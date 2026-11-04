@@ -990,6 +990,26 @@ Full reasoning and history: **D60** in `docs/decisions/log.md`.
 
 ---
 
+## THERE IS A SECOND READER (claude.ai Project)
+
+A claude.ai Project, "COP32 Platform", is connected to this repo as **read-only**
+knowledge (D62; setup in `docs/operations/claude-project-setup.md`). It syncs
+manually and one-way — repo → Project — and cannot write here.
+
+What this means when you work in this repo:
+
+- **Keep `docs/` readable on its own.** A chat surface reads these files without
+  the repo tree, shell output or this conversation. Don't write a doc that only
+  makes sense next to the code.
+- **`docs/decisions/log.md` and `docs/roadmap/phase-status.md` are what the
+  Project reads first.** Keep them current and self-explanatory; they are the
+  orientation layer for both surfaces.
+- **A decision made in a Project chat is not recorded** until someone carries it
+  here. If the founder reports a conclusion from "the project", log it properly
+  rather than assuming it already exists.
+
+---
+
 ## IMPORTANT BEHAVIOR
 
 Act as a critical professional advisor, not simply an assistant who agrees with me.
