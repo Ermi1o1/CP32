@@ -62,6 +62,12 @@ breaks the site (no `index.html` at root → 404) and exposes `docs/`,
 `deliverables/` and `spikes/` on a public URL even though this repo is private.
 See D60 in `docs/decisions/log.md`.
 
+Everything inside `prototype/` is world-readable at the site root, so the build
+command strips the dev-only files (`README.md`, `build.py`, `release.py`) from
+the build copy before upload — the repo keeps them (D61). If you add a file to
+that strip list, first confirm `index.html`, `app.js` and `sw.js` don't
+reference it: a precached file that 404s breaks the service worker install.
+
 ## Hard rules
 
 1. **Sample data only.** Everything in `data.js` is synthetic and fictional.

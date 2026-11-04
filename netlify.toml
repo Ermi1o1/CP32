@@ -14,6 +14,16 @@
 # This file overrides the build settings in the Netlify UI, so the deploy stays
 # correct even if someone changes them in the dashboard.
 
+# WHAT THE BUILD COMMAND DOES, in order:
+#   1. Version guard — if the prototype's version carriers disagree the build
+#      fails and NOTHING publishes; the previous deploy stays live.
+#   2. Strips dev-only files from the BUILD COPY so they are never uploaded to
+#      the CDN. This does not touch the repo — only what gets published. Keep
+#      the `rm` after the `--check`, since the check runs release.py itself.
+# None of the stripped files are referenced by index.html, app.js or sw.js, so
+# removing them cannot break the service worker install. Re-verify that before
+# adding anything to the list.
+
 [build]
   publish = "prototype"
-  command = "python3 prototype/release.py --check"
+  command = "python3 prototype/release.py --check && rm -f prototype/README.md prototype/build.py prototype/release.py"

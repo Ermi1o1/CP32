@@ -984,6 +984,7 @@ The clickable prototype is live at **https://cop32-prototype.netlify.app**.
 - **`netlify.toml` at the repo root is load-bearing.** It sets `publish = "prototype"`. Do NOT remove or change that line, and do not move/rename the `prototype/` folder without updating it in the same commit. Without it Netlify publishes the whole repo root, which breaks the site (no `index.html` at root → 404) and exposes `docs/`, `deliverables/` and `spikes/` on a public URL despite the repo being private.
 - **Do not add an `index.html` at the repo root** to "fix" anything — the publish directory already handles it, and a root `index.html` would invite exactly the whole-repo-published mistake above.
 - The `release.py --check` version guard runs as the Netlify build command, so a mismatched version fails the build and the previous deploy stays live. `check.yml` still runs on pull requests.
+- **Everything inside `prototype/` is world-readable at the site root.** The build command therefore strips dev-only files (`README.md`, `build.py`, `release.py`) from the build copy before upload; the repo keeps them (D61). Before adding anything to that list, confirm `index.html`, `app.js` and `sw.js` do not reference it — a precached file that 404s breaks the service worker install. Keep the `rm` after the `--check`.
 
 Full reasoning and history: **D60** in `docs/decisions/log.md`.
 
