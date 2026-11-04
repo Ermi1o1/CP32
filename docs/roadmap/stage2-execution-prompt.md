@@ -82,7 +82,7 @@ Re-read `docs/architecture/spike-briefs.md` in full before starting. For each sp
 - Implement: EN/Amharic language switch (using the bundled Ethiopic font from D11), the 12 tree-test tasks as clickable paths (T1–T12 from the IA kit) so it can double as a dry-run of the real tree test later, offline/empty/error states (static screens are fine — this doesn't need real offline sync, that's S7/Track B), and basic responsive layout for phone width.
 - Add a visible "PROTOTYPE — sample data, not an official COP32 product" watermark/footer, consistent with the branding caution in D1/D24.
 
-**Where it lives:** `/prototype` at the repo root (plain static site), with a `README.md` inside explaining how to open it locally and, if the founder wants to share a link, how to deploy it for free (e.g., GitHub Pages from this repo) — note that enabling GitHub Pages is a repo setting the founder needs to flip themselves (Settings → Pages), not something this session can do without the founder's own GitHub access.
+**Where it lives:** `/prototype` at the repo root (plain static site), with a `README.md` inside explaining how to open it locally. It is already deployed: pushing to `main` publishes it to https://cop32-prototype.netlify.app automatically (Netlify, Git-linked; `netlify.toml` publishes `prototype/` only — see D60). GitHub Pages is not used; it cannot serve a public site from a private repo on a free plan.
 
 ---
 

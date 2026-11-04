@@ -15,7 +15,7 @@ names or claims.
 | `docs/architecture/` | ADR-001…006, technical architecture, data-integration strategy, spike briefs and results |
 | `docs/decisions/log.md` | Every decision (D1…) with reason, alternatives and status |
 | `docs/research/`, `docs/requirements/`, `docs/security/`, `docs/roadmap/`, `docs/operations/` | Supporting evidence and plans |
-| `prototype/` | The clickable PWA (deployed to GitHub Pages) |
+| `prototype/` | The clickable PWA — the **only** folder published to the live site |
 | `spikes/` | Throwaway technical experiments (S1, S3, S4, S7) |
 
 Read the ADRs and `docs/decisions/log.md` before proposing changes that
@@ -46,9 +46,21 @@ python3 prototype/release.py --check    # verify only (exit 1 on mismatch)
 ```
 
 `--check` runs in CI: on every pull request that touches `prototype/`
-(`.github/workflows/check.yml`) and before every GitHub Pages deploy
-(`.github/workflows/pages.yml`), so an inconsistent tree can't ship. Bump the
-version in any change that alters what users see.
+(`.github/workflows/check.yml`) and as the Netlify build command on every
+deploy (`netlify.toml`), so an inconsistent tree can't ship — a mismatch fails
+the build and the previous deploy stays live. Bump the version in any change
+that alters what users see.
+
+## Deployment
+
+Pushing to `main` deploys automatically to https://cop32-prototype.netlify.app
+(Netlify project `cop32-prototype`, Git-linked). Nothing manual is required.
+
+`netlify.toml` at the repo root sets `publish = "prototype"`. **Do not remove or
+change that line.** Without it Netlify publishes the whole repo root, which both
+breaks the site (no `index.html` at root → 404) and exposes `docs/`,
+`deliverables/` and `spikes/` on a public URL even though this repo is private.
+See D60 in `docs/decisions/log.md`.
 
 ## Hard rules
 

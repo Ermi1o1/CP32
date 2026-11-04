@@ -62,7 +62,7 @@ After all batches:
 
 ## Step 5 — Redeploy and record
 
-- Redeploy via the existing GitHub Actions workflow (`.github/workflows/pages.yml` — same as before, no changes needed there unless the folder structure moved)
+- Redeploy by pushing to `main` — Netlify deploys automatically (`netlify.toml` publishes `prototype/` only; do not change that). No workflow to trigger.
 - Update `docs/roadmap/phase-status.md` noting Track D is now v2 (visual redesign complete) and link `docs/design/redesign-plan.md`
 - If any real design decisions were locked in during this pass (direction chosen, icon library, avatar system), log them as new D-numbered decisions in `docs/decisions/log.md`, same convention as before
 - End by stating: docs saved, what's next (showing the prototype around; S1 real-device decision still pending before any native build), and what a future session should read first

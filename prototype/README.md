@@ -38,8 +38,8 @@ python3 -m http.server 8000      # then open http://localhost:8000
 ## Rebuild generated files
 `python3 build.py` regenerates `tokens.css` (from the design tokens) and `data.js` (sample data from `spikes/data/sample.json`, with fictional titles, people and places layered on top). Regenerate tokens first with `python3 docs/design/build_tokens.py` (run inside `docs/design`).
 
-## Share a link (free)
-The repository includes `.github/workflows/pages.yml`. **You (the repo owner) must enable it yourself:** GitHub → Settings → Pages → Source: *GitHub Actions*; the workflow runs when `prototype/` changes on `main` (or via *Run workflow*). This session cannot change repository settings. Alternative: drag the `prototype` folder to any static host.
+## Share a link
+Live at **https://cop32-prototype.netlify.app** — already set up, nothing to enable. Pushing to `main` redeploys automatically (Netlify project `cop32-prototype`, Git-linked; `netlify.toml` at the repo root publishes this folder only). GitHub Pages is no longer used: it cannot serve a public site from a private repo on a free plan (D60).
 
 ## Not done / needs real validation
 Real users, real devices, screen-reader testing, native-speaker Amharic, real COP32 content (none officially exists), full accessibility audit of this build. Done so far: computed token contrast (64 pairs, all AA), automated axe-core WCAG 2.2 A/AA scan of 16 screens × light/dark (0 violations), 200% reflow check, and all 12 tree-test tasks resolving in app mode.
