@@ -1,0 +1,19 @@
+# Netlify deploy configuration for the COP32 prototype.
+#
+# WHY publish = "prototype":
+# Without it Netlify uploads the WHOLE repo root and serves it publicly — which
+# means docs/, deliverables/ (incl. the proposal .docx) and spikes/ end up on a
+# public URL even though this GitHub repo is private, and "/" 404s because the
+# repo root has no index.html. Publishing only /prototype fixes both.
+#
+# WHY this build command:
+# It is the same stale-cache guard the retired GitHub Pages workflow ran. If the
+# prototype's version carriers disagree, the build fails and NOTHING publishes —
+# the previous deploy stays live. Keeps phones from getting a half-updated PWA.
+#
+# This file overrides the build settings in the Netlify UI, so the deploy stays
+# correct even if someone changes them in the dashboard.
+
+[build]
+  publish = "prototype"
+  command = "python3 prototype/release.py --check"

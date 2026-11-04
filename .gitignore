@@ -1,0 +1,2 @@
+# Netlify CLI writes local link state here — must never be committed.
+.netlify
