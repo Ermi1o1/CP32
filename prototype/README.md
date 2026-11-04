@@ -10,7 +10,7 @@ The prototype is a Progressive Web App (D55): `manifest.webmanifest`, icons in `
 - **Android / Chrome:** an "Install the app" card appears on Today and in Profile & Settings; or use the browser menu → *Install app*.
 - **iPhone / Safari:** Share → *Add to Home Screen* (the card shows this hint on iOS).
 - **Releasing a change:** run `python3 release.py X.Y.Z` (never hand-edit versions). It updates `sw.js`, the `?v=` URLs in `index.html` and the About row together; `python3 release.py --check` runs in CI before every deploy. The service worker is network-first, so online users get the new deploy on their next open; the cache is only used offline. Photos are cached on first view.
-- The service worker only runs over HTTPS (GitHub Pages) or `localhost`.
+- The service worker only runs over HTTPS (the Netlify site) or `localhost`.
 
 ## Photos (D57)
 Card and header photos in `img/` are openly licensed (CC BY, CC BY-SA, CC0) from Wikimedia Commons via Openverse, cropped and resized. Credits: in-app at *Profile & Settings → Photo credits* (`#/menu/credits`), data in `credits.js`. They show real places and generic events, not COP32, and are never tied to invented people. Data saver switches back to illustrations.

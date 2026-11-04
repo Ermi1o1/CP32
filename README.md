@@ -5,7 +5,7 @@ An unofficial concept for a companion app for COP32 in Addis Ababa, Ethiopia.
 prototype is invented sample data; Amharic text is machine-drafted and has not
 been reviewed by a native speaker.
 
-**Live prototype:** https://ermi1o1.github.io/COP32 (PWA: installable, works offline)
+**Live prototype:** https://cop32-prototype.netlify.app (PWA: installable, works offline)
 
 ## What this repo contains
 
@@ -39,8 +39,9 @@ cd prototype && python3 -m http.server 8000   # http://localhost:8000
 ```
 
 Rebuild generated files with `python3 build.py`; release a new version with
-`python3 release.py X.Y.Z` (see `CONTRIBUTING.md`). Merging to `main` deploys
-to GitHub Pages; the deploy stops if the version strings disagree.
+`python3 release.py X.Y.Z` (see `CONTRIBUTING.md`). Pushing to `main` deploys
+to Netlify automatically (`netlify.toml` publishes `prototype/` only); the
+deploy stops if the version strings disagree.
 
 ## Documentation index
 

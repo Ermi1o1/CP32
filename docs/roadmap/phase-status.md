@@ -43,6 +43,14 @@ Added root `README.md` and `CONTRIBUTING.md`, `prototype/release.py` (single-com
 ## Name and mark (2026-10-05)
 The app is now **COP32 (Prototype)** with the original seedling mark carrying “COP32” on the leaf, across header, favicon, PWA and install icons (D59 supersedes D58 “Lemlem”, v0.8.0). Revisit the name before any public launch. The header Emergency button is in place (D44 complete).
 
+## Hosting moved to Netlify (2026-11-04)
+The repo is now **private**, which GitHub Pages cannot serve from on a free plan — the old
+`ermi1o1.github.io/COP32` link started 404ing. The prototype now lives at
+**https://cop32-prototype.netlify.app**, Git-linked to `main`: every push auto-deploys (D60).
+`netlify.toml` publishes `prototype/` only, so `docs/`, `deliverables/` and `spikes/` stay off the
+public site, and it runs the `release.py --check` stale-cache guard as the build command.
+`.github/workflows/pages.yml` is retired; `check.yml` still runs on PRs.
+
 ## Where the project stands in practice
 - Phase 21 is complete on a heuristic/sandbox basis (see table). Real card sort/tree test, real-device spikes (S1, S6), provider outreach (S5), native-speaker Amharic review and user testing remain open.
 - Planning documentation is complete through Phase 20 (blueprint approved, D43). Phase 21 ("Stage 2 execution") is defined and ready to run: `docs/roadmap/stage2-execution-prompt.md` is the operating prompt for it — paste it into a fresh Claude Code session (after `/clear`) to execute Tracks A–F (IA heuristic walkthrough, spikes S1–S7 sandbox proofs, design system, clickable prototype, architecture ADRs, external .docx dossier).
