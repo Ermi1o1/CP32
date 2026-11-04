@@ -86,6 +86,21 @@ All 59 docs together are ~101,000 words (~135k tokens) and would fill most of a
 context window before a question is asked. Selection is re-configurable at any
 time via **Configure files**.
 
+## Syncing — what is and isn't possible
+
+- **There is no automatic or scheduled sync.** It is a manual UI action only.
+- **No prompt or custom instruction can trigger a sync.** Instructions are text
+  that shapes replies; Claude in a Project chat has no tool to re-sync its own
+  knowledge. Do not expect an instruction to work around this.
+- **Sync is per connection entry** (`...` → *Sync now*). So connect the repo
+  **once** and tick all the wanted files inside that one connection via the file
+  browser / *Configure files* — not one connection per file, which turns every
+  sync into one tap per file. The fuller controls appear on desktop; the mobile
+  `...` menu offers only *Sync now* and *Remove from project*.
+- **What instructions CAN do is expose staleness.** The instruction block below
+  makes every answer open with the highest D-number and the phase-status date it
+  can see, so a stale copy announces itself instead of quietly misleading.
+
 ## Discipline
 
 - **Sync first.** Before any session that matters.
@@ -105,8 +120,11 @@ answering anything substantive — they record every decision (D1–D61) and whe
 the project stands. Phases 0–21 are complete; what remains is real-world
 validation, not more planning.
 
-This repo is synced manually and can be stale. If something I say contradicts
-the files, say so and ask me to sync rather than guessing which is current.
+This repo is synced manually and can be stale. At the start of any substantive
+answer, state the highest D-number you can see in docs/decisions/log.md and the
+"updated" date at the top of docs/roadmap/phase-status.md. If I tell you
+something newer exists, your copy is stale — say so and ask me to sync rather
+than working around it or guessing which version is current.
 
 You cannot write to the repo from here — only Claude Code can. If a conclusion
 from this chat should persist, tell me explicitly what to record and in which
