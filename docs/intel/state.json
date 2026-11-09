@@ -1,0 +1,1026 @@
+{
+ "fail_counts": {
+  "cop32ethiopia_home": 0,
+  "gnews_unfccc_cop32": 0,
+  "gnews_unfccc": 0,
+  "appstore_cop32": 0,
+  "appstore_ethiopia_climate": 0,
+  "gnews_mint": 0,
+  "gnews_egp": 0,
+  "gnews_ena_en": 0,
+  "fana_en": 0,
+  "amn_en": 0,
+  "gnews_ena_am": 0,
+  "fana_am": 0,
+  "gnews_addisstandard": 0,
+  "gnews_reporter_et": 0,
+  "capital_et": 0,
+  "addisfortune": 0,
+  "ethiopianmonitor": 0,
+  "shega": 0,
+  "climatehome": 0,
+  "carbonbrief": 0,
+  "gnews_enb_iisd": 0,
+  "gnews_cop32_ethiopia": 0,
+  "gnews_cop32_platform": 0,
+  "gnews_cop32_logistics": 0,
+  "gnews_cop32_amharic": 0,
+  "gnews_cop31_app": 0,
+  "yt_unfccc": 0,
+  "yt_ena": 0,
+  "yt_fana": 0,
+  "tg_ena": 0,
+  "tg_fana": 0
+ },
+ "app_ids": {
+  "appstore_cop32": [
+   "6811845833",
+   "1632885226",
+   "6754187049",
+   "6738282514",
+   "6821604613",
+   "6786924992",
+   "1402774264",
+   "1531927334",
+   "6822418708",
+   "6812363587",
+   "6761264127",
+   "6759739862",
+   "1665589216"
+  ],
+  "appstore_ethiopia_climate": [
+   "1326734477",
+   "1534203410",
+   "1375514824",
+   "1497800659",
+   "6789030250",
+   "1525181998",
+   "6811845833",
+   "1632885226",
+   "412788415",
+   "1466186227",
+   "6456039621",
+   "1195200573",
+   "6782940359",
+   "1506109691",
+   "1014260938",
+   "6736705086",
+   "1663036320",
+   "847859021",
+   "6784473143",
+   "6761763876",
+   "1525710459",
+   "6503872198",
+   "6529531521",
+   "1597040733"
+  ]
+ },
+ "seen": {
+  "f3401f2c11617d15": "2026-11-09",
+  "42c96e6e45fc1954": "2026-11-09",
+  "768b114e25795a9f": "2026-11-09",
+  "a024bb8542469f25": "2026-11-09",
+  "bd78575637df802c": "2026-11-09",
+  "a8e656059c33fde8": "2026-11-09",
+  "25ea0c53477d1bc8": "2026-11-09",
+  "5c17eb4a191c6ab7": "2026-11-09",
+  "ecf677ea73fe68bd": "2026-11-09",
+  "bfce907dcdcbffe3": "2026-11-09",
+  "ad3132a6c73052aa": "2026-11-09",
+  "a2ef1ac77d6747af": "2026-11-09",
+  "b608690528c5b6c5": "2026-11-09",
+  "cbabea66b31984b8": "2026-11-09",
+  "9795e901d5180c8b": "2026-11-09",
+  "97d0d57cc6e13816": "2026-11-09",
+  "dc8ac9154ad4aa0d": "2026-11-09",
+  "9108fb45d2962ebc": "2026-11-09",
+  "2b765f001826edd3": "2026-11-09",
+  "d14361cafdaa3d8f": "2026-11-09",
+  "f57bd190488a2d13": "2026-11-09",
+  "10d041c7e385fc44": "2026-11-09",
+  "74f6c12d4f340cd8": "2026-11-09",
+  "bebf73fdc7076790": "2026-11-09",
+  "73ed1d5be57d855f": "2026-11-09",
+  "51c8604d71d64e49": "2026-11-09",
+  "fccc5817318f2696": "2026-11-09",
+  "b369fb9fc6b63556": "2026-11-09",
+  "1cc322800d5762c3": "2026-11-09",
+  "f91606970e301986": "2026-11-09",
+  "78e94f99ac994a56": "2026-11-09",
+  "45325fd9e62b2caf": "2026-11-09",
+  "83ab9820839a68f5": "2026-11-09",
+  "977ca035a8d68941": "2026-11-09",
+  "98a0d7b4dab59a01": "2026-11-09",
+  "6054b88eff8d9e69": "2026-11-09",
+  "d8d2c8b7152ed333": "2026-11-09",
+  "55052898faf62d6e": "2026-11-09",
+  "b426a5638aeaff60": "2026-11-09",
+  "8edea3d55813a6c3": "2026-11-09",
+  "628acd3db118d7cf": "2026-11-09",
+  "50e03f4b7b585ca0": "2026-11-09",
+  "412a8aa2e37fdbb0": "2026-11-09",
+  "3edb2381264a4ba2": "2026-11-09",
+  "b2536665fd4a19da": "2026-11-09",
+  "4e472b45db0756e9": "2026-11-09",
+  "0c985beddd2e93eb": "2026-11-09",
+  "dead80999cd9f27e": "2026-11-09",
+  "fdad9fac1983a466": "2026-11-09",
+  "2720e1ba9f0098d2": "2026-11-09",
+  "ec538a9d6bc02a13": "2026-11-09",
+  "c05211cab45ebe54": "2026-11-09",
+  "93e6401628660994": "2026-11-09",
+  "3e37cfa010611008": "2026-11-09",
+  "e937d616a8d79979": "2026-11-09",
+  "1391779212ccdb69": "2026-11-09",
+  "78ea315ad960a106": "2026-11-09",
+  "38b882d8476c6fa9": "2026-11-09",
+  "b2a952f565768c53": "2026-11-09",
+  "bab82401a6f7aad7": "2026-11-09",
+  "a02044200c9a23da": "2026-11-09",
+  "93017a5715fb78f2": "2026-11-09",
+  "10f7bca160299839": "2026-11-09",
+  "406cc0c800a0bb2d": "2026-11-09",
+  "a4459b41e8c29db8": "2026-11-09",
+  "a188249da0acab51": "2026-11-09",
+  "754964f0c1aa1dc1": "2026-11-09",
+  "112ffe8fcead3f80": "2026-11-09",
+  "c8a49ca7b2b3949c": "2026-11-09",
+  "737c60847b0b167b": "2026-11-09",
+  "13b2ce3d4a4d2813": "2026-11-09",
+  "e0a0205c7ac57038": "2026-11-09",
+  "de3e353c35c8b8e8": "2026-11-09",
+  "a13a9190883e5baa": "2026-11-09",
+  "d786d48a39839682": "2026-11-09",
+  "86ebaa74cae4339d": "2026-11-09",
+  "7aaad1352f6abd08": "2026-11-09",
+  "bee74fd357230538": "2026-11-09",
+  "002b50e3fa418232": "2026-11-09",
+  "be398515b1302181": "2026-11-09",
+  "5953347ca964f871": "2026-11-09",
+  "01528dce2587537c": "2026-11-09",
+  "63b2c66ec3f9f457": "2026-11-09",
+  "705988d308152664": "2026-11-09",
+  "76418eac8cacf496": "2026-11-09",
+  "3418059aa219793b": "2026-11-09",
+  "2aa7b28cbfc9cf13": "2026-11-09",
+  "836eb9dc3199e870": "2026-11-09",
+  "308c3c4751c7925c": "2026-11-09",
+  "125d8f55b279b7a8": "2026-11-09",
+  "355fe64f07d58047": "2026-11-09",
+  "e87621b2774a0295": "2026-11-09",
+  "bafed15dd925804e": "2026-11-09",
+  "2bf6b634797e7f1b": "2026-11-09",
+  "879eb6b838f72ecd": "2026-11-09",
+  "b535fee65e02d28f": "2026-11-09",
+  "16f6fc95e93edcef": "2026-11-09",
+  "59e512840c5bbcd6": "2026-11-09",
+  "401e3b394e80f6a6": "2026-11-09",
+  "9e221d22ceafec33": "2026-11-09",
+  "001e724453ea9066": "2026-11-09",
+  "225ebec7fd32c9ea": "2026-11-09",
+  "3a88c6acd2fc04a3": "2026-11-09",
+  "d6cff9a502597e1f": "2026-11-09",
+  "8e4ea5f1556aead6": "2026-11-09",
+  "b93f302972d09a5c": "2026-11-09",
+  "7fa2e0c19958edf4": "2026-11-09",
+  "891a1be390db14dc": "2026-11-09",
+  "695a0cb8541087d0": "2026-11-09",
+  "3128153462f164f0": "2026-11-09",
+  "c1d8e09492e9694c": "2026-11-09",
+  "0562498d48cec588": "2026-11-09",
+  "6e7a98338c1241f3": "2026-11-09",
+  "36e8aadb65a47edc": "2026-11-09",
+  "b073a52c9e1d0549": "2026-11-09",
+  "f5bc6431fb5caa3a": "2026-11-09",
+  "9e0c7f5a754f8598": "2026-11-09",
+  "0fc6db3f4a8d52f4": "2026-11-09",
+  "a60ad568cc049391": "2026-11-09",
+  "c89e540356e32e0a": "2026-11-09",
+  "5aa0f4c16b2f50ce": "2026-11-09",
+  "c47cad0e3a6c1dd3": "2026-11-09",
+  "209f9d21347db2c5": "2026-11-09",
+  "28ca8a24a8f29bad": "2026-11-09",
+  "579bbb1b4b268dcb": "2026-11-09",
+  "1068f0f94a3e2f46": "2026-11-09",
+  "69ddda5947498921": "2026-11-09",
+  "9d8e88c94aae5e8c": "2026-11-09",
+  "4ecb91e2356f34c2": "2026-11-09",
+  "e7edc5e29112b132": "2026-11-09",
+  "f0dd2cfc96b6d489": "2026-11-09",
+  "0128213a6d797bee": "2026-11-09",
+  "4a68f5f8898c1cc8": "2026-11-09",
+  "1282bfd7a70d74c4": "2026-11-09",
+  "0ce58eb277ed0b79": "2026-11-09",
+  "15018bef090738e6": "2026-11-09",
+  "7bf66a200cff8721": "2026-11-09",
+  "8cd03b1a0ac87b0d": "2026-11-09",
+  "1967791c8c7ef0c0": "2026-11-09",
+  "e9c1868c8bc855ed": "2026-11-09",
+  "25e194d77f3fe91c": "2026-11-09",
+  "9d354976f463db16": "2026-11-09",
+  "fb430cbbe2e5d467": "2026-11-09",
+  "245cde45777aacd9": "2026-11-09",
+  "02426c741108b92a": "2026-11-09",
+  "b4ffaf145148ea90": "2026-11-09",
+  "75da3769f2343eff": "2026-11-09",
+  "6b7410ccfff9fa53": "2026-11-09",
+  "e6508c246f8f493c": "2026-11-09",
+  "5589f97a2c1ab928": "2026-11-09",
+  "96289bcaa6eaa184": "2026-11-09",
+  "612ee15f68b39192": "2026-11-09",
+  "92d1f08dd11af512": "2026-11-09",
+  "06deabf82cddf547": "2026-11-09",
+  "9a1bd3b806f993c7": "2026-11-09",
+  "ffc0ebefc0233bc0": "2026-11-09",
+  "c635affd22f1cfc5": "2026-11-09",
+  "55bcaa9c18761f6f": "2026-11-09",
+  "0f24d9b5f3763e2a": "2026-11-09",
+  "ade0c4d9f4328806": "2026-11-09",
+  "0fd3f3fe6c280b21": "2026-11-09",
+  "a685f03f2ba9df2c": "2026-11-09",
+  "b74ddbcbbc74439f": "2026-11-09",
+  "b09dfe7b4573ea8f": "2026-11-09",
+  "9cdf2438305b4264": "2026-11-09",
+  "ea45030a5b47952f": "2026-11-09",
+  "f09f08d8b96d9843": "2026-11-09",
+  "86e6dedca0a18713": "2026-11-09",
+  "e71245ba9a1b4ccb": "2026-11-09",
+  "8836eef58c46bab6": "2026-11-09",
+  "6353ac75f5d2f444": "2026-11-09",
+  "2f7b36ea53ea707e": "2026-11-09",
+  "d7c2a9778feff3bc": "2026-11-09",
+  "1318f6c0f9f78aae": "2026-11-09",
+  "1d50808e46a7d12c": "2026-11-09",
+  "94d4fa7b17c91549": "2026-11-09",
+  "2f83f4deb2ef5578": "2026-11-09",
+  "a6ba7d7b1fa402ba": "2026-11-09",
+  "d5ee57653f19494b": "2026-11-09",
+  "4945ebbe994d3482": "2026-11-09",
+  "dc1ebec28b1216b8": "2026-11-09",
+  "afd48d72f6f024c1": "2026-11-09",
+  "845eba055fb8d471": "2026-11-09",
+  "b41d21cb6efe7f8b": "2026-11-09",
+  "2bda7f7c7aa79f61": "2026-11-09",
+  "ce44bbe81cef33be": "2026-11-09",
+  "5c23b539d62dc2e9": "2026-11-09",
+  "13c1766cee3d53d5": "2026-11-09",
+  "930dc243ab750fb7": "2026-11-09",
+  "a302c90389948792": "2026-11-09",
+  "0a3b3bde05508770": "2026-11-09",
+  "59f009c1a9415b53": "2026-11-09"
+ },
+ "recent_titles": [
+  [
+   "new app listing ethiopian calendar elias haileselassie",
+   "2026-11-09"
+  ],
+  [
+   "new app listing sheger fm 102 1 adey tensae media and entertainment plc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ethiopia radio igears technology ltd",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ethiopia news ethiopian music lite edition juicestand inc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ethiopian airlines ethiopian airlines",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ride ethiopia djibouti hybrid designs plc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing viper c3625 sergei fetisov",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ethiopian calendar converter teferi aleme",
+   "2026-11-09"
+  ],
+  [
+   "new app listing jebena jebena tech inc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing kum neger habesha dating mulu technology llc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing jiji ethiopia walie holdings ltd",
+   "2026-11-09"
+  ],
+  [
+   "new app listing digital invea viditure inc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cbe mobile banking commercial bank of ethiopia",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cathexiscarbon cathexis technologies pty ltd",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cop27 mcit",
+   "2026-11-09"
+  ],
+  [
+   "new app listing seleda ethiopia toptech it solution plc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing m pesa safaricom ethiopia safaricom telecommunications ethiopia plc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing gojo shop negus sisay",
+   "2026-11-09"
+  ],
+  [
+   "new app listing kiosk shopping bethlehem teshome",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ananas shopping hailemichael ayalew",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cop16 navigator national center for vegetation cover",
+   "2026-11-09"
+  ],
+  [
+   "new app listing vigo6 remote screen proces data as",
+   "2026-11-09"
+  ],
+  [
+   "new app listing esp32 cam peter sauer",
+   "2026-11-09"
+  ],
+  [
+   "new app listing atlas copco group connect twebcast ab",
+   "2026-11-09"
+  ],
+  [
+   "new app listing allstore ethiopia seid jemal",
+   "2026-11-09"
+  ],
+  [
+   "new app listing u2 ai carbon u2 ai studio teknoloji anonim sirketi",
+   "2026-11-09"
+  ],
+  [
+   "new app listing ethiopia radio live stations roman skripchak",
+   "2026-11-09"
+  ],
+  [
+   "new app listing esc cop 17 erxes inc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing 888 market 888 market software systems l l c s o c",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cop31 volunteer ukx danismanlik ticaret limited sirketi",
+   "2026-11-09"
+  ],
+  [
+   "new app listing moana blue pacific billy chan ting",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cop31 t c cevre sehircilik ve iklim degisikligi bakanlıgı",
+   "2026-11-09"
+  ],
+  [
+   "new app listing hegemonia war strategy game ygt labs ai llc",
+   "2026-11-09"
+  ],
+  [
+   "new app listing cop 31 digital platform united nations framework convention on climate change",
+   "2026-11-09"
+  ],
+  [
+   "unlock just transition 2 way engineering policy via key minerals energy use electrical cities",
+   "2026-11-09"
+  ],
+  [
+   "cb hub powering ndc implementation electrification and the gst energy goals",
+   "2026-11-09"
+  ],
+  [
+   "pm abiy ahmed holds talks with au commission chairperson on inclusive politics and continental priorities",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia building global confidence mobilizing climate investment ahead of cop32 finance minister",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia mobilizing global partners building momentum for cop32 at cop31 foreign minister gedion timothewos",
+   "2026-11-09"
+  ],
+  [
+   "green legacy ethiopia s homegrown answer to a planet in peril",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia pavilion opens at cop31 in antalya",
+   "2026-11-09"
+  ],
+  [
+   "cop31 opens in antalya bringing global climate negotiations to türkiye",
+   "2026-11-09"
+  ],
+  [
+   "from seedlings to global influence ethiopia s green legacy is giving green diplomacy new roots",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia to showcase green development achievements at cop31 as a clean energy powerhouse",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia s participation in cop31 offers a strategic opportunity to showcase its green development vision ahead of cop32",
+   "2026-11-09"
+  ],
+  [
+   "በcop31 የኢትዮጵያን ፓቪልዮን ይጎብኙ ethiopiannewsagency",
+   "2026-11-09"
+  ],
+  [
+   "የኮፕ 32 ተመራጭ ፕሬዝዳንት ጌዲዮን ጢሞቲዮስ ዶ ር የሰጡት ማብራሪያ ethiopiannewsagency",
+   "2026-11-09"
+  ],
+  [
+   "የገንዘብ ሚኒስትር እና የኮፕ 32 ዋና ተደራዳሪ ፍጹም አሰፋ ዶ ር በcop31 የተከፈተውን የኢትዮጵያ ፓቪሊዮን በተመለከተ የሰጡት አስተያየት",
+   "2026-11-09"
+  ],
+  [
+   "የውጭ ጉዳይ ሚኒስትር እና የኮፕ 32 ተመራጭ ፕሬዚዳንት ጌዲዮን ጢሞቴዎስ ዶ ር በcop31 የተከፈተውን የኢትዮጵያ ፓቪሊዮን በተመለከተ የሰጡት አስተያየት",
+   "2026-11-09"
+  ],
+  [
+   "በcop31 ዛሬ የተከፈተው የኢትዮጵያ ፓቪሊዮን በምስል cop32 cop32ethiopia landoforigins",
+   "2026-11-09"
+  ],
+  [
+   "africa wants adaptation finance on cop31 agenda raising risk of a fight",
+   "2026-11-09"
+  ],
+  [
+   "why cop31 needs to start talking about just transition finance",
+   "2026-11-09"
+  ],
+  [
+   "cop31 must amplify people power not oil lobby voices",
+   "2026-11-09"
+  ],
+  [
+   "experts what china wants from the cop31 climate talks",
+   "2026-11-09"
+  ],
+  [
+   "what s on the climate calendar for november 2026",
+   "2026-11-09"
+  ],
+  [
+   "interactive who wants what at the cop31 climate change summit",
+   "2026-11-09"
+  ],
+  [
+   "uk climate minister katie white cop31 must respond to really scary science",
+   "2026-11-09"
+  ],
+  [
+   "cop30 adaptation pledge would meet under a third of poorer nations needs un warns",
+   "2026-11-09"
+  ],
+  [
+   "cop31 must deliver finance for africa or there will be no implementation",
+   "2026-11-09"
+  ],
+  [
+   "turkey must make cop31 a turning point for global climate action",
+   "2026-11-09"
+  ],
+  [
+   "when the oil companies leave who pays",
+   "2026-11-09"
+  ],
+  [
+   "cop31 briefing what to expect from the antalya climate summit",
+   "2026-11-09"
+  ],
+  [
+   "governments must embrace fossil free zones as they head to cop31",
+   "2026-11-09"
+  ],
+  [
+   "clean power shields china from oil shock more than any other country",
+   "2026-11-09"
+  ],
+  [
+   "interactive tracking negotiating texts at the cop31 climate summit",
+   "2026-11-09"
+  ],
+  [
+   "blue cop31 set to spotlight need for ocean protections amid record heat",
+   "2026-11-09"
+  ],
+  [
+   "nepal seeks stronger recognition of mountain issues in un climate process",
+   "2026-11-09"
+  ],
+  [
+   "business coalition urges cop31 presidency to close electrification implementation gap",
+   "2026-11-09"
+  ],
+  [
+   "cop31 bulletin day 1 agenda settled as cop urged to supercharge solutions",
+   "2026-11-09"
+  ],
+  [
+   "q a what is the belém antalya mechanism for a just transition",
+   "2026-11-09"
+  ],
+  [
+   "unfccc nav",
+   "2026-11-09"
+  ],
+  [
+   "united nations framework convention on climate change united nations 1992 fccc informal 84 ge 05 62220 e 200705",
+   "2026-11-09"
+  ],
+  [
+   "press and media",
+   "2026-11-09"
+  ],
+  [
+   "nationally determined contributions ndcs",
+   "2026-11-09"
+  ],
+  [
+   "summary of the unfccc climate change conference cop18 cmp8",
+   "2026-11-09"
+  ],
+  [
+   "how to obtain observer status",
+   "2026-11-09"
+  ],
+  [
+   "introduction",
+   "2026-11-09"
+  ],
+  [
+   "the paris agreement",
+   "2026-11-09"
+  ],
+  [
+   "overview of article 6 4 of the paris agreement the mechanism webinar 1 overview of article 6",
+   "2026-11-09"
+  ],
+  [
+   "first biennial transparency reports",
+   "2026-11-09"
+  ],
+  [
+   "concept note cop29 outcomes webinar series part ii inclusive climate action unfccc",
+   "2026-11-09"
+  ],
+  [
+   "nigeria seeks to host cop32 in 2027",
+   "2026-11-09"
+  ],
+  [
+   "un and ethiopia urge africa climate summit to send a clear message cop30 must deliver for african nations",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia s preparedness puts it ahead of nigeria in bid to host cop32 campaigners say",
+   "2026-11-09"
+  ],
+  [
+   "exclusive ethiopia to host cop32 climate summit in 2027",
+   "2026-11-09"
+  ],
+  [
+   "cop30 bulletin day 2 ethiopia picked as cop32 host while cop31 standoff continues",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia to be approved as host for cop32 climate summit in 2027",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia wins bid to host cop32 in 2027 edging out nigeria",
+   "2026-11-09"
+  ],
+  [
+   "cop32 2027 climate conference to be held in addis ababa",
+   "2026-11-09"
+  ],
+  [
+   "state minister details ethiopia s capacity and infrastructure for hosting cop32",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia tapped to host cop32 in 2027 solidifying africa s climate leadership",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia to host cop32 as nigeria backs down",
+   "2026-11-09"
+  ],
+  [
+   "view ethiopia s cop32 success offers opportunity for africa",
+   "2026-11-09"
+  ],
+  [
+   "hosting cop32 ethiopia s moment to restore trust in global climate action",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia to showcase africa as part of global solution for climate change boost image at cop32",
+   "2026-11-09"
+  ],
+  [
+   "pm abiy cop32 an opportunity to demonstrate ethiopia s potential and africa s role in global climate action",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia secures cop32 host role hailed for renewable energy progress ministry",
+   "2026-11-09"
+  ],
+  [
+   "comprehensive benefits of hosting cop32 for ethiopia",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia uneca formalize strategic partnership to host cop32",
+   "2026-11-09"
+  ],
+  [
+   "midroc unveils 5 hotel expansion plan ahead of ethiopia s cop32 hosting",
+   "2026-11-09"
+  ],
+  [
+   "the road to antalya",
+   "2026-11-09"
+  ],
+  [
+   "un june climate meetings sb64 have officially closed",
+   "2026-11-09"
+  ],
+  [
+   "pm abiy convenes national steering committee to advance ethiopia s cop32 preparations",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia embarks on early preparation as cop32 host country says pm abiy",
+   "2026-11-09"
+  ],
+  [
+   "climate weeks expression of interest 2027",
+   "2026-11-09"
+  ],
+  [
+   "cop31 takes center stage at hacettepe university s mun conference",
+   "2026-11-09"
+  ],
+  [
+   "submission by timor leste on behalf of the least developed countries ldc on the work programme on climate finance including o",
+   "2026-11-09"
+  ],
+  [
+   "germany stands ready to back ethiopia s cop32 preparations",
+   "2026-11-09"
+  ],
+  [
+   "will cop32 bring money or just motorcades",
+   "2026-11-09"
+  ],
+  [
+   "nordic partners back ethiopia s ev ambitions ahead of cop32",
+   "2026-11-09"
+  ],
+  [
+   "world meteorlogical organization",
+   "2026-11-09"
+  ],
+  [
+   "foreign minister gedion briefs african ambassadors on ethiopia s cop32 preparations",
+   "2026-11-09"
+  ],
+  [
+   "when africa hosts the world ethiopia s cop32 and the partnership shaping it",
+   "2026-11-09"
+  ],
+  [
+   "cop32 and the architecture of african climate leverage ifa",
+   "2026-11-09"
+  ],
+  [
+   "global climate observing system",
+   "2026-11-09"
+  ],
+  [
+   "un climate chief clean energy is the fastest route to energy security sovereignty and affordability for all",
+   "2026-11-09"
+  ],
+  [
+   "un and academia strengthen partnership to advance climate implementation ahead of cop31",
+   "2026-11-09"
+  ],
+  [
+   "on the road to cop31 business community meets for climate action",
+   "2026-11-09"
+  ],
+  [
+   "wwf submission to belém mission 1 5",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia s cop32 president designate holds talks with cop30 counterpart on summit preparations",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia unveils official digital platforms for cop32",
+   "2026-11-09"
+  ],
+  [
+   "from paris to addis cop21 legacy meets ethiopia s cop32 vision",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia steps up cop32 preparations as fm gedion fabius discuss lessons from paris climate deal",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia ramps up preparations to host cop32",
+   "2026-11-09"
+  ],
+  [
+   "kazakhstan ebrd advance qajet platform ahead of cop31 launch",
+   "2026-11-09"
+  ],
+  [
+   "former climate summit president says ethiopia must deliver results at cop32",
+   "2026-11-09"
+  ],
+  [
+   "addis ababa prepares for cop32 as ethiopia eyes bigger climate role",
+   "2026-11-09"
+  ],
+  [
+   "how ethiopia can make cop32 the summit that actually delivers",
+   "2026-11-09"
+  ],
+  [
+   "türkiye launches global academic initiative for cop31",
+   "2026-11-09"
+  ],
+  [
+   "ace children and youth at cop 31",
+   "2026-11-09"
+  ],
+  [
+   "addis chamber moves to lead private sector role at cop32 through new green growth centre",
+   "2026-11-09"
+  ],
+  [
+   "strong scientific contribution from universities to cop31 3 373 applications",
+   "2026-11-09"
+  ],
+  [
+   "un climate change conference antalya november 2026",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia brings climate delivery to the brics table as cop32 draws closer",
+   "2026-11-09"
+  ],
+  [
+   "eu supports ethiopia s cop32 hosting green growth agenda",
+   "2026-11-09"
+  ],
+  [
+   "wbcsd at unfccc cop 31 the world business council for sustainable development wbcsd",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia reaffirms vision for cop32 at the 81st un general assembly calling for action oriented climate diplomacy",
+   "2026-11-09"
+  ],
+  [
+   "un pledges comprehensive support as ethiopia prepares to host cop32 in addis ababa",
+   "2026-11-09"
+  ],
+  [
+   "our vision of the bam",
+   "2026-11-09"
+  ],
+  [
+   "eih advances 55 million hilton expansion to add to addis ababa s cop32 hospitality capacity eih",
+   "2026-11-09"
+  ],
+  [
+   "eih plans 55 mln hilton garden inn expansion ahead of cop32 eih",
+   "2026-11-09"
+  ],
+  [
+   "how do we make cop32 deliver on climate goals",
+   "2026-11-09"
+  ],
+  [
+   "tt clear",
+   "2026-11-09"
+  ],
+  [
+   "cop32 africa s challenge is turning climate action into economic growth",
+   "2026-11-09"
+  ],
+  [
+   "cop31 of antalya english",
+   "2026-11-09"
+  ],
+  [
+   "cop31 concept note",
+   "2026-11-09"
+  ],
+  [
+   "about the cop 31 digital platform",
+   "2026-11-09"
+  ],
+  [
+   "antalya leaders summit at cop 31",
+   "2026-11-09"
+  ],
+  [
+   "synthesis event 18 nov axis 5 cop31_gca_axis event_concept note docx",
+   "2026-11-09"
+  ],
+  [
+   "calendar list cmnucc",
+   "2026-11-09"
+  ],
+  [
+   "the ebrd at cop31",
+   "2026-11-09"
+  ],
+  [
+   "calendar list",
+   "2026-11-09"
+  ],
+  [
+   "2026 09 29_cct_axis 1 showcase event_concept note_v2 docx",
+   "2026-11-09"
+  ],
+  [
+   "cop31 preview comments from un climate change executive secretary simon stiell cop31 president designate murat kurum president of cop31 negotiations chris bowen",
+   "2026-11-09"
+  ],
+  [
+   "un türkiye pavilion programme at cop31 now available online",
+   "2026-11-09"
+  ],
+  [
+   "ilo at cop31 advancing climate action that delivers for people and jobs",
+   "2026-11-09"
+  ],
+  [
+   "türkiye to launch 6b industrial decarbonization platform at cop31 in antalya",
+   "2026-11-09"
+  ],
+  [
+   "solution and delivery event",
+   "2026-11-09"
+  ],
+  [
+   "axis 3 showcase inspiring action on agriculture food systems food security and nutrition in a changing climate",
+   "2026-11-09"
+  ],
+  [
+   "axis 5_people centric 2_yapu_cop31_conceptnote_v1 2 docx",
+   "2026-11-09"
+  ],
+  [
+   "belém mission to 1 5 enabling ambition and accelerating implementation of ndcs and naps",
+   "2026-11-09"
+  ],
+  [
+   "axis 5 synthesis roundtable",
+   "2026-11-09"
+  ],
+  [
+   "message to parties and observers preliminary list of speakers for the first part of the high level segment cop 31",
+   "2026-11-09"
+  ],
+  [
+   "media bulletin note 1 united nations climate change conference 2026 antalya türkiye monday 9 november",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia taps africa s largest road race to build global profile ahead of cop32",
+   "2026-11-09"
+  ],
+  [
+   "global implementation accelerator report of the cop30 and cop31 presidencies",
+   "2026-11-09"
+  ],
+  [
+   "annual report of the katowice committee of experts on the impacts of the implementation of response measures",
+   "2026-11-09"
+  ],
+  [
+   "report of the global environment facility to the conference of the parties note by the secretariat",
+   "2026-11-09"
+  ],
+  [
+   "unfccc i cra sekreteri simon stiell in cop31 açılış konuşması",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia advances cop32 preparations as president designate arrives in türkiye",
+   "2026-11-09"
+  ],
+  [
+   "ag22_cop31_gca_solutions delivery event_ag22_climate integrated public procurement docx",
+   "2026-11-09"
+  ],
+  [
+   "cop31 must supercharge solutions un climate chief on opening day of cop31",
+   "2026-11-09"
+  ],
+  [
+   "yearbook of global climate action 2026 provides new evidence that climate action is delivering results and driving implementation",
+   "2026-11-09"
+  ],
+  [
+   "democratic republic of the congo 2024 national inventory document nid",
+   "2026-11-09"
+  ],
+  [
+   "cop31 ace hub networking event why climate empowerment matters for locally led action",
+   "2026-11-09"
+  ],
+  [
+   "news ethiopia advances cop32 preparations as cop31 opens amid climate finance disputes",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia uses great ethiopian run to build public engagement ahead of cop32",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia opens pavilion at cop31 as it prepares to host cop32 in addis ababa",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia mobilizes global partnerships climate finance ahead of cop32",
+   "2026-11-09"
+  ],
+  [
+   "cop31 opens in antalya as ethiopia steps up preparations to host 2027 climate summit",
+   "2026-11-09"
+  ],
+  [
+   "ethiopia leverages cop31 to build momentum for successful cop32 hosting foreign minister",
+   "2026-11-09"
+  ],
+  [
+   "african development bank group at cop31",
+   "2026-11-09"
+  ],
+  [
+   "azersun holding at cop31 presenting national values to the world for a sustainable future",
+   "2026-11-09"
+  ],
+  [
+   "102 leaders from 6 continents to attend cop31 climate summit in türkiye",
+   "2026-11-09"
+  ],
+  [
+   "what is expected from the cop31 summit under way in antalya",
+   "2026-11-09"
+  ],
+  [
+   "cop31 president murat kurum of turkey celebrates with president of cop31 negotiations chris bowen of australia during the cop31 opening ceremony on monday november 9 in antalya turkey photo by murad sezer reuters",
+   "2026-11-09"
+  ],
+  [
+   "cop31 opens under climate and finance pressure",
+   "2026-11-09"
+  ],
+  [
+   "president of cop30 andré aranha corrêa do lago of brazil congratulates cop31 president murat kurum of turkey during the handover ceremony at the opening of cop31 on monday november 9 in antalya turkey photo by murad sezer reuters cop31",
+   "2026-11-09"
+  ]
+ ]
+}
