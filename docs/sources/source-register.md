@@ -1,4 +1,7 @@
 # Source Register
+
+> **News items from 2026-11-09 onward** are registered in `docs/intel/index.csv` (canonical news register, D63) and are not duplicated here. This table keeps research and reference sources.
+
 | Source | Organization | Date | Topic | URL | Reliability | Key Finding |
 |---|---|---|---|---|---|---|
 | Ethiopia set to be named host | Mongabay | 2025-11 | Host selection | https://news.mongabay.com/short-article/2025/11/ethiopia-set-to-be-named-host-of-2027-un-climate-talks/ | Medium-High (news) | Ethiopia endorsed by African Group |
@@ -137,3 +140,4 @@
 | COP-32 Ethiopia site (maintenance page) | cop32ethiopia.org | 2026-10-03 | Official digital presence | https://cop32ethiopia.org/ | Medium (operator unverified) | Still maintenance page with login UI; no app/registration/dates |
 | When Africa hosts the world: Ethiopia's COP32 | Capital Ethiopia | 2026-06-16 | Hosting context | https://capitalethiopia.com/2026/06/16/when-africa-hosts-the-world-ethiopias-cop32-and-the-partnership-shaping-it/ | Medium (press) | UAE/Masdar/AMEA support cited; no digital platform, dates or venue |
 | cic-26.com "COP-32 Ethiopia" website | Unknown operator (WordPress; placeholder "John Doe" team bios) | Fetched 2026-10-03 | COP32 web presence / palette reference | https://cic-26.com/ | Low — not verified as official; no UNFCCC/government attribution found | Says COP32 is planned for Nov 2027 in Addis Ababa, with AGN backing at COP30 (unverified). Lime-green logo. Re-check at the next Phase 0 pass to see if it is official. |
+| COP31 Türkiye Super APP launched | DHA / CNBC-e / Daily Sabah | 2026-11 | Host-country COP app precedent (R1) | https://www.dha.com.tr/gundem/bakan-kurum-cop31-turkiye-uygulamasini-paylasti-2973824 ; https://www.cnbce.com/cop31-iklim-zirvesi/cop31-icin-dijital-hazirlik-600den-fazla-etkinlik-tek-uygulamada-cop31-turkiye-super-app-kullanima-acildi-neler-sunuyor-h40802 ; https://www.dailysabah.com/turkiye/turkiye-advances-cop31-preparations-targets-global-impact/news | Medium-High (multiple news outlets) | Ministry-coordinated app on iOS/Android: programme, personal agenda, venue navigation, transport, dining, announcements (cop31.tr/app) |

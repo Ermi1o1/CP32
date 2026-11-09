@@ -1,4 +1,4 @@
-# Phase Status (updated 2026-10-03)
+# Phase Status (updated 2026-11-09)
 ## Documentation phases (project brief)
 | Phase | Status | Key files |
 |---|---|---|
@@ -50,6 +50,19 @@ The repo is now **private**, which GitHub Pages cannot serve from on a free plan
 `netlify.toml` publishes `prototype/` only, so `docs/`, `deliverables/` and `spikes/` stay off the
 public site, and it runs the `release.py --check` stale-cache guard as the build command.
 `.github/workflows/pages.yml` is retired; `check.yml` still runs on PRs.
+
+## Continuous intel watch (2026-11-09)
+`docs/intel/` is live: a daily GitHub Actions collector over RSS, Google News (EN+AM),
+YouTube, public Telegram channels, watched pages (`cop32ethiopia.org`, UNFCCC COP32,
+MinT) and the Apple app-search endpoint, delivered to Telegram with a GitHub issue on
+Tier-1 alerts (D63). Grading is automatic-floor only; `/intel-review` does the real
+grading and proposes document changes (D63a scopes D19 to product pipelines).
+This supersedes the quarterly re-check cadence in D1, which stays as a backstop.
+Zero Netlify impact — commits carry `[skip netlify]`.
+
+**Open:** feed URLs in `sources.yml` were authored unverified; run
+`collect.py --verify` and record the result. YouTube channel ids and Telegram
+handles are placeholders and those sources are disabled until filled in.
 
 ## Where the project stands in practice
 - Phase 21 is complete on a heuristic/sandbox basis (see table). Real card sort/tree test, real-device spikes (S1, S6), provider outreach (S5), native-speaker Amharic review and user testing remain open.

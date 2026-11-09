@@ -87,7 +87,7 @@ empty for days while COP32 is in the news, they are too tight.
 YouTube channel feeds, public Telegram channel pages, watched web pages,
 and the public Apple app-search endpoint.
 
-**Not automated — by decision (D62a):**
+**Not automated — by decision (D63a):**
 
 | Platform | Why not |
 |---|---|
@@ -102,7 +102,7 @@ about, and the honest answer would be bad. The upside is a few extra items a
 week. Not worth it.
 
 **If you are a future contributor reading this and thinking of adding one:
-don't.** Raise it with the founder and amend D62a first.
+don't.** Raise it with the founder and amend D63a first.
 
 ### Manual watchlist — 15 minutes, Sundays
 
@@ -127,7 +127,7 @@ worth keeping by running `/intel-review` and adding it by hand.
 | `queue/YYYY-MM-DD.json` | Raw machine output, unreviewed |
 | `daily/YYYY-MM-DD.md` | The digest exactly as delivered |
 | `items/YYYY/MM/*.md` | **Reviewed, graded items — the real archive** |
-| `index.csv` | One row per reviewed item. Canonical news register (D62) |
+| `index.csv` | One row per reviewed item. Canonical news register (D63) |
 | `watch/<key>/` | Watched-page text and a dated diff log |
 | `ALERTS.md` | Open Tier-1 items awaiting a decision |
 | `state.json` | Seen URLs, failure counters. Machine-managed; do not hand-edit |
@@ -173,7 +173,7 @@ see a login wall, it is not public — leave it out.
 | C1 | Never touches `prototype/` | D55–D59; the workflow stages only `docs/intel` and has a guard step |
 | C2 | Never changes `publish = "prototype"` in `netlify.toml` | D60; it is load-bearing |
 | C3 | Every automated commit says `[skip netlify]` | Protects the Netlify free-tier build minutes |
-| C4 | No scraping of TikTok, X, Facebook, Instagram; no bypassing any block | D62a; DPG readiness |
+| C4 | No scraping of TikTok, X, Facebook, Instagram; no bypassing any block | D63a; DPG readiness |
 | C5 | No full article text stored, ever | Copyright; D35 |
 | C6 | No images, PDFs or video committed | Repo size |
 | C7 | No paid service and no API that bills | R4, zero budget |

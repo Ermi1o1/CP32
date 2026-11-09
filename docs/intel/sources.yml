@@ -23,7 +23,7 @@
 #   max_items   cap per run (default 25)
 #   verified    date you last confirmed this URL returns a real feed
 #
-# NOT AUTOMATED, BY DECISION (see README "Manual watchlist" and D62a):
+# NOT AUTOMATED, BY DECISION (see README "Manual watchlist" and D63a):
 #   X/Twitter, Facebook, Instagram, TikTok. No free or permitted route exists.
 #   They are a 15-minute manual sweep on Sundays, checklist in README.md.
 

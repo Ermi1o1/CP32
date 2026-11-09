@@ -71,17 +71,20 @@ jobs:
           # Stage ONLY docs/intel. Never `git add -A` — prototype/ must never
           # be touched by this job (constraint C1).
           git add docs/intel
+          # Guard (C1): checks what is about to be committed, BEFORE the push,
+          # so a bad change can never reach main. Only files outside docs/intel
+          # fail it — and `git add docs/intel` cannot stage those, so this is a
+          # belt-and-braces check. It looks only at this job's own staged
+          # files, so a run with nothing to commit can never fail on someone
+          # else's earlier commit.
+          if git diff --staged --name-only | grep -v '^docs/intel/'; then
+            echo "::error::Staged files outside docs/intel (listed above). Refusing to commit."
+            exit 1
+          fi
           if git diff --staged --quiet; then
             echo "Nothing new to commit."
           else
             git commit -m "intel: $(date -u +%F) collection [skip netlify]"
             git push
           fi
-
-      - name: Guard — prototype must be untouched
-        run: |
-          if git diff --name-only HEAD~1 HEAD 2>/dev/null | grep -q '^prototype/'; then
-            echo "::error::This job modified prototype/. That must never happen."
-            exit 1
-          fi
-          echo "prototype/ untouched."
+          echo "Guard passed: only docs/intel was staged; prototype/ untouched."
