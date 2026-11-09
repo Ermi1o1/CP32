@@ -1,0 +1,167 @@
+# COP32 intel — tiering and automatic grading rules
+#
+# Everything here is deterministic string matching. No model inference runs in
+# the collector. Edit these lists to tune signal; re-run and watch the
+# "duplicates/irrelevant skipped" count in the digest.
+#
+# Matching is case-insensitive and whole-word.
+
+# ---------------------------------------------------------------------------
+# subject_terms — an item must mention one of these to reach Tier 1 or 2.
+# Without a subject hit, an item can only be Tier 3 or 4 (context/benchmark).
+# ---------------------------------------------------------------------------
+subject_terms:
+  - COP32
+  - COP 32
+  - COP-32
+  - ኮፕ32
+  - ኮፕ 32
+
+# ---------------------------------------------------------------------------
+# TIER 1 — project-critical. Pushed as an ALERT, appended to ALERTS.md.
+# These are the words that would appear in a story announcing the thing that
+# makes this project redundant, or the thing that unblocks it.
+# ---------------------------------------------------------------------------
+tier1_terms:
+  - app
+  - application
+  - mobile app
+  - super app
+  - platform
+  - portal
+  - website
+  - digital
+  - ICT
+  - tender
+  - RFP
+  - procurement
+  - bid
+  - contract award
+  - vendor
+  - supplier
+  - accreditation
+  - registration
+  - official dates
+  - venue
+  - media centre
+  - media center
+  - press centre
+  - volunteer programme
+  - volunteer program
+  - task force
+  - API
+  - data portal
+  - ድረ ገጽ          # website
+  - መተግበሪያ         # application
+  - ጨረታ            # tender
+
+# ---------------------------------------------------------------------------
+# TIER 2 — host-country preparation. Daily digest.
+# ---------------------------------------------------------------------------
+tier2_terms:
+  - preparation
+  - preparations
+  - committee
+  - steering committee
+  - subcommittee
+  - budget
+  - hotel
+  - hotels
+  - accommodation
+  - transport
+  - visa
+  - security
+  - logistics
+  - pavilion
+  - side event
+  - side events
+  - Addis Ababa
+  - Addis Abeba
+  - president-designate
+  - chief negotiator
+  - presidency
+  - host country
+  - delegates
+  - participants
+  - አዲስ አበባ
+  - ዝግጅት           # preparation
+
+# ---------------------------------------------------------------------------
+# TIER 3 — climate / negotiation context. Weekly roll-up, not a daily push.
+# ---------------------------------------------------------------------------
+tier3_terms:
+  - COP31
+  - COP 31
+  - climate finance
+  - adaptation finance
+  - loss and damage
+  - African Group of Negotiators
+  - AGN
+  - UNFCCC
+  - NDC
+  - Green Legacy
+  - Paris Agreement
+  - African Union
+  - just transition
+  - fossil fuel transition
+  - Antalya
+
+# ---------------------------------------------------------------------------
+# TIER 4 — benchmark watch. Feeds Phases 4 and 5.
+# ---------------------------------------------------------------------------
+tier4_terms:
+  - event app
+  - conference app
+  - visitor app
+  - Expo 2025
+  - Expo 2020
+  - Olympics app
+  - EventMobi
+  - Swapcard
+  - Whova
+  - Cvent
+  - Bizzabo
+  - event platform
+  - wayfinding
+  - digital twin
+  - offline maps
+
+# ---------------------------------------------------------------------------
+# opinion_markers — force grade D (analysis, not reportage).
+# ---------------------------------------------------------------------------
+opinion_markers:
+  - opinion
+  - op-ed
+  - editorial
+  - commentary
+  - analysis
+  - viewpoint
+  - "we must"
+  - "should use"
+  - column
+
+# ---------------------------------------------------------------------------
+# hard_claim_patterns — regular expressions.
+#
+# If a NON-OFFICIAL source states one of these, the item is forced to grade F
+# (needs verification) no matter how reputable the outlet. This is the rule
+# that stops "COP32 runs 8-19 November 2027" entering the archive as a fact
+# because an SEO blog said so.
+#
+# An official source is unaffected: it still grades B.
+# ---------------------------------------------------------------------------
+hard_claim_patterns:
+  # Date ranges: "8-19 November", "8 to 19 November"
+  - '\b\d{1,2}\s*(?:-|–|—|to)\s*\d{1,2}\s+(?:Nov|November)\b'
+  # Attendance figures: "50,000 participants", "80000 delegates"
+  - '\b\d{1,3}[,.]?\d{3}\s+(?:participants|delegates|attendees|visitors)\b'
+  - '\b(?:\d{2,3})[,.]?000\s+(?:participants|delegates|attendees)\b'
+  # Assertions of confirmation
+  - '\b(?:officially )?confirmed\s+(?:dates|venue|that)\b'
+  - '\bvenue\s+(?:is|will be|has been)\s+(?:confirmed|announced|set)\b'
+  - '\bdates\s+(?:are|have been)\s+(?:confirmed|announced|set|fixed)\b'
+  # Budget / money figures attached to COP32
+  - '\b(?:USD|\$|birr|ETB)\s?\d[\d,.]*\s?(?:million|billion|bn|m)\b'
+  # Claims of an official app or partnership existing
+  - '\bofficial\s+(?:COP32\s+)?(?:app|application|platform|portal)\b'
+  - '\b(?:signed|awarded)\s+(?:a\s+)?(?:contract|agreement|MoU)\b'
