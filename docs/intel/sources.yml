@@ -41,7 +41,7 @@ sources:
     trust: official
     tier_floor: 1
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
     notes: >
       As of 2026-10-03 this was a maintenance page with a login / lost-password
       UI. ANY change is project-critical: it is the most likely place an
@@ -54,23 +54,44 @@ sources:
     lang: en
     trust: official
     tier_floor: 1
-    enabled: true
+    enabled: false
     verified: unverified
     notes: >
-      unfccc.int has repeatedly refused automated fetches on this project.
-      If this FAILs on --verify, set enabled:false and rely on gnews_unfccc
-      plus a manual check. Do NOT try to work around the block.
+      https://unfccc.int/cop32 (and /cop-32) return 404 "Page not found" on 2026-11-09: no COP32 page
+      exists yet. Disabled; covered by gnews_unfccc_cop32. When UNFCCC publishes a COP32
+      page (cf. /cop31, /cop30, which exist), put its URL here and re-enable. unfccc.int
+      also intermittently serves short bot-check pages: do NOT try to work around that.
 
+  - key: gnews_unfccc_cop32
+    name: Google News — COP32 on unfccc.int
+    type: gnews
+    url: '"COP32" site:unfccc.int'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for unfccc_cop32 until a COP32 page exists.
   - key: unfccc_news
     name: UNFCCC newsroom
     type: rss
     url: https://unfccc.int/news/feed
     lang: en
     trust: official
-    enabled: true
+    enabled: false
     verified: unverified
-    notes: Feed URL guessed. Verify; alternatives are /rss/news.xml or none at all.
+    notes: >
+      No newsroom feed: /news/feed, /news/rss, /rss/news.xml are 404, /news has no feed tag,
+      and /rss.xml is a valid but EMPTY channel (0 items) on 2026-11-09. Disabled; covered by gnews_unfccc.
 
+  - key: gnews_unfccc
+    name: Google News — UNFCCC
+    type: gnews
+    url: 'site:unfccc.int'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for unfccc_news (no feed).
   - key: appstore_cop32
     name: Apple App Store search "COP32"
     type: apple_search
@@ -79,7 +100,7 @@ sources:
     trust: official
     tier_floor: 1
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
     notes: >
       Apple's public search endpoint, no key required. A COP32 app appearing
       here is the single highest-value trigger in the system (risk R1).
@@ -92,7 +113,7 @@ sources:
     trust: official
     tier_floor: 1
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: playstore_cop32
     name: Google Play search "COP32"
@@ -114,9 +135,23 @@ sources:
     url: https://mint.gov.et/
     lang: en
     trust: official
-    enabled: true
+    enabled: false
     verified: unverified
 
+    notes: >
+      Unreachable from cloud runners: connection refused/reset from GitHub Actions and from
+      a second network on 2026-11-09 (no feed paths reachable either). Disabled; covered by
+      gnews_mint. Re-test occasionally — it may be geo-restricted or down.
+
+  - key: gnews_mint
+    name: Google News — MinT (mint.gov.et)
+    type: gnews
+    url: 'site:mint.gov.et'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for mint_ethiopia (site unreachable from CI).
   - key: egp_ethiopia
     name: Ethiopian e-GP procurement portal
     type: page_watch
@@ -127,11 +162,20 @@ sources:
     enabled: false
     verified: unverified
     notes: >
-      Likely requires a session or a POST search, so a plain page watch may be
-      useless. DISABLED until someone confirms a stable public URL that lists
-      new notices. Until then this stays a manual monthly check — a COP32
-      digital tender appearing here would be a pivot-level event (R1).
+      SSL/connection errors from cloud runners on 2026-11-09, and the portal likely needs a
+      session or POST search anyway. DISABLED; gnews_egp catches pages Google indexes.
+      Still a manual monthly check — a COP32 digital tender here would be a pivot-level
+      event (R1).
 
+  - key: gnews_egp
+    name: Google News — e-GP portal
+    type: gnews
+    url: 'site:egp.gov.et'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Low-volume fallback for egp_ethiopia; keyword tiering filters it.
   # ======================================================================
   # ETHIOPIAN STATE MEDIA — grade floor C, flagged official_adjacent
   # ======================================================================
@@ -142,9 +186,23 @@ sources:
     url: https://www.ena.et/web/eng/rss
     lang: en
     trust: state_media
-    enabled: true
+    enabled: false
     verified: unverified
 
+    notes: >
+      No RSS feed exists: /web/eng/rss and /feed, /rss, /rss.xml, /feed/rss are all 404
+      and the pages carry no <link rel="alternate"> feed tag (checked 2026-11-09). Disabled;
+      covered by gnews_ena_en.
+
+  - key: gnews_ena_en
+    name: Google News — ENA (EN)
+    type: gnews
+    url: 'site:ena.et'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for ena_en (ENA has no feed).
   - key: fana_en
     name: Fana / FMC (EN)
     type: rss
@@ -152,7 +210,7 @@ sources:
     lang: en
     trust: state_media
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: amn_en
     name: Addis Media Network (EN)
@@ -161,7 +219,7 @@ sources:
     lang: en
     trust: state_media
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: ena_am
     name: ኢዜአ / ENA (AM)
@@ -169,9 +227,24 @@ sources:
     url: https://www.ena.et/web/amh/rss
     lang: am
     trust: state_media
-    enabled: true
+    enabled: false
     verified: unverified
 
+    notes: >
+      No RSS feed exists: /web/amh/rss and /feed, /rss, /rss.xml, /feed/rss are all 404
+      and the pages carry no <link rel="alternate"> feed tag (checked 2026-11-09). Disabled;
+      covered by gnews_ena_am.
+
+  - key: gnews_ena_am
+    name: Google News — ENA (AM)
+    type: gnews
+    url: 'site:ena.et'
+    gnews_locale: 'hl=am&gl=ET&ceid=ET:am'
+    lang: am
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for ena_am (ENA has no feed).
   - key: fana_am
     name: ፋና / Fana (AM)
     type: rss
@@ -179,7 +252,7 @@ sources:
     lang: am
     trust: state_media
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   # ======================================================================
   # INDEPENDENT ETHIOPIAN PRESS — grade floor C
@@ -191,22 +264,46 @@ sources:
     url: https://addisstandard.com/feed/
     lang: en
     trust: independent
-    enabled: true
+    enabled: false
     verified: unverified
     notes: >
-      Served a bot-detection block to a direct page fetch on 2026-11-09.
-      The RSS feed may still work. If the feed is blocked too, fall back to
-      the gnews queries — do NOT spoof a browser user agent.
+      Feed and site return a Cloudflare "Just a moment..." challenge (403) to our
+      identified user agent on 2026-11-09. Genuine block: do NOT spoof a browser or
+      solve the challenge. Disabled; covered by gnews_addisstandard.
+      Earlier note: Served a bot-detection block to a direct page fetch on 2026-11-09. The RSS feed may still work. If the feed is blocked too, fall back to the gnews queries — do NOT spoof a browser user agent.
 
+  - key: gnews_addisstandard
+    name: Google News — Addis Standard
+    type: gnews
+    url: 'site:addisstandard.com'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for addisstandard, whose own feed is blocked. Returned results on 2026-11-09.
   - key: reporter_et
     name: The Reporter Ethiopia
     type: rss
     url: https://www.thereporterethiopia.com/feed/
     lang: en
     trust: independent
-    enabled: true
+    enabled: false
     verified: unverified
 
+    notes: >
+      Feed and site return a Cloudflare "Just a moment..." challenge (403) to our
+      identified user agent on 2026-11-09. Genuine block: do NOT spoof a browser or
+      solve the challenge. Disabled; covered by gnews_reporter_et.
+
+  - key: gnews_reporter_et
+    name: Google News — The Reporter Ethiopia
+    type: gnews
+    url: 'site:thereporterethiopia.com'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for reporter_et, whose own feed is blocked. Returned results on 2026-11-09.
   - key: capital_et
     name: Capital Ethiopia
     type: rss
@@ -214,7 +311,7 @@ sources:
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: addisfortune
     name: Addis Fortune
@@ -223,7 +320,7 @@ sources:
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: ethiopianmonitor
     name: Ethiopian Monitor
@@ -232,18 +329,19 @@ sources:
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: shega
     name: Shega (Ethiopian tech)
     type: rss
-    url: https://shega.co/feed
+    url: https://shega.co/rss
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
-    notes: Best local source for an Ethiopian digital/ICT contract story.
-
+    verified: '2026-11-09'
+    notes: >
+      Best local source for an Ethiopian digital/ICT contract story.
+      /feed is 404; the real feed is /rss (30 items on 2026-11-09).
   # ======================================================================
   # CLIMATE / NEGOTIATION PRESS — mostly Tier 3
   # ======================================================================
@@ -255,7 +353,7 @@ sources:
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: carbonbrief
     name: Carbon Brief
@@ -264,7 +362,7 @@ sources:
     lang: en
     trust: independent
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: enb_iisd
     name: IISD Earth Negotiations Bulletin
@@ -272,10 +370,23 @@ sources:
     url: https://enb.iisd.org/rss.xml
     lang: en
     trust: independent
-    enabled: true
+    enabled: false
     verified: unverified
-    notes: The authoritative daily record of the negotiations. Highest value in this group.
+    notes: >
+      Feed and site return a Cloudflare "Just a moment..." challenge (403) to our
+      identified user agent on 2026-11-09. Genuine block: do NOT spoof a browser or
+      solve the challenge. Disabled; covered by gnews_enb_iisd.
+      Earlier note: The authoritative daily record of the negotiations. Highest value in this group.
 
+  - key: gnews_enb_iisd
+    name: Google News — IISD ENB
+    type: gnews
+    url: 'site:enb.iisd.org'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: '2026-11-09'
+    notes: Fallback for enb_iisd, whose own feed is blocked. Returned results on 2026-11-09.
   # ======================================================================
   # GOOGLE NEWS QUERIES — catches outlets with no feed
   # ======================================================================
@@ -287,7 +398,7 @@ sources:
     lang: en
     trust: aggregator
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: gnews_cop32_platform
     name: Google News — COP32 app/platform/tender
@@ -297,7 +408,7 @@ sources:
     trust: aggregator
     tier_floor: 1
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: gnews_cop32_logistics
     name: Google News — COP32 dates/venue/accreditation
@@ -306,7 +417,7 @@ sources:
     lang: en
     trust: aggregator
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: gnews_cop32_amharic
     name: Google News — COP32 (Amharic)
@@ -316,7 +427,7 @@ sources:
     lang: am
     trust: aggregator
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
 
   - key: gnews_cop31_app
     name: Google News — COP31 app (benchmark watch)
@@ -325,7 +436,7 @@ sources:
     lang: en
     trust: aggregator
     enabled: true
-    verified: unverified
+    verified: '2026-11-09'
     notes: Benchmark intelligence for Phases 4/5. Expect this to go quiet after Nov 2026.
 
   # ======================================================================
@@ -338,30 +449,36 @@ sources:
   - key: yt_unfccc
     name: UNFCCC (YouTube)
     type: youtube_channel
-    url: REPLACE_WITH_CHANNEL_ID
+    url: UCuLEr-GWiwCBB6zBDX3elOQ
     lang: en
     trust: official
-    enabled: false
-    verified: unverified
+    enabled: true
+    verified: '2026-11-09'
 
+    notes: >
+      Main "UN Climate Change" channel (canonical id of youtube.com/user/climateconference, linked from unfccc.int). A separate "UN Climate Change - Events" channel is UCJlvsGJAR8NsiyLzuBf_cQg if session streams are wanted.
   - key: yt_ena
     name: ENA (YouTube)
     type: youtube_channel
-    url: REPLACE_WITH_CHANNEL_ID
+    url: UCSjaw-eGJSkvcXHyTpQyT1Q
     lang: mixed
     trust: state_media
-    enabled: false
-    verified: unverified
+    enabled: true
+    verified: '2026-11-09'
 
+    notes: >
+      @EthiopianNewsAgency, feed title "Ethiopian News Agency (ENA)". Not @ENAEthiopia, which is a different, near-empty channel.
   - key: yt_fana
     name: Fana Television (YouTube)
     type: youtube_channel
-    url: REPLACE_WITH_CHANNEL_ID
+    url: UCZtXd8pSeqURf5MT2fqE51g
     lang: am
     trust: state_media
-    enabled: false
-    verified: unverified
+    enabled: true
+    verified: '2026-11-09'
 
+    notes: >
+      "Fana Television", linked from fanamc.com. Not UC4yEV6VBe0Emu8sMpyij0uQ, which is Fana Entertainment.
   # ======================================================================
   # TELEGRAM — PUBLIC channel preview pages only (t.me/s/<handle>)
   # ======================================================================
