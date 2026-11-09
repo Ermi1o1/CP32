@@ -327,17 +327,39 @@ def from_page_watch(src: dict, raw: bytes, state: dict) -> list[Item]:
 def from_apple_search(src: dict, raw: bytes, state: dict) -> list[Item]:
     """
     Apple's public search endpoint. Documented, free, no key.
-    Any app matching the term is a Tier 1 event.
+
+    IMPORTANT: iTunes search ORs the query terms and matches loosely, so
+    "COP32 Ethiopia" returns every Ethiopian app in the store. The first live
+    run (2026-11-09) produced 34 "NEW APP LISTING" Tier-1 alerts of which 31
+    were things like dating apps and radio players.
+
+    So a match regex is MANDATORY and is applied to the app's name and
+    publisher only -- never to its description, or any app whose blurb says
+    "climate" would alert. An app that does not match is still recorded as
+    seen, so it can never alert later either.
     """
     try:
         data = json.loads(raw.decode("utf-8", "replace"))
     except json.JSONDecodeError:
         return []
+
+    pattern = src.get("match") or r"\bCOP[\s\-_]?3[0-9]\b"
+    try:
+        rx = re.compile(pattern, re.I)
+    except re.error:
+        log(f"  !! bad match regex on {src['key']}: {pattern!r} — source skipped")
+        return []
+
     seen = set(state.get("app_ids", {}).get(src["key"], []))
-    fresh, out = [], []
-    for app in data.get("results", [])[:25]:
+    fresh, out, filtered = [], [], 0
+    for app in data.get("results", [])[:50]:
         aid = str(app.get("trackId"))
         fresh.append(aid)
+        name = app.get("trackName", "") or ""
+        seller = app.get("sellerName", "") or ""
+        if not rx.search(f"{name} {seller}"):
+            filtered += 1
+            continue
         if aid in seen:
             continue
         out.append(
@@ -353,6 +375,8 @@ def from_apple_search(src: dict, raw: bytes, state: dict) -> list[Item]:
             )
         )
     state.setdefault("app_ids", {})[src["key"]] = fresh
+    if filtered:
+        log(f"       {src['key']}: {filtered} store results ignored (name did not match {pattern})")
     return out
 
 
@@ -510,79 +534,173 @@ def dedupe(items: list[Item], state: dict) -> tuple[list[Item], int]:
 # --------------------------------------------------------------------------
 
 
-def render_digest(items: list[Item], dropped: int, problems: list[str]) -> str:
+GRADE_ICON = {"A": "✅", "B": "🏛", "C": "📰", "D": "💭", "F": "❓"}
+TIER_HEAD = {
+    1: ("🔴", "ALERTS — needs a decision"),
+    2: ("🇪🇹", "COP32 preparation"),
+    3: ("🌍", "Climate context"),
+    4: ("🔎", "Benchmark watch"),
+}
+
+
+def esc(s: str) -> str:
+    return html.escape(s or "", quote=False)
+
+
+def short_date(iso: str) -> str:
+    try:
+        return dt.date.fromisoformat(iso).strftime("%d %b")
+    except ValueError:
+        return iso
+
+
+def render_telegram(items: list[Item], counts: dict, problems: list[str]) -> tuple[str, list]:
+    """
+    Compact HTML for the phone. Titles are tappable links, so no raw URLs.
+    Tiers 1 and 2 are listed; 3 and 4 are summarised with a count and live in
+    the day's file. Returns (html_text, inline_keyboard_buttons).
+    """
     d = now_utc()
-    lines = [f"COP32 INTEL — {d:%a %d %b %Y}", ""]
+    by = {t: [i for i in items if i.tier == t] for t in (1, 2, 3, 4)}
+    out = [f"<b>COP32 INTEL</b> · {d:%a %d %b}"]
 
-    tier1 = [i for i in items if i.tier == 1]
-    tier2 = [i for i in items if i.tier == 2]
-    rest = [i for i in items if i.tier >= 3]
+    if by[1]:
+        icon, label = TIER_HEAD[1]
+        out += ["", f"{icon} <b>{label} ({len(by[1])})</b>"]
+        for n, it in enumerate(by[1], 1):
+            warn = " ⚑" if "hard_claim" in it.flags else ""
+            out.append(
+                f"{n}. <a href=\"{esc(it.url)}\">{esc(it.title[:110])}</a>{warn}\n"
+                f"    <i>{esc(it.outlet)} · {short_date(it.published)} · "
+                f"{GRADE_ICON.get(it.grade,'')}{it.grade}</i>"
+            )
 
-    def block(it: Item) -> list[str]:
-        tag = f"[{it.grade}]"
-        flag = " ⚑" if "hard_claim" in it.flags else ""
-        am = " (አማ)" if it.lang == "am" else ""
-        out = [f"  {tag} {it.outlet} · {it.published}{am}{flag}", f"      {it.title}"]
-        if it.excerpt_auto:
-            out.append(f"      {it.excerpt_auto[:180]}")
-        out.append(f"      {it.url}")
-        if it.also_seen:
-            out.append(f"      also: {', '.join(a['outlet'] for a in it.also_seen[:3])}")
-        return out
+    if by[2]:
+        icon, label = TIER_HEAD[2]
+        out += ["", f"{icon} <b>{label} ({len(by[2])})</b>"]
+        for it in by[2]:
+            warn = " ⚑" if "hard_claim" in it.flags else ""
+            am = " 🇪🇹አማ" if it.lang == "am" else ""
+            out.append(
+                f"• <a href=\"{esc(it.url)}\">{esc(it.title[:95])}</a>{warn}{am}\n"
+                f"    <i>{esc(it.outlet)} · {short_date(it.published)} · "
+                f"{GRADE_ICON.get(it.grade,'')}{it.grade}</i>"
+            )
 
-    if tier1:
-        lines.append(f"🔴 ALERTS — needs a decision ({len(tier1)})")
-        for it in tier1:
-            lines += block(it)
-        lines.append("")
-    if tier2:
-        lines.append(f"COP32 PREPARATION ({len(tier2)})")
-        for it in tier2:
-            lines += block(it)
-        lines.append("")
-    if rest:
-        lines.append(f"CONTEXT & BENCHMARKS ({len(rest)})")
-        for it in rest[:12]:
-            lines.append(f"  [{it.grade}] {it.outlet} · {it.title[:90]}")
-            lines.append(f"      {it.url}")
-        if len(rest) > 12:
-            lines.append(f"  … and {len(rest) - 12} more in the queue file")
-        lines.append("")
+    tail = []
+    if by[3]:
+        tail.append(f"🌍 {len(by[3])} context")
+    if by[4]:
+        tail.append(f"🔎 {len(by[4])} benchmark")
+    if tail:
+        out += ["", "· ".join(tail) + f" — in <code>docs/intel/daily/{today_str()}.md</code>"]
+
     if not items:
-        lines.append("Nothing new matched today.")
-        lines.append("")
+        out += ["", "Nothing new today."]
+
     if problems:
-        lines.append("SOURCES NEEDING ATTENTION")
-        lines += [f"  {p}" for p in problems]
-        lines.append("")
+        out += ["", f"⚠️ <b>{len(problems)} source(s) need attention</b>"]
+        out += [f"  <i>{esc(p)}</i>" for p in problems[:4]]
+        if len(problems) > 4:
+            out.append(f"  <i>…and {len(problems) - 4} more</i>")
 
-    lines.append(f"{dropped} duplicates/seen items skipped.")
-    lines.append("Grades are automatic FLOORS from source provenance, not verified facts.")
-    lines.append("⚑ = unverified hard claim (date / figure / venue). Run /intel-review to file.")
-    return "\n".join(lines)
+    skipped = counts["duplicates"] + counts["irrelevant"] + counts["stale"] + counts["trimmed"]
+    out += [
+        "",
+        f"<i>{skipped} filtered out "
+        f"({counts['irrelevant']} off-topic, {counts['duplicates']} seen, "
+        f"{counts['stale']} stale, {counts['trimmed']} trimmed).</i>",
+        "<i>Letters are provenance floors, not verified facts. "
+        "⚑ = unverified hard claim. Run /intel-review to file.</i>",
+    ]
+
+    buttons = [
+        [{"text": f"🔴 {it.outlet}: {it.title[:28]}", "url": it.url}]
+        for it in by[1][:6]
+        if it.url.startswith("http")
+    ]
+    return "\n".join(out), buttons
 
 
-def send_telegram(text: str) -> str:
+def render_file(items: list[Item], counts: dict, problems: list[str]) -> str:
+    """The full record for the repo. Everything, including tiers 3 and 4."""
+    d = now_utc()
+    out = [f"# COP32 intel — {d:%A %d %B %Y}", ""]
+    out.append(
+        f"{counts['kept']} kept · {counts['irrelevant']} off-topic · "
+        f"{counts['duplicates']} already seen · {counts['stale']} older than the age limit · "
+        f"{counts['trimmed']} trimmed from tiers 3-4."
+    )
+    out.append("")
+    out.append("Grades below are **automatic provenance floors**, not verified facts. "
+               "Only `/intel-review` assigns grade A. ⚑ marks an unverified hard claim.")
+
+    for tier in (1, 2, 3, 4):
+        group = [i for i in items if i.tier == tier]
+        if not group:
+            continue
+        icon, label = TIER_HEAD[tier]
+        out += ["", f"## {icon} {label} ({len(group)})", ""]
+        for it in group:
+            warn = " ⚑" if "hard_claim" in it.flags else ""
+            am = " `አማ`" if it.lang == "am" else ""
+            out.append(f"### [{it.grade}] {it.title}{warn}{am}")
+            out.append(f"*{it.outlet} · {it.published} · {it.source_key} · trust: {it.trust}*")
+            out.append("")
+            if it.excerpt_auto:
+                out.append(f"> {it.excerpt_auto}")
+                out.append("")
+            out.append(f"<{it.url}>")
+            if it.also_seen:
+                out.append("")
+                out.append("Also carried by: " + ", ".join(a["outlet"] for a in it.also_seen[:5]))
+            out.append(f"\n*Grade reason: {it.grade_reason}*")
+            out.append("")
+
+    if problems:
+        out += ["", "## ⚠️ Sources needing attention", ""]
+        out += [f"- {p}" for p in problems]
+
+    return "\n".join(out) + "\n"
+
+
+def send_telegram(text: str, buttons: list | None = None) -> str:
     token, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
     if not token or not chat:
         return "telegram: secrets not set, skipped"
     api = f"https://api.telegram.org/bot{token}/sendMessage"
+
+    # Split on blank lines so an entity is never cut in half -- a severed
+    # <a href> tag makes Telegram reject the whole message.
     chunks, buf = [], ""
-    for line in text.split("\n"):
-        if len(buf) + len(line) > 3800:
-            chunks.append(buf)
+    for para in text.split("\n\n"):
+        if len(buf) + len(para) > 3500 and buf:
+            chunks.append(buf.rstrip())
             buf = ""
-        buf += line + "\n"
-    chunks.append(buf)
-    for part in chunks:
+        buf += para + "\n\n"
+    if buf.strip():
+        chunks.append(buf.rstrip())
+
+    for n, part in enumerate(chunks):
+        payload = {
+            "chat_id": chat,
+            "text": part,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        }
+        if buttons and n == len(chunks) - 1:
+            payload["reply_markup"] = json.dumps({"inline_keyboard": buttons})
         try:
-            r = requests.post(
-                api,
-                data={"chat_id": chat, "text": part, "disable_web_page_preview": True},
-                timeout=TIMEOUT,
-            )
+            r = requests.post(api, data=payload, timeout=TIMEOUT)
             if r.status_code != 200:
-                return f"telegram: HTTP {r.status_code}"
+                # Fall back to plain text rather than losing the digest.
+                requests.post(
+                    api,
+                    data={"chat_id": chat, "text": re.sub(r"<[^>]+>", "", part),
+                          "disable_web_page_preview": True},
+                    timeout=TIMEOUT,
+                )
+                return f"telegram: HTML rejected (HTTP {r.status_code}), sent as plain text"
         except requests.RequestException as e:
             return f"telegram: {type(e).__name__}"
     return f"telegram: sent {len(chunks)} message(s)"
@@ -724,26 +842,62 @@ def main() -> int:
         print("Fix or set enabled:false for any FAIL or EMPTY not tagged [disabled]; fill in TODO placeholders.")
         return 0
 
-    # classify -> drop irrelevant
+    limits = keywords.get("limits", {})
+    max_age = int(limits.get("max_age_days", 14))
+    cutoff = (now_utc() - dt.timedelta(days=max_age)).strftime("%Y-%m-%d")
+
+    # classify -> drop irrelevant and stale
     classified: list[Item] = []
+    stale = 0
     for it in raw_items:
         src = next(s for s in sources if s["key"] == it.source_key)
+
+        # Age gate. Feeds and search endpoints happily serve items from years
+        # ago; the first live run surfaced an app released in 2005. Page
+        # changes are always "now", and an app listing is gated by its name
+        # match rather than its release date (a COP32 app could be listed
+        # quietly weeks before anyone writes about it).
+        if it.kind not in ("page_change", "app_listing") and it.published < cutoff:
+            stale += 1
+            continue
+
         kept = clf.classify(it, src)
         if kept:
             classified.append(kept)
-    irrelevant = len(raw_items) - len(classified)
+    irrelevant = len(raw_items) - len(classified) - stale
 
     items, dup = dedupe(classified, state)
-    items.sort(key=lambda i: (i.tier, i.published), reverse=False)
 
-    digest = render_digest(items, dup + irrelevant, problems)
+    # Volume caps. Tiers 1 and 2 are never trimmed -- those are the whole
+    # point. Tiers 3 and 4 are background and are capped at the newest few,
+    # because a digest nobody finishes reading is a digest nobody reads.
+    trimmed = 0
+    capped: list[Item] = []
+    for tier, cap in ((1, None), (2, None), (3, limits.get("tier3_max", 8)), (4, limits.get("tier4_max", 6))):
+        group = sorted([i for i in items if i.tier == tier], key=lambda i: i.published, reverse=True)
+        if cap is not None and len(group) > cap:
+            trimmed += len(group) - cap
+            group = group[:cap]
+        capped.extend(group)
+    items = capped
+    items.sort(key=lambda i: (i.tier, i.published))
+
+    counts = {
+        "kept": len(items),
+        "duplicates": dup,
+        "irrelevant": irrelevant,
+        "stale": stale,
+        "trimmed": trimmed,
+    }
+    tg_text, tg_buttons = render_telegram(items, counts, problems)
+    file_md = render_file(items, counts, problems)
 
     (QUEUE / f"{today_str()}.json").write_text(
         json.dumps(
             {
                 "run": now_utc().isoformat(),
                 "reviewed": False,
-                "counts": {"kept": len(items), "duplicates": dup, "irrelevant": irrelevant},
+                "counts": counts,
                 "problems": problems,
                 "items": [asdict(i) for i in items],
             },
@@ -752,19 +906,20 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
-    (DAILY / f"{today_str()}.md").write_text("```\n" + digest + "\n```\n", encoding="utf-8")
+    (DAILY / f"{today_str()}.md").write_text(file_md, encoding="utf-8")
     update_alerts_file([i for i in items if i.tier == 1])
     STATE_PATH.write_text(json.dumps(state, indent=1, ensure_ascii=False), encoding="utf-8")
 
-    print("\n" + digest + "\n")
+    # Plain-text echo for the Actions log (strip the HTML tags).
+    print("\n" + re.sub(r"<[^>]+>", "", tg_text) + "\n")
 
     if args.dry_run:
         log("dry run: nothing delivered")
         return 0
 
-    log(send_telegram(digest))
+    log(send_telegram(tg_text, tg_buttons))
     if any(i.tier == 1 for i in items) or os.environ.get("INTEL_ALWAYS_ISSUE") == "1":
-        log(open_github_issue(digest))
+        log(open_github_issue(re.sub(r"<[^>]+>", "", tg_text)))
     return 0
 
 

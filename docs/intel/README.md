@@ -150,6 +150,27 @@ workflow**, choosing `verify`, `dry-run` or `normal`.
 
 ---
 
+## Tuning volume
+
+`keywords.yml` has a `limits:` block:
+
+| Key | Default | What it does |
+|---|---|---|
+| `max_age_days` | 14 | Ignore anything published longer ago than this. Page changes and app listings are exempt — a COP32 app could sit in the store for weeks before anyone writes about it |
+| `tier3_max` | 8 | Cap on climate-context items per run |
+| `tier4_max` | 6 | Cap on benchmark items per run |
+
+**Tiers 1 and 2 are never trimmed.** If the digest feels thin, raise the caps.
+If it feels bulky, lower them — do not start filtering alerts instead.
+
+App-store sources need a `match` regex, applied to the app's **name and
+publisher only**, never its description. Without it, Apple's loose OR matching
+floods the alerts: the first live run (2026-11-09) produced 34 "new app"
+alerts of which 31 were unrelated — dating apps, radio players, an airline —
+because the query `"COP32 Ethiopia"` matched on the word *Ethiopia*. Matching
+the description instead would be just as bad: anything whose blurb mentions
+"climate" would alert.
+
 ## Adding a source
 
 1. Add an entry to `sources.yml`. Set `trust` honestly — it drives the grade floor.

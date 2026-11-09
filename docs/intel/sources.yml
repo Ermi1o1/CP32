@@ -94,6 +94,11 @@ sources:
     verified: '2026-11-09'
     notes: Fallback for unfccc_news (no feed).
   - key: appstore_cop32
+    # match: applied to the app NAME and PUBLISHER only, never the description.
+    # Without it, iTunes' loose OR matching returns unrelated apps -- the first
+    # live run alerted on 31 of them. Covers COP30-COP39 so a renamed or
+    # neighbouring-COP app is still caught.
+    match: '\bCOP[\s\-_]?3[0-9]\b'
     name: Apple App Store search "COP32"
     type: apple_search
     url: COP32
@@ -107,6 +112,7 @@ sources:
       here is the single highest-value trigger in the system (risk R1).
 
   - key: appstore_ethiopia_climate
+    match: '\bCOP[\s\-_]?3[0-9]\b'
     name: Apple App Store search "COP32 Ethiopia"
     type: apple_search
     url: COP32 Ethiopia

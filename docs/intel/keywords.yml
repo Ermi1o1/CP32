@@ -165,3 +165,18 @@ hard_claim_patterns:
   # Claims of an official app or partnership existing
   - '\bofficial\s+(?:COP32\s+)?(?:app|application|platform|portal)\b'
   - '\b(?:signed|awarded)\s+(?:a\s+)?(?:contract|agreement|MoU)\b'
+
+# ---------------------------------------------------------------------------
+# limits — volume control. Added 2026-11-09 after the first live run produced
+# a 188-item digest nobody could read.
+# ---------------------------------------------------------------------------
+limits:
+  # Ignore anything published longer ago than this. Feeds and search endpoints
+  # serve old items freely; the first run surfaced an app from 2005.
+  # Page changes and app listings are exempt (see collect.py).
+  max_age_days: 14
+
+  # Tiers 1 and 2 are never trimmed. Tiers 3 and 4 are background: keep the
+  # newest few and let the rest go. Raise these if the digest feels thin.
+  tier3_max: 8
+  tier4_max: 6
