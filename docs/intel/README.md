@@ -153,7 +153,7 @@ workflow**, choosing `verify`, `dry-run` or `normal`.
 ## Adding a source
 
 1. Add an entry to `sources.yml`. Set `trust` honestly — it drives the grade floor.
-2. Run `--verify`. If it FAILs, fix the URL or set `enabled: false`.
+2. Run `--verify`. If it shows FAIL or EMPTY (a feed that answers but has no items), fix the URL or set `enabled: false`. Rows tagged `[disabled]` are informational; `TODO` means an unfilled placeholder.
 3. Commit with `[skip netlify]` in the message.
 
 Finding a **YouTube** channel id: open the channel page, View Source, search

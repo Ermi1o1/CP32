@@ -6,8 +6,9 @@
 #
 #     python3 docs/intel/collect.py --verify
 #
-# That writes docs/intel/source-verification.txt showing OK / FAIL for each.
-# Fix or disable anything that FAILs. Record the date you verified it.
+# That writes docs/intel/source-verification.txt showing OK / EMPTY / FAIL / TODO
+# for each. Fix or disable any FAIL or EMPTY not tagged [disabled]; fill in TODOs.
+# Record the date you verified it. Full check done 2026-11-09.
 #
 # Fields:
 #   key         stable id, used in filenames and logs. Never reuse.
@@ -490,20 +491,26 @@ sources:
   - key: tg_ena
     name: ENA (Telegram)
     type: telegram
-    url: REPLACE_WITH_PUBLIC_HANDLE
+    url: EthiopianNewsA
     lang: am
     trust: state_media
-    enabled: false
-    verified: unverified
+    enabled: true
+    verified: '2026-11-09'
+    notes: >
+      Linked from ena.et itself (t.me/EthiopianNewsA, "Ethiopian News Agency", ~22K
+      subscribers). Not @EthiopianNewsAgency, a different small channel.
 
   - key: tg_fana
     name: Fana (Telegram)
     type: telegram
-    url: REPLACE_WITH_PUBLIC_HANDLE
+    url: fanatelevision
     lang: am
     trust: state_media
-    enabled: false
-    verified: unverified
+    enabled: true
+    verified: '2026-11-09'
+    notes: >
+      Linked from fanamc.com (t.me/fanatelevision, "Fana Media Corporation S.C (FMC)",
+      ~203K subscribers). Fana English is @FMCEnglish but is nearly inactive.
 
   - key: tg_addisstandard
     name: Addis Standard (Telegram)
@@ -513,3 +520,8 @@ sources:
     trust: independent
     enabled: false
     verified: unverified
+    notes: >
+      No official handle confirmed (addisstandard.com blocks us, so its own links
+      can't be checked). WARNING: @addisstandard / @AddisStandard is titled "Addis
+      not Standard" and is NOT the outlet. Leave disabled until the founder confirms
+      the real handle from the site in a browser.
