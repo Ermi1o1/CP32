@@ -114,4 +114,14 @@
 - R3: Branding/impersonation risk of "unofficial" app (must not imply endorsement).
 ## Re-check schedule
 - Re-check #1 done 2026-10-03 (no change; see research/reality-check.md)
-- Quarterly re-check of official COP32 digital announcements (next: 2027-01).
+- Re-check #2 done 2026-11-09 — verdict unchanged (no official COP32 app, portal or
+  tender), but R1 sharpened: Türkiye shipped a host-country "COP31 Türkiye Super APP"
+  (Ministry of Environment, Urbanisation and Climate Change) covering events, venue
+  navigation, transport and announcements, and (reported in the intel pack, not yet verified by us) the UNFCCC observer briefing separately
+  documents a "COP31 Host Country App" plus a pavilion-discovery platform. The Türkiye app itself is
+  confirmed by multiple news reports (DHA, CNBC-e, Daily Sabah; see source register). That is
+  broader than the COP28 host app D1 was based on, and it covers ground equivalent to
+  our Programme, Map and Updates tabs. Ethiopia has an equivalent Digital, ICT and
+  Utilities Task Force. Treat a host-country app as likely, not speculative.
+- Continuous automated watch from 2026-11-09 (D63) replaces the quarterly cadence.
+  Quarterly manual review retained as a backstop (next: 2027-01).
