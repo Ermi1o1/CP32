@@ -11,7 +11,7 @@ Turn the raw collector queue into graded, filed intelligence, and propose
 
 Read, in this order:
 
-1. `docs/decisions/log.md` — every decision, especially D1, D8, D19, D60, D61, D62.
+1. `docs/decisions/log.md` — every decision, especially D1, D8, D19, D60, D61, D62, D63.
 2. `docs/roadmap/phase-status.md` — where the project stands.
 3. `docs/intel/README.md` — how grades and tiers work here.
 4. `docs/research/reality-check.md` — the current R1 position.
@@ -113,7 +113,7 @@ Candidates:
 | COP32 dates, venue, attendance, structure | `docs/research/cop32-context.md` |
 | Another event's app or platform | `docs/research/benchmark-findings.md` |
 | A named official, ministry or committee | `docs/product/project-definition.md` §9 stakeholder map |
-| Any filed item | `docs/sources/source-register.md` — or a pointer to `index.csv` if D62 made that canonical |
+| Any filed item | `docs/sources/source-register.md` — or a pointer to `index.csv` if D63 made that canonical |
 
 Never write to `docs/decisions/log.md` yourself. Draft the decision text and
 let the founder paste it.
