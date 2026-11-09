@@ -992,9 +992,24 @@ Full reasoning and history: **D60** in `docs/decisions/log.md`.
 
 ## THERE IS A SECOND READER (claude.ai Project)
 
-A claude.ai Project, "COP32 Platform", is connected to this repo as **read-only**
-knowledge (D62; setup in `docs/operations/claude-project-setup.md`). It syncs
-manually and one-way — repo → Project — and cannot write here.
+A claude.ai Project, "COP32 Platform", is connected to this repo as
+knowledge (D62; setup in `docs/operations/claude-project-setup.md`). The
+**knowledge sync is manual and one-way** — repo → Project — so the Project's
+copy of these files can be stale, which is why its instructions require every
+substantive answer to open with the highest D-number and phase-status date it
+can see.
+
+**A Project chat can sometimes write here.** The knowledge sync cannot, but a
+Project session that attaches this repo through its GitHub tooling has the same
+commit and push access a Claude Code session has (first used 2026-11-09, commit
+`fdfac08`). Earlier wording here said a Project chat "cannot write here"; that
+was wrong, and nothing should be assumed safe on the strength of it. The rule
+that actually protects `main` is the one below, and it binds every surface.
+
+**Ask the founder before pushing.** No surface commits to `main` without the
+founder asking for that specific change in that conversation. Draft, show the
+diff, push on a yes. This matters most on `netlify.toml`, `prototype/` and
+anything the live site serves.
 
 What this means when you work in this repo:
 
@@ -1006,7 +1021,8 @@ What this means when you work in this repo:
   orientation layer for both surfaces.
 - **A decision made in a Project chat is not recorded** until someone carries it
   here. If the founder reports a conclusion from "the project", log it properly
-  rather than assuming it already exists.
+  rather than assuming it already exists — and check the log yourself rather
+  than trusting that a Project session already wrote it.
 
 ---
 

@@ -365,7 +365,11 @@ def from_apple_search(src: dict, raw: bytes, state: dict) -> list[Item]:
         out.append(
             Item(
                 url=app.get("trackViewUrl", ""),
-                title=f"NEW APP LISTING: {app.get('trackName','?')} — {app.get('sellerName','?')}",
+                # No "NEW APP LISTING:" prefix -- it ate 19 characters of every
+                # alert title and truncated the inline buttons mid-word. The
+                # kind is carried by the 📱 marker the renderers add and by the
+                # "Apple App Store" outlet line.
+                title=f"{app.get('trackName','?')} — {app.get('sellerName','?')}",
                 outlet="Apple App Store",
                 source_key=src["key"],
                 kind="app_listing",
@@ -547,6 +551,22 @@ def esc(s: str) -> str:
     return html.escape(s or "", quote=False)
 
 
+def clip(text: str, limit: int) -> str:
+    """Trim on a word boundary so titles and buttons never cut mid-word."""
+    text = (text or "").strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    space = cut.rfind(" ")
+    if space > limit * 0.6:
+        cut = cut[:space]
+    return cut.rstrip(" ,.;:—-") + "…"
+
+
+def kind_marker(it: "Item") -> str:
+    return {"app_listing": "📱 ", "page_change": "🔔 ", "telegram": "💬 ", "video": "▶️ "}.get(it.kind, "")
+
+
 def short_date(iso: str) -> str:
     try:
         return dt.date.fromisoformat(iso).strftime("%d %b")
@@ -570,7 +590,7 @@ def render_telegram(items: list[Item], counts: dict, problems: list[str]) -> tup
         for n, it in enumerate(by[1], 1):
             warn = " ⚑" if "hard_claim" in it.flags else ""
             out.append(
-                f"{n}. <a href=\"{esc(it.url)}\">{esc(it.title[:110])}</a>{warn}\n"
+                f"{n}. {kind_marker(it)}<a href=\"{esc(it.url)}\">{esc(clip(it.title, 105))}</a>{warn}\n"
                 f"    <i>{esc(it.outlet)} · {short_date(it.published)} · "
                 f"{GRADE_ICON.get(it.grade,'')}{it.grade}</i>"
             )
@@ -582,7 +602,7 @@ def render_telegram(items: list[Item], counts: dict, problems: list[str]) -> tup
             warn = " ⚑" if "hard_claim" in it.flags else ""
             am = " 🇪🇹አማ" if it.lang == "am" else ""
             out.append(
-                f"• <a href=\"{esc(it.url)}\">{esc(it.title[:95])}</a>{warn}{am}\n"
+                f"• {kind_marker(it)}<a href=\"{esc(it.url)}\">{esc(clip(it.title, 92))}</a>{warn}{am}\n"
                 f"    <i>{esc(it.outlet)} · {short_date(it.published)} · "
                 f"{GRADE_ICON.get(it.grade,'')}{it.grade}</i>"
             )
@@ -615,7 +635,7 @@ def render_telegram(items: list[Item], counts: dict, problems: list[str]) -> tup
     ]
 
     buttons = [
-        [{"text": f"🔴 {it.outlet}: {it.title[:28]}", "url": it.url}]
+        [{"text": f"{kind_marker(it) or '🔴 '}{clip(it.title, 36)}", "url": it.url}]
         for it in by[1][:6]
         if it.url.startswith("http")
     ]
@@ -644,7 +664,7 @@ def render_file(items: list[Item], counts: dict, problems: list[str]) -> str:
         for it in group:
             warn = " ⚑" if "hard_claim" in it.flags else ""
             am = " `አማ`" if it.lang == "am" else ""
-            out.append(f"### [{it.grade}] {it.title}{warn}{am}")
+            out.append(f"### [{it.grade}] {kind_marker(it)}{it.title}{warn}{am}")
             out.append(f"*{it.outlet} · {it.published} · {it.source_key} · trust: {it.trust}*")
             out.append("")
             if it.excerpt_auto:
