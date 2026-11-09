@@ -1,0 +1,398 @@
+# COP32 intel — source register
+#
+# IMPORTANT: the feed URLs below were NOT verified at authoring time (the
+# authoring sandbox had no outbound access to these hosts). Before trusting
+# any of them, run:
+#
+#     python3 docs/intel/collect.py --verify
+#
+# That writes docs/intel/source-verification.txt showing OK / FAIL for each.
+# Fix or disable anything that FAILs. Record the date you verified it.
+#
+# Fields:
+#   key         stable id, used in filenames and logs. Never reuse.
+#   name        human name, shown in the digest as the outlet
+#   type        rss | gnews | youtube_channel | telegram | page_watch | apple_search
+#   url         feed URL | gnews query | YouTube channel_id | telegram handle
+#               | page URL | apple search term
+#   lang        en | am | mixed
+#   trust       official | state_media | independent | aggregator | unknown
+#               -> this drives the automatic evidence-grade FLOOR. Set it honestly.
+#   tier_floor  1 forces every item from this source to Tier 1 (use sparingly)
+#   enabled     false keeps the entry documented but skipped
+#   max_items   cap per run (default 25)
+#   verified    date you last confirmed this URL returns a real feed
+#
+# NOT AUTOMATED, BY DECISION (see README "Manual watchlist" and D62a):
+#   X/Twitter, Facebook, Instagram, TikTok. No free or permitted route exists.
+#   They are a 15-minute manual sweep on Sundays, checklist in README.md.
+
+sources:
+
+  # ======================================================================
+  # OFFICIAL / PRIMARY  — highest value, grade floor B
+  # ======================================================================
+
+  - key: cop32ethiopia_home
+    name: cop32ethiopia.org
+    type: page_watch
+    url: https://cop32ethiopia.org/
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: true
+    verified: unverified
+    notes: >
+      As of 2026-10-03 this was a maintenance page with a login / lost-password
+      UI. ANY change is project-critical: it is the most likely place an
+      official COP32 portal or registration system first appears.
+
+  - key: unfccc_cop32
+    name: UNFCCC COP32 page
+    type: page_watch
+    url: https://unfccc.int/cop32
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: true
+    verified: unverified
+    notes: >
+      unfccc.int has repeatedly refused automated fetches on this project.
+      If this FAILs on --verify, set enabled:false and rely on gnews_unfccc
+      plus a manual check. Do NOT try to work around the block.
+
+  - key: unfccc_news
+    name: UNFCCC newsroom
+    type: rss
+    url: https://unfccc.int/news/feed
+    lang: en
+    trust: official
+    enabled: true
+    verified: unverified
+    notes: Feed URL guessed. Verify; alternatives are /rss/news.xml or none at all.
+
+  - key: appstore_cop32
+    name: Apple App Store search "COP32"
+    type: apple_search
+    url: COP32
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: true
+    verified: unverified
+    notes: >
+      Apple's public search endpoint, no key required. A COP32 app appearing
+      here is the single highest-value trigger in the system (risk R1).
+
+  - key: appstore_ethiopia_climate
+    name: Apple App Store search "COP32 Ethiopia"
+    type: apple_search
+    url: COP32 Ethiopia
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: true
+    verified: unverified
+
+  - key: playstore_cop32
+    name: Google Play search "COP32"
+    type: page_watch
+    url: https://play.google.com/store/search?q=COP32&c=apps
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: false
+    verified: unverified
+    notes: >
+      No official Play search API. This page is JavaScript-heavy and may
+      produce noisy diffs. Left DISABLED by default. Enable only if --verify
+      shows a stable text extraction; otherwise check Play manually each month.
+
+  - key: mint_ethiopia
+    name: Ministry of Innovation and Technology
+    type: page_watch
+    url: https://mint.gov.et/
+    lang: en
+    trust: official
+    enabled: true
+    verified: unverified
+
+  - key: egp_ethiopia
+    name: Ethiopian e-GP procurement portal
+    type: page_watch
+    url: https://www.egp.gov.et/
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: false
+    verified: unverified
+    notes: >
+      Likely requires a session or a POST search, so a plain page watch may be
+      useless. DISABLED until someone confirms a stable public URL that lists
+      new notices. Until then this stays a manual monthly check — a COP32
+      digital tender appearing here would be a pivot-level event (R1).
+
+  # ======================================================================
+  # ETHIOPIAN STATE MEDIA — grade floor C, flagged official_adjacent
+  # ======================================================================
+
+  - key: ena_en
+    name: Ethiopian News Agency (EN)
+    type: rss
+    url: https://www.ena.et/web/eng/rss
+    lang: en
+    trust: state_media
+    enabled: true
+    verified: unverified
+
+  - key: fana_en
+    name: Fana / FMC (EN)
+    type: rss
+    url: https://www.fanamc.com/english/feed/
+    lang: en
+    trust: state_media
+    enabled: true
+    verified: unverified
+
+  - key: amn_en
+    name: Addis Media Network (EN)
+    type: rss
+    url: https://www.amn.gov.et/en/feed/
+    lang: en
+    trust: state_media
+    enabled: true
+    verified: unverified
+
+  - key: ena_am
+    name: ኢዜአ / ENA (AM)
+    type: rss
+    url: https://www.ena.et/web/amh/rss
+    lang: am
+    trust: state_media
+    enabled: true
+    verified: unverified
+
+  - key: fana_am
+    name: ፋና / Fana (AM)
+    type: rss
+    url: https://www.fanamc.com/feed/
+    lang: am
+    trust: state_media
+    enabled: true
+    verified: unverified
+
+  # ======================================================================
+  # INDEPENDENT ETHIOPIAN PRESS — grade floor C
+  # ======================================================================
+
+  - key: addisstandard
+    name: Addis Standard
+    type: rss
+    url: https://addisstandard.com/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+    notes: >
+      Served a bot-detection block to a direct page fetch on 2026-11-09.
+      The RSS feed may still work. If the feed is blocked too, fall back to
+      the gnews queries — do NOT spoof a browser user agent.
+
+  - key: reporter_et
+    name: The Reporter Ethiopia
+    type: rss
+    url: https://www.thereporterethiopia.com/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: capital_et
+    name: Capital Ethiopia
+    type: rss
+    url: https://capitalethiopia.com/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: addisfortune
+    name: Addis Fortune
+    type: rss
+    url: https://addisfortune.news/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: ethiopianmonitor
+    name: Ethiopian Monitor
+    type: rss
+    url: https://ethiopianmonitor.com/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: shega
+    name: Shega (Ethiopian tech)
+    type: rss
+    url: https://shega.co/feed
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+    notes: Best local source for an Ethiopian digital/ICT contract story.
+
+  # ======================================================================
+  # CLIMATE / NEGOTIATION PRESS — mostly Tier 3
+  # ======================================================================
+
+  - key: climatehome
+    name: Climate Home News
+    type: rss
+    url: https://www.climatechangenews.com/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: carbonbrief
+    name: Carbon Brief
+    type: rss
+    url: https://www.carbonbrief.org/feed/
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+
+  - key: enb_iisd
+    name: IISD Earth Negotiations Bulletin
+    type: rss
+    url: https://enb.iisd.org/rss.xml
+    lang: en
+    trust: independent
+    enabled: true
+    verified: unverified
+    notes: The authoritative daily record of the negotiations. Highest value in this group.
+
+  # ======================================================================
+  # GOOGLE NEWS QUERIES — catches outlets with no feed
+  # ======================================================================
+
+  - key: gnews_cop32_ethiopia
+    name: Google News — COP32 Ethiopia
+    type: gnews
+    url: '"COP32" Ethiopia'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: unverified
+
+  - key: gnews_cop32_platform
+    name: Google News — COP32 app/platform/tender
+    type: gnews
+    url: '"COP32" (app OR platform OR portal OR website OR tender OR procurement)'
+    lang: en
+    trust: aggregator
+    tier_floor: 1
+    enabled: true
+    verified: unverified
+
+  - key: gnews_cop32_logistics
+    name: Google News — COP32 dates/venue/accreditation
+    type: gnews
+    url: '"COP32" (dates OR venue OR accreditation OR registration OR "Addis Ababa")'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: unverified
+
+  - key: gnews_cop32_amharic
+    name: Google News — COP32 (Amharic)
+    type: gnews
+    url: 'COP32 ኢትዮጵያ'
+    gnews_locale: 'hl=am&gl=ET&ceid=ET:am'
+    lang: am
+    trust: aggregator
+    enabled: true
+    verified: unverified
+
+  - key: gnews_cop31_app
+    name: Google News — COP31 app (benchmark watch)
+    type: gnews
+    url: '"COP31" (app OR platform OR "super app")'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: unverified
+    notes: Benchmark intelligence for Phases 4/5. Expect this to go quiet after Nov 2026.
+
+  # ======================================================================
+  # YOUTUBE — official per-channel XML feeds, no API key
+  # ======================================================================
+  # To fill in a channel_id: open the channel page, View Source, search for
+  # "channelId" — it looks like UCxxxxxxxxxxxxxxxxxxxxxx. A @handle will NOT
+  # work in this URL. All DISABLED until their ids are filled in.
+
+  - key: yt_unfccc
+    name: UNFCCC (YouTube)
+    type: youtube_channel
+    url: REPLACE_WITH_CHANNEL_ID
+    lang: en
+    trust: official
+    enabled: false
+    verified: unverified
+
+  - key: yt_ena
+    name: ENA (YouTube)
+    type: youtube_channel
+    url: REPLACE_WITH_CHANNEL_ID
+    lang: mixed
+    trust: state_media
+    enabled: false
+    verified: unverified
+
+  - key: yt_fana
+    name: Fana Television (YouTube)
+    type: youtube_channel
+    url: REPLACE_WITH_CHANNEL_ID
+    lang: am
+    trust: state_media
+    enabled: false
+    verified: unverified
+
+  # ======================================================================
+  # TELEGRAM — PUBLIC channel preview pages only (t.me/s/<handle>)
+  # ======================================================================
+  # No login, no API key, no private data, no personal messages. Public
+  # broadcast channels only. Confirm each handle by opening t.me/s/<handle>
+  # in a browser first — an invented handle silently returns nothing.
+  # All DISABLED until their handles are confirmed.
+
+  - key: tg_ena
+    name: ENA (Telegram)
+    type: telegram
+    url: REPLACE_WITH_PUBLIC_HANDLE
+    lang: am
+    trust: state_media
+    enabled: false
+    verified: unverified
+
+  - key: tg_fana
+    name: Fana (Telegram)
+    type: telegram
+    url: REPLACE_WITH_PUBLIC_HANDLE
+    lang: am
+    trust: state_media
+    enabled: false
+    verified: unverified
+
+  - key: tg_addisstandard
+    name: Addis Standard (Telegram)
+    type: telegram
+    url: REPLACE_WITH_PUBLIC_HANDLE
+    lang: en
+    trust: independent
+    enabled: false
+    verified: unverified
