@@ -23,7 +23,17 @@
 # None of the stripped files are referenced by index.html, app.js or sw.js, so
 # removing them cannot break the service worker install. Re-verify that before
 # adding anything to the list.
+#
+# WHY the ignore command:
+# Netlify skips the build when this command exits 0. It exits 0 only when
+# nothing outside docs/, deliverables/ and spikes/ changed since the LAST
+# DEPLOYED commit ($CACHED_COMMIT_REF), so the daily intel commits and doc-only
+# pushes never use build minutes. It compares against the last deploy, not
+# HEAD^, so a push that holds a prototype change plus a later docs-only commit
+# still builds. If $CACHED_COMMIT_REF is missing, git errors (non-zero) and the
+# build runs, so it fails open, never closed.
 
 [build]
   publish = "prototype"
   command = "python3 prototype/release.py --check && rm -f prototype/README.md prototype/build.py prototype/release.py"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!docs' ':!deliverables' ':!spikes'"
