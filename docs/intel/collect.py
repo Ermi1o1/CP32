@@ -241,12 +241,13 @@ def from_feed(src: dict, raw: bytes) -> list[Item]:
     return out
 
 
-TG_MSG = re.compile(
-    r'<div class="tgme_widget_message_wrap.*?data-post="(?P<post>[^"]+)".*?'
-    r'(?:<div class="tgme_widget_message_text[^"]*"[^>]*>(?P<text>.*?)</div>)?'
-    r'.*?<time datetime="(?P<ts>[^"]+)"',
-    re.S,
-)
+# Parsed one message block at a time. A single regex with an OPTIONAL text
+# group never captured the text (the optional group matched empty right after
+# data-post), so every post was dropped as text-less. Fixed 2026-11-09.
+TG_SPLIT = re.compile(r'<div class="tgme_widget_message_wrap')
+TG_POST = re.compile(r'data-post="([^"]+)"')
+TG_TEXT = re.compile(r'<div class="tgme_widget_message_text[^"]*"[^>]*>(.*?)</div>', re.S)
+TG_TS = re.compile(r'<time datetime="([^"]+)"')
 
 
 def from_telegram(src: dict, raw: bytes) -> list[Item]:
@@ -256,18 +257,22 @@ def from_telegram(src: dict, raw: bytes) -> list[Item]:
     """
     page = raw.decode("utf-8", "replace")
     out: list[Item] = []
-    for m in list(TG_MSG.finditer(page))[-src.get("max_items", 20):]:
-        text = strip_tags(m.group("text") or "")
+    blocks = TG_SPLIT.split(page)[1:]
+    for block in blocks[-src.get("max_items", 20):]:
+        post, tm, ts = TG_POST.search(block), TG_TEXT.search(block), TG_TS.search(block)
+        if not post or not tm:
+            continue            # media-only post or unexpected markup
+        text = strip_tags(tm.group(1))
         if not text:
             continue
         out.append(
             Item(
-                url=f"https://t.me/{m.group('post')}",
+                url=f"https://t.me/{post.group(1)}",
                 title=text[:140],
                 outlet=src.get("name", src["key"]),
                 source_key=src["key"],
                 kind="telegram",
-                published=(m.group("ts") or "")[:10] or today_str(),
+                published=(ts.group(1) if ts else "")[:10] or today_str(),
                 excerpt_auto=text[:EXCERPT_CAP],
             )
         )
@@ -669,9 +674,17 @@ def main() -> int:
     fails = state.setdefault("fail_counts", {})
 
     for src in sources:
-        if not src.get("enabled", True) and not args.verify:
+        enabled = src.get("enabled", True)
+        if not enabled and not args.verify:
             continue
+        # In --verify, disabled sources are still probed (so they can be
+        # re-checked) but tagged, so their FAILs aren't mistaken for live ones.
+        off = "" if enabled else "  [disabled]"
         url = build_url(src)
+        if "REPLACE_WITH" in str(src.get("url", "")):
+            # Unfilled placeholder: probing it proves nothing.
+            verify_rows.append(f"TODO  {src['key']:22} {'placeholder':16} fill in url in sources.yml{off}")
+            continue
         body, status = fetcher.get(url)
 
         if status != "ok":
@@ -680,7 +693,7 @@ def main() -> int:
             if fails[src["key"]] >= FAIL_LIMIT:
                 note += " — AUTO-DISABLED, set enabled:false or fix the URL"
             problems.append(note)
-            verify_rows.append(f"FAIL  {src['key']:22} {status:16} {url[:70]}")
+            verify_rows.append(f"FAIL  {src['key']:22} {status:16} {url[:70]}{off}")
             log(f"  fail {src['key']}: {status}")
             continue
 
@@ -690,10 +703,14 @@ def main() -> int:
             found = fn(src, body, state) if src["type"] in ("page_watch", "apple_search") else fn(src, body)
         except Exception as e:                                  # noqa: BLE001
             problems.append(f"{src['key']} — parse error {type(e).__name__}")
-            verify_rows.append(f"ERR   {src['key']:22} parse:{type(e).__name__}")
+            verify_rows.append(f"ERR   {src['key']:22} parse:{type(e).__name__}{off}")
             continue
 
-        verify_rows.append(f"OK    {src['key']:22} items={len(found):<4} {url[:70]}")
+        # A feed that answers but yields nothing is not a working feed (e.g. an
+        # HTML page served at a feed URL, or an empty channel). Page watches
+        # legitimately report 0 items when nothing changed, so they stay OK.
+        verdict = "OK  " if found or src["type"] == "page_watch" else "EMPTY"
+        verify_rows.append(f"{verdict:5} {src['key']:22} items={len(found):<4} {url[:70]}{off}")
         log(f"  ok   {src['key']}: {len(found)} raw")
         raw_items.extend(found)
 
@@ -704,7 +721,7 @@ def main() -> int:
         (ROOT / "source-verification.txt").write_text(report + "\n", encoding="utf-8")
         print("\n" + report)
         print("\nWritten to docs/intel/source-verification.txt")
-        print("Set enabled:false in sources.yml for anything that FAILs, or fix its URL.")
+        print("Fix or set enabled:false for any FAIL or EMPTY not tagged [disabled]; fill in TODO placeholders.")
         return 0
 
     # classify -> drop irrelevant
