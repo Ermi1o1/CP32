@@ -1,0 +1,422 @@
+{
+  "run": "2026-11-10T11:27:53.307823+00:00",
+  "reviewed": false,
+  "counts": {
+    "kept": 16,
+    "duplicates": 71,
+    "irrelevant": 180,
+    "stale": 211,
+    "trimmed": 17
+  },
+  "problems": [
+    "amn_en — error:ReadTimeout (1 consecutive)"
+  ],
+  "items": [
+    {
+      "id": "0a0c436fcde006d8",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZkhBSmNVR2RBY1Q0aURyWFhqQVVtVjhIQzhZNm83THpUVXBxN1hBZ2FIaUpuZmdhc21VdXFtSkdQMWt3SnM2ZmNoTllua3FOOWY2ZURKVTNzYUpPZW93TXJTQURCU0VsTGVGVXF5TDlSSmJzdjhGYjNheFFGaEZlcXg2X3RUQUdX?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZkhBSmNVR2RBY1Q0aURyWFhqQVVtVjhIQzhZNm83THpUVXBxN1hBZ2FIaUpuZmdhc21VdXFtSkdQMWt3SnM2ZmNoTllua3FOOWY2ZURKVTNzYUpPZW93TXJTQURCU0VsTGVGVXF5TDlSSmJzdjhGYjNheFFGaEZlcXg2X3RUQUdX?oc=5",
+      "title": "Ethiopia opens pavilion at COP31 as preparations accelerate for COP32 in Addis Ababa",
+      "outlet": "the afro times",
+      "source_key": "gnews_cop32_logistics",
+      "kind": "article",
+      "published": "2026-11-08",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "addis ababa",
+        "cop31",
+        "pavilion",
+        "preparations"
+      ],
+      "excerpt_auto": "Ethiopia opens pavilion at COP31 as preparations accelerate for COP32 in Addis Ababa the afro times",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "8ac8bbfcc0e4875f",
+      "url": "https://www.fanamc.com/english/ethiopia-and-un-weather-agency-explore-climate-observation-data-equity-cooperation-ahead-of-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-and-un-weather-agency-explore-climate-observation-data-equity-cooperation-ahead-of-cop32",
+      "url_canonical": "https://fanamc.com/english/ethiopia-and-un-weather-agency-explore-climate-observation-data-equity-cooperation-ahead-of-cop32",
+      "title": "Ethiopia and UN Weather Agency Explore Climate Observation, Data Equity Cooperation Ahead of COP32",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa"
+      ],
+      "excerpt_auto": "Addis Ababa, November 10, 2026 (FMC) – Ethiopia’s Minister of National Strategy, Bereket Fesehatsion, held discussions with World Meteorological Organization (WMO) Secretary-General Prof. Celeste Saulo on strengthening cooperation in climate observations, early warning systems and equitable access t",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "ccc524469a0186c2",
+      "url": "https://www.fanamc.com/english/cop31-must-translate-global-climate-commitments-into-concrete-progress-on-mitigation-adaptation-and-finance-foreign-minister/?utm_source=rss&utm_medium=rss&utm_campaign=cop31-must-translate-global-climate-commitments-into-concrete-progress-on-mitigation-adaptation-and-finance-foreign-minister",
+      "url_canonical": "https://fanamc.com/english/cop31-must-translate-global-climate-commitments-into-concrete-progress-on-mitigation-adaptation-and-finance-foreign-minister",
+      "title": "COP31 Must Translate Global Climate Commitments into Concrete Progress on Mitigation, Adaptation and Finance: Foreign Minister",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "cop31",
+        "presidency"
+      ],
+      "excerpt_auto": "Addis Ababa, November 10, 2026 (FMC) – Rebuilding confidence in multilateral climate cooperation through tangible delivery, inclusive processes and outcomes that connect global ambition with national implementation is a central priority for Ethiopia as it prepares to assume the COP32 presidency, For",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "82db4f8fec37699f",
+      "url": "https://www.youtube.com/watch?v=OlVJFo_Kp2Y",
+      "url_canonical": "https://youtube.com/watch?v=OlVJFo_Kp2Y",
+      "title": "ኢትዮጵያ በCOP31 @ethiopiannewsagency",
+      "outlet": "ENA (YouTube)",
+      "source_key": "yt_ena",
+      "kind": "video",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "የኢትዮጵያ ልዑካን ቡድን በዓለም አቀፍ የአየር ንብረት መድረክ ላይ 🤝 ትስስር፣ አጋርነት እና ዘላቂና ተግባራዊ እርምጃ! #COP31 #Ethiopia #COP32 #ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "b9c45811c880a2ae",
+      "url": "https://t.me/EthiopianNewsA/30941",
+      "url_canonical": "https://t.me/EthiopianNewsA/30941",
+      "title": "የውጭ ጉዳይ ሚኒስትር እና የኮፕ32 ፕሬዝዳንት ጌዲዮን ጢሞቴዎስ (ዶ/ር) በCOP31 ፕሌናሪ ተገኝተው ገለጻ አደረጉ። የባለብዙ ወገን የአየር ንብረት ትብብርን ማጠናከር፣ አተገባበርን ማፋጠን እና የአየር ንብረት ፋይናንስ ",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "የውጭ ጉዳይ ሚኒስትር እና የኮፕ32 ፕሬዝዳንት ጌዲዮን ጢሞቴዎስ (ዶ/ር) በCOP31 ፕሌናሪ ተገኝተው ገለጻ አደረጉ። የባለብዙ ወገን የአየር ንብረት ትብብርን ማጠናከር፣ አተገባበርን ማፋጠን እና የአየር ንብረት ፋይናንስ ክፍተቶችን ማድረስ እንደሚገባ አጽንኦት ሰጥተዋል። እየመጣ ያለው የCOP32 ፕሬዝዳንትነት ኢትዮጵያ ሁሉንም ፓርቲዎች ለማገልገል ያላትን ቁርጠኝነት አረጋግጣለች ፍትሃዊ፣ ግልጽና ሁሉን አቀፍ አሰራርን ለማመቻቸት የአፍሪካን ተሞክሮ በመሳብ የጋራ የአየር ን",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "f2e5c41ada8c2fa7",
+      "url": "https://t.me/EthiopianNewsA/30943",
+      "url_canonical": "https://t.me/EthiopianNewsA/30943",
+      "title": "ኢትዮጵያ በCOP31 የኢትዮጵያ ልዑካን ቡድን አሳታፊ፣ ግንኙነት እና የአየር ንብረት እርምጃን ከፍ የሚያደርግ #COP31 #Ethiopia #COP32",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "ኢትዮጵያ በCOP31 የኢትዮጵያ ልዑካን ቡድን አሳታፊ፣ ግንኙነት እና የአየር ንብረት እርምጃን ከፍ የሚያደርግ #COP31 #Ethiopia #COP32",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "580875cc1441e139",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tYldWTTdrcnU5M1RWN1hLdHB5ZktGVzhvR1F3OGxVSnRpRUFHblNBd1hRRG1NUHlJbU16bzZwTWJpNFZ5eXA5eWg1VDFvcjJMdmc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9tYldWTTdrcnU5M1RWN1hLdHB5ZktGVzhvR1F3OGxVSnRpRUFHblNBd1hRRG1NUHlJbU16bzZwTWJpNFZ5eXA5eWg1VDFvcjJMdmc?oc=5",
+      "title": "Ethiopia, Nepal Explore Stronger Climate Partnership Ahead of COP32",
+      "outlet": "ENA English",
+      "source_key": "gnews_ena_en",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia, Nepal Explore Stronger Climate Partnership Ahead of COP32 ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "2866a0d9f84589c6",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2RmQl9lOEJIQnBOSE9RQmRhVGFmQ2hrcVpRckVkMFRSMmRELV9kZU9vdmJoek95WTdxeF9DUE1CSzZHX21iVG0xaFVFa25YbzNtOXhoOG1GeEJHVllabnByRFpyZFdKbEpHNXhnR04walBfWWNMYkxuZ0ZvcGFaaU9RWVlCNU9wLVk2LXU2QmhTQVVsYkNhY0JxdWRpaExwUTlDTTkwRFVsMS1peWpFWHp2TlN2NHJncmRHTTJ6Z2l1QQ?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2RmQl9lOEJIQnBOSE9RQmRhVGFmQ2hrcVpRckVkMFRSMmRELV9kZU9vdmJoek95WTdxeF9DUE1CSzZHX21iVG0xaFVFa25YbzNtOXhoOG1GeEJHVllabnByRFpyZFdKbEpHNXhnR04walBfWWNMYkxuZ0ZvcGFaaU9RWVlCNU9wLVk2LXU2QmhTQVVsYkNhY0JxdWRpaExwUTlDTTkwRFVsMS1peWpFWHp2TlN2NHJncmRHTTJ6Z2l1QQ?oc=5",
+      "title": "From Antalya to Addis: Ethiopia Unveils COP31 Pavilion as It Prepares to Host COP32 Climate Summit",
+      "outlet": "ethiopiatoday.net",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "antalya",
+        "cop31",
+        "pavilion"
+      ],
+      "excerpt_auto": "From Antalya to Addis: Ethiopia Unveils COP31 Pavilion as It Prepares to Host COP32 Climate Summit ethiopiatoday.net",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "dcb875363d1d66b9",
+      "url": "https://www.youtube.com/watch?v=-pkb9b8f9Gs",
+      "url_canonical": "https://youtube.com/watch?v=-pkb9b8f9Gs",
+      "title": "🔴 #COP31 Press Conference",
+      "outlet": "UNFCCC (YouTube)",
+      "source_key": "yt_unfccc",
+      "kind": "video",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "official",
+      "tier": 3,
+      "grade": "B",
+      "grade_reason": "published on an official domain",
+      "flags": [],
+      "matched": [
+        "cop31",
+        "unfccc"
+      ],
+      "excerpt_auto": "Twitter ► https://twitter.com/UNFCCC Instagram ► https://www.instagram.com/UNclimatechange/ TikTok ► https://www.tiktok.com/@unclimatechange Facebook ► https://www.facebook.com/UNclimatechange The UNFCCC secretariat (UN Climate Change) is the United Nations entity tasked with supporting the global r",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "fa5bc3c832903749",
+      "url": "https://www.youtube.com/watch?v=VUsmbl54-jg",
+      "url_canonical": "https://youtube.com/watch?v=VUsmbl54-jg",
+      "title": "በCOP31 የኢትዮጵያን ፓቪልዮን ይጎብኙ!/የፓቪሊዮን መርሃግብር: https://ethiopiapavilion.info/",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "9f539fea0698e556",
+      "url": "https://www.youtube.com/watch?v=FsKqNeM2nBo",
+      "url_canonical": "https://youtube.com/watch?v=FsKqNeM2nBo",
+      "title": "የውጭ ጉዳይ ሚኒስትር እና የኮፕ- 32 ተመራጭ ፕሬዚዳንት ጌዲዮን ጢሞቴዎስ (ዶ/ር) በCOP31 ጉባዔ ላይ ያስተላለፉት መልዕክት #COP31",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "3090b8376aae4487",
+      "url": "https://t.me/fanatelevision/113161",
+      "url_canonical": "https://t.me/fanatelevision/113161",
+      "title": "የኢትዮጵያ ብሔራዊ ስትራቴጂ ሚኒስትር በረከት ፍስሃፅዮን ከዓለም አቀፉ የሜትሮሎጂ ድርጅት ዋና ጸሐፊ ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 1፣ 2019 (ኤፍ ኤም ሲ) ከCOP31 ጉባኤ ጎን ለጎን የኢትዮጵያ ብሔራዊ ስትራቴጂ ሚ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31",
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "የኢትዮጵያ ብሔራዊ ስትራቴጂ ሚኒስትር በረከት ፍስሃፅዮን ከዓለም አቀፉ የሜትሮሎጂ ድርጅት ዋና ጸሐፊ ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 1፣ 2019 (ኤፍ ኤም ሲ) ከCOP31 ጉባኤ ጎን ለጎን የኢትዮጵያ ብሔራዊ ስትራቴጂ ሚኒስትር በረከት ፍስሃፅዮን ከዓለም አቀፉ የሜትሮሎጂ ድርጅት ዋና ጸሐፊ ሴሌስቴ ሳውሎ (ፕ/ር) ጋር ተወያይተዋል። በውይይቱ ወቅት ሁለቱ ወገኖች በአየር ንብረትና አየር ሁኔታ ምልከታ ሥርዓቶች ላይ ያለውን ትብብር ማጠናከር በሚቻልበት ሁኔታ ላይ መክረዋል።",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "b9305157a73f5d64",
+      "url": "https://www.climatechangenews.com/2026/11/10/cop31-outcome-needs-to-prioritise-transition-away-from-fossil-fuels/",
+      "url_canonical": "https://climatechangenews.com/2026/11/10/cop31-outcome-needs-to-prioritise-transition-away-from-fossil-fuels",
+      "title": "COP31 outcome needs to prioritise transition away from fossil fuels",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Many countries are already working on parts of their transition, such as phasing out coal or ending fossil fuel subsidies, with more expected to follow soon The post COP31 outcome needs to prioritise transition away from fossil fuels appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "8211e9b99a88b9c7",
+      "url": "https://www.climatechangenews.com/2026/11/10/developing-countries-face-climate-finance-deficit-as-loan-repayments-soar/",
+      "url_canonical": "https://climatechangenews.com/2026/11/10/developing-countries-face-climate-finance-deficit-as-loan-repayments-soar",
+      "title": "Developing countries face climate finance deficit as loan payments soar",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "D",
+      "grade_reason": "opinion/analysis markers in title or excerpt",
+      "flags": [],
+      "matched": [
+        "climate finance"
+      ],
+      "excerpt_auto": "Repayments on climate loans could overtake new lending by 2036, according to CARE analysis shared exclusively with Climate Home News The post Developing countries face climate finance deficit as loan payments soar appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "9f701c5bc45a14ff",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVFljejVrdUtsdHJQZjJGbC1yZUhfOENZdXZTdTJCMGZjeG9LTGR0Nl9SU1ZWLS1GZ0htSEJiZHJYWWFNMkVWaDItZGJBbUtjd1FkQk54dnNKb2lxV3FFeTVNYnlLdlE2dXV3b0xoMFoyLVhCd2dyNTNtSHVVYWc3Q0VnWWZvVGpkZktYa0I2OVVUbXRYWFo4UGVLNjdtVDA?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOVFljejVrdUtsdHJQZjJGbC1yZUhfOENZdXZTdTJCMGZjeG9LTGR0Nl9SU1ZWLS1GZ0htSEJiZHJYWWFNMkVWaDItZGJBbUtjd1FkQk54dnNKb2lxV3FFeTVNYnlLdlE2dXV3b0xoMFoyLVhCd2dyNTNtSHVVYWc3Q0VnWWZvVGpkZktYa0I2OVVUbXRYWFo4UGVLNjdtVDA?oc=5",
+      "title": "Axis 5 Showcase - Delivering Climate-Health Action across the Action Agenda",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc_cop32",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "unfccc"
+      ],
+      "excerpt_auto": "Axis 5 Showcase - Delivering Climate-Health Action across the Action Agenda UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "8ad890ebf693a2dd",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNmoteVFFY204UkN5blJzbVhpZlN4UVp3eWF6R3k3a0pLVjlkUWhQNTlhbFBpMzRfR0ZKN2hrdE9wMDVDRGpPQXB6ekhVVnpuNmtZcm8xWUVZMDN1NTJIQTYyTVFOZlJPZGpOd2VValBvMmpVSUtET0NDNWRMdDZGZWVOcHBBRWszR0xzZGdoUmVVdC1tc2NjX3ZLN2RVUUFodWFSMmVURTNZYTZ4YVZNR3BldWVBOVA0anFJ?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNNmoteVFFY204UkN5blJzbVhpZlN4UVp3eWF6R3k3a0pLVjlkUWhQNTlhbFBpMzRfR0ZKN2hrdE9wMDVDRGpPQXB6ekhVVnpuNmtZcm8xWUVZMDN1NTJIQTYyTVFOZlJPZGpOd2VValBvMmpVSUtET0NDNWRMdDZGZWVOcHBBRWszR0xzZGdoUmVVdC1tc2NjX3ZLN2RVUUFodWFSMmVURTNZYTZ4YVZNR3BldWVBOVA0anFJ?oc=5",
+      "title": "Axis 2 Synthesis Roundtable - Nature At Work: From Forest To Sea, Turning Belem’s Commitments Into Atalya’s Results",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc_cop32",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-10",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "unfccc"
+      ],
+      "excerpt_auto": "Axis 2 Synthesis Roundtable - Nature At Work: From Forest To Sea, Turning Belem’s Commitments Into Atalya’s Results UNFCCC",
+      "also_seen": [],
+      "note": ""
+    }
+  ]
+}
