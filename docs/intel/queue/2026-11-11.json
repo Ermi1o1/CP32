@@ -1,0 +1,665 @@
+{
+  "run": "2026-11-11T11:16:46.933742+00:00",
+  "reviewed": false,
+  "counts": {
+    "kept": 25,
+    "duplicates": 86,
+    "irrelevant": 164,
+    "stale": 195,
+    "trimmed": 30
+  },
+  "problems": [
+    "amn_en — error:ReadTimeout (2 consecutive)"
+  ],
+  "items": [
+    {
+      "id": "b08d9ef0e59c80a8",
+      "url": "https://apps.apple.com/us/app/cop31-itsm/id6816161178?uo=4",
+      "url_canonical": "https://apps.apple.com/us/app/cop31-itsm/id6816161178?uo=4",
+      "title": "COP31 ITSM — INOSAS TEKNOLOJI ANONIM SIRKETI",
+      "outlet": "Apple App Store",
+      "source_key": "appstore_cop32",
+      "kind": "app_listing",
+      "published": "2026-10-28",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "official",
+      "tier": 1,
+      "grade": "B",
+      "grade_reason": "published on an official domain",
+      "flags": [
+        "app_listing"
+      ],
+      "matched": [
+        "application",
+        "cop31",
+        "digital",
+        "ict",
+        "participants"
+      ],
+      "excerpt_auto": "COP31 ICT Support – Your Digital Support Center COP31 ICT Support is a dedicated mobile application designed to provide Information and Communication Technology (ICT) support services for participants and authorized personnel during COP31. The application provides a simple and efficient way to submi",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "a66f663bcbe53a10",
+      "url": "https://t.me/fanatelevision/113163",
+      "url_canonical": "https://t.me/fanatelevision/113163",
+      "title": "የውጭ ጉዳይ ሚኒስትር ጌዲዮን ጢሞቴዎስ (ዶ/ር) ከታዳጊ ሀገራት ቡድን ሊቀመንበር ጋር ተወያዩ አዲስ አበባ፣ ህዳር 1፣ 2019 (ኤፍ ኤም ሲ) የኢትዮጵያ የውጭ ጉዳይ ሚኒስትርና የኮፕ 32 ተመራጭ ፕሬዚዳንት ጌዲዮን ጢሞቴ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "የውጭ ጉዳይ ሚኒስትር ጌዲዮን ጢሞቴዎስ (ዶ/ር) ከታዳጊ ሀገራት ቡድን ሊቀመንበር ጋር ተወያዩ አዲስ አበባ፣ ህዳር 1፣ 2019 (ኤፍ ኤም ሲ) የኢትዮጵያ የውጭ ጉዳይ ሚኒስትርና የኮፕ 32 ተመራጭ ፕሬዚዳንት ጌዲዮን ጢሞቴዎስ (ዶ/ር) ከታዳጊ ሀገራት ቡድን ሊቀመንበርና የቲሞር-ሌስቴ አምባሳደር አዳኦ ሶአሬስ ባርቦሳ ጋር ተወያይተዋል። ውይይቱ ከኮፕ31 ጉባኤ ጎን ለጎን ጎን ለጎን በኢትዮጵያ ፓቪሊዮን የተካሄደ ሲሆን በዋናነት በታዳጊ ሀገራት ቅድሚያ ጉዳዮችና ለኮፕ32 በሚ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "9304d23ae26cc05f",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93dWh5TjE0RDZwM0tEWk1uLTlkaEUwOWRiYmxQdHZlWG9ZRHRSMU1uOS1reVVHS1pZWmtkQW5SRlpKZS1ZMFMwaVZmaWhkWjZOUFE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93dWh5TjE0RDZwM0tEWk1uLTlkaEUwOWRiYmxQdHZlWG9ZRHRSMU1uOS1reVVHS1pZWmtkQW5SRlpKZS1ZMFMwaVZmaWhkWjZOUFE?oc=5",
+      "title": "Ethiopia Pledges Inclusive COP32 Process, Puts LDC Priorities at Center of Climate Agenda",
+      "outlet": "ENA English",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia Pledges Inclusive COP32 Process, Puts LDC Priorities at Center of Climate Agenda ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "56c75bc6e1caf74d",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1CWFBqSFA2eGlaWWh4bXFTVkN1a3M5YzJwWUtuWXBjNVplRGZ4QWJRVmxldkY1cGp1NjlPSnRZQTFUVlVfby1vaUFZZDc4ZThfSVE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1CWFBqSFA2eGlaWWh4bXFTVkN1a3M5YzJwWUtuWXBjNVplRGZ4QWJRVmxldkY1cGp1NjlPSnRZQTFUVlVfby1vaUFZZDc4ZThfSVE?oc=5",
+      "title": "Ethiopia, Norway Seek Stronger Climate Partnership Ahead of COP32",
+      "outlet": "ENA English",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia, Norway Seek Stronger Climate Partnership Ahead of COP32 ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "72a71359a64d6087",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLWx5M2wzT0hKTFZkaDBieXpmTDRMcmpORkstUjNWSjhYbHZKUkNZRF9FREhiOGQxZzUwaW9GcHY4Mks2ZXhhWEE2S015VndPMlFNdFM5eGZscHZ6cm1qTHJHXzN6NldEeXBfRkVLSUlmTGs3N3ozeDhYVmxfYVdyR2tSRzFDeS0zSXQ3c192Y3NlYlJ4ek1jbkhlbzZiNE1ucHNieW9fY3prODdkenRKYzcyUXdRSnBTQXEyUGFMUWx2ZU9FM3c?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNLWx5M2wzT0hKTFZkaDBieXpmTDRMcmpORkstUjNWSjhYbHZKUkNZRF9FREhiOGQxZzUwaW9GcHY4Mks2ZXhhWEE2S015VndPMlFNdFM5eGZscHZ6cm1qTHJHXzN6NldEeXBfRkVLSUlmTGs3N3ozeDhYVmxfYVdyR2tSRzFDeS0zSXQ3c192Y3NlYlJ4ek1jbkhlbzZiNE1ucHNieW9fY3prODdkenRKYzcyUXdRSnBTQXEyUGFMUWx2ZU9FM3c?oc=5",
+      "title": "Ethiopia Strengthens Climate Diplomacy and COP32 Preparations through Strategic Engagements at COP31",
+      "outlet": "አዲስ ሚዲያ ኔትወርክ",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-10",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31",
+        "preparations"
+      ],
+      "excerpt_auto": "Ethiopia Strengthens Climate Diplomacy and COP32 Preparations through Strategic Engagements at COP31 አዲስ ሚዲያ ኔትወርክ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "1bca6b7c2882a284",
+      "url": "https://www.fanamc.com/english/ethiopia-presses-for-fairer-access-to-climate-finance-and-greater-impact-from-multilateral-funds/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-presses-for-fairer-access-to-climate-finance-and-greater-impact-from-multilateral-funds",
+      "url_canonical": "https://fanamc.com/english/ethiopia-presses-for-fairer-access-to-climate-finance-and-greater-impact-from-multilateral-funds",
+      "title": "Ethiopia Presses for Fairer Access to Climate Finance and Greater Impact from Multilateral Funds",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "climate finance",
+        "cop31",
+        "side event"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Expanding access to climate finance and ensuring that multilateral funding mechanisms deliver greater impact for developing countries were at the centre of Ethiopia’s engagement at a COP31 side event in Antalya, Türkiye. Minister of Finance and COP32 Chief Nego",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "808bb5ded646598a",
+      "url": "https://www.fanamc.com/english/ethiopian-and-norwegian-prime-ministers-discuss-green-legacy-clean-energy-investment-and-cop32-preparations/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopian-and-norwegian-prime-ministers-discuss-green-legacy-clean-energy-investment-and-cop32-preparations",
+      "url_canonical": "https://fanamc.com/english/ethiopian-and-norwegian-prime-ministers-discuss-green-legacy-clean-energy-investment-and-cop32-preparations",
+      "title": "Ethiopian and Norwegian Prime Ministers Discuss Green Legacy, Clean Energy Investment and COP32 Preparations",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "green legacy",
+        "preparations",
+        "presidency"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Ethiopia’s Green Legacy Initiative, investment opportunities in the renewable energy sector and Norway’s support for Ethiopia’s forthcoming COP32 Presidency featured prominently in discussions between Ethiopian Prime Minister Abiy Ahmed and Norwegian Prime Mini",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "194bd1cf57732009",
+      "url": "https://www.fanamc.com/english/ethiopias-abiy-ahmed-and-finlands-alexander-stubb-confer-on-global-security-and-cop32-cooperation/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopias-abiy-ahmed-and-finlands-alexander-stubb-confer-on-global-security-and-cop32-cooperation",
+      "url_canonical": "https://fanamc.com/english/ethiopias-abiy-ahmed-and-finlands-alexander-stubb-confer-on-global-security-and-cop32-cooperation",
+      "title": "Ethiopia’s Abiy Ahmed and Finland’s Alexander Stubb Confer on Global Security and COP32 Cooperation",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "cop31",
+        "security"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Ethiopian Prime Minister Abiy Ahmed and Finnish President Alexander Stubb held high-level discussions ahead of the COP31 Leaders’ Summit in Antalya, Türkiye, addressing global peace and security developments, regional dynamics and issues of mutual interest. The",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "152a611fd1054653",
+      "url": "https://www.youtube.com/watch?v=uFM5DuhWr0A",
+      "url_canonical": "https://youtube.com/watch?v=uFM5DuhWr0A",
+      "title": "👉የጠቅላይ ሚኒስትሩ ውይይቶች 👉የኮፕ 32 ፕሬዚዳንት ንግግር",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "fa0d8c5db270aba1",
+      "url": "https://www.youtube.com/watch?v=9w9moYCn_Zg",
+      "url_canonical": "https://youtube.com/watch?v=9w9moYCn_Zg",
+      "title": "ኢትዮጵያ በኮፕ 31 - Ethiopia at COP31#COP31 #COP32 #COP32Ethiopia #LandOfOrigins",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c3de4176af16fdba",
+      "url": "https://t.me/EthiopianNewsA/30966",
+      "url_canonical": "https://t.me/EthiopianNewsA/30966",
+      "title": "ኢትዮጵያ በCOP31 #COP31 #COP32 #COP32Ethiopia #LandOfOrigins",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "ኢትዮጵያ በCOP31 #COP31 #COP32 #COP32Ethiopia #LandOfOrigins",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "baf49b2d95b83af9",
+      "url": "https://t.me/EthiopianNewsA/30967",
+      "url_canonical": "https://t.me/EthiopianNewsA/30967",
+      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቱርክዬ ፕሬዚዳንት ረጅብ ጣይብ ኤርዶጋን ጋር ያደረጉት የሁለትዮሽ ውይይት #COP31 #COP32 #COP32Ethiopia #LandOfOrigins",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቱርክዬ ፕሬዚዳንት ረጅብ ጣይብ ኤርዶጋን ጋር ያደረጉት የሁለትዮሽ ውይይት #COP31 #COP32 #COP32Ethiopia #LandOfOrigins",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "79a06eb39620b8a5",
+      "url": "https://t.me/fanatelevision/113169",
+      "url_canonical": "https://t.me/fanatelevision/113169",
+      "title": "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) መልዕክት በCOP31 የመሪዎች ጉባኤ ጎን ለጎን፣ ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር በሁለቱ ሀገሮቻችን መካከል የጋራ ትኩረት በሚሹ ጉዳዮች ላይ ተወያይተናል። ‎ ‎በአቪዬ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) መልዕክት በCOP31 የመሪዎች ጉባኤ ጎን ለጎን፣ ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር በሁለቱ ሀገሮቻችን መካከል የጋራ ትኩረት በሚሹ ጉዳዮች ላይ ተወያይተናል። ‎ ‎በአቪዬሽን ትብብር እና የኢትዮጵያን የCOP32 ፕሬዝዳንትነት ለመደገፍ በሚደረገው አጋርነት ላይ የመከርን ሲሆን፣ የጋራ ፍላጎቶችን መሠረት በማድረግ የሁለትዮሽ ግንኙነታችንን ይበልጥ ለማስፋት እና ቅድሚያ የሚሰጣቸውን የወል ጉዳዮች ወደ ተጨባጭ ውጤቶች ለመቀየር",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "6cd27e717f25ced7",
+      "url": "https://t.me/fanatelevision/113170",
+      "url_canonical": "https://t.me/fanatelevision/113170",
+      "title": "በኮፕ32 ሁለገብ የአየር ንብረት ትብብር ዙሪያ እምነትን መልሶ መገንባት ቅድሚያ የሚሰጠው ጉዳይ ነው – ጌዲዮን ጢሞቴዎስ (ዶ/ር) አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ኢትዮጵያ በምታዘጋጀው ኮፕ32 ጉባኤ በሁለ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "በኮፕ32 ሁለገብ የአየር ንብረት ትብብር ዙሪያ እምነትን መልሶ መገንባት ቅድሚያ የሚሰጠው ጉዳይ ነው – ጌዲዮን ጢሞቴዎስ (ዶ/ር) አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ኢትዮጵያ በምታዘጋጀው ኮፕ32 ጉባኤ በሁለገብ የአየር ንብረት ትብብር ላይ እምነትን መልሶ መገንባት ቅድሚያ የሚሰጠው ዋነኛ ጉዳይ ነው አሉ የኮፕ32 ፕሬዚዳንትና የውጭ ጉዳይ ሚኒስትር ጌዲዮን ጢሞቴዎስ (ዶ/ር)፡፡ ጌዲዮን ጢሞቲዎስ (ዶ/ር) በአንታሊያ፣ ቱርክ እየተካሄደ በሚገኘው 31ኛው የተባበ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "f6266038612ac6ac",
+      "url": "https://t.me/fanatelevision/113173",
+      "url_canonical": "https://t.me/fanatelevision/113173",
+      "title": "የአየር ንብረት ጥበቃ ሥራዎችን ከኢኮኖሚ ሽግግር ጋር ማስተሳሰር ይኖርብናል - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) #ኢትዮጵያ #ኮፕ_32_ኢትዮጵያ #COP31 #COP32 #COP32ETHIOPIA #fanamediacorpo",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "የአየር ንብረት ጥበቃ ሥራዎችን ከኢኮኖሚ ሽግግር ጋር ማስተሳሰር ይኖርብናል - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) #ኢትዮጵያ #ኮፕ_32_ኢትዮጵያ #COP31 #COP32 #COP32ETHIOPIA #fanamediacorporation",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "f3a93a4ebf2b17b3",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE82SVVfYWtzajJBYUJPZ3dNeHkzcWx2V1B0dVVPajFRZ1dFMEs2ZTV2TWVZSXVqWmNTaG84MVRfWHZPTmlXNzRNejY5TkQ4WGRaUWc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE82SVVfYWtzajJBYUJPZ3dNeHkzcWx2V1B0dVVPajFRZ1dFMEs2ZTV2TWVZSXVqWmNTaG84MVRfWHZPTmlXNzRNejY5TkQ4WGRaUWc?oc=5",
+      "title": "PM Abiy, Barbados’ Mottley Discuss Aviation Cooperation, COP32 Partnership",
+      "outlet": "ENA English",
+      "source_key": "gnews_ena_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "PM Abiy, Barbados’ Mottley Discuss Aviation Cooperation, COP32 Partnership ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c39e093297613a16",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMjl6MTA2UkwteG9tNm5zOTZPTDZVelRCb1g2VFZVc3dlWlZPcTlJcUZhN1Y3ZEdfa0ctR0VVc1JHTng5SGxESWREaU8yaUIyMzl4UEppOXNIZEdWT21hMXpmVC1rdTNyMGZ6aU00WnF2dG9jaHR1ZFpQU0hiQWhCY1gwczZWQVFi?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPMjl6MTA2UkwteG9tNm5zOTZPTDZVelRCb1g2VFZVc3dlWlZPcTlJcUZhN1Y3ZEdfa0ctR0VVc1JHTng5SGxESWREaU8yaUIyMzl4UEppOXNIZEdWT21hMXpmVC1rdTNyMGZ6aU00WnF2dG9jaHR1ZFpQU0hiQWhCY1gwczZWQVFi?oc=5",
+      "title": "Ethiopia outlines three priorities for COP32",
+      "outlet": "Report.az",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia outlines three priorities for COP32 Report.az",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c1f3c1647d0618b1",
+      "url": "https://www.fanamc.com/english/cop31-leaders-summit-opens-in-antalya-with-focus-on-global-climate-commitments-and-cooperation/?utm_source=rss&utm_medium=rss&utm_campaign=cop31-leaders-summit-opens-in-antalya-with-focus-on-global-climate-commitments-and-cooperation",
+      "url_canonical": "https://fanamc.com/english/cop31-leaders-summit-opens-in-antalya-with-focus-on-global-climate-commitments-and-cooperation",
+      "title": "COP31 Leaders’ Summit Opens in Antalya with Focus on Global Climate Commitments and Cooperation",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "cop31"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – The Antalya Leaders’ Summit has officially opened in Türkiye, bringing the global climate agenda to the highest level of political deliberation as heads of state and government convene to advance international cooperation and climate commitments. The two-day su",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "12dba9d88b1c17bb",
+      "url": "https://www.fanamc.com/english/leaders-of-ethiopia-and-somalia-review-security-developments-and-regional-stability/?utm_source=rss&utm_medium=rss&utm_campaign=leaders-of-ethiopia-and-somalia-review-security-developments-and-regional-stability",
+      "url_canonical": "https://fanamc.com/english/leaders-of-ethiopia-and-somalia-review-security-developments-and-regional-stability",
+      "title": "Leaders of Ethiopia and Somalia Review Security Developments and Regional Stability",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "cop31",
+        "security"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Regional security developments and the importance of sustained dialogue in advancing peace and stability were at the centre of discussions between Ethiopian Prime Minister Abiy Ahmed and Somali President Hassan Sheikh Mohamud ahead of the COP31 Leaders’ Summit",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "99ace1b94f600fc4",
+      "url": "https://www.fanamc.com/english/ethiopia-advances-green-skills-and-youth-employment-agenda-at-cop31-side-event/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-advances-green-skills-and-youth-employment-agenda-at-cop31-side-event",
+      "url_canonical": "https://fanamc.com/english/ethiopia-advances-green-skills-and-youth-employment-agenda-at-cop31-side-event",
+      "title": "Ethiopia Advances Green Skills and Youth Employment Agenda at COP31 Side Event",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "cop31",
+        "side event"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Ethiopia has underscored the role of green skills development and youth employment in accelerating the transition to a low-carbon economy, with Minister of National Strategy Bereket Fesehatsion presenting the country’s approach at a COP31 side event in Antalya,",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "404243a8ee90932d",
+      "url": "https://www.fanamc.com/english/ethiopian-prime-minister-abiy-ahmed-meets-barbados-prime-minister-mia-mottley-on-cop31-sidelines/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopian-prime-minister-abiy-ahmed-meets-barbados-prime-minister-mia-mottley-on-cop31-sidelines",
+      "url_canonical": "https://fanamc.com/english/ethiopian-prime-minister-abiy-ahmed-meets-barbados-prime-minister-mia-mottley-on-cop31-sidelines",
+      "title": "Ethiopian Prime Minister Abiy Ahmed Meets Barbados Prime Minister Mia Mottley on COP31 Sidelines",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "cop31"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Ethiopian Prime Minister Abiy Ahmed held a meeting with Barbados Prime Minister Mia Mottley on the sidelines of the COP31 Leaders’ Summit in Antalya, Türkiye, for discussions on issues of shared interest between the two countries. In a social media post, Prime",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "6089318def81d0ba",
+      "url": "https://www.fanamc.com/english/ethiopias-green-legacy-and-gerd-draw-praise-as-homegrown-development-models-cop31-participants/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopias-green-legacy-and-gerd-draw-praise-as-homegrown-development-models-cop31-participants",
+      "url_canonical": "https://fanamc.com/english/ethiopias-green-legacy-and-gerd-draw-praise-as-homegrown-development-models-cop31-participants",
+      "title": "Ethiopia’s Green Legacy and GERD Draw Praise as Homegrown Development Models: COP31 Participants",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "cop31",
+        "green legacy",
+        "participants"
+      ],
+      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Ethiopia’s Green Legacy Initiative and the Grand Ethiopian Renaissance Dam (GERD) have emerged as notable examples of homegrown solutions for environmental protection, renewable energy development and climate action, drawing praise from participants at the UN C",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "f4cdb6c80287696a",
+      "url": "https://www.youtube.com/watch?v=7Vrv-z1up3o",
+      "url_canonical": "https://youtube.com/watch?v=7Vrv-z1up3o",
+      "title": "ከCOP31 የመሪዎች ጉባኤ ጎን ለጎን ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከተለያዩ ሀገራት መሪዎች ጋር ያደረጉት የጎንዮሽ ውይይቶች",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "5782ac3db215cc2a",
+      "url": "https://t.me/EthiopianNewsA/30954",
+      "url_canonical": "https://t.me/EthiopianNewsA/30954",
+      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር ተወያዩ አዲስ አበባ፤ ህዳር 2/2019 (ኢዜአ)፦ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር ",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31",
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር ተወያዩ አዲስ አበባ፤ ህዳር 2/2019 (ኢዜአ)፦ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር ውይይት አድርገዋል። ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በመልዕክታቸው፤ ከCOP31 የመሪዎች ጉባኤ ጎን ለጎን፣ ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር በሁለቱ ሀገሮች መካከል የጋራ ትኩረት በሚሹ ጉዳዮች ላይ መወያየታቸውን ገልጸዋል። ‎በአቪዬሽ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "3a4fd307655f3ef6",
+      "url": "https://t.me/EthiopianNewsA/30958",
+      "url_canonical": "https://t.me/EthiopianNewsA/30958",
+      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋር ተወያዩ አዲስ አበባ፤ ህዳር 2/2019 (ኢዜአ)፦ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋ",
+      "outlet": "ENA (Telegram)",
+      "source_key": "tg_ena",
+      "kind": "telegram",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-11",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "cop31",
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋር ተወያዩ አዲስ አበባ፤ ህዳር 2/2019 (ኢዜአ)፦ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋር ውይይት አድርገዋል። ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በማህበራዊ ትስስር ገጻቸው ባስተላለፉት መልዕክት፤ ከCOP31 የመሪዎች ጉባኤ ጎን ለጎን ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋር ተገናኝተው መምከራቸውን ገልጸዋል። ‎ከዚህ በፊት በG2",
+      "also_seen": [],
+      "note": ""
+    }
+  ]
+}

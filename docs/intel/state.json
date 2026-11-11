@@ -9,7 +9,7 @@
   "gnews_egp": 0,
   "gnews_ena_en": 0,
   "fana_en": 0,
-  "amn_en": 1,
+  "amn_en": 2,
   "gnews_ena_am": 0,
   "fana_am": 0,
   "gnews_addisstandard": 0,
@@ -37,42 +37,41 @@
    "6811845833",
    "1632885226",
    "6754187049",
-   "6738282514",
    "6821604613",
-   "6786924992",
+   "6816161178",
+   "6738282514",
    "1402774264",
    "1531927334",
-   "6822418708",
    "6812363587",
+   "6822418708",
    "6761264127",
-   "6759739862",
-   "1665589216"
+   "6759739862"
   ],
   "appstore_ethiopia_climate": [
    "1326734477",
    "1534203410",
-   "1375514824",
-   "1497800659",
+   "6748839567",
    "6789030250",
+   "1497800659",
    "1525181998",
    "6811845833",
    "1632885226",
-   "412788415",
+   "1515175481",
    "1466186227",
-   "6456039621",
    "1195200573",
-   "6782940359",
-   "1506109691",
+   "1588675742",
    "1014260938",
-   "6736705086",
-   "1663036320",
+   "590204052",
    "847859021",
-   "6784473143",
    "6761763876",
    "1525710459",
-   "6503872198",
+   "6782940359",
+   "6736705086",
    "6529531521",
-   "1597040733"
+   "1597040733",
+   "6778734585",
+   "1497638811",
+   "6503872198"
   ]
  },
  "seen": {
@@ -301,7 +300,63 @@
   "bc90f38574f1e54b": "2026-11-10",
   "3dd956fbe4adde28": "2026-11-10",
   "2d4b749b428f6c18": "2026-11-10",
-  "32108da0247ebd34": "2026-11-10"
+  "32108da0247ebd34": "2026-11-10",
+  "b08d9ef0e59c80a8": "2026-11-11",
+  "20376e377df88125": "2026-11-11",
+  "fb54c09c5f4bb017": "2026-11-11",
+  "8d44420a981da117": "2026-11-11",
+  "7963b6b3260ff2d8": "2026-11-11",
+  "a66f663bcbe53a10": "2026-11-11",
+  "c1f3c1647d0618b1": "2026-11-11",
+  "12dba9d88b1c17bb": "2026-11-11",
+  "1bca6b7c2882a284": "2026-11-11",
+  "99ace1b94f600fc4": "2026-11-11",
+  "808bb5ded646598a": "2026-11-11",
+  "194bd1cf57732009": "2026-11-11",
+  "404243a8ee90932d": "2026-11-11",
+  "6089318def81d0ba": "2026-11-11",
+  "152a611fd1054653": "2026-11-11",
+  "fa0d8c5db270aba1": "2026-11-11",
+  "f4cdb6c80287696a": "2026-11-11",
+  "5782ac3db215cc2a": "2026-11-11",
+  "3a4fd307655f3ef6": "2026-11-11",
+  "ca0ba299ab876f92": "2026-11-11",
+  "82045622d50584dc": "2026-11-11",
+  "6cd2e43f5db975c9": "2026-11-11",
+  "c3de4176af16fdba": "2026-11-11",
+  "baf49b2d95b83af9": "2026-11-11",
+  "79a06eb39620b8a5": "2026-11-11",
+  "6cd27e717f25ced7": "2026-11-11",
+  "f6266038612ac6ac": "2026-11-11",
+  "8fca411a63a28820": "2026-11-11",
+  "8cc8376da68ce208": "2026-11-11",
+  "531118758adc0ad5": "2026-11-11",
+  "6caf510f04964baa": "2026-11-11",
+  "120572d517556d6e": "2026-11-11",
+  "6a18fa6f235a759a": "2026-11-11",
+  "5a8461da0ee4f60a": "2026-11-11",
+  "c425390473f6e9f6": "2026-11-11",
+  "f8ae99f586fabcd0": "2026-11-11",
+  "fc07bd4bf78b972e": "2026-11-11",
+  "8052acb6b2c19bba": "2026-11-11",
+  "d5ca8a8b027a4a2a": "2026-11-11",
+  "9304d23ae26cc05f": "2026-11-11",
+  "56c75bc6e1caf74d": "2026-11-11",
+  "72a71359a64d6087": "2026-11-11",
+  "75e848e727eb973e": "2026-11-11",
+  "9a4119279580a5b6": "2026-11-11",
+  "4e5d3f2da9d16336": "2026-11-11",
+  "d829740319ac18ea": "2026-11-11",
+  "954260ee9ac6d101": "2026-11-11",
+  "f3a93a4ebf2b17b3": "2026-11-11",
+  "282e6e4766991c8d": "2026-11-11",
+  "c39e093297613a16": "2026-11-11",
+  "198e392b7b4e5e88": "2026-11-11",
+  "ae1535690ab97065": "2026-11-11",
+  "56d8b7a4356fe7ff": "2026-11-11",
+  "0d4c8de963ae0593": "2026-11-11",
+  "b8f5385298824e21": "2026-11-11",
+  "e0c92afc4781e4b5": "2026-11-11"
  },
  "recent_titles": [
   [
@@ -1187,6 +1242,226 @@
   [
    "antalya hotel rates 92 above annual average during cop31",
    "2026-11-10"
+  ],
+  [
+   "cop31 itsm inosas teknoloji anonim sirketi",
+   "2026-11-11"
+  ],
+  [
+   "cop31 opening session leaders segment",
+   "2026-11-11"
+  ],
+  [
+   "cop31 qué está en juego en la cumbre climática de 2026",
+   "2026-11-11"
+  ],
+  [
+   "pm abiy arrives in antalya holds talks with turkish president erdoğan ahead of cop31",
+   "2026-11-11"
+  ],
+  [
+   "የኢትዮጵያ ብሔራዊ ስትራቴጂ ሚኒስትር በረከት ፍስሃፅዮን ከዓለም አቀፉ የሜትሮሎጂ ድርጅት ዋና ጸሐፊ ጋር ተወያዩ",
+   "2026-11-11"
+  ],
+  [
+   "የውጭ ጉዳይ ሚኒስትር ጌዲዮን ጢሞቴዎስ ዶ ር ከታዳጊ ሀገራት ቡድን ሊቀመንበር ጋር ተወያዩ አዲስ አበባ ህዳር 1 2019 ኤፍ ኤም ሲ የኢትዮጵያ የውጭ ጉዳይ ሚኒስትርና የኮፕ 32 ተመራጭ ፕሬዚዳንት ጌዲዮን ጢሞቴ",
+   "2026-11-11"
+  ],
+  [
+   "cop31 leaders summit opens in antalya with focus on global climate commitments and cooperation",
+   "2026-11-11"
+  ],
+  [
+   "leaders of ethiopia and somalia review security developments and regional stability",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia presses for fairer access to climate finance and greater impact from multilateral funds",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia advances green skills and youth employment agenda at cop31 side event",
+   "2026-11-11"
+  ],
+  [
+   "ethiopian and norwegian prime ministers discuss green legacy clean energy investment and cop32 preparations",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia s abiy ahmed and finland s alexander stubb confer on global security and cop32 cooperation",
+   "2026-11-11"
+  ],
+  [
+   "ethiopian prime minister abiy ahmed meets barbados prime minister mia mottley on cop31 sidelines",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia s green legacy and gerd draw praise as homegrown development models cop31 participants",
+   "2026-11-11"
+  ],
+  [
+   "የጠቅላይ ሚኒስትሩ ውይይቶች የኮፕ 32 ፕሬዚዳንት ንግግር",
+   "2026-11-11"
+  ],
+  [
+   "ኢትዮጵያ በኮፕ 31 ethiopia at cop31 cop31 cop32 cop32ethiopia landoforigins",
+   "2026-11-11"
+  ],
+  [
+   "ከcop31 የመሪዎች ጉባኤ ጎን ለጎን ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከተለያዩ ሀገራት መሪዎች ጋር ያደረጉት የጎንዮሽ ውይይቶች",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር ተወያዩ አዲስ አበባ ህዳር 2 2019 ኢዜአ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋር ተወያዩ አዲስ አበባ ህዳር 2 2019 ኢዜአ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከፊንላንድ ፕሬዝዳንት አሌክሳንደር ስተብ ጋ",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከኖርዌይ ጠቅላይ ሚኒስትር ጆናስ ጋህር ስተር ጋር ተወያዩ አዲስ አበባ ህዳር 2 2019 ኢዜአ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከኖርዌይ ጠቅላይ ሚኒስትር ጆናስ ጋህር",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከኢራቁ ፕሬዝዳንት ኒዛር አሚዲ ጋር ተወያዩ አዲስ አበባ ህዳር 2 2019 ኢዜአ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከኢራቁ ፕሬዝዳንት ኒዛር አሚዲ ጋር ውይይት አድርገዋ",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከሶማሊያ ፕሬዚዳንት ሐሰን ሼክ መሐሙድ ጋር ተወያዩ አዲስ አበባ ህዳር 2 2019 ኢዜአ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከሶማሊያ ፕሬዚዳንት ሐሰን ሼክ መሐሙድ ጋር ተወ",
+   "2026-11-11"
+  ],
+  [
+   "ኢትዮጵያ በcop31 cop31 cop32 cop32ethiopia landoforigins",
+   "2026-11-11"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ከቱርክዬ ፕሬዚዳንት ረጅብ ጣይብ ኤርዶጋን ጋር ያደረጉት የሁለትዮሽ ውይይት cop31 cop32 cop32ethiopia landoforigins",
+   "2026-11-11"
+  ],
+  [
+   "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር መልዕክት በcop31 የመሪዎች ጉባኤ ጎን ለጎን ከባርቤዶስ ጠቅላይ ሚኒስትር ሚያ ሞትሊ ጋር በሁለቱ ሀገሮቻችን መካከል የጋራ ትኩረት በሚሹ ጉዳዮች ላይ ተወያይተናል በአቪዬ",
+   "2026-11-11"
+  ],
+  [
+   "በኮፕ32 ሁለገብ የአየር ንብረት ትብብር ዙሪያ እምነትን መልሶ መገንባት ቅድሚያ የሚሰጠው ጉዳይ ነው ጌዲዮን ጢሞቴዎስ ዶ ር አዲስ አበባ ሕዳር 2 2019 ኤፍ ኤም ሲ ኢትዮጵያ በምታዘጋጀው ኮፕ32 ጉባኤ በሁለ",
+   "2026-11-11"
+  ],
+  [
+   "የአየር ንብረት ጥበቃ ሥራዎችን ከኢኮኖሚ ሽግግር ጋር ማስተሳሰር ይኖርብናል ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር ኢትዮጵያ ኮፕ_32_ኢትዮጵያ cop31 cop32 cop32ethiopia fanamediacorpo",
+   "2026-11-11"
+  ],
+  [
+   "cop31 bulletin day 2 momentum builds on electrification and fossil fuel transition",
+   "2026-11-11"
+  ],
+  [
+   "analysis which countries have sent the most delegates to cop31",
+   "2026-11-11"
+  ],
+  [
+   "cop31 bulletin day 3 with the people stuck outside world leaders jet in",
+   "2026-11-11"
+  ],
+  [
+   "türkiye pushes zero waste at cop31 but is it delivering at home",
+   "2026-11-11"
+  ],
+  [
+   "analysis climate finance pledges fall 70 as countries meet at cop31",
+   "2026-11-11"
+  ],
+  [
+   "cop 31 meetings at a glance",
+   "2026-11-11"
+  ],
+  [
+   "ministerial high level event on the launch of the second global stocktake",
+   "2026-11-11"
+  ],
+  [
+   "transcript of press conference opening remarks today of cop31 president president of negotiations un climate change executive secretary",
+   "2026-11-11"
+  ],
+  [
+   "concept note 2026 annual high level ministerial roundtable on pre 2030 ambition",
+   "2026-11-11"
+  ],
+  [
+   "update of the secretariat to the 10th meeting of the glasgow committee on non market approaches",
+   "2026-11-11"
+  ],
+  [
+   "development of a nap monitoring evaluation and learning system",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia pledges inclusive cop32 process puts ldc priorities at center of climate agenda",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia norway seek stronger climate partnership ahead of cop32",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia strengthens climate diplomacy and cop32 preparations through strategic engagements at cop31",
+   "2026-11-11"
+  ],
+  [
+   "cop31 why air quality is key to climate health",
+   "2026-11-11"
+  ],
+  [
+   "kazakhstan presents climate investment platform at cop31",
+   "2026-11-11"
+  ],
+  [
+   "cop31 delegates stranded as transport delays hit türkiye",
+   "2026-11-11"
+  ],
+  [
+   "cop31 networking session for national ace focal points",
+   "2026-11-11"
+  ],
+  [
+   "opening ceremony of the antalya leaders summit",
+   "2026-11-11"
+  ],
+  [
+   "pm abiy barbados mottley discuss aviation cooperation cop32 partnership",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia calls for stronger international cooperation on climate finance",
+   "2026-11-11"
+  ],
+  [
+   "ethiopia outlines three priorities for cop32",
+   "2026-11-11"
+  ],
+  [
+   "kazakhstan launches climate investment platform at cop31 with up to 1 billion in potential ebrd financing",
+   "2026-11-11"
+  ],
+  [
+   "cop31 türkiye 2026 latest news and key developments",
+   "2026-11-11"
+  ],
+  [
+   "pm joins cop31 in antalya to meet uzbek president chinese vice president",
+   "2026-11-11"
+  ],
+  [
+   "world leaders take stage at cop31 but big names missing",
+   "2026-11-11"
+  ],
+  [
+   "kazakhstan presents new climate investment platform at cop31 in antalya",
+   "2026-11-11"
+  ],
+  [
+   "indonesia launches carbonnex to boost carbon cooperation at cop31",
+   "2026-11-11"
   ]
  ]
 }

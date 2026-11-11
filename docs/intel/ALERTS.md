@@ -46,3 +46,4 @@ Items the collector flagged as project-critical. Clear a line once it is filed o
 - [ ] 2026-10-31 · **Apple App Store** · [B] NEW APP LISTING: Hegemonia: War Strategy Game — YGT LABS AI, LLC — https://apps.apple.com/us/app/hegemonia-war-strategy-game/id6822418708?uo=4
 - [ ] 2026-11-04 · **Apple App Store** · [B] NEW APP LISTING: COP 31 Digital Platform — United Nations Framework Convention on Climate Change — https://apps.apple.com/us/app/cop-31-digital-platform/id6811845833?uo=4
 - [ ] 2026-11-09 · **Addis Media Network (EN)** · [C] Ethiopia’s Participation in COP31 Offers a Strategic Opportunity to Showcase its Green Development Vision Ahead of COP32 — https://www.amn.gov.et/en/ethiopias-participation-in-cop31-offers-a-strategic-opportunity-to-showcase-its-green-development-vision-ahead-of-cop32/
+- [ ] 2026-10-28 · **Apple App Store** · [B] COP31 ITSM — INOSAS TEKNOLOJI ANONIM SIRKETI — https://apps.apple.com/us/app/cop31-itsm/id6816161178?uo=4
