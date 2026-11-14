@@ -1,51 +1,43 @@
 # Open Tier-1 alerts
 
 Items the collector flagged as project-critical. Clear a line once it is filed or dismissed.
-- [ ] 2011-03-18 · **Apple App Store** · [B] NEW APP LISTING: Ethiopian Calendar — Elias Haileselassie — https://apps.apple.com/us/app/ethiopian-calendar/id412788415?uo=4
-- [ ] 2014-04-18 · **Apple App Store** · [B] NEW APP LISTING: Sheger FM 102.1 — Adey Tensae Media and Entertainment PLC — https://apps.apple.com/us/app/sheger-fm-102-1/id847859021?uo=4
-- [ ] 2015-07-11 · **Apple App Store** · [B] NEW APP LISTING: Ethiopia Radio — IGEARS TECHNOLOGY LTD — https://apps.apple.com/us/app/ethiopia-radio/id1014260938?uo=4
-- [ ] 2017-02-07 · **Apple App Store** · [B] NEW APP LISTING: Ethiopia News & Ethiopian Music (Lite Edition) — Juicestand Inc — https://apps.apple.com/us/app/ethiopia-news-ethiopian-music-lite-edition/id1195200573?uo=4
-- [ ] 2017-12-30 · **Apple App Store** · [B] NEW APP LISTING: Ethiopian Airlines — Ethiopian Airlines — https://apps.apple.com/us/app/ethiopian-airlines/id1326734477?uo=4
-- [ ] 2018-06-05 · **Apple App Store** · [B] NEW APP LISTING: RIDE: Ethiopia & Djibouti — Hybrid Designs plc — https://apps.apple.com/us/app/ride-ethiopia-djibouti/id1375514824?uo=4
-- [ ] 2018-07-27 · **Apple App Store** · [B] NEW APP LISTING: VIPER C3625 — Sergei Fetisov — https://apps.apple.com/us/app/viper-c3625/id1402774264?uo=4
-- [ ] 2019-06-03 · **Apple App Store** · [B] NEW APP LISTING: Ethiopian Calendar & Converter — Teferi Aleme — https://apps.apple.com/us/app/ethiopian-calendar-converter/id1466186227?uo=4
-- [ ] 2020-04-16 · **Apple App Store** · [B] NEW APP LISTING: Jebena — Jebena Tech, Inc. — https://apps.apple.com/us/app/jebena/id1497800659?uo=4
-- [ ] 2020-05-05 · **Apple App Store** · [B] NEW APP LISTING: Kum Neger - Habesha Dating — Mulu Technology LLC — https://apps.apple.com/us/app/kum-neger-habesha-dating/id1506109691?uo=4
-- [ ] 2020-07-31 · **Apple App Store** · [B] NEW APP LISTING: Jiji Ethiopia — Walie Holdings Ltd. — https://apps.apple.com/us/app/jiji-ethiopia/id1525181998?uo=4
-- [ ] 2020-09-06 · **Apple App Store** · [B] NEW APP LISTING: Digital Invea — viditure inc — https://apps.apple.com/us/app/digital-invea/id1525710459?uo=4
-- [ ] 2020-10-18 · **Apple App Store** · [B] NEW APP LISTING: CBE Mobile Banking — COMMERCIAL BANK OF ETHIOPIA — https://apps.apple.com/us/app/cbe-mobile-banking/id1534203410?uo=4
-- [ ] 2021-12-02 · **Apple App Store** · [B] NEW APP LISTING: CathexisCarbon — Cathexis Technologies Pty Ltd — https://apps.apple.com/us/app/cathexiscarbon/id1531927334?uo=4
-- [ ] 2022-10-20 · **Apple App Store** · [B] NEW APP LISTING: COP27 — MCIT — https://apps.apple.com/us/app/cop27/id1632885226?uo=4
-- [ ] 2023-02-27 · **Apple App Store** · [B] NEW APP LISTING: Seleda Ethiopia — TOPTECH IT SOLUTION PLC — https://apps.apple.com/us/app/seleda-ethiopia/id1663036320?uo=4
-- [ ] 2023-09-06 · **Apple App Store** · [B] NEW APP LISTING: M-PESA Safaricom Ethiopia — Safaricom Telecommunications Ethiopia Plc — https://apps.apple.com/us/app/m-pesa-safaricom-ethiopia/id6456039621?uo=4
-- [ ] 2024-06-13 · **Apple App Store** · [B] NEW APP LISTING: Gojo Shop — Negus Sisay — https://apps.apple.com/us/app/gojo-shop/id6503872198?uo=4
-- [ ] 2024-08-19 · **Apple App Store** · [B] NEW APP LISTING: Kiosk Shopping — Bethlehem Teshome — https://apps.apple.com/us/app/kiosk-shopping/id6529531521?uo=4
-- [ ] 2024-11-11 · **Apple App Store** · [B] NEW APP LISTING: Ananas Shopping — Hailemichael Ayalew — https://apps.apple.com/us/app/ananas-shopping/id6736705086?uo=4
-- [ ] 2024-11-25 · **Apple App Store** · [B] NEW APP LISTING: COP16 Navigator — NATIONAL CENTER FOR VEGETATION COVER — https://apps.apple.com/us/app/cop16-navigator/id6738282514?uo=4
-- [ ] 2025-03-06 · **The Guardian Nigeria News** · [C] Nigeria seeks to host COP32 in 2027 — https://news.google.com/rss/articles/CBMibkFVX3lxTE5iVVA0eUhzMHpfWXBTYVlwQk9qTDRaRko5bmJ2Z2lrakNEcmFRTzMtLUF2UWF5ZDNsb1pBVEtMNTFJRUlsM0hEdjVuSTVPSklyZmVtZUpGWm4xNjctd2FoTG5uS1A1MFJqdnNEZGdB?oc=5
-- [ ] 2025-09-11 · **Climate Home News** · [C] Ethiopia’s preparedness puts it ahead of Nigeria in bid to host COP32, campaigners say — https://news.google.com/rss/articles/CBMiygFBVV95cUxPaFlOdWpzczF1VG15Uk1IeFhwU3hJbXhvRl9CXzI3cVZIbFRYZE0xQTY4TThQWTZWaW1aQ29wa0xENWJmbHRRb0ljV2JNQWdjbWNCcnNKWU9QaF9tSHJPdXRmeXhNdEFTYktmeGVhQ3lYS0R2aHdpVGNqUlV6NXNMMWQyQi1DWjNaZVd6OS1RSi02X1ZxRVdIVEJOOWRKYmJyRUl1TS11am9TUTk2YlBtMXZFYjVpWnlXWkdOQVN6b29YOGF5dGJMYkh3?oc=5
-- [ ] 2025-09-22 · **Apple App Store** · [B] NEW APP LISTING: VIGO6 Remote Screen — PROCES-DATA AS — https://apps.apple.com/us/app/vigo6-remote-screen/id1665589216?uo=4
-- [ ] 2025-11-12 · **Apple App Store** · [B] NEW APP LISTING: ESP32-Cam — Peter Sauer — https://apps.apple.com/us/app/esp32-cam/id6754187049?uo=4
-- [ ] 2025-11-12 · **RFI** · [C] Ethiopia wins bid to host Cop32 in 2027, edging out Nigeria — https://news.google.com/rss/articles/CBMipgFBVV95cUxQZWZueHFqX19QM1k5aXU3N0p1dkV5cnFoZUNaam9ySEVKanBpSHE3dWNrQVlVWVlTa1QwdkZyTzVlTTY0dU5wOVQ4OTlQTzFBeV9FVlhhM1BQOU1tWFVMQldaaFR0Z200Y3JFVnJpZ041MGJ3NFFqQVhfbWtUdzFfaGFLOGFjMWpqcEJxLVZucU5KbVY3TUtKcXhhQWEyT2N4UnpSYVNn?oc=5
-- [ ] 2025-11-27 · **ENA English** · [C] Ethiopia to Showcase Africa as Part of Global Solution for Climate Change, Boost Image at COP32 — https://news.google.com/rss/articles/CBMiUkFVX3lxTE1GS1VPVXhOUDk3bllkUXJJdkZUc1FucGZiTnoxYzRqRW9TUTdfcVNpaVh0d2hmWVNybUhwaWYxX2YtNEJfZXY1LThYOGcxbW5ia0E?oc=5
-- [ ] 2025-11-28 · **Fana Media Corporation S.C** · [C] PM Abiy: COP32 an Opportunity to Demonstrate Ethiopia’s Potential and Africa’s Role in Global Climate Action — https://news.google.com/rss/articles/CBMi0wFBVV95cUxQaHBDc09yOE5XR1QxdTlHdUJhOUFpNkRkdXRRZkEwTXFkeVhrdDRUOFVWRUYwNXdvLXBDZk92RElsZXhfNWktSm9rcGhIRVppY3BwWVZvakdQLVRTSVlVMDEzQUpoWUxjZ3F5VkU3QWhWaXZUODYyd3dhcUtMbF8xdF91UjVsU0VEdWllTUJnM1dFbEJjYS1MUEJGeUNzdDBWTXMzWFZlTFRmcFdoZm1EcVdhVG8tUlNNZWxsWWVfZk8zU0ZwVGtJaC01OG96WlhCNWsw?oc=5
-- [ ] 2026-04-17 · **ENA English** · [C] Ethiopia Embarks on Early Preparation as COP32 Host Country, Says PM Abiy — https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lNFVCS0dreXRLUGMtVG0zRkNzTlpBbGFDVGs5WXl4OTFGUW8yOGJCd3ptZ2V4cUY3dHdTR3pFc2xJSnVXeVhlc29IczJsbE1kd1E?oc=5
-- [ ] 2026-04-20 · **Apple App Store** · [B] NEW APP LISTING: Atlas Copco Group connect — Twebcast AB — https://apps.apple.com/us/app/atlas-copco-group-connect/id6761264127?uo=4
-- [ ] 2026-05-02 · **Apple App Store** · [B] NEW APP LISTING: AllStore Ethiopia — Seid Jemal — https://apps.apple.com/us/app/allstore-ethiopia/id6761763876?uo=4
-- [ ] 2026-05-16 · **Apple App Store** · [B] NEW APP LISTING: U2 AI Carbon — U2 AI STUDIO TEKNOLOJI ANONIM SIRKETI — https://apps.apple.com/us/app/u2-ai-carbon/id6759739862?uo=4
-- [ ] 2026-06-17 · **Institute of Foreign Affairs** · [C] COP32 and the Architecture of African Climate Leverage - IFA — https://news.google.com/rss/articles/CBMiRkFVX3lxTE9YbGQzcjVHMlZvME5xWS11OHJLSnoxUjJZcWl0U0JiYVdTQUYzZ3pWRl9CakRETmFEdFdTdi1IdTNFR1B5UUE?oc=5
-- [ ] 2026-06-27 · **Apple App Store** · [B] NEW APP LISTING: Ethiopia Radio: Live Stations — Roman Skripchak — https://apps.apple.com/us/app/ethiopia-radio-live-stations/id6782940359?uo=4
-- [ ] 2026-07-06 · **Fana Media Corporation S.C** · [C] Ethiopia Unveils Official Digital Platforms for COP32 — https://news.google.com/rss/articles/CBMijgFBVV95cUxOdnJ1eVhFcFVXOHZkUUlTMEN0TWdTNVAxZURFWmRMYTZqTWg2aDFmSm5wNml2Y0xZMnA3Tk5ncUcwMGRZRWpWbU1zbllYTVhaWnNSeVI0VWswZzAyajNHTnNhWkVwOVJfRkFsbHp3NWVhWXF5QkU3aklZZkU5RHJ2NDVGN3F2bVhPekpCOXZn?oc=5
-- [ ] 2026-07-15 · **Apple App Store** · [B] NEW APP LISTING: ESC COP-17 — erxes Inc — https://apps.apple.com/us/app/esc-cop-17/id6786924992?uo=4
-- [ ] 2026-07-16 · **Apple App Store** · [B] NEW APP LISTING: 888 Market — 888 Market Software Systems L.L.C S.O.C — https://apps.apple.com/us/app/888-market/id6784473143?uo=4
-- [ ] 2026-09-07 · **CapitalEthiopia** · [C] Addis Chamber moves to lead private sector role at COP32 through new Green Growth Centre — https://news.google.com/rss/articles/CBMixwFBVV95cUxOdUlxYmYyT3EyczhDNEQyaXdUTHVKeGZEQmlDSW5kYW54MHJqVjNTTTh6T2lERDdFLWtFd2J2ejZRci1xR1UxczJual9pYXluQ2JIeENrWmJOOG95ZklxR3ZyZFhXRU1HQmcxaHhoaWZPQ2xrQ1laQnRPd1ZiM0tRUG9remhJWU1vQ0p4bzVQN0EwQnM0dHpoX1FRZllEUzNLblk4RnkxVXcwZkYyLVp0SnZZS09oQ1BWLWpwMGd1ZHRzNWxEdTFB?oc=5
-- [ ] 2026-09-25 · **350.org** · [C] Ethiopia reaffirms vision for COP32 at the 81st UN General Assembly, calling for action oriented climate diplomacy. — https://news.google.com/rss/articles/CBMi3AFBVV95cUxQTzl4ZUgtYUN4VEVQdWNWamxUSHVaTS05dmVxYmJIRVNaUUptTFF5QTRGOENPaTRMMnU0aGRFbDM3d0FLWmpZb2dURmVjaU5YS1B2b1B2OFU4emxXbktoS3pLbE1JRlZTWjF2Ynd2ZkxEUnZqcUpldnpWM0hlUG5wR3NTdlVmS01KeHpjdGVfTWhwaUhac2dEcEdNeWY4cVVyRWlYYVJRNWhtVl9xVEpEM0xfa0V3NHI0MlJvQ0Y0ZFJpbmY3ZWlBTWNVV1lxZUl0V3VxeHNwYlJpMGRu?oc=5
-- [ ] 2026-10-21 · **Apple App Store** · [B] NEW APP LISTING: COP31 Volunteer — UKX DANISMANLIK TICARET LIMITED SIRKETI — https://apps.apple.com/us/app/cop31-volunteer/id6812363587?uo=4
-- [ ] 2026-10-28 · **Apple App Store** · [B] NEW APP LISTING: Moana Blue Pacific — Billy Chan Ting — https://apps.apple.com/us/app/moana-blue-pacific/id6821604613?uo=4
-- [ ] 2026-10-28 · **Apple App Store** · [B] NEW APP LISTING: COP31 — T.C. Cevre, Sehircilik ve Iklim Degisikligi Bakanlıgı — https://apps.apple.com/us/app/cop31/id6789030250?uo=4
-- [ ] 2026-10-31 · **Apple App Store** · [B] NEW APP LISTING: Hegemonia: War Strategy Game — YGT LABS AI, LLC — https://apps.apple.com/us/app/hegemonia-war-strategy-game/id6822418708?uo=4
-- [ ] 2026-11-04 · **Apple App Store** · [B] NEW APP LISTING: COP 31 Digital Platform — United Nations Framework Convention on Climate Change — https://apps.apple.com/us/app/cop-31-digital-platform/id6811845833?uo=4
-- [ ] 2026-11-09 · **Addis Media Network (EN)** · [C] Ethiopia’s Participation in COP31 Offers a Strategic Opportunity to Showcase its Green Development Vision Ahead of COP32 — https://www.amn.gov.et/en/ethiopias-participation-in-cop31-offers-a-strategic-opportunity-to-showcase-its-green-development-vision-ahead-of-cop32/
-- [ ] 2026-10-28 · **Apple App Store** · [B] COP31 ITSM — INOSAS TEKNOLOJI ANONIM SIRKETI — https://apps.apple.com/us/app/cop31-itsm/id6816161178?uo=4
-- [ ] 2026-11-10 · **Fana Media Corporation S.C** · [C] Addis Ababa to Unite African Cities in Advancing Shared Climate Priorities, Financing Needs and Development Agendas at COP32: Mayor — https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXdTc3QzVGpLUDN4YU9qSW94NXhLT21RcWRScHFsaXExUEdIM2tpTVNVbkFzOHJlWEpBSHY4VEFQVlVUS0o1cUJzQjB1MEpzTUtlMjU5Z1AzVUR2c09sRGF6SHZtNEVjVmx6eGpmZl9OTWlVRFVHNlAtWTMtRmJNTWlZU1JaMkxUeFRQZDNnRU45WkxraVAyanF0YW9aNF9EMDVNSElIRmlCZ0stMF95S0lWVWYxNG05RFFv?oc=5
-- [ ] 2026-11-12 · **ENA English** · [C] COP32 Ethiopia Crucial Platform for Global South Consensus Beyond Climate Finance — https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wXzlGTEJ6bUhnd2U1YmVBOG9rNEM1VzJjLXEzTG5rMm1pbUNPWHpHZlQ0bXYyLXpzRVd5MlpZY25JaEktMG15Umc5V1gzYUJnclE?oc=5
+
+Last triage: **2026-11-14** (`/intel-review`). 48 Tier-1 alerts reviewed, 7 filed
+to `items/`, 41 dismissed. 45 of the 48 came from the collector's first
+backfill run on 2026-11-09 and had never been triaged; daily runs since have
+produced 0–2 Tier-1 items each, so the backlog was a one-off, not a filter
+fault. See `proposals/2026-11-14-review.md` for what is still open.
+
+## Open — needs the founder
+
+- [ ] 2026-07-06 · **Fana Media** · [C] Ethiopia Unveils Official Digital Platforms for COP32 — filed as
+  `items/2026/07/2026-07-06-ethiopia-official-cop32-digital-platforms.md`.
+  **Stays open**: the underlying fact is not traced to a primary source, and it
+  bears on R1 and on D1. Settled by reading the official COP32 host site or a
+  government statement naming what launched in July 2026 and who operates it.
+- [ ] **Which COP32 domain is official, and who operates it.** Three candidates,
+  none with verified attribution:
+  `cop32.gov.et` (an `events@cop32.gov.et` address appears in an Ethiopian
+  Environmental Protection Authority official's public post; the domain itself
+  could not be fetched from this session),
+  `cop32ethiopia.et` (live placeholder, self-describes as "The Official Site of
+  COP32", names no operator, no contact details, links only to `cop32ethiopia`
+  social handles),
+  `cop32ethiopia.org` (the domain this pipeline watches; a WordPress maintenance
+  page with a login UI). `cic-26.com` was already flagged unverified in
+  `reality-check.md`. Until this is settled the `page_watch` entry may be
+  pointed at the wrong host.
+- [ ] **Is a COP32 host-country mobile app announced, procured or in
+  development, and who owns it?** Not answered by anything collected so far.
+  Check e-GP, MinT, the Digital/ICT and Utilities Task Force, and the COP32
+  secretariat.
+
+## Dismissed on 2026-11-14
+
+- 34 Apple App Store listings from the 2026-11-09 backfill that matched on
+  loose iTunes search before the `match:` regex in `sources.yml` was applied
+  (Ethiopian Calendar, Sheger FM, ESP32-Cam, Atlas Copco, Hegemonia, CBE Mobile
+  Banking, assorted shopping, radio and dating apps). Not COP-related.
+- 7 news items restating what `reality-check.md` already records: the host
+  selection and Ethiopia–Nigeria contest, PM Abiy's preparation statements,
+  UNGA and Global South commentary, and COP31-sidelines diplomacy coverage.

@@ -1,734 +1,743 @@
 {
-  "run": "2026-11-12T11:33:00.219270+00:00",
-  "reviewed": false,
-  "counts": {
-    "kept": 28,
-    "duplicates": 113,
-    "irrelevant": 171,
-    "stale": 179,
-    "trimmed": 17
+ "run": "2026-11-12T11:33:00.219270+00:00",
+ "reviewed": false,
+ "counts": {
+  "kept": 28,
+  "duplicates": 113,
+  "irrelevant": 171,
+  "stale": 179,
+  "trimmed": 17
+ },
+ "problems": [],
+ "items": [
+  {
+   "id": "084ba27b1d37cbab",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXdTc3QzVGpLUDN4YU9qSW94NXhLT21RcWRScHFsaXExUEdIM2tpTVNVbkFzOHJlWEpBSHY4VEFQVlVUS0o1cUJzQjB1MEpzTUtlMjU5Z1AzVUR2c09sRGF6SHZtNEVjVmx6eGpmZl9OTWlVRFVHNlAtWTMtRmJNTWlZU1JaMkxUeFRQZDNnRU45WkxraVAyanF0YW9aNF9EMDVNSElIRmlCZ0stMF95S0lWVWYxNG05RFFv?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXdTc3QzVGpLUDN4YU9qSW94NXhLT21RcWRScHFsaXExUEdIM2tpTVNVbkFzOHJlWEpBSHY4VEFQVlVUS0o1cUJzQjB1MEpzTUtlMjU5Z1AzVUR2c09sRGF6SHZtNEVjVmx6eGpmZl9OTWlVRFVHNlAtWTMtRmJNTWlZU1JaMkxUeFRQZDNnRU45WkxraVAyanF0YW9aNF9EMDVNSElIRmlCZ0stMF95S0lWVWYxNG05RFFv?oc=5",
+   "title": "Addis Ababa to Unite African Cities in Advancing Shared Climate Priorities, Financing Needs and Development Agendas at COP32: Mayor",
+   "outlet": "Fana Media Corporation S.C",
+   "source_key": "gnews_cop32_platform",
+   "kind": "article",
+   "published": "2026-11-10",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 1,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "addis ababa"
+   ],
+   "excerpt_auto": "Addis Ababa to Unite African Cities in Advancing Shared Climate Priorities, Financing Needs and Development Agendas at COP32: Mayor Fana Media Corporation S.C",
+   "also_seen": [],
+   "note": "",
+   "tier1_reviewed": true,
+   "review_outcome": "dropped"
   },
-  "problems": [],
-  "items": [
+  {
+   "id": "b6e31db978c27ee0",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wXzlGTEJ6bUhnd2U1YmVBOG9rNEM1VzJjLXEzTG5rMm1pbUNPWHpHZlQ0bXYyLXpzRVd5MlpZY25JaEktMG15Umc5V1gzYUJnclE?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wXzlGTEJ6bUhnd2U1YmVBOG9rNEM1VzJjLXEzTG5rMm1pbUNPWHpHZlQ0bXYyLXpzRVd5MlpZY25JaEktMG15Umc5V1gzYUJnclE?oc=5",
+   "title": "COP32 Ethiopia Crucial Platform for Global South Consensus Beyond Climate Finance",
+   "outlet": "ENA English",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 1,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "climate finance",
+    "platform"
+   ],
+   "excerpt_auto": "COP32 Ethiopia Crucial Platform for Global South Consensus Beyond Climate Finance ENA English",
+   "also_seen": [],
+   "note": "",
+   "tier1_reviewed": true,
+   "review_outcome": "dropped"
+  },
+  {
+   "id": "eba3c2f2279aac82",
+   "url": "https://www.fanamc.com/english/president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host/?utm_source=rss&utm_medium=rss&utm_campaign=president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host",
+   "url_canonical": "https://fanamc.com/english/president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host",
+   "title": "President of Turkiye Backs Ethiopia’s Forthcoming Leadership of Global Climate Process, Wishes Success as COP32 Host",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "presidency"
+   ],
+   "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Turkish President Recep Tayyip Erdoğan has wished Ethiopia success in assuming the Presidency of the 32nd United Nations Climate Change Conference (COP32), recognizing the country’s forthcoming role in leading the next phase of the global climate process. “I wi",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "02062bc28bd32c99",
+   "url": "https://www.amn.gov.et/en/ethiopia-african-group-of-negotiators-strengthen-cooperation-on-africas-climate-priorities-ahead-of-cop32/",
+   "url_canonical": "https://amn.gov.et/en/ethiopia-african-group-of-negotiators-strengthen-cooperation-on-africas-climate-priorities-ahead-of-cop32",
+   "title": "Ethiopia, African Group of Negotiators Strengthen Cooperation on Africa’s Climate Priorities Ahead of COP32",
+   "outlet": "Addis Media Network (EN)",
+   "source_key": "amn_en",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "african group of negotiators",
+    "agn",
+    "antalya",
+    "cop31",
+    "president-designate"
+   ],
+   "excerpt_auto": "AMN Plus-November 11, 2026 Ethiopia’s Minister of Foreign Affairs and COP32 President-Designate, Gedion Timothewos (PhD), held a bilateral discussion with Dr. Antwi-Boasiako Amoah, Chair of the African Group of Negotiators (AGN), on the sidelines of the COP31 Leaders’ Summit in Antalya, Türkiye.",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "22027ec27cf04043",
+   "url": "https://www.amn.gov.et/en/prime-minister-abiy-norways-jonas-gahr-store-discuss-green-legacy-and-cop32-cooperation/",
+   "url_canonical": "https://amn.gov.et/en/prime-minister-abiy-norways-jonas-gahr-store-discuss-green-legacy-and-cop32-cooperation",
+   "title": "Prime Minister Abiy, Norway’s Jonas Gahr Støre Discuss Green Legacy and COP32 Cooperation",
+   "outlet": "Addis Media Network (EN)",
+   "source_key": "amn_en",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "cop31",
+    "green legacy"
+   ],
+   "excerpt_auto": "AMN PLUS-November 11, 2026 Prime Minister Abiy Ahmed has held a bilateral meeting with Norwegian Prime Minister Jonas Gahr Støre on the sidelines of the COP31 Leaders’ Summit, focusing on opportunities to strengthen cooperation in key areas of mutual interest. In a statement shared on his official s",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "b276df3bcdad59c9",
+   "url": "https://www.fanamc.com/archives/326349?utm_source=rss&utm_medium=rss&utm_campaign=%25e1%258c%25a0%25e1%2589%2585%25e1%2588%258b%25e1%258b%25ad-%25e1%2588%259a%25e1%258a%2592%25e1%2588%25b5%25e1%2589%25b5%25e1%2588%25ad-%25e1%258b%2590%25e1%2589%25a2%25e1%258b%25ad-%25e1%258a%25a0%25e1%2588%2595%25e1%2588%2598%25e1%258b%25b5-%25e1%258b%25b6-%25e1%2588%25ad-%25e1%258a%25a8%25e1%2589%25a6%25e1%2589%25b5",
+   "url_canonical": "https://fanamc.com/archives/326349",
+   "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ",
+   "outlet": "ፋና / Fana (AM)",
+   "source_key": "fana_am",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "አዲስ አበባ"
+   ],
+   "excerpt_auto": "አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የመሪዎች ጉባኤ ጎን ለጎን ተወያይተዋል፡፡ ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ በውይይታችንም ሁለቱ ሀገሮች የተጋረጡባቸውን የጋራ የአየር ንብረት ለውጥ ተግዳሮቶችና እየወሰድናቸው ያሉትን ምላሾች ጨምሮ በCOP32 ላይ ትብብራችንን ለማጠናከር፣ ጠንካራ የአፍሪካ አየር ንብረት […] The po",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "2701f9253ab16605",
+   "url": "https://www.fanamc.com/archives/326345?utm_source=rss&utm_medium=rss&utm_campaign=%25e1%2588%2588%25e1%258b%259b%25e1%2588%25ac%25e1%258b%258d%25e1%258a%2593-%25e1%2588%2588%25e1%2588%2598%25e1%258c%25aa%25e1%258b%258d-%25e1%2589%25b5%25e1%258b%258d%25e1%2588%258d%25e1%258b%25b5-%25e1%258b%25a8%25e1%2589%25b0%25e1%2588%25bb%25e1%2588%2588%25e1%2589%25bd%25e1%258a%2593-%25e1%258b%2598%25e1%2588%258b",
+   "url_canonical": "https://fanamc.com/archives/326345",
+   "title": "ለዛሬውና ለመጪው ትውልድ የተሻለችና ዘላቂ ከተማ ለመገንባት በቁርጠኝነት እንሠራለን – ከንቲባ አዳነች አቤቤ",
+   "outlet": "ፋና / Fana (AM)",
+   "source_key": "fana_am",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "አዲስ አበባ"
+   ],
+   "excerpt_auto": "አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ለዛሬውና ለመጪው ትውልድ የተሻለችና ዘላቂ ከተማ ለመገንባት በቁርጠኝነት እንሠራለን አሉ የአዲስ አበባ ከተማ አስተዳደር ከንቲባ አዳነች አቤቤ፡፡ ከንቲባ አዳነች በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ ከኮፕ31 ጉባኤ ጎን ለጎን፣ ከህፃናት ኢንቨስትመንት ፈንድ ፋውንዴሽን ዋና ሥራ አስፈጻሚ ኬት ሃምፕተን ጋር መወያየታቸውን ገልጸዋል፡፡ ውይይቱ ኢትዮጵያ የCOP32 አዘጋጅ ሀገር እንደመሆኗ በትብብር […] The post ለ",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "2277181a49405d1d",
+   "url": "https://www.youtube.com/shorts/PeT2XbKK__Y",
+   "url_canonical": "https://youtube.com/shorts/PeT2XbKK__Y",
+   "title": "የኮፕ 32 ጉባዔ ትኩረቶች @ethiopiannewsagency",
+   "outlet": "ENA (YouTube)",
+   "source_key": "yt_ena",
+   "kind": "video",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [],
+   "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "b0ffe1c49e42e1e7",
+   "url": "https://t.me/fanatelevision/113181",
+   "url_canonical": "https://t.me/fanatelevision/113181",
+   "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የ",
+   "outlet": "Fana (Telegram)",
+   "source_key": "tg_fana",
+   "kind": "telegram",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "አዲስ አበባ"
+   ],
+   "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የመሪዎች ጉባኤ ጎን ለጎን ተወያይተዋል፡፡ ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ በውይይታችንም ሁለቱ ሀገሮች የተጋረጡባቸውን የጋራ የአየር ንብረት ለውጥ ተግዳሮቶችና እየወሰድናቸው ያሉትን ምላሾች ጨምሮ በCOP32 ላ",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "bd9c500c1cd6bcf7",
+   "url": "https://t.me/fanatelevision/113182",
+   "url_canonical": "https://t.me/fanatelevision/113182",
+   "title": "መላውን ዓለም ለኮፕ 32 ጉባኤ ወደ ምድረ ቀደምት ሀገር ወደሆነችው ኢትዮጵያ ለመቀበል ዝግጁ ነን - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር)",
+   "outlet": "Fana (Telegram)",
+   "source_key": "tg_fana",
+   "kind": "telegram",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [],
+   "excerpt_auto": "መላውን ዓለም ለኮፕ 32 ጉባኤ ወደ ምድረ ቀደምት ሀገር ወደሆነችው ኢትዮጵያ ለመቀበል ዝግጁ ነን - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር)",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "b13670f8c1dbfad8",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnRsdkdJYnhOdHhGZmh1cjR4M25QNXllVVhfNktVaWEtRDdYa24yZEJ4MVhwSm9XY2pTM2RpS295RDIxV3ZESUh2ekI2TzZlaWJzOHJWT2E0Ni1pZlBVNkwwZk9YYUlkcFYxYWNqWVZsb2JnOE5qM3oyak5HX0pBaExLTzdoQTd3dHR3YlFiMlFUX0dtbzJNTVJxMF9oNXZaalhwRjE5dw?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnRsdkdJYnhOdHhGZmh1cjR4M25QNXllVVhfNktVaWEtRDdYa24yZEJ4MVhwSm9XY2pTM2RpS295RDIxV3ZESUh2ekI2TzZlaWJzOHJWT2E0Ni1pZlBVNkwwZk9YYUlkcFYxYWNqWVZsb2JnOE5qM3oyak5HX0pBaExLTzdoQTd3dHR3YlFiMlFUX0dtbzJNTVJxMF9oNXZaalhwRjE5dw?oc=5",
+   "title": "Ethiopia to Host COP32, PM Abiy Ahmed Announces During COP31 Leaders' Summit",
+   "outlet": "Dawan Africa",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "cop31"
+   ],
+   "excerpt_auto": "Ethiopia to Host COP32, PM Abiy Ahmed Announces During COP31 Leaders' Summit Dawan Africa",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "d23cd4a80af94ae7",
+   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jRzlPc09zYk9vOEpFSUZzOVl2cXBFb2ZVcXdzWXZsam9kUllNYm4talJJUXV0bGVLTlhjOVctX2tkSUlqZVE?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jRzlPc09zYk9vOEpFSUZzOVl2cXBFb2ZVcXdzWXZsam9kUllNYm4talJJUXV0bGVLTlhjOVctX2tkSUlqZVE?oc=5",
+   "title": "Ethiopia and the Global Energy Transition: The Climate Diplomacy Dividend of COP32 Energy Access, Development Finance, and Consensus-Building in Global Climate Action - IFA",
+   "outlet": "Institute of Foreign Affairs",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [],
+   "excerpt_auto": "Ethiopia and the Global Energy Transition: The Climate Diplomacy Dividend of COP32 Energy Access, Development Finance, and Consensus-Building in Global Climate Action IFA - Institute of Foreign Affairs",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "f6891f00e8a6bc56",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNczNtVXEyVjZFWF85ZGhqMnFBSlpZcTd6MWhhMXZ6cEZxMk55ZWRvYUVsakdTRjBVU1pURHFDbkEzVHRJajhfSnREZm5MaG5jTlJFaXBldGw4RGVqQUxST2Z6VW5vUkRrZlJHdnlUNmhCdDByRjI0SEdGdlR3ZlphdWxQR3NjaHNjcURUYTFkMlpZSGdPdzBMdDUxaWgxTG9MbXJQWDR3dGh1bjBHQmc?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNczNtVXEyVjZFWF85ZGhqMnFBSlpZcTd6MWhhMXZ6cEZxMk55ZWRvYUVsakdTRjBVU1pURHFDbkEzVHRJajhfSnREZm5MaG5jTlJFaXBldGw4RGVqQUxST2Z6VW5vUkRrZlJHdnlUNmhCdDByRjI0SEdGdlR3ZlphdWxQR3NjaHNjcURUYTFkMlpZSGdPdzBMdDUxaWgxTG9MbXJQWDR3dGh1bjBHQmc?oc=5",
+   "title": "Ethiopian, Turkish presidents explore ways to strengthen bilateral ties ahead of COP32",
+   "outlet": "Peoples Gazette Nigeria",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-11",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [],
+   "excerpt_auto": "Ethiopian, Turkish presidents explore ways to strengthen bilateral ties ahead of COP32 Peoples Gazette Nigeria",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "f3223b635f7b98d5",
+   "url": "https://www.fanamc.com/english/wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32",
+   "url_canonical": "https://fanamc.com/english/wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32",
+   "title": "Wearing Its Name Like a Promise: Addis Ababa Carries Its Invitation to the World to Antalya Ahead of COP32",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "antalya"
+   ],
+   "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – A name can be a city’s first introduction to the world. Addis Ababa—literally, the New Flower—carries within its name an image of renewal, growth and possibility.",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "c5c8ddcbf7805e3d",
+   "url": "https://www.fanamc.com/english/ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32",
+   "url_canonical": "https://fanamc.com/english/ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32",
+   "title": "Ethiopia and UK Chart Path for Stronger Climate Partnership Towards COP32",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "antalya",
+    "preparations"
+   ],
+   "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – Ethiopia and the United Kingdom have discussed strengthening climate cooperation and advancing preparations for COP32, scheduled to take place in Addis Ababa in 2027. The discussions were held today in Antalya, Türkiye, on the sidelines of the 31st UN Climate C",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "dcbe8fcc383c57be",
+   "url": "https://t.me/EthiopianNewsA/30982",
+   "url_canonical": "https://t.me/EthiopianNewsA/30982",
+   "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ:: #COP32 #PMOEthiopia",
+   "outlet": "ENA (Telegram)",
+   "source_key": "tg_ena",
+   "kind": "telegram",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "cop31"
+   ],
+   "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ:: #COP32 #PMOEthiopia",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "f21f75451ef061bd",
+   "url": "https://t.me/fanatelevision/113191",
+   "url_canonical": "https://t.me/fanatelevision/113191",
+   "title": "ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 3፣ 2019 (ኤፍ ኤም ሲ) የውጭ ጉዳይ ሚኒስትር እና የኮፕ 32 ፕሬዚዳንት ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪን",
+   "outlet": "Fana (Telegram)",
+   "source_key": "tg_fana",
+   "kind": "telegram",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "አዲስ አበባ"
+   ],
+   "excerpt_auto": "ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 3፣ 2019 (ኤፍ ኤም ሲ) የውጭ ጉዳይ ሚኒስትር እና የኮፕ 32 ፕሬዚዳንት ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ኤድ ሚሊባንድ ጋር ተወያይተዋል፡፡ በውይይታቸውም ጌዲዮን ጢሞቲዎስ (ዶ/ር) ኢትዮጵያ የአየር ንብረት ለውጥን ለመከላከል የወሰደቻቸውን ርምጃዎች በተመለከተ ገለፃ አድርገዋል፡፡ የአየር ንብረት ለውጥን ለመከላከል የካርበን ልቀቶ",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "ac722dc85eaa6ac0",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOLWJOWnBOdGRIR3lneG9HcFp3V0lCM2hyY3FqeXVMLVBLSnJUdjN3U2ptSHZBcWEtejdrSWlYN1RpakwwMFRqMDk3MC1zQkFycTVFbWVFRXRzYUVNVUlnb3A1YVJvNFF6Q1pUXzc3eDZLVzdqZnVkRmxkM3ZLVDhsVjJQcTYyMnVSaHBGWDFQaHNkWVV0OS1WekRhbkk0cG55blNrOFFmeWdkcFdrbWszUDJtbXlzRXJoZzNMNlNNVTB6WFZFQ0FuMXBJc3hpbjJqY0p3SG9POG9lTHdUYVdj?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOLWJOWnBOdGRIR3lneG9HcFp3V0lCM2hyY3FqeXVMLVBLSnJUdjN3U2ptSHZBcWEtejdrSWlYN1RpakwwMFRqMDk3MC1zQkFycTVFbWVFRXRzYUVNVUlnb3A1YVJvNFF6Q1pUXzc3eDZLVzdqZnVkRmxkM3ZLVDhsVjJQcTYyMnVSaHBGWDFQaHNkWVV0OS1WekRhbkk0cG55blNrOFFmeWdkcFdrbWszUDJtbXlzRXJoZzNMNlNNVTB6WFZFQ0FuMXBJc3hpbjJqY0p3SG9POG9lTHdUYVdj?oc=5",
+   "title": "#Video_News :-PM_Abiy urges major emitters to step up, intensifies diplomatic outreach ahead of #Ethiopia’s COP32 watch",
+   "outlet": "Facebook",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [],
+   "excerpt_auto": "#Video_News :-PM_Abiy urges major emitters to step up, intensifies diplomatic outreach ahead of #Ethiopia’s COP32 watch Facebook",
+   "also_seen": [
     {
-      "id": "084ba27b1d37cbab",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXdTc3QzVGpLUDN4YU9qSW94NXhLT21RcWRScHFsaXExUEdIM2tpTVNVbkFzOHJlWEpBSHY4VEFQVlVUS0o1cUJzQjB1MEpzTUtlMjU5Z1AzVUR2c09sRGF6SHZtNEVjVmx6eGpmZl9OTWlVRFVHNlAtWTMtRmJNTWlZU1JaMkxUeFRQZDNnRU45WkxraVAyanF0YW9aNF9EMDVNSElIRmlCZ0stMF95S0lWVWYxNG05RFFv?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVXdTc3QzVGpLUDN4YU9qSW94NXhLT21RcWRScHFsaXExUEdIM2tpTVNVbkFzOHJlWEpBSHY4VEFQVlVUS0o1cUJzQjB1MEpzTUtlMjU5Z1AzVUR2c09sRGF6SHZtNEVjVmx6eGpmZl9OTWlVRFVHNlAtWTMtRmJNTWlZU1JaMkxUeFRQZDNnRU45WkxraVAyanF0YW9aNF9EMDVNSElIRmlCZ0stMF95S0lWVWYxNG05RFFv?oc=5",
-      "title": "Addis Ababa to Unite African Cities in Advancing Shared Climate Priorities, Financing Needs and Development Agendas at COP32: Mayor",
-      "outlet": "Fana Media Corporation S.C",
-      "source_key": "gnews_cop32_platform",
-      "kind": "article",
-      "published": "2026-11-10",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 1,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "addis ababa"
-      ],
-      "excerpt_auto": "Addis Ababa to Unite African Cities in Advancing Shared Climate Priorities, Financing Needs and Development Agendas at COP32: Mayor Fana Media Corporation S.C",
-      "also_seen": [],
-      "note": ""
+     "outlet": "Addis Standard",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPR0ZvZ0lwR3IwcWFwUkNzM28zc2NVN1BNNUFnc1laVDNUa05CSmlrNGpoS0tZcnZjZlZRVjRYSFBDdFpyTWN6dWdZWjRmRUhIRmp5TV9tSkpRZE5NN2lraHF0M2hwUEhOTGlzNGUyZ21CaGdBSmpvcGVWcUhSTUZOQkRKQjFhcy0tVkxaa1oySi1GaG8xZGJrM2V0b2VkOUVGbU9BT1RiUWxvdFBLOUZsWE13VnozRURoekM2ZzBBc3Y?oc=5"
     },
     {
-      "id": "b6e31db978c27ee0",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wXzlGTEJ6bUhnd2U1YmVBOG9rNEM1VzJjLXEzTG5rMm1pbUNPWHpHZlQ0bXYyLXpzRVd5MlpZY25JaEktMG15Umc5V1gzYUJnclE?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5wXzlGTEJ6bUhnd2U1YmVBOG9rNEM1VzJjLXEzTG5rMm1pbUNPWHpHZlQ0bXYyLXpzRVd5MlpZY25JaEktMG15Umc5V1gzYUJnclE?oc=5",
-      "title": "COP32 Ethiopia Crucial Platform for Global South Consensus Beyond Climate Finance",
-      "outlet": "ENA English",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 1,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "climate finance",
-        "platform"
-      ],
-      "excerpt_auto": "COP32 Ethiopia Crucial Platform for Global South Consensus Beyond Climate Finance ENA English",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "eba3c2f2279aac82",
-      "url": "https://www.fanamc.com/english/president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host/?utm_source=rss&utm_medium=rss&utm_campaign=president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host",
-      "url_canonical": "https://fanamc.com/english/president-of-turkiye-backs-ethiopias-forthcoming-leadership-of-global-climate-process-wishes-success-as-cop32-host",
-      "title": "President of Turkiye Backs Ethiopia’s Forthcoming Leadership of Global Climate Process, Wishes Success as COP32 Host",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "presidency"
-      ],
-      "excerpt_auto": "Addis Ababa, November 11, 2026 (FMC) – Turkish President Recep Tayyip Erdoğan has wished Ethiopia success in assuming the Presidency of the 32nd United Nations Climate Change Conference (COP32), recognizing the country’s forthcoming role in leading the next phase of the global climate process. “I wi",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "02062bc28bd32c99",
-      "url": "https://www.amn.gov.et/en/ethiopia-african-group-of-negotiators-strengthen-cooperation-on-africas-climate-priorities-ahead-of-cop32/",
-      "url_canonical": "https://amn.gov.et/en/ethiopia-african-group-of-negotiators-strengthen-cooperation-on-africas-climate-priorities-ahead-of-cop32",
-      "title": "Ethiopia, African Group of Negotiators Strengthen Cooperation on Africa’s Climate Priorities Ahead of COP32",
-      "outlet": "Addis Media Network (EN)",
-      "source_key": "amn_en",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "african group of negotiators",
-        "agn",
-        "antalya",
-        "cop31",
-        "president-designate"
-      ],
-      "excerpt_auto": "AMN Plus-November 11, 2026 Ethiopia’s Minister of Foreign Affairs and COP32 President-Designate, Gedion Timothewos (PhD), held a bilateral discussion with Dr. Antwi-Boasiako Amoah, Chair of the African Group of Negotiators (AGN), on the sidelines of the COP31 Leaders’ Summit in Antalya, Türkiye.",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "22027ec27cf04043",
-      "url": "https://www.amn.gov.et/en/prime-minister-abiy-norways-jonas-gahr-store-discuss-green-legacy-and-cop32-cooperation/",
-      "url_canonical": "https://amn.gov.et/en/prime-minister-abiy-norways-jonas-gahr-store-discuss-green-legacy-and-cop32-cooperation",
-      "title": "Prime Minister Abiy, Norway’s Jonas Gahr Støre Discuss Green Legacy and COP32 Cooperation",
-      "outlet": "Addis Media Network (EN)",
-      "source_key": "amn_en",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "cop31",
-        "green legacy"
-      ],
-      "excerpt_auto": "AMN PLUS-November 11, 2026 Prime Minister Abiy Ahmed has held a bilateral meeting with Norwegian Prime Minister Jonas Gahr Støre on the sidelines of the COP31 Leaders’ Summit, focusing on opportunities to strengthen cooperation in key areas of mutual interest. In a statement shared on his official s",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "b276df3bcdad59c9",
-      "url": "https://www.fanamc.com/archives/326349?utm_source=rss&utm_medium=rss&utm_campaign=%25e1%258c%25a0%25e1%2589%2585%25e1%2588%258b%25e1%258b%25ad-%25e1%2588%259a%25e1%258a%2592%25e1%2588%25b5%25e1%2589%25b5%25e1%2588%25ad-%25e1%258b%2590%25e1%2589%25a2%25e1%258b%25ad-%25e1%258a%25a0%25e1%2588%2595%25e1%2588%2598%25e1%258b%25b5-%25e1%258b%25b6-%25e1%2588%25ad-%25e1%258a%25a8%25e1%2589%25a6%25e1%2589%25b5",
-      "url_canonical": "https://fanamc.com/archives/326349",
-      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ",
-      "outlet": "ፋና / Fana (AM)",
-      "source_key": "fana_am",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "አዲስ አበባ"
-      ],
-      "excerpt_auto": "አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የመሪዎች ጉባኤ ጎን ለጎን ተወያይተዋል፡፡ ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ በውይይታችንም ሁለቱ ሀገሮች የተጋረጡባቸውን የጋራ የአየር ንብረት ለውጥ ተግዳሮቶችና እየወሰድናቸው ያሉትን ምላሾች ጨምሮ በCOP32 ላይ ትብብራችንን ለማጠናከር፣ ጠንካራ የአፍሪካ አየር ንብረት […] The po",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "2701f9253ab16605",
-      "url": "https://www.fanamc.com/archives/326345?utm_source=rss&utm_medium=rss&utm_campaign=%25e1%2588%2588%25e1%258b%259b%25e1%2588%25ac%25e1%258b%258d%25e1%258a%2593-%25e1%2588%2588%25e1%2588%2598%25e1%258c%25aa%25e1%258b%258d-%25e1%2589%25b5%25e1%258b%258d%25e1%2588%258d%25e1%258b%25b5-%25e1%258b%25a8%25e1%2589%25b0%25e1%2588%25bb%25e1%2588%2588%25e1%2589%25bd%25e1%258a%2593-%25e1%258b%2598%25e1%2588%258b",
-      "url_canonical": "https://fanamc.com/archives/326345",
-      "title": "ለዛሬውና ለመጪው ትውልድ የተሻለችና ዘላቂ ከተማ ለመገንባት በቁርጠኝነት እንሠራለን – ከንቲባ አዳነች አቤቤ",
-      "outlet": "ፋና / Fana (AM)",
-      "source_key": "fana_am",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "አዲስ አበባ"
-      ],
-      "excerpt_auto": "አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ለዛሬውና ለመጪው ትውልድ የተሻለችና ዘላቂ ከተማ ለመገንባት በቁርጠኝነት እንሠራለን አሉ የአዲስ አበባ ከተማ አስተዳደር ከንቲባ አዳነች አቤቤ፡፡ ከንቲባ አዳነች በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ ከኮፕ31 ጉባኤ ጎን ለጎን፣ ከህፃናት ኢንቨስትመንት ፈንድ ፋውንዴሽን ዋና ሥራ አስፈጻሚ ኬት ሃምፕተን ጋር መወያየታቸውን ገልጸዋል፡፡ ውይይቱ ኢትዮጵያ የCOP32 አዘጋጅ ሀገር እንደመሆኗ በትብብር […] The post ለ",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "2277181a49405d1d",
-      "url": "https://www.youtube.com/shorts/PeT2XbKK__Y",
-      "url_canonical": "https://youtube.com/shorts/PeT2XbKK__Y",
-      "title": "የኮፕ 32 ጉባዔ ትኩረቶች @ethiopiannewsagency",
-      "outlet": "ENA (YouTube)",
-      "source_key": "yt_ena",
-      "kind": "video",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [],
-      "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "b0ffe1c49e42e1e7",
-      "url": "https://t.me/fanatelevision/113181",
-      "url_canonical": "https://t.me/fanatelevision/113181",
-      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የ",
-      "outlet": "Fana (Telegram)",
-      "source_key": "tg_fana",
-      "kind": "telegram",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "አዲስ አበባ"
-      ],
-      "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 2፣ 2019 (ኤፍ ኤም ሲ) ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) ከቦትስዋና ፕሬዚዳንት ዱማ ጌዲዮን ቦኮ ጋር ከኮፕ31 የመሪዎች ጉባኤ ጎን ለጎን ተወያይተዋል፡፡ ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) በማህበራዊ ትስስር ገጻቸው ባሰፈሩት ጽሁፍ፤ በውይይታችንም ሁለቱ ሀገሮች የተጋረጡባቸውን የጋራ የአየር ንብረት ለውጥ ተግዳሮቶችና እየወሰድናቸው ያሉትን ምላሾች ጨምሮ በCOP32 ላ",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "bd9c500c1cd6bcf7",
-      "url": "https://t.me/fanatelevision/113182",
-      "url_canonical": "https://t.me/fanatelevision/113182",
-      "title": "መላውን ዓለም ለኮፕ 32 ጉባኤ ወደ ምድረ ቀደምት ሀገር ወደሆነችው ኢትዮጵያ ለመቀበል ዝግጁ ነን - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር)",
-      "outlet": "Fana (Telegram)",
-      "source_key": "tg_fana",
-      "kind": "telegram",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [],
-      "excerpt_auto": "መላውን ዓለም ለኮፕ 32 ጉባኤ ወደ ምድረ ቀደምት ሀገር ወደሆነችው ኢትዮጵያ ለመቀበል ዝግጁ ነን - ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር)",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "b13670f8c1dbfad8",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnRsdkdJYnhOdHhGZmh1cjR4M25QNXllVVhfNktVaWEtRDdYa24yZEJ4MVhwSm9XY2pTM2RpS295RDIxV3ZESUh2ekI2TzZlaWJzOHJWT2E0Ni1pZlBVNkwwZk9YYUlkcFYxYWNqWVZsb2JnOE5qM3oyak5HX0pBaExLTzdoQTd3dHR3YlFiMlFUX0dtbzJNTVJxMF9oNXZaalhwRjE5dw?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYnRsdkdJYnhOdHhGZmh1cjR4M25QNXllVVhfNktVaWEtRDdYa24yZEJ4MVhwSm9XY2pTM2RpS295RDIxV3ZESUh2ekI2TzZlaWJzOHJWT2E0Ni1pZlBVNkwwZk9YYUlkcFYxYWNqWVZsb2JnOE5qM3oyak5HX0pBaExLTzdoQTd3dHR3YlFiMlFUX0dtbzJNTVJxMF9oNXZaalhwRjE5dw?oc=5",
-      "title": "Ethiopia to Host COP32, PM Abiy Ahmed Announces During COP31 Leaders' Summit",
-      "outlet": "Dawan Africa",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "cop31"
-      ],
-      "excerpt_auto": "Ethiopia to Host COP32, PM Abiy Ahmed Announces During COP31 Leaders' Summit Dawan Africa",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "d23cd4a80af94ae7",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jRzlPc09zYk9vOEpFSUZzOVl2cXBFb2ZVcXdzWXZsam9kUllNYm4talJJUXV0bGVLTlhjOVctX2tkSUlqZVE?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jRzlPc09zYk9vOEpFSUZzOVl2cXBFb2ZVcXdzWXZsam9kUllNYm4talJJUXV0bGVLTlhjOVctX2tkSUlqZVE?oc=5",
-      "title": "Ethiopia and the Global Energy Transition: The Climate Diplomacy Dividend of COP32 Energy Access, Development Finance, and Consensus-Building in Global Climate Action - IFA",
-      "outlet": "Institute of Foreign Affairs",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [],
-      "excerpt_auto": "Ethiopia and the Global Energy Transition: The Climate Diplomacy Dividend of COP32 Energy Access, Development Finance, and Consensus-Building in Global Climate Action IFA - Institute of Foreign Affairs",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "f6891f00e8a6bc56",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNczNtVXEyVjZFWF85ZGhqMnFBSlpZcTd6MWhhMXZ6cEZxMk55ZWRvYUVsakdTRjBVU1pURHFDbkEzVHRJajhfSnREZm5MaG5jTlJFaXBldGw4RGVqQUxST2Z6VW5vUkRrZlJHdnlUNmhCdDByRjI0SEdGdlR3ZlphdWxQR3NjaHNjcURUYTFkMlpZSGdPdzBMdDUxaWgxTG9MbXJQWDR3dGh1bjBHQmc?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNczNtVXEyVjZFWF85ZGhqMnFBSlpZcTd6MWhhMXZ6cEZxMk55ZWRvYUVsakdTRjBVU1pURHFDbkEzVHRJajhfSnREZm5MaG5jTlJFaXBldGw4RGVqQUxST2Z6VW5vUkRrZlJHdnlUNmhCdDByRjI0SEdGdlR3ZlphdWxQR3NjaHNjcURUYTFkMlpZSGdPdzBMdDUxaWgxTG9MbXJQWDR3dGh1bjBHQmc?oc=5",
-      "title": "Ethiopian, Turkish presidents explore ways to strengthen bilateral ties ahead of COP32",
-      "outlet": "Peoples Gazette Nigeria",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-11",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [],
-      "excerpt_auto": "Ethiopian, Turkish presidents explore ways to strengthen bilateral ties ahead of COP32 Peoples Gazette Nigeria",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "f3223b635f7b98d5",
-      "url": "https://www.fanamc.com/english/wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32",
-      "url_canonical": "https://fanamc.com/english/wearing-its-name-like-a-promise-addis-ababa-carries-its-invitation-to-the-world-to-antalya-ahead-of-cop32",
-      "title": "Wearing Its Name Like a Promise: Addis Ababa Carries Its Invitation to the World to Antalya Ahead of COP32",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "antalya"
-      ],
-      "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – A name can be a city’s first introduction to the world. Addis Ababa—literally, the New Flower—carries within its name an image of renewal, growth and possibility.",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "c5c8ddcbf7805e3d",
-      "url": "https://www.fanamc.com/english/ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32",
-      "url_canonical": "https://fanamc.com/english/ethiopia-and-uk-chart-path-for-stronger-climate-partnership-towards-cop32",
-      "title": "Ethiopia and UK Chart Path for Stronger Climate Partnership Towards COP32",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "antalya",
-        "preparations"
-      ],
-      "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – Ethiopia and the United Kingdom have discussed strengthening climate cooperation and advancing preparations for COP32, scheduled to take place in Addis Ababa in 2027. The discussions were held today in Antalya, Türkiye, on the sidelines of the 31st UN Climate C",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "dcbe8fcc383c57be",
-      "url": "https://t.me/EthiopianNewsA/30982",
-      "url_canonical": "https://t.me/EthiopianNewsA/30982",
-      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ:: #COP32 #PMOEthiopia",
-      "outlet": "ENA (Telegram)",
-      "source_key": "tg_ena",
-      "kind": "telegram",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "cop31"
-      ],
-      "excerpt_auto": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ:: #COP32 #PMOEthiopia",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "f21f75451ef061bd",
-      "url": "https://t.me/fanatelevision/113191",
-      "url_canonical": "https://t.me/fanatelevision/113191",
-      "title": "ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 3፣ 2019 (ኤፍ ኤም ሲ) የውጭ ጉዳይ ሚኒስትር እና የኮፕ 32 ፕሬዚዳንት ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪን",
-      "outlet": "Fana (Telegram)",
-      "source_key": "tg_fana",
-      "kind": "telegram",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "አዲስ አበባ"
-      ],
-      "excerpt_auto": "ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ጋር ተወያዩ አዲስ አበባ፣ ሕዳር 3፣ 2019 (ኤፍ ኤም ሲ) የውጭ ጉዳይ ሚኒስትር እና የኮፕ 32 ፕሬዚዳንት ጌዲዮን ጢሞቲዎስ (ዶ/ር) ከዩናይትድ ኪንግደም የውጭ ጉዳይ ሚኒስትር ኤድ ሚሊባንድ ጋር ተወያይተዋል፡፡ በውይይታቸውም ጌዲዮን ጢሞቲዎስ (ዶ/ር) ኢትዮጵያ የአየር ንብረት ለውጥን ለመከላከል የወሰደቻቸውን ርምጃዎች በተመለከተ ገለፃ አድርገዋል፡፡ የአየር ንብረት ለውጥን ለመከላከል የካርበን ልቀቶ",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "ac722dc85eaa6ac0",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOLWJOWnBOdGRIR3lneG9HcFp3V0lCM2hyY3FqeXVMLVBLSnJUdjN3U2ptSHZBcWEtejdrSWlYN1RpakwwMFRqMDk3MC1zQkFycTVFbWVFRXRzYUVNVUlnb3A1YVJvNFF6Q1pUXzc3eDZLVzdqZnVkRmxkM3ZLVDhsVjJQcTYyMnVSaHBGWDFQaHNkWVV0OS1WekRhbkk0cG55blNrOFFmeWdkcFdrbWszUDJtbXlzRXJoZzNMNlNNVTB6WFZFQ0FuMXBJc3hpbjJqY0p3SG9POG9lTHdUYVdj?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOLWJOWnBOdGRIR3lneG9HcFp3V0lCM2hyY3FqeXVMLVBLSnJUdjN3U2ptSHZBcWEtejdrSWlYN1RpakwwMFRqMDk3MC1zQkFycTVFbWVFRXRzYUVNVUlnb3A1YVJvNFF6Q1pUXzc3eDZLVzdqZnVkRmxkM3ZLVDhsVjJQcTYyMnVSaHBGWDFQaHNkWVV0OS1WekRhbkk0cG55blNrOFFmeWdkcFdrbWszUDJtbXlzRXJoZzNMNlNNVTB6WFZFQ0FuMXBJc3hpbjJqY0p3SG9POG9lTHdUYVdj?oc=5",
-      "title": "#Video_News :-PM_Abiy urges major emitters to step up, intensifies diplomatic outreach ahead of #Ethiopia’s COP32 watch",
-      "outlet": "Facebook",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [],
-      "excerpt_auto": "#Video_News :-PM_Abiy urges major emitters to step up, intensifies diplomatic outreach ahead of #Ethiopia’s COP32 watch Facebook",
-      "also_seen": [
-        {
-          "outlet": "Addis Standard",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPR0ZvZ0lwR3IwcWFwUkNzM28zc2NVN1BNNUFnc1laVDNUa05CSmlrNGpoS0tZcnZjZlZRVjRYSFBDdFpyTWN6dWdZWjRmRUhIRmp5TV9tSkpRZE5NN2lraHF0M2hwUEhOTGlzNGUyZ21CaGdBSmpvcGVWcUhSTUZOQkRKQjFhcy0tVkxaa1oySi1GaG8xZGJrM2V0b2VkOUVGbU9BT1RiUWxvdFBLOUZsWE13VnozRURoekM2ZzBBc3Y?oc=5"
-        },
-        {
-          "outlet": "Facebook",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPaFdWS2llX1VXTVJoUDZkcW40WnJjT0liSUFhbTB5UkU5RWN0YlhkN3RPV2FrVDNIZDJwUlEzdUNyd3BTZ1FNck85Nm16VDJFOGlMTDhOdUFsVE41TlhiM0VRemVmQVlwVnVINlVpSWVNTWZDQUphQzNPYlg3bkN3ZWV1Qnh6WVNkbC1kMjk0SlVPRnNXRWlXVDVoelFNZVlxZ1hBVkhMSUlfbldDeGdYY2JNV21xSy1FdWFPUVpHZWs4c0FDTGttYkgtMnNaYmZ1SERPekZIbGJWNl81Q3o1aw?oc=5"
-        }
-      ],
-      "note": ""
-    },
-    {
-      "id": "4510fcada9468420",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdHBCYlBQaXVtOEpQYlkxTzZkaGNzaWVueDI4azZwMUljekwxVU0xaGkxVVNMaTZKdjN1bU9SVUVFVTgzS3luRFBYaUZIS2dBWDVxT0JwUkg4UGZsRUNqdWFaSDgtS3l0UjFDNmg1YXo1NW5oQUVVcG82dG84TlNmZ1o0cURVRUdUY0ZPYm5ZTzdmQWpUUjVBcGdOUmg1RFFVR2c?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdHBCYlBQaXVtOEpQYlkxTzZkaGNzaWVueDI4azZwMUljekwxVU0xaGkxVVNMaTZKdjN1bU9SVUVFVTgzS3luRFBYaUZIS2dBWDVxT0JwUkg4UGZsRUNqdWFaSDgtS3l0UjFDNmg1YXo1NW5oQUVVcG82dG84TlNmZ1o0cURVRUdUY0ZPYm5ZTzdmQWpUUjVBcGdOUmg1RFFVR2c?oc=5",
-      "title": "Ethiopia Pledges Early Climate Action as It Prepares to Host COP32 in 2027",
-      "outlet": "Bantu Gazette",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [],
-      "excerpt_auto": "Ethiopia Pledges Early Climate Action as It Prepares to Host COP32 in 2027 Bantu Gazette",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "6f78aabdae51781f",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rNV9BS0F4cm1HZ3pjZUZNejlObm1hSDdRMkNxS3pMYk95cVdzdDhsS2tSV2V3VV9SdjZ0TlZkT1JiTWhGZ2ZWa1F0ZmFpRi1RakE?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rNV9BS0F4cm1HZ3pjZUZNejlObm1hSDdRMkNxS3pMYk95cVdzdDhsS2tSV2V3VV9SdjZ0TlZkT1JiTWhGZ2ZWa1F0ZmFpRi1RakE?oc=5",
-      "title": "Ethiopia, UK Discuss COP32 Preparations and Climate Cooperation",
-      "outlet": "ENA English",
-      "source_key": "gnews_cop32_ethiopia",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 2,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "preparations"
-      ],
-      "excerpt_auto": "Ethiopia, UK Discuss COP32 Preparations and Climate Cooperation ENA English",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "9171e0745a016a94",
-      "url": "https://www.fanamc.com/english/ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030",
-      "url_canonical": "https://fanamc.com/english/ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030",
-      "title": "Ethiopia Reaffirms Global Climate Commitment, Showcases Record 56 Billion Seedlings and Global Drive to Reverse Deforestation by 2030",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "green legacy"
-      ],
-      "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – Ethiopia has reaffirmed its commitment to advancing global forest and climate action, showcasing the achievements of its Green Legacy Initiative, which has seen more than 56 billion seedlings planted since 2019, while underscoring the need for stronger internat",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "f7d8e4c950386a99",
-      "url": "https://www.fanamc.com/english/as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2/?utm_source=rss&utm_medium=rss&utm_campaign=as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2",
-      "url_canonical": "https://fanamc.com/english/as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2",
-      "title": "As Antalya Looks to the Cities of Tomorrow, Ethiopia Brings a Story of Urban Renaissance",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "antalya",
-        "cop31"
-      ],
-      "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – The cities of tomorrow are being shaped by decisions made today: where homes are built, how people move, how rivers are protected, where energy comes from and whether urban growth leaves nature behind or makes it part of the solution. As COP31 in Antalya, Türki",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "c7a4687488f6dd47",
-      "url": "https://www.fanamc.com/english/from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities/?utm_source=rss&utm_medium=rss&utm_campaign=from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities",
-      "url_canonical": "https://fanamc.com/english/from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities",
-      "title": "From the Land of Origins to Antalya’s Global Climate Stage: Ethiopia’s Urban Renaissance and the Quest for Resilient Cities",
-      "outlet": "Fana / FMC (EN)",
-      "source_key": "fana_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "state_media",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "addis ababa",
-        "antalya"
-      ],
-      "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – A city is more than the sum of its buildings. It is the rhythm of its streets, the memory carried by its rivers, the shade offered by its trees and the spaces in which strangers become neighbours.",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "4ad7fb8f82d54d1c",
-      "url": "https://www.youtube.com/watch?v=nN-_AYeh7Aw",
-      "url_canonical": "https://youtube.com/watch?v=nN-_AYeh7Aw",
-      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ @ethiopiannewsagency",
-      "outlet": "ENA (YouTube)",
-      "source_key": "yt_ena",
-      "kind": "video",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "cop31"
-      ],
-      "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "c76477a8c278c678",
-      "url": "https://www.youtube.com/watch?v=zNoVZxsVyoM",
-      "url_canonical": "https://youtube.com/watch?v=zNoVZxsVyoM",
-      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ",
-      "outlet": "Fana Television (YouTube)",
-      "source_key": "yt_fana",
-      "kind": "video",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "am",
-      "trust": "state_media",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "state media; promote to B only for direct official statements",
-      "flags": [
-        "official_adjacent"
-      ],
-      "matched": [
-        "cop31"
-      ],
-      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "258b81513d99a104",
-      "url": "https://www.climatechangenews.com/2026/11/12/cop31-bulletin-day-4-burnham-speaks-with-uk-climate-policy-under-fire/",
-      "url_canonical": "https://climatechangenews.com/2026/11/12/cop31-bulletin-day-4-burnham-speaks-with-uk-climate-policy-under-fire",
-      "title": "COP31 Bulletin Day 4: Burnham speaks with UK climate policy under fire",
-      "outlet": "Climate Home News",
-      "source_key": "climatehome",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "independent",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "independent press report",
-      "flags": [],
-      "matched": [
-        "antalya",
-        "cop31"
-      ],
-      "excerpt_auto": "The UK prime minister is one of 25 leaders speaking in Antalya on Thursday while Lula, Greta Thunberg and Gavin Newsom are set to draw crowds The post COP31 Bulletin Day 4: Burnham speaks with UK climate policy under fire appeared first on Climate Home News .",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "2c093112e294668d",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wbGJvLUdKcHFBb3FJUTRMTjd6SFAyXzZsdnNMTHE2eVdrNGtZV2ZfTklNdGp0VXpKWWx0XzlBYWlXU29hNndOUG1yWQ?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wbGJvLUdKcHFBb3FJUTRMTjd6SFAyXzZsdnNMTHE2eVdrNGtZV2ZfTklNdGp0VXpKWWx0XzlBYWlXU29hNndOUG1yWQ?oc=5",
-      "title": "National Adaptation Plan - Côte d'Ivoire",
-      "outlet": "UNFCCC",
-      "source_key": "gnews_unfccc",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "unfccc"
-      ],
-      "excerpt_auto": "National Adaptation Plan - Côte d'Ivoire UNFCCC",
-      "also_seen": [],
-      "note": ""
-    },
-    {
-      "id": "aa9f7930b894bf40",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9INF92MVJhWWtNQ0ZVTDdnVG5mZjQxTnZFU25aQ2M2aXF3UDYtdmNPcG5mc0ZFcW1ZcUlkRmdlcFpUUDRubmF1bXRuNHpVclU5V2c?oc=5",
-      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9INF92MVJhWWtNQ0ZVTDdnVG5mZjQxTnZFU25aQ2M2aXF3UDYtdmNPcG5mc0ZFcW1ZcUlkRmdlcFpUUDRubmF1bXRuNHpVclU5V2c?oc=5",
-      "title": "Ministirri dhimma alaa Itoophiyaa Yaa’ii COP31 Turkiyyee Magaalaa Antaliyaatti,gaggeeffamu cinaatti, marii gam lamee gaggeessan",
-      "outlet": "ENA English",
-      "source_key": "gnews_ena_en",
-      "kind": "article",
-      "published": "2026-11-12",
-      "retrieved": "2026-11-12",
-      "lang": "en",
-      "trust": "aggregator",
-      "tier": 3,
-      "grade": "C",
-      "grade_reason": "aggregator or unverified source",
-      "flags": [
-        "via_google_news",
-        "low_trust"
-      ],
-      "matched": [
-        "cop31"
-      ],
-      "excerpt_auto": "Ministirri dhimma alaa Itoophiyaa Yaa’ii COP31 Turkiyyee Magaalaa Antaliyaatti,gaggeeffamu cinaatti, marii gam lamee gaggeessan ENA English",
-      "also_seen": [],
-      "note": ""
+     "outlet": "Facebook",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPaFdWS2llX1VXTVJoUDZkcW40WnJjT0liSUFhbTB5UkU5RWN0YlhkN3RPV2FrVDNIZDJwUlEzdUNyd3BTZ1FNck85Nm16VDJFOGlMTDhOdUFsVE41TlhiM0VRemVmQVlwVnVINlVpSWVNTWZDQUphQzNPYlg3bkN3ZWV1Qnh6WVNkbC1kMjk0SlVPRnNXRWlXVDVoelFNZVlxZ1hBVkhMSUlfbldDeGdYY2JNV21xSy1FdWFPUVpHZWs4c0FDTGttYkgtMnNaYmZ1SERPekZIbGJWNl81Q3o1aw?oc=5"
     }
-  ]
+   ],
+   "note": ""
+  },
+  {
+   "id": "4510fcada9468420",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdHBCYlBQaXVtOEpQYlkxTzZkaGNzaWVueDI4azZwMUljekwxVU0xaGkxVVNMaTZKdjN1bU9SVUVFVTgzS3luRFBYaUZIS2dBWDVxT0JwUkg4UGZsRUNqdWFaSDgtS3l0UjFDNmg1YXo1NW5oQUVVcG82dG84TlNmZ1o0cURVRUdUY0ZPYm5ZTzdmQWpUUjVBcGdOUmg1RFFVR2c?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdHBCYlBQaXVtOEpQYlkxTzZkaGNzaWVueDI4azZwMUljekwxVU0xaGkxVVNMaTZKdjN1bU9SVUVFVTgzS3luRFBYaUZIS2dBWDVxT0JwUkg4UGZsRUNqdWFaSDgtS3l0UjFDNmg1YXo1NW5oQUVVcG82dG84TlNmZ1o0cURVRUdUY0ZPYm5ZTzdmQWpUUjVBcGdOUmg1RFFVR2c?oc=5",
+   "title": "Ethiopia Pledges Early Climate Action as It Prepares to Host COP32 in 2027",
+   "outlet": "Bantu Gazette",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [],
+   "excerpt_auto": "Ethiopia Pledges Early Climate Action as It Prepares to Host COP32 in 2027 Bantu Gazette",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "6f78aabdae51781f",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rNV9BS0F4cm1HZ3pjZUZNejlObm1hSDdRMkNxS3pMYk95cVdzdDhsS2tSV2V3VV9SdjZ0TlZkT1JiTWhGZ2ZWa1F0ZmFpRi1RakE?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5rNV9BS0F4cm1HZ3pjZUZNejlObm1hSDdRMkNxS3pMYk95cVdzdDhsS2tSV2V3VV9SdjZ0TlZkT1JiTWhGZ2ZWa1F0ZmFpRi1RakE?oc=5",
+   "title": "Ethiopia, UK Discuss COP32 Preparations and Climate Cooperation",
+   "outlet": "ENA English",
+   "source_key": "gnews_cop32_ethiopia",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 2,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "preparations"
+   ],
+   "excerpt_auto": "Ethiopia, UK Discuss COP32 Preparations and Climate Cooperation ENA English",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "9171e0745a016a94",
+   "url": "https://www.fanamc.com/english/ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030",
+   "url_canonical": "https://fanamc.com/english/ethiopia-reaffirms-global-climate-commitment-showcases-record-56-billion-seedlings-and-global-drive-to-reverse-deforestation-by-2030",
+   "title": "Ethiopia Reaffirms Global Climate Commitment, Showcases Record 56 Billion Seedlings and Global Drive to Reverse Deforestation by 2030",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "green legacy"
+   ],
+   "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – Ethiopia has reaffirmed its commitment to advancing global forest and climate action, showcasing the achievements of its Green Legacy Initiative, which has seen more than 56 billion seedlings planted since 2019, while underscoring the need for stronger internat",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "f7d8e4c950386a99",
+   "url": "https://www.fanamc.com/english/as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2/?utm_source=rss&utm_medium=rss&utm_campaign=as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2",
+   "url_canonical": "https://fanamc.com/english/as-antalya-looks-to-the-cities-of-tomorrow-ethiopia-brings-a-story-of-urban-renaissance93549-2",
+   "title": "As Antalya Looks to the Cities of Tomorrow, Ethiopia Brings a Story of Urban Renaissance",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "antalya",
+    "cop31"
+   ],
+   "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – The cities of tomorrow are being shaped by decisions made today: where homes are built, how people move, how rivers are protected, where energy comes from and whether urban growth leaves nature behind or makes it part of the solution. As COP31 in Antalya, Türki",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "c7a4687488f6dd47",
+   "url": "https://www.fanamc.com/english/from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities/?utm_source=rss&utm_medium=rss&utm_campaign=from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities",
+   "url_canonical": "https://fanamc.com/english/from-the-land-of-origins-to-the-fire-of-anatolia-ethiopias-urban-renaissance-and-the-global-quest-for-resilient-cities",
+   "title": "From the Land of Origins to Antalya’s Global Climate Stage: Ethiopia’s Urban Renaissance and the Quest for Resilient Cities",
+   "outlet": "Fana / FMC (EN)",
+   "source_key": "fana_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "state_media",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "addis ababa",
+    "antalya"
+   ],
+   "excerpt_auto": "Addis Ababa, November 12, 2026 (FMC) – A city is more than the sum of its buildings. It is the rhythm of its streets, the memory carried by its rivers, the shade offered by its trees and the spaces in which strangers become neighbours.",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "4ad7fb8f82d54d1c",
+   "url": "https://www.youtube.com/watch?v=nN-_AYeh7Aw",
+   "url_canonical": "https://youtube.com/watch?v=nN-_AYeh7Aw",
+   "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ @ethiopiannewsagency",
+   "outlet": "ENA (YouTube)",
+   "source_key": "yt_ena",
+   "kind": "video",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "cop31"
+   ],
+   "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "c76477a8c278c678",
+   "url": "https://www.youtube.com/watch?v=zNoVZxsVyoM",
+   "url_canonical": "https://youtube.com/watch?v=zNoVZxsVyoM",
+   "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) በCOP31 የመሪዎች ጉባኤ የነበራቸው ተሳትፎ",
+   "outlet": "Fana Television (YouTube)",
+   "source_key": "yt_fana",
+   "kind": "video",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "am",
+   "trust": "state_media",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "state media; promote to B only for direct official statements",
+   "flags": [
+    "official_adjacent"
+   ],
+   "matched": [
+    "cop31"
+   ],
+   "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "258b81513d99a104",
+   "url": "https://www.climatechangenews.com/2026/11/12/cop31-bulletin-day-4-burnham-speaks-with-uk-climate-policy-under-fire/",
+   "url_canonical": "https://climatechangenews.com/2026/11/12/cop31-bulletin-day-4-burnham-speaks-with-uk-climate-policy-under-fire",
+   "title": "COP31 Bulletin Day 4: Burnham speaks with UK climate policy under fire",
+   "outlet": "Climate Home News",
+   "source_key": "climatehome",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "independent",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "independent press report",
+   "flags": [],
+   "matched": [
+    "antalya",
+    "cop31"
+   ],
+   "excerpt_auto": "The UK prime minister is one of 25 leaders speaking in Antalya on Thursday while Lula, Greta Thunberg and Gavin Newsom are set to draw crowds The post COP31 Bulletin Day 4: Burnham speaks with UK climate policy under fire appeared first on Climate Home News .",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "2c093112e294668d",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wbGJvLUdKcHFBb3FJUTRMTjd6SFAyXzZsdnNMTHE2eVdrNGtZV2ZfTklNdGp0VXpKWWx0XzlBYWlXU29hNndOUG1yWQ?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wbGJvLUdKcHFBb3FJUTRMTjd6SFAyXzZsdnNMTHE2eVdrNGtZV2ZfTklNdGp0VXpKWWx0XzlBYWlXU29hNndOUG1yWQ?oc=5",
+   "title": "National Adaptation Plan - Côte d'Ivoire",
+   "outlet": "UNFCCC",
+   "source_key": "gnews_unfccc",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "unfccc"
+   ],
+   "excerpt_auto": "National Adaptation Plan - Côte d'Ivoire UNFCCC",
+   "also_seen": [],
+   "note": ""
+  },
+  {
+   "id": "aa9f7930b894bf40",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9INF92MVJhWWtNQ0ZVTDdnVG5mZjQxTnZFU25aQ2M2aXF3UDYtdmNPcG5mc0ZFcW1ZcUlkRmdlcFpUUDRubmF1bXRuNHpVclU5V2c?oc=5",
+   "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9INF92MVJhWWtNQ0ZVTDdnVG5mZjQxTnZFU25aQ2M2aXF3UDYtdmNPcG5mc0ZFcW1ZcUlkRmdlcFpUUDRubmF1bXRuNHpVclU5V2c?oc=5",
+   "title": "Ministirri dhimma alaa Itoophiyaa Yaa’ii COP31 Turkiyyee Magaalaa Antaliyaatti,gaggeeffamu cinaatti, marii gam lamee gaggeessan",
+   "outlet": "ENA English",
+   "source_key": "gnews_ena_en",
+   "kind": "article",
+   "published": "2026-11-12",
+   "retrieved": "2026-11-12",
+   "lang": "en",
+   "trust": "aggregator",
+   "tier": 3,
+   "grade": "C",
+   "grade_reason": "aggregator or unverified source",
+   "flags": [
+    "via_google_news",
+    "low_trust"
+   ],
+   "matched": [
+    "cop31"
+   ],
+   "excerpt_auto": "Ministirri dhimma alaa Itoophiyaa Yaa’ii COP31 Turkiyyee Magaalaa Antaliyaatti,gaggeeffamu cinaatti, marii gam lamee gaggeessan ENA English",
+   "also_seen": [],
+   "note": ""
+  }
+ ],
+ "tier1_review": {
+  "date": "2026-11-14",
+  "by": "/intel-review",
+  "scope": "tier-1 only; tiers 2-4 still unreviewed"
+ }
 }
