@@ -108,9 +108,26 @@ Branch `phase-22-design-v2` (cut from `phase-22-native-build`, which is pushed a
 - **Two directions** (`docs/design/v2-directions/`): **A "Fidel"** — type-led, spacious, quiet; Ge'ez numerals and two scripts set together as the signature. **B "Birhan"** — image-led, dense, lively; highland photography cut by a "horizon line". Each drawn on Home, Programme, Session detail, Map and an offline state, with type scale, spacing, radius, elevation, icon and motion rules. A third, pattern-led sketch was discarded. Claude recommends A. **These are static drawings, not the app.**
 - **Imagery test:** openly licensed photos can be downloaded in the cloud session, but only up to about 1024 px wide — soft for a phone hero. A shot list for the founder's own photographs is in the directions file. Credits: `docs/design/image-credits.md`.
 
-**Waiting on the founder:** choose A or B (or a deliberate hybrid). The choice will be recorded as D73 together with the palette and type changes.
+**Founder's choice, 2026-11-14 (D73, D74):** Direction B on a **white theme**, with the best of A, more creative, **English-first and without cultural motifs**; the Amharic version to be done later by a native speaker. Recorded as direction **"Daylight"**.
 
-**Then:** ADR-008 for the added animation and image libraries; rebuild tokens, type and components; Home and Programme; stop for phone screenshots.
+**Built to it (version 0.2.0):** new design tokens v1.0, a display typeface, new buttons, chips, header and floating tab bar, and three redesigned screens — **Home, Programme and the session page** — with 24 invented sessions and 12 invented speakers, saving to an on-device agenda, nine credited photographs, entrance animation and a save animation with a haptic tick. Signature: one amber **line** that means time (the horizon under photos, the "now" marker in the programme, a day-progress dot on Home). Screenshots: `docs/design/app-screens/v1-daylight/` (**browser renders, not a phone**). Rules: `docs/design/design-system.md`, section "v1.0 Daylight". Libraries: ADR-008.
+
+| Check (version 0.2.0) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict, lint | Pass | Cloud session |
+| Unit tests | 96 of 96 | Cloud session |
+| Design-token contrast | 70 of 70 pairs pass WCAG 2.2 AA | Cloud session |
+| Automated accessibility (axe-core) | 0 violations over 13 routes × 2 languages × 2 themes, after fixing three it found | Browser render only |
+| 200% text at 320 px wide | No sideways scrolling after fixes; display titles and clock times stop growing at 135% by design | Browser render only |
+| Outside network requests | None | Browser render only |
+| Release APK | Builds: **25.0 MB** (first build 21.7 MB; budget 30 MB). Android 7.0+. Permissions: network access and, new with the image library, network-state. Test-signed | Cloud session |
+| Runs on a phone; animation smoothness; haptic tick; photo sharpness; airplane-mode cold start | **Not done — needs the founder's phone** | — |
+
+**Self-assessment against the design rubric (not validation):** focal point clear on all three screens (the clock time); three hierarchy levels; spacing and type scale followed; no identical-card grid; imagery is real photographs but only about 1024 px wide, so possibly soft on a large phone; three of nine photos are not Ethiopia and are credited as such. **Not built yet:** the shared-element transition from a session row to its page, the bottom-sheet filter, and the redesign of Map, Visit, Updates, Settings and Welcome (they carry the new colours, type and buttons on the old list structure).
+
+**Work stops here for the founder's on-device review of Home and Programme**, as the prompt requires.
+
+**Carry-over from D74:** the demo script, one-pager, teardown "how we win" list and blueprint should no longer present Amharic as a lead selling point; none of those documents has been edited yet.
 
 **Still open from build step 1:** the phone checklist (`docs/operations/device-checklist.md`) has not been reported back; package name; whether the demo build drops network access; the Netlify exclusion before any merge.
 

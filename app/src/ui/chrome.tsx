@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Platform } from 'react-native';
+import { View, ScrollView, Platform, useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
 import { Text } from './Text';
@@ -9,66 +9,62 @@ import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import type { ColorRole } from '@/theme/brand';
 
-function RoundButton({ icon, label, onPress, bg, fg = 'primary' }: { icon: IconName; label: string; onPress: () => void; bg?: string; fg?: ColorRole }) {
+function RoundButton({ icon, label, onPress, tone = 'plain', onPhoto }: { icon: IconName; label: string; onPress: () => void; tone?: 'plain' | 'danger'; onPhoto?: boolean }) {
   const { c } = useTheme();
+  // Over a photograph every control gets a solid backing, so it never depends on the image for contrast.
+  const bg = tone === 'danger' ? c.danger : onPhoto ? c.surface : c.fill;
+  const fg: ColorRole = tone === 'danger' ? 'onDanger' : 'text';
   return (
     <Tap onPress={onPress} accessibilityLabel={label} style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <View style={{ width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center', backgroundColor: bg ?? c.fill }}>
-        <Icon name={icon} size={21} color={fg} />
+      <View style={{ width: 42, height: 42, borderRadius: 21, alignItems: 'center', justifyContent: 'center', backgroundColor: bg }}>
+        <Icon name={icon} size={21} color={fg} stroke={2} />
       </View>
     </Tap>
   );
 }
 
 /**
- * Header for the five tab roots: brand lockup on the left; language switch,
- * search, Emergency (always one tap away, D44) and profile on the right.
+ * Header for the five tab roots (v1.0). Brand on the left; search, Emergency
+ * (always one tap away, D44) and profile on the right. `onPhoto` floats it
+ * over a hero image with solid-backed controls. The language switch lives in
+ * Settings (D74: English first).
  */
-export function AppHeader() {
+export function AppHeader({ onPhoto, title }: { onPhoto?: boolean; title?: string }) {
   const { c, brand } = useTheme();
-  const { prefs, setPrefs } = usePrefs();
+  const { prefs } = usePrefs();
   const { t } = useT();
   const insets = useSafeAreaInsets();
   const router = useRouter();
-  // At large text sizes the brand takes its own line so the name is never cut to "C…".
-  const stacked = prefs.textScale >= 1.5;
-  const lockup = (
-    <View accessible accessibilityRole="header" accessibilityLabel={brand.name} style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flex: stacked ? undefined : 1, paddingLeft: 4 }}>
-      <View style={{ flexShrink: 0 }}><Mark size={32} /></View>
-      <Text variant="title3" numberOfLines={stacked ? 2 : 1} style={{ flexShrink: 1 }}>{brand.name}</Text>
-    </View>
-  );
-  const actions = (
-    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 2, justifyContent: 'flex-end' }}>
-      <Tap onPress={() => setPrefs({ lang: prefs.lang === 'en' ? 'am' : 'en' })} accessibilityLabel={t('a11y.language')} style={{ alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4 }}>
-        <View style={{ height: 40, minWidth: 48, paddingHorizontal: 10, borderRadius: 20, alignItems: 'center', justifyContent: 'center', backgroundColor: c.fill }}>
-          {/* The switch shows the language you would switch TO, in its own script. */}
-          <Text variant="subhead" weight={700} color="primary" maxFontSizeMultiplier={1.3} style={{ fontSize: 15, lineHeight: 22 }}>{prefs.lang === 'en' ? 'አማ' : 'EN'}</Text>
-        </View>
-      </Tap>
-      <RoundButton icon="search" label={t('a11y.search')} onPress={() => router.push('/search')} />
-      <RoundButton icon="siren" label={t('a11y.emergency')} onPress={() => router.push('/visit')} bg={c.dangerBg} fg="danger" />
-      <RoundButton icon="circle-user-round" label={t('a11y.settings')} onPress={() => router.push('/settings')} />
-    </View>
-  );
+  // At large text the header name stops growing at 130%: it is a label for the mark, and the
+  // page's own title carries the full size. This keeps "COP32" whole beside three 42 px controls.
+  const k = Math.min(prefs.textScale, 1.3);
   return (
-    <View style={{ paddingTop: insets.top + 6, paddingBottom: 6, paddingHorizontal: 12, backgroundColor: c.bg, flexDirection: stacked ? 'column' : 'row', alignItems: stacked ? 'stretch' : 'center', gap: stacked ? 6 : 2 }}>
-      {lockup}
-      {actions}
+    <View style={{ paddingTop: insets.top + 8, paddingBottom: 8, paddingHorizontal: 12, backgroundColor: onPhoto ? 'transparent' : c.bg, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+      <View accessible accessibilityRole="header" accessibilityLabel={title ?? brand.name}
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexShrink: 1, paddingLeft: onPhoto ? 6 : 8, paddingRight: onPhoto ? 14 : 0, height: 42, borderRadius: 21, backgroundColor: onPhoto ? c.surface : 'transparent' }}>
+        <View style={{ flexShrink: 0 }}><Mark size={28} /></View>
+        <Text variant="headline" weight={800} numberOfLines={1} maxFontSizeMultiplier={1.3} style={{ flexShrink: 1, fontSize: Math.round(17 * k), lineHeight: Math.round(22 * k) }}>{brand.name}</Text>
+      </View>
+      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+        <RoundButton icon="search" label={t('a11y.search')} onPress={() => router.push('/search')} onPhoto={onPhoto} />
+        <RoundButton icon="siren" label={t('a11y.emergency')} onPress={() => router.push('/visit')} tone="danger" />
+        <RoundButton icon="circle-user-round" label={t('a11y.settings')} onPress={() => router.push('/settings')} onPhoto={onPhoto} />
+      </View>
     </View>
   );
 }
 
-/** Header for pushed screens and sheets: back or close, then the title. */
-export function SubHeader({ title, close }: { title: string; close?: boolean }) {
+/** Header for pushed screens and sheets: back or close, then the title. `onPhoto` floats it over a hero image. */
+export function SubHeader({ title, close, onPhoto, right }: { title?: string; close?: boolean; onPhoto?: boolean; right?: React.ReactNode }) {
   const { c } = useTheme();
   const { t } = useT();
   const insets = useSafeAreaInsets();
   const router = useRouter();
   return (
-    <View style={{ paddingTop: insets.top + 6, paddingBottom: 6, paddingHorizontal: 8, backgroundColor: c.bg, flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-      <RoundButton icon={close ? 'x' : 'chevron-left'} label={t(close ? 'a11y.close' : 'a11y.back')} onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} />
-      <Text variant="headline" accessibilityRole="header" style={{ flex: 1 }}>{title}</Text>
+    <View style={{ paddingTop: insets.top + 8, paddingBottom: 8, paddingHorizontal: 12, backgroundColor: onPhoto ? 'transparent' : c.bg, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+      <RoundButton icon={close ? 'x' : 'chevron-left'} label={t(close ? 'a11y.close' : 'a11y.back')} onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} onPhoto={onPhoto} />
+      {title ? <Text variant="headline" weight={800} accessibilityRole="header" style={{ flex: 1 }}>{title}</Text> : <View style={{ flex: 1 }} />}
+      {right}
     </View>
   );
 }
@@ -96,29 +92,36 @@ export function Page({ title, children, footerSpace = true }: { title?: string; 
 export interface TabItem { key: string; label: string; icon: IconName; focused: boolean; onPress: () => void }
 
 /**
- * Bottom tab bar: five labelled destinations (D16 v2). Labels wrap to two
- * lines rather than truncate; the selected tab is marked by a filled pill,
- * a heavier icon stroke and the accessibility state.
+ * Bottom tab bar (v1.0): a floating bar. The selected tab becomes a solid ink
+ * capsule holding its icon and label; the others show an icon over a small
+ * label. Five labelled destinations (D16 v2).
  */
 export function TabBar({ items }: { items: TabItem[] }) {
-  const { c } = useTheme();
+  const { c, dark } = useTheme();
   const { prefs } = usePrefs();
   const insets = useSafeAreaInsets();
-  // Tab labels stop growing at 130%. Beyond that, five labels cannot sit side by side and
-  // words break mid-syllable (seen in Amharic at 200%). Icon and accessibility label remain.
+  const { width } = useWindowDimensions();
+  // On narrow phones, or with enlarged text, the selected capsule cannot also hold its label inline
+  // without pushing the bar off-screen, so every tab becomes icon-over-label and only the capsule marks selection.
+  const compact = width < 380 || prefs.textScale > 1.15;
   const k = Math.min(prefs.textScale, 1.3);
-  const capped = { fontSize: Math.round(12 * k), lineHeight: Math.round(12 * k * 1.5) };
+  const small = { fontSize: Math.round(11 * k), lineHeight: Math.round(11 * k * 1.4) };
+  const big = { fontSize: Math.round(13.5 * k), lineHeight: Math.round(13.5 * k * 1.3) };
   return (
-    <View accessibilityRole="tablist" style={{ flexDirection: 'row', backgroundColor: c.surface, borderTopWidth: 1, borderTopColor: c.divider, paddingBottom: Math.max(insets.bottom, Platform.OS === 'web' ? 6 : 0), paddingTop: 6, paddingHorizontal: 4 }}>
-      {items.map((it) => (
-        <Tap key={it.key} onPress={it.onPress} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
-          style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-start', gap: 2, paddingVertical: 2 }}>
-          <View style={{ paddingHorizontal: 16, paddingVertical: 4, borderRadius: 16, backgroundColor: it.focused ? c.primarySoft : 'transparent' }}>
-            <Icon name={it.icon} size={23} color={it.focused ? 'onPrimarySoft' : 'textSecondary'} stroke={it.focused ? 2.15 : 1.75} />
-          </View>
-          <Text variant="caption" weight={it.focused ? 700 : 600} color={it.focused ? 'primary' : 'textSecondary'} center numberOfLines={2} maxFontSizeMultiplier={1.3} style={capped}>{it.label}</Text>
-        </Tap>
-      ))}
+    <View style={{ backgroundColor: c.bg, paddingHorizontal: 12, paddingTop: 6, paddingBottom: Math.max(insets.bottom, 10) }}>
+      <View accessibilityRole="tablist"
+        style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: c.surface, borderRadius: 32, padding: 6, minHeight: 64, borderWidth: 1, borderColor: c.divider,
+          shadowColor: '#000', shadowOpacity: dark ? 0.5 : 0.1, shadowRadius: 16, shadowOffset: { width: 0, height: 6 }, elevation: 8 }}>
+        {items.map((it) => (
+          <Tap key={it.key} onPress={it.onPress} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
+            style={it.focused && !compact
+              ? { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7, backgroundColor: c.ink, borderRadius: 26, paddingHorizontal: 16, minHeight: 52 }
+              : { flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', gap: 2, minHeight: 52, borderRadius: 26, backgroundColor: it.focused ? c.ink : 'transparent' }}>
+            <Icon name={it.icon} size={22} color={it.focused ? 'onInk' : 'textSecondary'} stroke={it.focused ? 2.3 : 1.8} />
+            <Text variant="caption" weight={it.focused ? 800 : 600} color={it.focused ? 'onInk' : 'textSecondary'} numberOfLines={1} maxFontSizeMultiplier={1.3} style={it.focused && !compact ? big : small}>{it.label}</Text>
+          </Tap>
+        ))}
+      </View>
     </View>
   );
 }

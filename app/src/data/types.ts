@@ -2,7 +2,7 @@
  * Content model, following docs/ux/information-architecture.md §4.
  * Event is the root entity; every record carries its event id (D5).
  * Bilingual fields hold both languages; `am` may be missing and then falls
- * back to English visibly.
+ * back to English (D74: English first, Amharic by a native-speaking editor later).
  */
 export interface Bilingual { en: string; am?: string }
 
@@ -21,9 +21,22 @@ export interface EventRecord {
   /** Programme days are numbered, never dated, in this build (D66). */
   dayCount: number;
   timeZone: 'Africa/Addis_Ababa';
+  /**
+   * The demonstration clock. The conference is in the future, so "now" is a
+   * fixed, illustrative moment that lets Home and Programme show a live day.
+   */
+  demoNow: { day: number; time: string };
 }
 
 export type Access = 'public' | 'accredited' | 'registration' | 'unknown';
+export type Theme = 'water' | 'energy' | 'land' | 'cities' | 'food' | 'finance' | 'youth' | 'culture' | 'plenary';
+
+export interface Speaker {
+  id: string;
+  name: string;
+  org: string;
+  role: string;
+}
 
 export interface Session {
   id: string;
@@ -36,7 +49,7 @@ export interface Session {
   title: Bilingual;
   body: Bilingual;
   room: string;
-  theme: string;
+  theme: Theme;
   format: string;
   access: Access;
   speakerIds: string[];
@@ -52,4 +65,5 @@ export interface ContentRepository {
   getEvent(): Promise<EventRecord>;
   listSessions(filter?: { day?: number; access?: Access }): Promise<Session[]>;
   getSession(id: string): Promise<Session | undefined>;
+  getSpeakers(ids: readonly string[]): Promise<Speaker[]>;
 }

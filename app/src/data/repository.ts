@@ -1,9 +1,13 @@
-import type { Access, ContentRepository, EventRecord, Session } from './types';
-import { EVENT, SESSIONS } from './seed';
+import type { Access, ContentRepository, EventRecord, Session, Speaker } from './types';
+import { EVENT, SESSIONS, SPEAKERS } from './seed';
 
 /** Reads the content bundled in the app. Makes no network request, ever. */
 export class BundledRepository implements ContentRepository {
-  constructor(private readonly event: EventRecord = EVENT, private readonly sessions: readonly Session[] = SESSIONS) {}
+  constructor(
+    private readonly event: EventRecord = EVENT,
+    private readonly sessions: readonly Session[] = SESSIONS,
+    private readonly speakers: readonly Speaker[] = SPEAKERS,
+  ) {}
 
   async getEvent(): Promise<EventRecord> {
     return this.event;
@@ -17,6 +21,10 @@ export class BundledRepository implements ContentRepository {
 
   async getSession(id: string): Promise<Session | undefined> {
     return this.sessions.find((s) => s.id === id);
+  }
+
+  async getSpeakers(ids: readonly string[]): Promise<Speaker[]> {
+    return ids.map((id) => this.speakers.find((p) => p.id === id)).filter((p): p is Speaker => p !== undefined);
   }
 }
 

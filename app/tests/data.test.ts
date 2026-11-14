@@ -4,7 +4,7 @@ import { EVENT } from '../src/data/seed';
 import type { Session } from '../src/data/types';
 
 const mk = (id: string, day: number, start: string, access: Session['access'] = 'public'): Session => ({
-  id, eventId: 'cop32', day, start, end: '23:59', title: { en: id }, body: { en: '' }, room: 'A', theme: 't', format: 'Panel', access, speakerIds: [], certainty: 'illustrative',
+  id, eventId: 'cop32', day, start, end: '23:59', title: { en: id }, body: { en: '' }, room: 'A', theme: 'water', format: 'Panel', access, speakerIds: [], certainty: 'illustrative',
 });
 
 describe('bundled repository', () => {

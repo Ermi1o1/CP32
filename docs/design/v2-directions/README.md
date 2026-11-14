@@ -1,6 +1,6 @@
 # Design Pass v2 — two directions for the founder to choose between
 
-**Written:** 2026-11-14 (Phase 22 Design Pass v2, Step 2). **Status: waiting for the founder's choice. Nothing here is built.**
+**Written:** 2026-11-14 (Phase 22 Design Pass v2, Step 2). **Status: decided the same day — the founder chose Direction B on a white theme with the best of A, English-first and without cultural motifs (D73, D74). The Ge'ez-numeral signature of Direction A described below was set aside. What was built is summarised in `docs/design/design-system.md` under "v1.0 Daylight".**
 **Read first:** `docs/design/design-audit-v2.md` (why the first build looked dated).
 
 **What these pictures are.** Static drawings made as web pages and photographed in a browser at phone size (390 × 844). They are **not the app** and not a device test. Session names, speakers and organisations are invented; the venue plan is a schematic. Their purpose is one decision: which visual language to build.

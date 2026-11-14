@@ -4,7 +4,24 @@ Every photograph used in the app or in design material is listed here with its s
 
 The web prototype's 45 photos have their own credits list in `prototype/credits.js` (D57) and are not repeated here.
 
-## Status on 2026-11-14
+## In the app (from Design Pass v2, D73)
+Nine photographs are bundled in `app/assets/photos/`. Machine-readable copy: `app/assets/photos/credits.json`; the app shows the same list under About.
+
+All nine are **attribution-only or public-domain** (CC BY 2.0 or Public Domain Mark) — no share-alike images are in the app. Each was cropped to a 1024 × 634 frame and recompressed. They are **theme images**: they illustrate a subject and do not show COP32 or its venue. **Three are not Ethiopia** (a wind farm in England, a plant nursery in the United States, a lecture hall of unstated location) and must never be captioned as if they were. Place names are the photographers' own titles and were not independently checked. Source resolution is about 1024 px wide — acceptable on most phones, soft on the largest; founder-supplied photographs would be better.
+
+| File | Title (photographer's) | Author | Licence | Source | Used for |
+|---|---|---|---|---|---|
+| highland.jpg | Bale mountains | Petr Meissner | CC BY 2.0 | https://www.flickr.com/photos/21147679@N08/6899799183 | Home hero; default session image |
+| terraces.jpg | Terraced Mountains, Tigray Region, Northern Ethiopia | A.Davey | CC BY 2.0 | https://www.flickr.com/photos/40595948@N00/3134131550 | Land and restoration sessions |
+| dusk.jpg | Sunset on the rising city: Addis Ababa | jeanotr | CC BY 2.0 | https://www.flickr.com/photos/62669993@N07/16246807237 | Cities sessions; offline state |
+| heath.jpg | Sanetti Plateau, Bale Mountains National Park (25) | Prof. Mortel | CC BY 2.0 | https://www.flickr.com/photos/43714545@N06/29008250340 | Culture and training sessions |
+| teff.jpg | On The Road To The Blue Nile Falls | A.Davey | CC BY 2.0 | https://www.flickr.com/photos/40595948@N00/2210031781 | Agriculture and food sessions |
+| lake.jpg | Bishoftu Lake | D-Stanley | CC BY 2.0 | https://www.flickr.com/photos/79721788@N00/11368822925 | Water sessions |
+| wind.jpg | Sunset at Royd Moor Wind Farm | Charles Cook | CC BY 2.0 | https://www.flickr.com/photos/15581583@N00/380352233 | Energy sessions |
+| nursery.jpg | Glacier's Native Plant Nursery | GlacierNPS | Public Domain Mark | https://www.flickr.com/photos/43288043@N04/51512350639 | Restoration and youth sessions |
+| hall.jpg | Lecture Hall | cogdogblog | CC BY 2.0 | https://www.flickr.com/photos/37996646802@N01/4952946111 | Plenary sessions |
+
+## Mock-ups only (not in the app)
 The eight photos below were downloaded for the **direction mock-ups only** (`docs/design/v2-directions/`). They are **not in the app**. The image files themselves are not committed; they appear only inside the mock-up pictures. If Direction B is chosen, each is re-checked and either kept (and committed with this entry) or replaced.
 
 **Checked:** licence as reported by Openverse and the Flickr page address. **Not checked:** that the place named in each title is correct — the titles are the photographers' own. All eight are landscapes or cityscapes without identifiable people. Largest size available through this route was about 1024 px wide, which is soft for a full-width phone hero.

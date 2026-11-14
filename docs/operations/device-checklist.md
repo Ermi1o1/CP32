@@ -4,6 +4,15 @@
 
 **Who:** the founder or any team member with an Android phone (Android 7.0 or newer). **Time:** about 30 minutes. **Write results** in the table at the bottom and tell the next Claude Code session, which records them in `docs/roadmap/phase-status.md`.
 
+## Version 0.2.0 — design review first (Design Pass v2)
+Before the sections below, please send **screenshots from your phone** of: Home (top, and scrolled down), Programme (Day 2, and one other day), one session page (top and scrolled), and Home in dark mode. Then answer four questions in a sentence each:
+1. Does it open, and is it smooth when you scroll and when you open a session?
+2. Tap a bookmark: do you see the small "pop", and feel a tick? (The tick needs Android 11 or newer.)
+3. Are the photographs sharp enough, or soft?
+4. Turn on airplane mode, close the app fully, open it again: does everything still show?
+
+Note: from version 0.2.0 the design is English-first (D74). The Amharic checks in section B are now a secondary check of the draft translation, not a release gate.
+
 ## Before you start
 1. Copy the APK to the phone and open it. Allow "install unknown apps" for the file manager when asked.
 2. Note the phone model and Android version (Settings → About phone).

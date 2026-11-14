@@ -5,9 +5,10 @@ import { Page, SubHeader } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { Mark } from '@/ui/Icon';
 import { Banner } from '@/ui/controls';
-import { Group, Row } from '@/ui/lists';
+import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
+import CREDITS from '../../assets/photos/credits.json';
 
 export default function About() {
   const { c, brand } = useTheme();
@@ -29,6 +30,13 @@ export default function About() {
         <Text variant="body" color="textSecondary">{t('about.body3')}</Text>
         <Group>
           <Row icon="info" title={t('about.version')} value={Constants.expoConfig?.version ?? '—'} />
+        </Group>
+        <SectionTitle>{t('about.photos')}</SectionTitle>
+        <Text variant="footnote" color="textSecondary">{t('about.photosSub')}</Text>
+        <Group>
+          {CREDITS.map((p) => (
+            <Row key={p.file} title={p.title} subtitle={`${p.author} · ${p.licence}`} />
+          ))}
         </Group>
       </Page>
     </View>

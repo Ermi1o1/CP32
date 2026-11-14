@@ -51,12 +51,12 @@ export const BRANDS = {
     light: {
       primary: '#2F3A8F', onPrimary: '#FFFFFF', primarySoft: '#E3E6F8', onPrimarySoft: '#1E2663',
       accent: '#F2B441', onAccent: '#2A1B00', link: '#2F3A8F', focus: '#2F3A8F',
-      heroFrom: '#2B3585', heroTo: '#1B2260', heroKicker: '#F6C766',
+      heroFrom: '#2B3585', heroTo: '#1B2260', heroKicker: '#F6C766', line: '#2F3A8F', ink: '#1B2260', onInk: '#FFFFFF',
     },
     dark: {
       primary: '#A9B4FF', onPrimary: '#0B1140', primarySoft: '#1C2250', onPrimarySoft: '#D5DAFF',
       accent: '#F2B441', onAccent: '#2A1B00', link: '#B9C2FF', focus: '#B9C2FF',
-      heroFrom: '#2B3585', heroTo: '#151A4D', heroKicker: '#F6C766',
+      heroFrom: '#2B3585', heroTo: '#151A4D', heroKicker: '#F6C766', line: '#F2B441', ink: '#D5DAFF', onInk: '#0B1140',
     },
     official: false,
   },
@@ -85,4 +85,7 @@ export const BRAND_CONTRAST_PAIRS: readonly (readonly [ColorRole, ColorRole, num
   ['onHero', 'heroTo', 4.5],
   ['heroKicker', 'heroFrom', 4.5],
   ['heroKicker', 'heroTo', 4.5],
+  ['onInk', 'ink', 4.5],
+  ['line', 'bg', 3],
+  ['line', 'surface', 3],
 ];

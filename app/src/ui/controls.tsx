@@ -7,14 +7,17 @@ import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import type { ColorRole } from '@/theme/brand';
 
 /**
- * Button. `primary` is the lime action and is used at most once per screen
- * (design system §2). `tinted` is the everyday button; `plain` is a text button.
+ * Button (v1.0, D73). Rectangular with a 14 px radius and 52 px tall.
+ * `primary` is the amber action, used at most once per screen. `dark` is the
+ * strong neutral. `outline` and `tinted` are secondary. `plain` is a text button.
  */
-export function Button({ label, onPress, kind = 'tinted', icon, wide, accessibilityHint }: { label: string; onPress?: () => void; kind?: 'primary' | 'tinted' | 'plain' | 'danger'; icon?: IconName; wide?: boolean; accessibilityHint?: string }) {
+export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, accessibilityHint }: { label: string; onPress?: () => void; kind?: 'primary' | 'dark' | 'outline' | 'tinted' | 'plain' | 'danger'; icon?: IconName; wide?: boolean; flex?: number; accessibilityHint?: string }) {
   const { c, radius } = useTheme();
   const { prefs } = usePrefs();
-  const map: Record<string, { bg: string; fg: ColorRole }> = {
+  const map: Record<string, { bg: string; fg: ColorRole; border?: string }> = {
     primary: { bg: c.accent, fg: 'onAccent' },
+    dark: { bg: c.ink, fg: 'onInk' },
+    outline: { bg: c.surface, fg: 'text', border: c.border },
     tinted: { bg: c.primarySoft, fg: 'onPrimarySoft' },
     plain: { bg: 'transparent', fg: 'primary' },
     danger: { bg: c.danger, fg: 'onDanger' },
@@ -22,21 +25,26 @@ export function Button({ label, onPress, kind = 'tinted', icon, wide, accessibil
   const s = map[kind]!;
   return (
     <Tap onPress={onPress} accessibilityLabel={label} accessibilityHint={accessibilityHint}
-      style={{ backgroundColor: s.bg, borderRadius: radius.pill, paddingHorizontal: 20, paddingVertical: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, alignSelf: wide ? 'stretch' : 'flex-start' }}>
-      {icon ? <Icon name={icon} size={Math.round(20 * Math.min(prefs.textScale, 1.5))} color={s.fg} /> : null}
-      <Text variant="callout" weight={700} color={s.fg} style={{ flexShrink: 1 }}>{label}</Text>
+      style={{ backgroundColor: s.bg, borderRadius: radius.md, borderWidth: s.border ? 1.5 : 0, borderColor: s.border, minHeight: 52, paddingHorizontal: 18, paddingVertical: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, alignSelf: wide || flex ? 'stretch' : 'flex-start', flex }}>
+      {icon ? <Icon name={icon} size={Math.round(20 * Math.min(prefs.textScale, 1.5))} color={s.fg} stroke={2.2} /> : null}
+      <Text variant="callout" weight={800} color={s.fg} style={{ flexShrink: 1 }}>{label}</Text>
     </Tap>
   );
 }
 
-/** Filter chip. Selected state is carried by fill, a check icon and the accessibility state — never colour alone. */
-export function Chip({ label, selected, onPress }: { label: string; selected?: boolean; onPress?: () => void }) {
+/**
+ * Filter chip. Selected = solid ink with reversed text and the accessibility
+ * state; never colour alone. The visible pill is 38 px tall inside a 48 px target.
+ */
+export function Chip({ label, selected, onPress, count }: { label: string; selected?: boolean; onPress?: () => void; count?: number }) {
   const { c, radius } = useTheme();
   return (
-    <Tap onPress={onPress} accessibilityState={{ selected: !!selected }} aria-pressed={!!selected} accessibilityLabel={label}
-      style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 14, paddingVertical: 8, borderRadius: radius.pill, borderWidth: 1, borderColor: selected ? c.primary : c.border, backgroundColor: selected ? c.primarySoft : c.surface }}>
-      {selected ? <Icon name="check" size={16} color="onPrimarySoft" stroke={2.4} /> : null}
-      <Text variant="subhead" weight={selected ? 700 : 400} color={selected ? 'onPrimarySoft' : 'text'}>{label}</Text>
+    <Tap onPress={onPress} accessibilityState={{ selected: !!selected }} aria-pressed={!!selected} accessibilityLabel={count !== undefined ? `${label}, ${count}` : label}
+      style={{ justifyContent: 'center' }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 14, minHeight: 38, borderRadius: radius.pill, borderWidth: 1.5, borderColor: selected ? c.ink : c.divider, backgroundColor: selected ? c.ink : c.surface }}>
+        <Text variant="subhead" weight={700} color={selected ? 'onInk' : 'text'}>{label}</Text>
+        {count !== undefined ? <Text variant="footnote" weight={700} color={selected ? 'onInk' : 'textSecondary'} tabular>{String(count)}</Text> : null}
+      </View>
     </Tap>
   );
 }

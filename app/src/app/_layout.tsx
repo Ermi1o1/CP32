@@ -8,6 +8,7 @@ import { StatusBar } from 'expo-status-bar';
 import { AppProvider, usePrefs, useTheme } from '@/theme/ThemeProvider';
 import { FONT_FILES } from '@/theme/fonts';
 import Welcome from '@/screens/Welcome';
+import { AgendaProvider } from '@/state/agenda';
 
 void SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -44,7 +45,9 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <AppProvider>
-        <Shell />
+        <AgendaProvider>
+          <Shell />
+        </AgendaProvider>
       </AppProvider>
     </SafeAreaProvider>
   );

@@ -10,3 +10,4 @@ Recorded 2026-10-03 from the sandbox/desk spikes in `../spike-results/`. Each AD
 | [ADR-005](ADR-005-cms.md) | CMS: Payload leading; Strapi not recommended; none locked | D50 | Provisional |
 | [ADR-006](ADR-006-mobile-framework.md) | Mobile framework: decision deferred | — | Superseded by ADR-007 |
 | [ADR-007](ADR-007-mobile-framework-expo-react-native.md) | Mobile framework: Expo + React Native (TypeScript) | D64 | Accepted by founder decision 2026-11-14; real-device checks still owed |
+| [ADR-008](ADR-008-native-ui-libraries.md) | Native UI libraries: animation, haptics, images added; bottom sheet, gestures, fast list deferred | D73 | Accepted; not yet run on a device |

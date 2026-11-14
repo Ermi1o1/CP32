@@ -32,7 +32,8 @@ export default function TabsLayout() {
         return <TabBar items={items} />;
       }}>
       {TABS.map((tab) => (
-        <Tabs.Screen key={tab.name} name={tab.name} />
+        // Home draws its own header over the hero photograph.
+        <Tabs.Screen key={tab.name} name={tab.name} options={tab.name === 'index' ? { headerShown: false } : undefined} />
       ))}
     </Tabs>
   );

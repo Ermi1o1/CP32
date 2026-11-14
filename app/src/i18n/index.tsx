@@ -11,10 +11,15 @@ export function translate(lang: Lang, key: StringKey): string {
   return STRINGS[lang][key] || en[key];
 }
 
+export function fill(s: string, vars?: Record<string, string | number>): string {
+  return vars ? s.replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m)) : s;
+}
+
 export function useT() {
   const { prefs } = usePrefs();
   return {
     lang: prefs.lang,
-    t: (key: StringKey) => translate(prefs.lang, key),
+    /** `vars` fills {name} placeholders, e.g. t('home.dayOf', { d: 2, n: 5 }). */
+    t: (key: StringKey, vars?: Record<string, string | number>) => fill(translate(prefs.lang, key), vars),
   };
 }

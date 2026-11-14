@@ -4,6 +4,8 @@ export const FONT_FILES = {
   'Atkinson-600': require('../../assets/fonts/Atkinson-600.ttf'),
   'Atkinson-700': require('../../assets/fonts/Atkinson-700.ttf'),
   'Atkinson-800': require('../../assets/fonts/Atkinson-800.ttf'),
+  'Fraunces-500': require('../../assets/fonts/Fraunces-500.ttf'),
+  'Fraunces-600': require('../../assets/fonts/Fraunces-600.ttf'),
   'NotoEthiopic-400': require('../../assets/fonts/NotoEthiopic-400.ttf'),
   'NotoEthiopic-600': require('../../assets/fonts/NotoEthiopic-600.ttf'),
   'NotoEthiopic-700': require('../../assets/fonts/NotoEthiopic-700.ttf'),
