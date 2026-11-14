@@ -34,19 +34,76 @@ sources:
   # OFFICIAL / PRIMARY  — highest value, grade floor B
   # ======================================================================
 
-  - key: cop32ethiopia_home
-    name: cop32ethiopia.org
+  - key: cop32ethiopia_et
+    name: cop32ethiopia.et (official COP32 site)
     type: page_watch
-    url: https://cop32ethiopia.org/
+    url: https://cop32ethiopia.et/
     lang: en
     trust: official
     tier_floor: 1
     enabled: true
-    verified: '2026-11-09'
+    verified: '2026-11-14'
     notes: >
-      As of 2026-10-03 this was a maintenance page with a login / lost-password
-      UI. ANY change is project-critical: it is the most likely place an
-      official COP32 portal or registration system first appears.
+      D69. The federal government portal ethiopia.gov.et links "Official COP32
+      Website" to this address (read 2026-11-14, reality-check re-check #3).
+      On 2026-11-14 it was a "Coming Soon" holding page with nine cop32ethiopia
+      social links. ANY change is project-critical: this is where an official
+      COP32 portal, registration system or app announcement will first appear.
+
+  - key: cop32ethiopia_home
+    name: cop32ethiopia.org (NOT confirmed official)
+    type: page_watch
+    url: https://cop32ethiopia.org/
+    lang: en
+    trust: unknown
+    tier_floor: 1
+    enabled: true
+    verified: '2026-11-14'
+    notes: >
+      Watched as "official" from 2026-11-09 to 2026-11-14 in error (D69). No
+      government source links to it; its only known tie is cic-26.com, which
+      lists info@cop32ethiopia.org as contact. A WordPress maintenance page
+      with a login UI. Still watched, because a change would tell us who is
+      behind it. Key kept so the existing snapshot history carries on.
+
+  - key: cic26_home
+    name: cic-26.com (unverified "COP-32 Ethiopia" site)
+    type: page_watch
+    url: https://cic-26.com/
+    lang: en
+    trust: unknown
+    enabled: true
+    verified: '2026-11-14'
+    notes: >
+      Unverified third-party site with template "John Doe" team entries.
+      No tier floor: a change here is context, not an alert.
+
+  - key: cop32_gov_et
+    name: cop32.gov.et
+    type: page_watch
+    url: https://cop32.gov.et/
+    lang: en
+    trust: official
+    tier_floor: 1
+    enabled: false
+    verified: unverified
+    notes: >
+      An events@cop32.gov.et address appears in a public post by an EPA
+      official. The host did not answer on 2026-11-14. DISABLED until it
+      does; re-test monthly and enable when it serves a page.
+
+  - key: cop32_presidency_substack
+    name: COP32 Ethiopia (Presidency Substack)
+    type: rss
+    url: https://cop32ethiopia.substack.com/feed
+    lang: en
+    trust: official
+    enabled: true
+    verified: unverified
+    notes: >
+      Linked from cop32ethiopia.et. Carries COP32 Presidency statements.
+      Feed URL follows Substack's standard pattern; confirm with
+      collect.py --verify on the next run.
 
   - key: unfccc_cop32
     name: UNFCCC COP32 page
@@ -406,6 +463,26 @@ sources:
     trust: aggregator
     enabled: true
     verified: '2026-11-09'
+
+  - key: gnews_cop32_uneca
+    name: Google News — COP32 on uneca.org
+    type: gnews
+    url: '"COP32" site:uneca.org'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: unverified
+    notes: D69. UNECA signed a COP32 delivery agreement with Ethiopia.
+
+  - key: gnews_cop32_mfa
+    name: Google News — COP32 on mfa.gov.et
+    type: gnews
+    url: '"COP32" site:mfa.gov.et'
+    lang: en
+    trust: aggregator
+    enabled: true
+    verified: unverified
+    notes: D69. The COP32 President-Designate is the Foreign Minister.
 
   - key: gnews_cop32_platform
     name: Google News — COP32 app/platform/tender

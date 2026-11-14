@@ -424,10 +424,22 @@ class Classifier:
         m3 = {m.group(0).lower() for m in self.t3.finditer(blob)}
         m4 = {m.group(0).lower() for m in self.t4.finditer(blob)}
 
-        forced = it.kind in ("page_change", "app_listing") or src.get("tier_floor") == 1
+        # D69: an app listing is Tier 1 only when its NAME or PUBLISHER says
+        # COP32. Listings for other COPs (COP16, COP27, COP31...) pass the
+        # source's match regex but are benchmark material, not alerts, and
+        # used to be forced to Tier 1 by the source's tier_floor.
+        if it.kind == "app_listing":
+            forced = hits_subject
+        else:
+            forced = src.get("tier_floor") == 1
 
         if forced or (hits_subject and m1):
             it.tier = 1
+        elif it.kind == "app_listing":
+            it.tier = 4
+        elif it.kind == "page_change":
+            # A watched page without a tier floor changed: context, not an alert.
+            it.tier = 2
         elif hits_subject:
             # Any COP32 mention is at least preparation-relevant.
             it.tier = 2
@@ -750,6 +762,28 @@ def open_github_issue(text: str) -> str:
         return f"github issue: {type(e).__name__}"
 
 
+def stale_alert_count(days: int = 7) -> int:
+    """
+    D69: how many open Tier-1 lines in ALERTS.md are older than `days`.
+
+    An alert sat unread for 131 days in 2026 because ALERTS.md only ever grew
+    and nothing reported its age. Counts lines of the form
+    "- [ ] YYYY-MM-DD ..."; open items without a leading date are counted too,
+    since they have no date to excuse them.
+    """
+    if not ALERTS_PATH.exists():
+        return 0
+    cutoff = (now_utc() - dt.timedelta(days=days)).strftime("%Y-%m-%d")
+    n = 0
+    for line in ALERTS_PATH.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"\s*- \[ \]\s*(\d{4}-\d{2}-\d{2})?", line)
+        if not m:
+            continue
+        if m.group(1) is None or m.group(1) < cutoff:
+            n += 1
+    return n
+
+
 def update_alerts_file(tier1: list[Item]) -> None:
     if not tier1:
         return
@@ -909,6 +943,13 @@ def main() -> int:
         "stale": stale,
         "trimmed": trimmed,
     }
+    stale = stale_alert_count()
+    if stale:
+        problems.insert(
+            0,
+            f"{stale} open Tier-1 alert(s) in ALERTS.md older than 7 days — run /intel-review",
+        )
+
     tg_text, tg_buttons = render_telegram(items, counts, problems)
     file_md = render_file(items, counts, problems)
 
