@@ -8,9 +8,14 @@ Agreed with the founder in a claude.ai Project chat on 2026-11-14. Nothing in
 it is recorded as a decision until the session writes D64–D67 to
 `docs/decisions/log.md`.
 
-**Read Track 0 before committing to the rest.** Material surfaced from
-`docs/intel/` on 2026-11-14 puts the D1 premise in question, and Track 0 may
-stop or reshape everything after it.
+**Track 0 runs in parallel, not as a gate.** Material surfaced from
+`docs/intel/` on 2026-11-14 re-dates the D1 premise: an official COP32 digital
+workstream (website and communications channels) has existed since about July
+2026. No official COP32 *application* has been found. The founder's decision on
+2026-11-14 is to build regardless, on the reasoning that arriving with
+something strong beats arriving with a plan. Track 0 therefore answers the
+ownership question in time for the demo conversation rather than blocking the
+build. See `docs/intel/proposals/2026-11-14-review.md`.
 
 ---
 
@@ -40,9 +45,14 @@ official information.
 Then report the highest D-number, the phase-status date, and anything in the
 above that contradicts this prompt. Do not start building until you have.
 
-## TRACK 0 — REALITY RE-CHECK (BLOCKING; do this before anything else)
+## TRACK 0 — REALITY RE-CHECK (runs in parallel with Tracks A–F; do not block
+## the build on it, but report findings as soon as you have them)
 D1 rests on "no official COP32 platform announced as of 2026-10-01". That
-premise is now in doubt, and Track 0 exists to settle it.
+premise is now known to be out of date. The founder has decided to build
+anyway: even if an official effort is under way, a working app is a stronger
+thing to put in front of officials than a proposal. Track 0 therefore exists to
+make sure the demo conversation happens with eyes open, not to decide whether
+the build proceeds.
 
 Found in docs/intel/ on 2026-11-14, unfiled:
 - A Tier-1 alert dated 2026-07-06 (Fana Media): "Ethiopia Unveils Official
@@ -77,13 +87,16 @@ research rules:
    either, is open for COP32.
 
 Then present the founder with a verdict and options, as Phase 0 requires:
-- Open ground → proceed to Tracks A–F as written.
-- Official effort underway without an app → proceed, repositioned as
-  "the host-country app, built and ready for adoption"; propose the D1
-  amendment accordingly.
-- Official app already procured or in development → STOP. Do not build. Put
-  the options in front of the founder: partner, supply a component, pivot to a
-  niche the official platform will not cover, or stand down.
+- Open ground → carry on; propose the D1 amendment to "host-country app, built
+  and ready for adoption".
+- Official effort underway without an app → carry on, same repositioning, and
+  name the owning body so outreach goes to the right desk.
+- Official app already procured or in development → carry on building, but tell
+  the founder immediately and change the framing of the demo, not the code. An
+  app shown to a team that has already contracted a vendor must read as
+  "here is what is possible, and here is what we can contribute", never as a
+  competing bid. Draft that framing and put it in docs/demo/demo-script.md.
+  Scope questions (what to cut, what to emphasise) go to the founder.
 
 Write findings to docs/research/reality-check.md as a dated re-check section,
 not as a replacement, and raise a decision for the founder. Do not pass this
@@ -268,8 +281,7 @@ access.
 Work on a branch, not main, and do not push to main without the founder asking
 in that conversation (CLAUDE.md). Plan first in writing as
 docs/roadmap/phase22-execution-plan.md and show it before writing code. Commit
-per batch with clear messages. Stop and ask when: Track 0 returns anything
-other than open ground, a decision would change D1 or D65, an external
+per batch with clear messages. Stop and ask when: a decision would change D1 or D65, an external
 dependency is missing, a quality gate fails in a way that needs a scope call,
 or you are about to invent a fact. Do not expand scope to match COP31
 feature-for-feature. Do not lock anything beyond D64 without asking.
