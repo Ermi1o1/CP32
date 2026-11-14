@@ -24,7 +24,7 @@
 | 19 Project team | Done — D40–D42 approved 2026-10-03 | roadmap/team-requirements.md |
 | 20 Final product blueprint | Done — D43 approved 2026-10-03 | product/final-blueprint.md |
 | 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52). Its S1 outcome ("no framework decision") is superseded by D64 | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
-| 22 Native build (Expo + React Native, Android APK first) | **Started 2026-11-14 — planning and research done, no app code yet; waiting on founder decisions** (D64–D67 approved; D68–D70 proposed) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
+| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14; paused for founder review of screenshots; nothing tested on a phone yet** (D64–D72) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
 
 ## Track D v2 — visual redesign (2026-10-03)
 **Done.** Direction "Highland Mist" chosen after four founder review rounds (D53; `docs/design/redesign-directions/`). Design system v0.2 + `tokens.json` updated; plan in `docs/design/redesign-plan.md`; every prototype screen rebuilt (5 batches); screenshots refreshed in `docs/design/prototype-screens/` (20). Checks: tokens 64/64 AA, axe-core 0 violations (16 screens × light/dark), 200% reflow without horizontal scroll, EN/AM and light/dark parity, tree-test T1–T12 all resolve. Private phone-viewable copy: https://claude.ai/artifact/X4MMCwgpeHVfpBCpLDh3wh (entry page `prototype/artifact-entry.html`). The GitHub Pages redeploy runs once this branch is merged to `main`.
@@ -71,12 +71,27 @@ Work is on the branch `phase-22-native-build`; nothing is merged to `main` and t
 **Done on 2026-11-14**
 - **Track 0, reality re-check #3.** The federal government portal links "Official COP32 Website" to `cop32ethiopia.et` (a holding page with nine social channels). An official COP32 digital workstream therefore exists. **No official COP32 app, tender or contractor was found.** The procurement portal (e-GP) could not be reached and has still never been searched directly. The intel pipeline had been watching a different, apparently unofficial domain (`cop32ethiopia.org`). Detail: `docs/research/reality-check.md`.
 - **Track A, COP31 teardown.** `docs/research/cop31-app-teardown.md`, from the founder's 20 screenshots and screen recording. Headline: on the three screens tested, the COP31 host app fails without a connection; offline-first is our main differentiator, with a seven-point testable target.
-- **Decisions recorded.** D64 (Expo + React Native; supersedes the D18 real-device rule for mobile), D65 (own identity, swappable brand layer; retires the "COP32" name and mark of D59 for the native app), D66 (demo content: complete but honest), D67 (benchmark limits) — approved by the founder. D68 (Track 0 verdict), D69 (intel pipeline repair), D70 (amend D1 to "host-country app offered for adoption") — **proposed, awaiting the founder**.
+- **Decisions recorded.** D64 (Expo + React Native; supersedes the D18 real-device rule for mobile), D65 (own identity, swappable brand layer; retires the "COP32" name and mark of D59 for the native app), D66 (demo content: complete but honest), D67 (benchmark limits) — approved by the founder. D68 (Track 0 verdict), D69 (intel pipeline repair), D70 (amend D1 to "host-country app offered for adoption") — proposed that day and then confirmed by the founder.
 - **Plan.** `docs/roadmap/phase22-execution-plan.md` — build order, quality gates, and ten questions for the founder.
 
-**Not started:** the design-system package, the app, the APK, the demo script and one-pager.
+**Founder answers, 2026-11-14 (recorded as D65a, D68–D72):** the app keeps the name "COP32" (against Claude's recommendation; the independence statements now carry that risk); the form of the "not official" statement, the "Day 1 … Day N" programme labels and Android 7.0 are agreed; D68–D70 are confirmed, so **D1 is amended** to "host-country app offered for adoption"; contributor IP assignments are **not signed** and the build continues regardless (D72 — the question of showing the APK before they are signed stays open).
 
-**Waiting on the founder (plan §2):** the app's name and mark (it may no longer be called "COP32"); the form of the "independent, not official" statement; how programme days are labelled without inventing dates; Android 7.0 as the floor; screen scope; map approach; build route; confirmation of D68–D70; status of contributor IP assignments before any showing.
+**Intel pipeline repaired (D69)** on the branch: the official site `cop32ethiopia.et` is now the watched host; app listings are Tier 1 only when they say COP32; the daily digest reports alerts left open more than seven days. It takes effect for the daily run only when the branch is merged.
+
+**Build step 1 of 8 done — app shell (in `app/`).** Five tabs, header with language switch, search, Emergency and profile; light and dark themes; English and Amharic; the brand layer with two switchable brands; bundled fonts; the one-time first-run statement; Settings, About, Sources and status; a component gallery; the content model and repository interface. Screenshots: `docs/design/app-screens/` (17 images — **browser renders, not a phone**).
+
+| Check (build step 1) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict | Pass | Cloud session |
+| Unit tests | 74 of 74 pass (contrast for both brands, language-file parity, script-aware fonts, data layer, stored preferences) | Cloud session |
+| Design-token contrast | 64 of 64 pairs pass WCAG 2.2 AA | Cloud session |
+| Automated accessibility (axe-core) | 0 violations across 11 screens × 2 languages × 2 themes (two real faults found and fixed first) | Browser render only |
+| 200% text at 320 px wide, Amharic | No sideways scrolling; no clipped text seen | Browser render only |
+| Outside network requests | None — every font, icon and image came from the app itself | Browser render only |
+| Release APK | See `docs/operations/apk-build-runbook.md` | Cloud session |
+| Install, Amharic rendering, offline cold start, TalkBack, start-up time | **Not done — needs a phone.** Checklist: `docs/operations/device-checklist.md` | — |
+
+**Work stops here until the founder has looked at the screenshots** (the Phase 22 prompt requires it). **Not started:** build steps 2–8 (Home and Updates; Programme; Map; Visit and Emergency; Learn and search; Settings detail; quality gates, demo script, one-pager, design system v1.0).
 
 **Limits to keep in view:** the cloud session has no Android phone or emulator. Screenshots will be browser renders of the same code and labelled as such. Install, Amharic rendering, screen reader, cold start and airplane-mode tests must be run by the founder on a phone before anything is called validated.
 
@@ -91,4 +106,4 @@ Work is on the branch `phase-22-native-build`; nothing is merged to `main` and t
 ## Decisions awaiting approval
 D44–D52 recorded in the log with qualified status (heuristic/sandbox basis; provisional). Founder to confirm or amend.
 ## Next session should read first
-`docs/decisions/log.md` (D64–D70), this file, `docs/roadmap/phase22-execution-plan.md` (the founder's answers to its ten questions decide what happens next), `docs/research/reality-check.md` (re-check #3), `docs/research/cop31-app-teardown.md`, `docs/architecture/adr/ADR-007-mobile-framework-expo-react-native.md`, then `docs/design/design-system.md` and `docs/ux/information-architecture.md`. Earlier wording that Phase 22 is "blocked on a real-device S1 decision" no longer applies (D64).
+`docs/decisions/log.md` (D64–D72), this file, `docs/roadmap/phase22-execution-plan.md` (build order; the founder answered its questions on 2026-11-14), `app/README.md`, `docs/operations/device-checklist.md`, `docs/research/reality-check.md` (re-check #3), `docs/research/cop31-app-teardown.md`, `docs/architecture/adr/ADR-007-mobile-framework-expo-react-native.md`, then `docs/design/design-system.md` and `docs/ux/information-architecture.md`. Earlier wording that Phase 22 is "blocked on a real-device S1 decision" no longer applies (D64).

@@ -1,6 +1,8 @@
 # Phase 22 — Execution plan (native build)
 
-**Written:** 2026-11-14, on branch `phase-22-native-build`. **Status: for founder review. No app code has been written.**
+**Written:** 2026-11-14, on branch `phase-22-native-build`. **Status: reviewed by the founder the same day; build step 1 (app shell) is done and work is paused for the founder's review of the screenshots.**
+
+**Founder's answers to section 2 (2026-11-14):** Q1 — keep the name "COP32" (the Lemlem recommendation was declined; see D65a). Q2, Q3, Q4 — agreed as recommended. Q10 — D68, D69 and D70 confirmed. Q9 — assignments are not signed; continue regardless (D72). Q5–Q8 were not answered individually and proceed on the recommendations below (D71); Q8, the Netlify exclusion, is still needed before this branch is merged.
 **Operating prompt:** `docs/roadmap/phase22-execution-prompt.md`. **Read with:** `docs/decisions/log.md` (D64–D70), `docs/research/reality-check.md` (re-check #3), `docs/research/cop31-app-teardown.md`.
 
 This plan says what will be built, in what order, what "done" means for each step, what cannot be done from a cloud session, and which decisions are needed from the founder before code starts. It can be read without the repository open.
