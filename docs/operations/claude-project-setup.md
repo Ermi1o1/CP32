@@ -35,11 +35,15 @@ Source: https://support.claude.com/en/articles/10167454-using-the-github-integra
 
 ## Project description
 
-> Planning and strategy project for the COP32 digital platform — an unofficial,
-> complementary public-information app for the World Climate Conference expected
-> in Ethiopia. Connected to the Ermi1o1/COP32 repo, which holds all 21 phases of
-> research, decisions (D1–D61) and the clickable prototype. The repo is the
-> source of truth; this project reads it.
+*(Updated 2026-11-14. The previous version said "expected in Ethiopia",
+"21 phases" and "D1–D61" — all stale.)*
+
+> Planning and build project for the COP32 digital platform — a complementary,
+> unofficial public-information app for the UN Climate Change Conference in
+> Addis Ababa, November 2027. Connected to the Ermi1o1/COP32 repo, which holds
+> phases 0–21 of research, decisions D1–D63a, a live clickable prototype and a
+> daily COP32 intel watch. Phase 22, the native Android/iOS build, is under way.
+> The repo is the source of truth; this project reads it.
 
 ## Custom instructions
 
@@ -59,7 +63,14 @@ docs/product/project-definition.md
 docs/research/reality-check.md
 docs/ux/information-architecture.md
 docs/design/design-system.md
+docs/intel/ALERTS.md
 ```
+
+`docs/intel/ALERTS.md` was added on 2026-11-14 and is **not optional**. Without
+it the Project cannot see what the daily collector has flagged. A Tier-1 alert
+reporting Ethiopia's official COP32 digital platforms sat unread for 131 days,
+invisible to every Project conversation in that period, because nothing from
+`docs/intel/` was selected. It is small — a triaged alert list, not a feed.
 
 **Add only while working that topic, then remove again:**
 
@@ -97,6 +108,13 @@ time via **Configure files**.
   browser / *Configure files* — not one connection per file, which turns every
   sync into one tap per file. The fuller controls appear on desktop; the mobile
   `...` menu offers only *Sync now* and *Remove from project*.
+- **The live configuration does not follow that advice** (observed 2026-11-14).
+  The Context panel holds **seven** separate `Ermi1o1/COP32` entries, one per
+  file or file pair, all displaying the same name. A full refresh therefore
+  means tapping *Sync now* seven times, and there is no way to tell from the
+  list which entry carries which file. Worth rebuilding as a single connection
+  with all nine files ticked — but note that removing and re-adding loses
+  nothing, since the repo is the source of truth either way.
 - **What instructions CAN do is expose staleness.** The instruction block below
   makes every answer open with the highest D-number and the phase-status date it
   can see, so a stale copy announces itself instead of quietly misleading.
@@ -116,9 +134,10 @@ COP32 digital platform — planning project. Ermias (Addis Ababa) is the founder
 
 The connected GitHub repo (Ermi1o1/COP32) is the source of truth, not this
 chat. Read docs/decisions/log.md and docs/roadmap/phase-status.md before
-answering anything substantive — they record every decision (D1–D61) and where
-the project stands. Phases 0–21 are complete; what remains is real-world
-validation, not more planning.
+answering anything substantive — they record every decision (D1–D63a) and where
+the project stands. Phases 0–21 are complete. Phase 22, the native Android/iOS
+build, is running from docs/roadmap/phase22-execution-prompt.md. Also check
+docs/intel/ALERTS.md for project-critical alerts nobody has handled yet.
 
 This repo is synced manually and can be stale. At the start of any substantive
 answer, state the highest D-number you can see in docs/decisions/log.md and the
@@ -126,14 +145,21 @@ answer, state the highest D-number you can see in docs/decisions/log.md and the
 something newer exists, your copy is stale — say so and ask me to sync rather
 than working around it or guessing which version is current.
 
-You cannot write to the repo from here — only Claude Code can. If a conclusion
-from this chat should persist, tell me explicitly what to record and in which
-file. Never assume it has been saved.
+The knowledge sync cannot write to the repo, but a Project session that
+attaches the repo through its GitHub tooling can commit and push, exactly as a
+Claude Code session can. Do not assume anything from this chat has been saved:
+ask me before pushing, never commit to main unless I ask for that specific
+change in this conversation, and if a conclusion should persist tell me
+explicitly what to record and in which file.
 
 Hard constraints:
 - This is an UNOFFICIAL, complementary platform (D1). Never use real COP32,
   UNFCCC or Ethiopian-government branding, logos or official names, and never
-  imply endorsement.
+  imply endorsement. D1's premise is re-dated: an official COP32 digital
+  workstream (a website and communications channels) has existed since about
+  July 2026, and no official COP32 application has been found. See
+  docs/intel/proposals/2026-11-14-review.md before describing this as open
+  ground.
 - Never invent COP32 dates, attendance figures, APIs, partnerships or official
   decisions. If something is not yet public, say so and mark it as a gap.
 - Distinguish confirmed fact / officially announced / reported but unconfirmed /
