@@ -24,7 +24,7 @@
 | 19 Project team | Done — D40–D42 approved 2026-10-03 | roadmap/team-requirements.md |
 | 20 Final product blueprint | Done — D43 approved 2026-10-03 | product/final-blueprint.md |
 | 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52). Its S1 outcome ("no framework decision") is superseded by D64 | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
-| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14; paused for founder review of screenshots; nothing tested on a phone yet** (D64–D72) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
+| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14 and installed by the founder; judged visually dated; Design Pass v2 under way, waiting for the founder to choose a direction** (D64–D72) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
 
 ## Track D v2 — visual redesign (2026-10-03)
 **Done.** Direction "Highland Mist" chosen after four founder review rounds (D53; `docs/design/redesign-directions/`). Design system v0.2 + `tokens.json` updated; plan in `docs/design/redesign-plan.md`; every prototype screen rebuilt (5 batches); screenshots refreshed in `docs/design/prototype-screens/` (20). Checks: tokens 64/64 AA, axe-core 0 violations (16 screens × light/dark), 200% reflow without horizontal scroll, EN/AM and light/dark parity, tree-test T1–T12 all resolve. Private phone-viewable copy: https://claude.ai/artifact/X4MMCwgpeHVfpBCpLDh3wh (entry page `prototype/artifact-entry.html`). The GitHub Pages redeploy runs once this branch is merged to `main`.
@@ -98,6 +98,22 @@ Work is on the branch `phase-22-native-build`; nothing is merged to `main` and t
 
 **Still open across the project:** real-user testing of the information architecture; real-device spikes S1 and S6; hosting-provider outreach (S5); native-speaker Amharic review; the legal foundation (company registration, IP assignments, profit-participation agreement); official data access and alert authorisation; a direct search of the procurement portal; who owns COP32 digital delivery.
 
+## Phase 22 — Design Pass v2 (started 2026-11-14)
+Branch `phase-22-design-v2` (cut from `phase-22-native-build`, which is pushed as a backup). Operating prompt: `docs/roadmap/phase22-design-v2-prompt.md`. It overrides only the visual parts of Phase 22.
+
+**Why:** the founder installed the first APK — so **it does install and open on a real phone** — and judged the design dated and "the prototype style, adapted". No written device notes or phone screenshots are in the repository yet.
+
+**Done**
+- **Audit** (`docs/design/design-audit-v2.md`, no code changed): the shell is correct and accessible but every tab is the same boxed list, there is no imagery, one typeface is used timidly, colour is spread across seven even tints, and nothing moves. Compared screen by screen with the COP31 captures and with six reference apps studied from public material only.
+- **Two directions** (`docs/design/v2-directions/`): **A "Fidel"** — type-led, spacious, quiet; Ge'ez numerals and two scripts set together as the signature. **B "Birhan"** — image-led, dense, lively; highland photography cut by a "horizon line". Each drawn on Home, Programme, Session detail, Map and an offline state, with type scale, spacing, radius, elevation, icon and motion rules. A third, pattern-led sketch was discarded. Claude recommends A. **These are static drawings, not the app.**
+- **Imagery test:** openly licensed photos can be downloaded in the cloud session, but only up to about 1024 px wide — soft for a phone hero. A shot list for the founder's own photographs is in the directions file. Credits: `docs/design/image-credits.md`.
+
+**Waiting on the founder:** choose A or B (or a deliberate hybrid). The choice will be recorded as D73 together with the palette and type changes.
+
+**Then:** ADR-008 for the added animation and image libraries; rebuild tokens, type and components; Home and Programme; stop for phone screenshots.
+
+**Still open from build step 1:** the phone checklist (`docs/operations/device-checklist.md`) has not been reported back; package name; whether the demo build drops network access; the Netlify exclusion before any merge.
+
 ## Where the project stands in practice
 - Phase 21 is complete on a heuristic/sandbox basis (see table). Real card sort/tree test, real-device spikes (S1, S6), provider outreach (S5), native-speaker Amharic review and user testing remain open.
 - Planning documentation is complete through Phase 20 (blueprint approved, D43). Phase 21 ("Stage 2 execution") is defined and ready to run: `docs/roadmap/stage2-execution-prompt.md` is the operating prompt for it — paste it into a fresh Claude Code session (after `/clear`) to execute Tracks A–F (IA heuristic walkthrough, spikes S1–S7 sandbox proofs, design system, clickable prototype, architecture ADRs, external .docx dossier).
@@ -107,4 +123,6 @@ Work is on the branch `phase-22-native-build`; nothing is merged to `main` and t
 ## Decisions awaiting approval
 D44–D52 recorded in the log with qualified status (heuristic/sandbox basis; provisional). Founder to confirm or amend.
 ## Next session should read first
+**Design Pass v2 is the live work:** read `docs/roadmap/phase22-design-v2-prompt.md`, `docs/design/design-audit-v2.md` and `docs/design/v2-directions/README.md` after the decisions log and this file.
+
 `docs/decisions/log.md` (D64–D72), this file, `docs/roadmap/phase22-execution-plan.md` (build order; the founder answered its questions on 2026-11-14), `app/README.md`, `docs/operations/device-checklist.md`, `docs/research/reality-check.md` (re-check #3), `docs/research/cop31-app-teardown.md`, `docs/architecture/adr/ADR-007-mobile-framework-expo-react-native.md`, then `docs/design/design-system.md` and `docs/ux/information-architecture.md`. Earlier wording that Phase 22 is "blocked on a real-device S1 decision" no longer applies (D64).
