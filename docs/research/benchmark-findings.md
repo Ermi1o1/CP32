@@ -117,3 +117,24 @@ Still not retrieved: Brella, Airmeet, Bizzabo, Hopin-successor documentation; of
 
 ## J. Remaining gaps (accept for now)
 Hands-on testing (plan below); G20/Glastonbury/Coachella; FIFA 2022 official fan app features; Olympics Paris detailed features; AFCON; vendor docs for Brella/Airmeet/Bizzabo; user reviews/ratings of COP apps; any usage analytics.
+
+---
+# Third pass (2026-11-14) — first hands-on evidence: the COP31 host-country app
+Full teardown: `docs/research/cop31-app-teardown.md`. Source: the founder's own screenshots and screen recording of the COP31 Türkiye app, taken on a phone during the conference on 14 November 2026 (`docs/research/cop31-captures/`, internal use only). Legend as above, plus **[O]** observed first-hand by us.
+
+## K. COP31 (Antalya, 9–20 Nov 2026)
+- **App estate [V, store listings filed in `docs/intel/items/`]:** four published apps — the host-country "COP31 Türkiye" app (ministry-published), the UNFCCC "COP 31 Digital Platform" (badge-gated delegate platform), a volunteer app and an IT-service-management app, the last two under private vendors' names. "A host builds an app" understates it: a host ships a small family of apps. This bears on the admin and operations scope (Phase 16).
+- **Host app, observed [O]:** five tabs (Zones, Venue, Home, Programme, My Pass) plus a drawer; programme with day and zone filters and live/ended states; 157–160 pavilions; thematic hubs; illustrated venue map with stand-level floor plans; shuttle route planner; 111 food venues with open/closed status; weather; news and press; Turkish/English; guest mode with a QR entry pass behind sign-in; a generative AI chat labelled "responses may be inaccurate".
+- **Offline [O, three screens only]:** an "Offline" banner; cached hero content; event lists fail with "Something went wrong / Retry"; a previously opened session page renders in full. Content appears to be kept after viewing rather than downloaded ahead.
+- **Dark mode [O]:** none seen except the chat screen.
+- **Size [I, not measured by us]:** about 187 MB.
+
+## L. What this changes in the earlier conclusions
+1. Conclusion D2/I1 ("host-country app pattern is our adoption path") is confirmed and sharpened: the host app is now the main public app and is reported as presented jointly with the secretariat. See reality-check re-check #3 and D70.
+2. Conclusion D4/I5 on offline is now first-hand for one major app: even a well-funded host app was not offline-first on the screens tested.
+3. Wayfinding, shuttle routing and live venue status are where the host app is strongest, and all depend on venue and operator data (conclusion I2 confirmed).
+4. A generative assistant has reached a host-country COP app; we recommend a retrieval-only alternative (teardown §6).
+
+## M. Status of the Phase 4 hands-on gap
+**Partly closed.** One app (COP31 host app) has now been observed first-hand, on one Android phone, in guest mode, in English, with three screens tested offline.
+**Still desk evidence only:** every other benchmark in this file (COP28–COP30 apps, the UNFCCC COP31 Digital Platform, Expo, Olympics, World Cup, and all event-technology vendors). **Not tested on any app, including COP31:** screen readers, 200% text, measured size and start time, time-zone handling, notification behaviour, permissions requested, privacy and tracking, the signed-in state, and a cold start offline. The test plan in `benchmark-test-plan.md` remains open for all of those.

@@ -1,12 +1,12 @@
-# Phase Status (updated 2026-11-09)
+# Phase Status (updated 2026-11-14)
 ## Documentation phases (project brief)
 | Phase | Status | Key files |
 |---|---|---|
-| 0 Reality check | Done (D1) | research/reality-check.md |
+| 0 Reality check | Done (D1); **re-check #3 on 2026-11-14 changed the verdict** — official COP32 website and channels exist, no official app found (D68 proposed; D70 proposes amending D1) | research/reality-check.md |
 | 1 Discovery | Done (D2–D7) | product/discovery-answers.md |
 | 2 Project definition | Done (approved) | product/project-definition.md |
 | 3 COP32 research | Done (two passes; re-run when official pages publish) | research/cop32-context.md, ethiopia-digital-landscape.md |
-| 4 Benchmarks | Done (desk); hands-on test plan issued | research/benchmark-findings.md, benchmark-test-plan.md |
+| 4 Benchmarks | Done (desk); **one app observed first-hand 2026-11-14** (COP31 host app, founder's captures); all others still desk evidence; hands-on test plan still open | research/benchmark-findings.md, benchmark-test-plan.md, cop31-app-teardown.md |
 | 5 Gap analysis | Done (approved) | research/gap-analysis.md |
 | 6 Personas & journeys | Done (approved); BA interviews pending (non-blocking) | ux/personas.md, user-journeys.md, interview-questionnaire.md |
 | 7 Feature catalog | Done | product/feature-catalog.md |
@@ -23,7 +23,8 @@
 | 18 Development roadmap | Done — D38, D39 approved 2026-10-03 | roadmap/development-roadmap.md | roadmap/development-roadmap.md |
 | 19 Project team | Done — D40–D42 approved 2026-10-03 | roadmap/team-requirements.md |
 | 20 Final product blueprint | Done — D43 approved 2026-10-03 | product/final-blueprint.md |
-| 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52) | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
+| 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52). Its S1 outcome ("no framework decision") is superseded by D64 | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
+| 22 Native build (Expo + React Native, Android APK first) | **Started 2026-11-14 — planning and research done, no app code yet; waiting on founder decisions** (D64–D67 approved; D68–D70 proposed) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
 
 ## Track D v2 — visual redesign (2026-10-03)
 **Done.** Direction "Highland Mist" chosen after four founder review rounds (D53; `docs/design/redesign-directions/`). Design system v0.2 + `tokens.json` updated; plan in `docs/design/redesign-plan.md`; every prototype screen rebuilt (5 batches); screenshots refreshed in `docs/design/prototype-screens/` (20). Checks: tokens 64/64 AA, axe-core 0 violations (16 screens × light/dark), 200% reflow without horizontal scroll, EN/AM and light/dark parity, tree-test T1–T12 all resolve. Private phone-viewable copy: https://claude.ai/artifact/X4MMCwgpeHVfpBCpLDh3wh (entry page `prototype/artifact-entry.html`). The GitHub Pages redeploy runs once this branch is merged to `main`.
@@ -64,13 +65,30 @@ Zero Netlify impact — commits carry `[skip netlify]`.
 `collect.py --verify` and record the result. YouTube channel ids and Telegram
 handles are placeholders and those sources are disabled until filled in.
 
+## Phase 22 — native build (started 2026-11-14)
+Work is on the branch `phase-22-native-build`; nothing is merged to `main` and the live prototype is unchanged.
+
+**Done on 2026-11-14**
+- **Track 0, reality re-check #3.** The federal government portal links "Official COP32 Website" to `cop32ethiopia.et` (a holding page with nine social channels). An official COP32 digital workstream therefore exists. **No official COP32 app, tender or contractor was found.** The procurement portal (e-GP) could not be reached and has still never been searched directly. The intel pipeline had been watching a different, apparently unofficial domain (`cop32ethiopia.org`). Detail: `docs/research/reality-check.md`.
+- **Track A, COP31 teardown.** `docs/research/cop31-app-teardown.md`, from the founder's 20 screenshots and screen recording. Headline: on the three screens tested, the COP31 host app fails without a connection; offline-first is our main differentiator, with a seven-point testable target.
+- **Decisions recorded.** D64 (Expo + React Native; supersedes the D18 real-device rule for mobile), D65 (own identity, swappable brand layer; retires the "COP32" name and mark of D59 for the native app), D66 (demo content: complete but honest), D67 (benchmark limits) — approved by the founder. D68 (Track 0 verdict), D69 (intel pipeline repair), D70 (amend D1 to "host-country app offered for adoption") — **proposed, awaiting the founder**.
+- **Plan.** `docs/roadmap/phase22-execution-plan.md` — build order, quality gates, and ten questions for the founder.
+
+**Not started:** the design-system package, the app, the APK, the demo script and one-pager.
+
+**Waiting on the founder (plan §2):** the app's name and mark (it may no longer be called "COP32"); the form of the "independent, not official" statement; how programme days are labelled without inventing dates; Android 7.0 as the floor; screen scope; map approach; build route; confirmation of D68–D70; status of contributor IP assignments before any showing.
+
+**Limits to keep in view:** the cloud session has no Android phone or emulator. Screenshots will be browser renders of the same code and labelled as such. Install, Amharic rendering, screen reader, cold start and airplane-mode tests must be run by the founder on a phone before anything is called validated.
+
+**Still open across the project:** real-user testing of the information architecture; real-device spikes S1 and S6; hosting-provider outreach (S5); native-speaker Amharic review; the legal foundation (company registration, IP assignments, profit-participation agreement); official data access and alert authorisation; a direct search of the procurement portal; who owns COP32 digital delivery.
+
 ## Where the project stands in practice
 - Phase 21 is complete on a heuristic/sandbox basis (see table). Real card sort/tree test, real-device spikes (S1, S6), provider outreach (S5), native-speaker Amharic review and user testing remain open.
 - Planning documentation is complete through Phase 20 (blueprint approved, D43). Phase 21 ("Stage 2 execution") is defined and ready to run: `docs/roadmap/stage2-execution-prompt.md` is the operating prompt for it — paste it into a fresh Claude Code session (after `/clear`) to execute Tracks A–F (IA heuristic walkthrough, spikes S1–S7 sandbox proofs, design system, clickable prototype, architecture ADRs, external .docx dossier).
-- **Not started yet (execution):** legal set-up (company registration, IP assignments, PPR agreement), outreach (letters drafted, not sent), real-world validation of Phase 21's heuristic/sandbox work (see above), and — deferred until after Phase 21 — the real native-app build (Phase 22+).
+- **Not started yet (execution):** legal set-up (company registration, IP assignments, PPR agreement), outreach (letters drafted, not sent; **must be re-read against D68 before sending**), and real-world validation of Phase 21's heuristic/sandbox work (see above). The native-app build (Phase 22) started on 2026-11-14 — see the section above.
 - **Important scope note for Phase 21:** nothing in it substitutes for real-user IA testing or real-device/real-provider spikes (`docs/ux/ia-validation-kit.md`, `docs/architecture/spike-briefs.md`). It produces heuristic/sandbox evidence only, clearly labeled, plus a tangible clickable prototype and a sendable proposal dossier — real validation stays a tracked open item.
 - **Next gate:** G1 on 31 Dec 2026 (see roadmap).
 ## Decisions awaiting approval
 D44–D52 recorded in the log with qualified status (heuristic/sandbox basis; provisional). Founder to confirm or amend.
 ## Next session should read first
-docs/decisions/log.md (D44–D53), docs/roadmap/phase-status.md, docs/design/redesign-plan.md, docs/architecture/adr/README.md, docs/design/design-system.md, prototype/README.md, then docs/product/final-blueprint.md. Phase 22 (native build) is blocked on prototype review + a real-device S1 decision.
+`docs/decisions/log.md` (D64–D70), this file, `docs/roadmap/phase22-execution-plan.md` (the founder's answers to its ten questions decide what happens next), `docs/research/reality-check.md` (re-check #3), `docs/research/cop31-app-teardown.md`, `docs/architecture/adr/ADR-007-mobile-framework-expo-react-native.md`, then `docs/design/design-system.md` and `docs/ux/information-architecture.md`. Earlier wording that Phase 22 is "blocked on a real-device S1 decision" no longer applies (D64).
