@@ -88,7 +88,8 @@ Work is on the branch `phase-22-native-build`; nothing is merged to `main` and t
 | Automated accessibility (axe-core) | 0 violations across 11 screens × 2 languages × 2 themes (two real faults found and fixed first) | Browser render only |
 | 200% text at 320 px wide, Amharic | No sideways scrolling; no clipped text seen | Browser render only |
 | Outside network requests | None — every font, icon and image came from the app itself | Browser render only |
-| Release APK | See `docs/operations/apk-build-runbook.md` | Cloud session |
+| Lint | Pass | Cloud session |
+| Release APK | **Builds.** 21.7 MB for both phone chip types together (budget 30 MB; the COP31 app is reported at about 187 MB). Android 7.0 and up. The only permission is network access. Signed with a throwaway test key. **It has never been installed or opened on any device, so it is not known to run.** See `docs/operations/apk-build-runbook.md` | Cloud session |
 | Install, Amharic rendering, offline cold start, TalkBack, start-up time | **Not done — needs a phone.** Checklist: `docs/operations/device-checklist.md` | — |
 
 **Work stops here until the founder has looked at the screenshots** (the Phase 22 prompt requires it). **Not started:** build steps 2–8 (Home and Updates; Programme; Map; Visit and Emergency; Learn and search; Settings detail; quality gates, demo script, one-pager, design system v1.0).

@@ -19,6 +19,8 @@ jobs:
           git diff --exit-code -- tokens.json ../../app/src/theme/tokens.generated.ts
       - name: TypeScript (strict)
         run: npm run typecheck
+      - name: Lint
+        run: npm run lint
       - name: Unit tests
         run: npm test
       - name: No tracking or advertising packages (D21)
