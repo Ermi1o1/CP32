@@ -1,0 +1,368 @@
+{
+  "run": "2026-11-15T11:17:16.231102+00:00",
+  "reviewed": false,
+  "counts": {
+    "kept": 14,
+    "duplicates": 158,
+    "irrelevant": 166,
+    "stale": 172,
+    "trimmed": 4
+  },
+  "problems": [],
+  "items": [
+    {
+      "id": "2eabf62d1a628390",
+      "url": "https://www.fanamc.com/english/%f0%9f%87%aa%f0%9f%87%b9%f0%9f%87%a8%f0%9f%87%a6-ethiopia-and-canada-deepen-climate-dialogue-ahead-of-cop32-with-focus-on-resilience-and-sustainable-development/?utm_source=rss&utm_medium=rss&utm_campaign=%25f0%259f%2587%25aa%25f0%259f%2587%25b9%25f0%259f%2587%25a8%25f0%259f%2587%25a6-ethiopia-and-canada-deepen-climate-dialogue-ahead-of-cop32-with-focus-on-resilience-and-sustainable-development",
+      "url_canonical": "https://fanamc.com/english/%f0%9f%87%aa%f0%9f%87%b9%f0%9f%87%a8%f0%9f%87%a6-ethiopia-and-canada-deepen-climate-dialogue-ahead-of-cop32-with-focus-on-resilience-and-sustainable-development",
+      "title": "🇪🇹🇨🇦 Ethiopia and Canada Deepen Climate Dialogue Ahead of COP32, with Focus on Resilience and Sustainable Development",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "presidency"
+      ],
+      "excerpt_auto": "Addis Ababa, November 14, 2026 (FMC) – Ethiopia and Canada have discussed strengthening bilateral cooperation on climate action, with particular attention to climate resilience and sustainable development, as Ethiopia prepares to assume the COP32 Presidency. The discussions brought together Ethiopia",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "72b1533c5955b242",
+      "url": "https://www.fanamc.com/english/ethiopia-and-un-women-reinforce-cooperation-on-gender-responsive-climate-finance-and-inclusive-climate-action/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-and-un-women-reinforce-cooperation-on-gender-responsive-climate-finance-and-inclusive-climate-action",
+      "url_canonical": "https://fanamc.com/english/ethiopia-and-un-women-reinforce-cooperation-on-gender-responsive-climate-finance-and-inclusive-climate-action",
+      "title": "Ethiopia and UN Women Reinforce Cooperation on Gender-Responsive Climate Finance and Inclusive Climate Action",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "chief negotiator",
+        "climate finance",
+        "cop31"
+      ],
+      "excerpt_auto": "Addis Ababa, November 14, 2026 (FMC) – Gender equality and women’s inclusion in climate financing featured in discussions between Ethiopia’s Minister of Finance and COP32 Chief Negotiator, Fitsum Assefa (PhD), and Sarah Hendriks of UN Women on the sidelines of COP31. The two sides exchanged views on",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "67cf39631030c424",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9vSU1OUXNJVnRhb2RNWVI3YzVVZDlGaXR1RTF3dkxTdGNneHJYZy1sSGJWbHJXYkdZVUF2Y2tQdVl6OTVZZWNoazU2eEtBWTBZdGc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9vSU1OUXNJVnRhb2RNWVI3YzVVZDlGaXR1RTF3dkxTdGNneHJYZy1sSGJWbHJXYkdZVUF2Y2tQdVl6OTVZZWNoazU2eEtBWTBZdGc?oc=5",
+      "title": "FM Gedion Stresses Need for Action-Oriented COP32, Urges Global Investment in Africa’s Green Future",
+      "outlet": "ENA English",
+      "source_key": "gnews_ena_en",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "FM Gedion Stresses Need for Action-Oriented COP32, Urges Global Investment in Africa’s Green Future ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "897015e80565e24e",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvb25Odmd3VnV5NU9mS3NxOTdrem5DZkxFNFVXQ3N4ZDMwQTJhTDM1TnphTWhETTR6Vi1xNWNhN3JoWDU0ZENXbVNnVk15OWRUeWc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvb25Odmd3VnV5NU9mS3NxOTdrem5DZkxFNFVXQ3N4ZDMwQTJhTDM1TnphTWhETTR6Vi1xNWNhN3JoWDU0ZENXbVNnVk15OWRUeWc?oc=5",
+      "title": "Ethiopia Calls for Shift from Climate Commitments to Action Ahead of COP32",
+      "outlet": "ENA English",
+      "source_key": "gnews_ena_en",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia Calls for Shift from Climate Commitments to Action Ahead of COP32 ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c21d06cfd4ad2a68",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE51TF95Y2V1U2FUWTlzQkQ0cy1heGREc08tUHdxVHBGN1VzcjNDT0N4WVlSQUhlZ1Z4b182YlI3ZEZVbzZUUFNZZ1JrRjZMenFTT0x3WGZCTnpnVXllNkVXbXZQU2g1TDZ0dHEwT0xMenotcnVPYmRZRTViN1NrUVU?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMif0FVX3lxTE51TF95Y2V1U2FUWTlzQkQ0cy1heGREc08tUHdxVHBGN1VzcjNDT0N4WVlSQUhlZ1Z4b182YlI3ZEZVbzZUUFNZZ1JrRjZMenFTT0x3WGZCTnpnVXllNkVXbXZQU2g1TDZ0dHEwT0xMenotcnVPYmRZRTViN1NrUVU?oc=5",
+      "title": "Central Bank Joins Global Islamic Climate Finance Alliance as It Prepares to Host COP32",
+      "outlet": "Birr Metrics",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "climate finance"
+      ],
+      "excerpt_auto": "Central Bank Joins Global Islamic Climate Finance Alliance as It Prepares to Host COP32 Birr Metrics",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "1e59882a3826afe4",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5pd1V1VVE1M21lSlRaa1hzY29GT1ZzdGhmTWdrRFZOVlhJTXJENTh5aUh3S1JobV9DSXJ4S0x2c3dqMUk1YVg4Tkk0SVlUOTF3TUE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5pd1V1VVE1M21lSlRaa1hzY29GT1ZzdGhmTWdrRFZOVlhJTXJENTh5aUh3S1JobV9DSXJ4S0x2c3dqMUk1YVg4Tkk0SVlUOTF3TUE?oc=5",
+      "title": "Ethiopia Turns COP31 Diplomacy into Strategic Opportunity to Advance COP32 and Africa’s Climate Agenda",
+      "outlet": "ENA English",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-15",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Ethiopia Turns COP31 Diplomacy into Strategic Opportunity to Advance COP32 and Africa’s Climate Agenda ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "bbc23d3a5b8445db",
+      "url": "https://www.youtube.com/watch?v=y7nxHHL_mUU",
+      "url_canonical": "https://youtube.com/watch?v=y7nxHHL_mUU",
+      "title": "COP31: El Niño 2026-2027: ¿qué dice la ciencia y qué países serán más afectados?",
+      "outlet": "UNFCCC (YouTube)",
+      "source_key": "yt_unfccc",
+      "kind": "video",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "official",
+      "tier": 3,
+      "grade": "B",
+      "grade_reason": "published on an official domain",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "“El Super Niño”, “el Niño Godzilla”, “el Niño monstruo” y muchos otros apodos se le han puesto. Sabemos que estamos viviendo uno de los episodios de El Niño más fuertes de la historia, pero ¿cuándo llegará a su punto máximo?",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "1452f6627bb15592",
+      "url": "https://www.fanamc.com/english/national-bank-of-ethiopia-joins-global-islamic-climate-finance-alliance-as-founding-affiliate/?utm_source=rss&utm_medium=rss&utm_campaign=national-bank-of-ethiopia-joins-global-islamic-climate-finance-alliance-as-founding-affiliate",
+      "url_canonical": "https://fanamc.com/english/national-bank-of-ethiopia-joins-global-islamic-climate-finance-alliance-as-founding-affiliate",
+      "title": "National Bank of Ethiopia Joins Global Islamic Climate Finance Alliance as Founding Affiliate",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "climate finance",
+        "cop31"
+      ],
+      "excerpt_auto": "Addis Ababa, November 14, 2026 (FMC) – The National Bank of Ethiopia (NBE) has become a Founding Affiliate of the Global Islamic Climate Finance Alliance (GICFA), joining the initiative at its official launch held on the sidelines of the 31st UN Climate Change Conference (COP31) in Antalya, Türkiye.",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "a639f53cc75ff1e3",
+      "url": "https://www.climatechangenews.com/2026/11/14/scientists-defend-un-overshoot-report-after-saudi-led-push-to-sideline-it-at-cop31/",
+      "url_canonical": "https://climatechangenews.com/2026/11/14/scientists-defend-un-overshoot-report-after-saudi-led-push-to-sideline-it-at-cop31",
+      "title": "Scientists defend UN overshoot report after Saudi-led push to sideline it at COP31",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "In response to critics who have questioned the report's scientific legitimacy, its authors say the review matches IPCC standards The post Scientists defend UN overshoot report after Saudi-led push to sideline it at COP31 appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c57ad481bd95ff60",
+      "url": "https://www.climatechangenews.com/2026/11/14/cop31-bulletin-day-6-limited-progress-as-ministers-arrive-in-antalya/",
+      "url_canonical": "https://climatechangenews.com/2026/11/14/cop31-bulletin-day-6-limited-progress-as-ministers-arrive-in-antalya",
+      "title": "COP31 Bulletin Day 6: Climate marchers call for justice as talks make limited progress",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "After campaigners took to the streets, red lines are set to emerge at the summit as Australia and Türkiye preside over a stocktaking plenary on Saturday night The post COP31 Bulletin Day 6: Climate marchers call for justice as talks make limited progress appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "4f93d7826e3b6826",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOW5vN0tESWF2YzdKT0RLSTRpelRWZElTU0hzbUtJMmNLZFNMTXVQY2FaM1E0UUE3UWJaVHpjSWV0Tjlsb3g5MGRuRldGLVU3V2d1Y1JsQ1JhTHV3NUtkbGJOd0ltVDhCRmFVZ2pHZzRqUXdkMjBidGlMN1FWaWtoTFhfNUd5UklWS3NiVjg3c3hBSWgzSmNPZTlwX3FlQk05RE1vU21zd0N1b2MxUmFKV0NWeUtNWXAtTUNCbzlPT2RXUQ?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOW5vN0tESWF2YzdKT0RLSTRpelRWZElTU0hzbUtJMmNLZFNMTXVQY2FaM1E0UUE3UWJaVHpjSWV0Tjlsb3g5MGRuRldGLVU3V2d1Y1JsQ1JhTHV3NUtkbGJOd0ltVDhCRmFVZ2pHZzRqUXdkMjBidGlMN1FWaWtoTFhfNUd5UklWS3NiVjg3c3hBSWgzSmNPZTlwX3FlQk05RE1vU21zd0N1b2MxUmFKV0NWeUtNWXAtTUNCbzlPT2RXUQ?oc=5",
+      "title": "UN Climate Chief today at halfway point of COP31: \"no collective success without compromise from every Party",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31",
+        "unfccc"
+      ],
+      "excerpt_auto": "UN Climate Chief today at halfway point of COP31: \"no collective success without compromise from every Party UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "d7d3541730e03cae",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvc1A5M19oYjE5V3ZsUjNpdkMya1BfSng3enViQzBTYnF0MzZyOXEzM1pXN0plSFRIWElOXzJIMWVvSnBsemFDMFVSYw?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvc1A5M19oYjE5V3ZsUjNpdkMya1BfSng3enViQzBTYnF0MzZyOXEzM1pXN0plSFRIWElOXzJIMWVvSnBsemFDMFVSYw?oc=5",
+      "title": "Statement at the 7th HLMD on Flimate Finance: IIPFCC",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-14",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "unfccc"
+      ],
+      "excerpt_auto": "Statement at the 7th HLMD on Flimate Finance: IIPFCC UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "fef57c534cfba100",
+      "url": "https://www.climatechangenews.com/2026/11/15/behind-the-cop31-fanfare-turkiye-is-worried-about-water/",
+      "url_canonical": "https://climatechangenews.com/2026/11/15/behind-the-cop31-fanfare-turkiye-is-worried-about-water",
+      "title": "Behind the COP31 fanfare, Türkiye is worried about water",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-15",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Highlighting the urgency of climate diplomacy, more frequent droughts are depleting the country's lakes and half the population is at risk of water shortages by 2030 The post Behind the COP31 fanfare, Türkiye is worried about water appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "b8e28dfecb65b604",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYzZHVmlHU3d1blNYUjdXX0pBWTd2VnhCRGVRaUpGZ3Z2cmZjVW0tNW05RUxXTDcxU29CT3FtRndTZjdlVmZtOWdRaTBZbWJUdmJpQzc5OWo0UjlRb0pab19odmhKYlZobElaRXlhQU9qWlM1cnJqTWZtWWgzWU9kQlpJeHVlbzY0bFEwaGhzLXRpcmhMd3lSUjg0dnAzbDUxQk1qRm9vc2QwTHlBY1hLZzBtVXZhLWdYd0hXTWJPclBSWnlEM1pV?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQYzZHVmlHU3d1blNYUjdXX0pBWTd2VnhCRGVRaUpGZ3Z2cmZjVW0tNW05RUxXTDcxU29CT3FtRndTZjdlVmZtOWdRaTBZbWJUdmJpQzc5OWo0UjlRb0pab19odmhKYlZobElaRXlhQU9qWlM1cnJqTWZtWWgzWU9kQlpJeHVlbzY0bFEwaGhzLXRpcmhMd3lSUjg0dnAzbDUxQk1qRm9vc2QwTHlBY1hLZzBtVXZhLWdYd0hXTWJPclBSWnlEM1pV?oc=5",
+      "title": "COP31: Countries, financial institutions mobilise billions to bridge global climate finance gap",
+      "outlet": "EnviroNews Nigeria",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-15",
+      "retrieved": "2026-11-15",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "climate finance",
+        "cop31"
+      ],
+      "excerpt_auto": "COP31: Countries, financial institutions mobilise billions to bridge global climate finance gap EnviroNews Nigeria",
+      "also_seen": [],
+      "note": ""
+    }
+  ]
+}
