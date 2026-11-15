@@ -15,6 +15,7 @@ import { fontFor } from '@/theme/typography';
 const KINDS: readonly { kind: HitKind; label: StringKey; icon: IconName }[] = [
   { kind: 'session', label: 'search.sessions', icon: 'calendar' },
   { kind: 'person', label: 'search.people', icon: 'user-round' },
+  { kind: 'exhibitor', label: 'exhibitors.title', icon: 'building-2' },
   { kind: 'place', label: 'search.places', icon: 'map-pin' },
   { kind: 'guide', label: 'search.guides', icon: 'book-open' },
   { kind: 'term', label: 'search.terms', icon: 'circle-help' },

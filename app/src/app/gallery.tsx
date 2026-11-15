@@ -28,7 +28,8 @@ export default function Gallery() {
         <SectionTitle>{t('gallery.buttons')}</SectionTitle>
         <View style={{ gap: 10 }}>
           <Button kind="primary" icon="calendar-plus" label={t('gallery.primary')} />
-          <Button kind="tinted" icon="map-pin" label={t('gallery.secondary')} />
+          <Button kind="dark" icon="calendar" label={t('home.cta')} />
+          <Button kind="outline" icon="map-pin" label={t('gallery.secondary')} />
           <Button kind="plain" label={t('gallery.plain')} />
         </View>
 
@@ -61,7 +62,7 @@ export default function Gallery() {
           <Skeleton />
           <Skeleton width="85%" />
         </Card>
-        <StateBlock icon="star" title={t('gallery.emptyTitle')} body={t('gallery.emptySub')} action={<Button kind="tinted" label={t('home.cta')} />} />
+        <StateBlock icon="star" title={t('gallery.emptyTitle')} body={t('gallery.emptySub')} action={<Button kind="dark" label={t('home.cta')} />} />
         <StateBlock icon="wifi-off" title={t('gallery.errorTitle')} body={t('gallery.errorSub')} />
       </Page>
     </View>

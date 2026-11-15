@@ -6,14 +6,15 @@ const root=process.argv[2], out=process.argv[3];
 const types={'.html':'text/html','.js':'application/javascript','.ttf':'font/ttf','.png':'image/png','.ico':'image/x-icon','.json':'application/json','.css':'text/css'};
 const srv=http.createServer((q,r)=>{let p=path.join(root,decodeURIComponent(q.url.split('?')[0]));if(!fs.existsSync(p)||fs.statSync(p).isDirectory())p=path.join(root,'index.html');r.writeHead(200,{'content-type':types[path.extname(p)]||'application/octet-stream'});fs.createReadStream(p).pipe(r);}).listen(8099);
 (async()=>{const b=await chromium.launch();const errors=[];
-async function shot(name,{prefs,route='/',scheme='light',w=390,h=844,full=false,agenda=null,type=null}){
- const ctx=await b.newContext({viewport:{width:w,height:h},deviceScaleFactor:1,colorScheme:scheme});
+async function shot(name,{prefs,route='/',scheme='light',w=390,h=844,full=false,agenda=null,type=null,click=null,tz=null}){
+ const ctx=await b.newContext({viewport:{width:w,height:h},deviceScaleFactor:1,colorScheme:scheme,...(tz?{timezoneId:tz}:{timezoneId:'Africa/Addis_Ababa'})});
  const pg=await ctx.newPage();pg.on('pageerror',e=>errors.push(name+': '+e.message));pg.on('console',m=>{if(m.type()==='error')errors.push(name+' console: '+m.text().slice(0,200))});
  pg.on('request',q=>{const u=q.url();if(!u.startsWith('http://localhost:8099'))errors.push(name+' EXTERNAL REQUEST: '+u)});
  await pg.addInitScript(p=>{if(p)localStorage.setItem('prefs.v1',JSON.stringify(p))},prefs);
  await pg.addInitScript(a=>{if(a)localStorage.setItem('agenda.v1',JSON.stringify(a))},agenda);
  await pg.goto('http://localhost:8099'+route);await pg.waitForTimeout(1200);
  if(type){await pg.getByRole('textbox').first().fill(type);await pg.waitForTimeout(500);}
+ if(click){await pg.getByText(click,{exact:true}).filter({visible:true}).last().click();await pg.waitForTimeout(700);}
  const sw=await pg.evaluate(()=>document.documentElement.scrollWidth);if(sw>w+1)errors.push(name+' HORIZONTAL OVERFLOW '+sw+'>'+w);
  await pg.screenshot({path:path.join(out,name+'.png'),fullPage:full});await ctx.close();}
 const P=(o)=>({lang:'en',mode:'system',textScale:1,brand:'cop32',reduceMotion:false,welcomed:true,livePreview:false,...o});
@@ -58,4 +59,9 @@ await shot('37-glossary',{prefs:P({}),route:'/glossary',w:W,h:1500});
 await shot('38-programme-end',{prefs:P({}),route:'/programme',w:W,h:1300,agenda:['s07']});
 await shot('39-search-dark',{prefs:P({mode:'dark'}),route:'/search',w:W,h:1300,type:'hall'});
 await shot('40-agenda-200-320',{prefs:P({textScale:2}),route:'/agenda',w:320,h:1600,agenda:['s07','s09']});
+await shot('41-exhibitors',{prefs:P({}),route:'/exhibitors',w:W,h:1200});
+await shot('42-exhibitor',{prefs:P({}),route:'/exhibitor/e11',w:W,h:1300});
+await shot('43-programme-filter',{prefs:P({}),route:'/programme',w:W,h:915,click:'Filter'});
+await shot('44-session-localtime',{prefs:P({}),route:'/session/s07',w:W,h:1100,tz:'Europe/London'});
+await shot('45-exhibitors-dark-200',{prefs:P({mode:'dark',textScale:2}),route:'/exhibitors',w:320,h:1400});
 console.log(errors.length?errors.join('\n'):'no errors, no external requests, no overflow');await b.close();srv.close();})();

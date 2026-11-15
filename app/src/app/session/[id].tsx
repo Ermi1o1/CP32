@@ -7,6 +7,7 @@ import Animated, { FadeInDown } from 'react-native-reanimated';
 import { GUTTER, SubHeader } from '@/ui/chrome';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useNow } from '@/data/useNow';
+import { deviceOffsetMin, inViewerTime } from '@/data/localTime';
 import { Text } from '@/ui/Text';
 import { Icon } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
@@ -63,6 +64,7 @@ export default function SessionPage() {
     );
   }
   const phase = now ? phaseOf(session, now) : 'upcoming';
+  const local = inViewerTime(session.start, deviceOffsetMin());
   const saved = isSaved(session.id);
 
   return (
@@ -93,7 +95,8 @@ export default function SessionPage() {
                   <Text variant="clock">{session.start}</Text>
                   <Text variant="title2" weight={600} color="textSecondary" tabular>– {session.end}</Text>
                 </View>
-                <Text variant="footnote" color="textSecondary" style={{ paddingTop: 2, paddingBottom: 12 }}>{t('session.yourTime')} · {t('session.minutes', { m: durationMin(session) })}</Text>
+                <Text variant="footnote" color="textSecondary" style={{ paddingTop: 2, paddingBottom: local ? 2 : 12 }}>{t('session.yourTime')} · {t('session.minutes', { m: durationMin(session) })}</Text>
+                {local ? <Text variant="footnote" weight={600} color="text" style={{ paddingBottom: 12 }}>{t(local.dayShift === 0 ? 'session.local' : local.dayShift > 0 ? 'session.localNext' : 'session.localPrev', { t: local.time })}</Text> : null}
                 <Group>
                   <View style={{ height: 0 }} />
                   <Row icon="map-pin" title={session.room} value={t('session.onMap')} onPress={() => router.push('/map')} />

@@ -1,4 +1,4 @@
-# Phase Status (updated 2026-11-14)
+# Phase Status (updated 2026-11-15)
 ## Documentation phases (project brief)
 | Phase | Status | Key files |
 |---|---|---|
@@ -158,9 +158,20 @@ Screenshots: `docs/design/app-screens/v1.1-daylight/` (browser renders at 412 px
 | Release APK | Builds: 25.2 MB, Android 7.0+, permissions unchanged. Test-signed | Cloud session |
 | On a phone | **Not done for 0.3.0 or 0.4.0** | — |
 
+**Version 0.5.0 (2026-11-15) — again on the founder's instruction to continue; still no phone feedback since 0.2.0.** Added: **exhibitors** (twelve invented organisations — the same ones the invented speakers belong to — with a page each, filter by hall, their sessions and people); a **filter sheet** on the Programme (format and theme, combining with the day and the quick filters; built on the platform's own modal, so no new native library); **your local time** on every session for viewers outside Addis Ababa; exhibitors in search. Corrected: the Sources page no longer says news is invented (there is no news feed), and the component gallery shows the current button styles. Documents brought into line with D68, D70 and D74: a stop-notice on the outreach pack, a read-this-first note on the blueprint, and the Amharic point in the teardown.
+
+| Check (version 0.5.0) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict, lint | Pass | Cloud session |
+| Unit tests | 117 of 117 | Cloud session |
+| Automated accessibility (axe-core) | 0 violations over 27 routes × 2 languages × 2 themes (108 runs) | Browser render only |
+| Tree test T1–T12 | 12 of 12 reachable in at most two taps (scripted walk) | Browser render only |
+| Release APK | Builds: 25.2 MB, Android 7.0+, permissions unchanged. Test-signed | Cloud session |
+| On a phone | **Not done for 0.3.0, 0.4.0 or 0.5.0.** Three versions are now stacked on an unverified base — the single largest risk in the project today | — |
+
 **Three conditions before any demo to officials, none met today:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
 
-**Not built:** bottom-sheet filter, shared-element transition, real offline city map, exhibitors directory, push notifications, reminders.
+**Not built:** shared-element transition, real offline city map, push notifications, reminders, calendar export, the Amharic edition.
 
 **Carry-over from D74:** the demo script, one-pager, teardown "how we win" list and blueprint should no longer present Amharic as a lead selling point; none of those documents has been edited yet.
 

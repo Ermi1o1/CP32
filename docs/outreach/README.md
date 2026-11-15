@@ -1,4 +1,11 @@
 # Outreach Pack — how to use (drafted 2026-10-03)
+
+> **STOP — these drafts are out of date as of 2026-11-14 and must not be sent as written.** They were drafted before three things changed. Each letter needs revising against them first:
+> 1. **An official COP32 digital workstream exists (D68).** The federal government portal links `cop32ethiopia.et` as the official COP32 website, with official social channels. The letters must not read as if nothing has started, and should say plainly that we have seen the official site. Which office owns digital delivery, and whether an app is planned, is still unknown — finding that out is the first purpose of any contact.
+> 2. **The positioning changed (D70).** From "a complementary, unofficial platform" to "a host-country guide, built independently and offered to the host for adoption — unofficial until adopted in writing". If a team or vendor is already working on an app, the message is "here is a working reference and what we can contribute", never a competing bid.
+> 3. **English first (D74).** The drafts describe a bilingual English and Amharic platform as a headline. The app is now English-first, with a draft Amharic that needs native-speaking editors. Do not promise a finished Amharic edition.
+>
+> Also changed: there is now a **working Android app** (version 0.5.0), where the drafts speak of a proposal and a prototype; and the names and titles in the drafts were unverified press reports in October — `ethiopia.gov.et` now names the President-Designate and the Chief Negotiator, but **every name, title and address must still be checked on the day of sending**. Talking points that are current: `docs/demo/demo-script.md` and `docs/demo/one-pager.md`.
 Drafts for the founder to review, edit and send. **Nothing has been sent.** All names, titles and contacts below come from press reports and are **unverified**; confirm every name, title, address and channel before sending.
 
 ## Contents

@@ -4,6 +4,9 @@
 
 **Who:** the founder or any team member with an Android phone (Android 7.0 or newer). **Time:** about 30 minutes. **Write results** in the table at the bottom and tell the next Claude Code session, which records them in `docs/roadmap/phase-status.md`.
 
+## Version 0.5.0 — additions to check
+Programme → Filter: the sheet should slide up from the bottom, close with the X, with a tap on the dimmed area, and with the phone's back gesture. Programme → More → Exhibitors: open one. On a session page, check whether a line "… where you are today" appears (it appears only if your phone is not on Addis Ababa time).
+
 ## Version 0.4.0 — additions to check
 After the four 0.3.0 checks below: tap the search button and type "water" (results should appear as you type, also in airplane mode); save two sessions and open Programme → More → My agenda; open a speaker from a session page; Profile → Your data → Delete my data.
 

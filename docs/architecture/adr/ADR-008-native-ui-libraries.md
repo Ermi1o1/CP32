@@ -28,3 +28,6 @@ Design Pass v2 asks for designed motion (staggered list entrance, a rewarding sa
 
 ## Revisit when
 A device test shows dropped frames or a crash attributable to any of these; the programme grows beyond a few hundred rows; the filter sheet or Map sheet is built.
+
+## Update 2026-11-15 — bottom sheet without a new library
+The programme filter sheet (version 0.5.0) is built on the platform's own modal (`app/src/ui/Sheet.tsx`): it slides up, dims the page, and closes on the close button, a tap outside, or the system back gesture. This avoids adding `react-native-gesture-handler` and `@gorhom/bottom-sheet` — two more native modules that could not be verified without a device. What it gives up: dragging the sheet with a finger. Revisit if the Map needs a draggable place sheet.
