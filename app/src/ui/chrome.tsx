@@ -15,11 +15,11 @@ export const GUTTER = 20;
 function RoundButton({ icon, label, onPress, tone = 'plain', onPhoto }: { icon: IconName; label: string; onPress: () => void; tone?: 'plain' | 'danger'; onPhoto?: boolean }) {
   const { c } = useTheme();
   // Over a photograph every control gets a solid backing, so it never depends on the image for contrast.
-  const bg = tone === 'danger' ? c.danger : onPhoto ? c.surface : c.fill;
+  const bg = tone === 'danger' ? c.danger : onPhoto ? c.bg : c.surface;
   const fg: ColorRole = tone === 'danger' ? 'onDanger' : 'text';
   return (
     <Tap onPress={onPress} accessibilityLabel={label} style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <View style={{ width: 42, height: 42, borderRadius: 21, alignItems: 'center', justifyContent: 'center', backgroundColor: bg }}>
+      <View style={{ width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center', backgroundColor: bg }}>
         <Icon name={icon} size={21} color={fg} stroke={2} />
       </View>
     </Tap>
@@ -42,7 +42,7 @@ export function AppHeader({ onPhoto }: { onPhoto?: boolean }) {
   return (
     <View style={{ paddingTop: insets.top + 8, paddingBottom: 8, paddingLeft: GUTTER - 6, paddingRight: GUTTER - 14, backgroundColor: onPhoto ? 'transparent' : c.bg, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
       <View accessible accessibilityRole="header" accessibilityLabel={brand.name}
-        style={{ flexDirection: 'row', alignItems: 'center', gap: 9, flexShrink: 1, paddingLeft: 6, paddingRight: 14, height: 42, borderRadius: 21, backgroundColor: onPhoto ? c.surface : 'transparent' }}>
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 9, flexShrink: 1, paddingLeft: 6, paddingRight: 14, height: 44, borderRadius: 22, backgroundColor: onPhoto ? c.bg : 'transparent' }}>
         <View style={{ flexShrink: 0 }}><Mark size={28} /></View>
         <Text variant="title3" numberOfLines={1} maxFontSizeMultiplier={1.3} style={{ flexShrink: 1, fontSize: Math.round(18 * k), lineHeight: Math.round(24 * k) }}>{brand.name}</Text>
       </View>
@@ -110,34 +110,31 @@ export function Page({ title, sub, right, children }: { title?: string; sub?: st
 export interface TabItem { key: string; label: string; icon: IconName; focused: boolean; onPress: () => void }
 
 /**
- * Bottom tab bar (v1.1). Five EQUAL columns in a floating bar whose width is
- * set from the screen, never from its contents — the first version sized
- * itself to its labels on Android and ran off the edge. Every tab is an icon
- * over a label; the selected one sits on a solid ink tile. Nothing changes
- * width when the selection moves.
+ * Bottom navigation (v1.2, D77). The standard pattern people know from every
+ * major app: a full-width bar fixed to the bottom, five equal columns, an
+ * icon above a label. The selected tab is shown by a soft green pill BEHIND
+ * THE ICON ONLY and by its label turning green and bold. The label is never
+ * inside a tile, so its width can never clip it — the fault in both earlier
+ * versions. No border: the bar is lifted from the page by a soft shadow.
  */
 export function TabBar({ items }: { items: TabItem[] }) {
   const { c, dark } = useTheme();
-  const { prefs } = usePrefs();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const barWidth = Math.min(width, 560) - 24;
-  const col = (barWidth - 12) / Math.max(items.length, 1);
-  // The longest label ("Programme") must fit its column on the narrowest phones, so the size is
-  // derived from the column width and enlarged text can only grow it as far as it still fits.
-  const fit = col < 60 ? 9.5 : col < 70 ? 10.5 : 11.5;
-  const size = Math.min(fit * Math.min(prefs.textScale, 1.25), col / 6.3);
-  const label = { fontSize: size, lineHeight: Math.round(size * 1.3) };
+  const col = Math.min(width, 640) / Math.max(items.length, 1);
+  // Sized from the column so the longest label ("Programme") always fits; never from the system font scale.
+  const size = Math.min(12.5, col / 6.4);
   return (
-    <View style={{ width, backgroundColor: c.bg, alignItems: 'center', paddingTop: 6, paddingBottom: Math.max(insets.bottom, 10) }}>
-      <View accessibilityRole="tablist"
-        style={{ width: barWidth, flexDirection: 'row', backgroundColor: c.surface, borderRadius: 24, padding: 5, borderWidth: 1, borderColor: c.divider,
-          shadowColor: '#000', shadowOpacity: dark ? 0.5 : 0.1, shadowRadius: 16, shadowOffset: { width: 0, height: 6 }, elevation: 8 }}>
+    <View style={{ width, backgroundColor: c.bg, alignItems: 'center', paddingTop: 8, paddingBottom: Math.max(insets.bottom, 8),
+      shadowColor: '#0B4F47', shadowOpacity: dark ? 0.4 : 0.1, shadowRadius: 14, shadowOffset: { width: 0, height: -4 }, elevation: 12 }}>
+      <View accessibilityRole="tablist" style={{ flexDirection: 'row', width: col * items.length }}>
         {items.map((it) => (
           <Tap key={it.key} onPress={it.onPress} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
-            style={{ width: col, minHeight: 54, alignItems: 'center', justifyContent: 'center', gap: 3, borderRadius: 19, backgroundColor: it.focused ? c.ink : 'transparent' }}>
-            <Icon name={it.icon} size={22} color={it.focused ? 'onInk' : 'textSecondary'} stroke={it.focused ? 2.2 : 1.8} />
-            <Text variant="caption" weight={it.focused ? 700 : 600} color={it.focused ? 'onInk' : 'textSecondary'} numberOfLines={1} maxFontSizeMultiplier={1} style={label}>{it.label}</Text>
+            style={{ width: col, minHeight: 58, alignItems: 'center', justifyContent: 'center', gap: 4 }}>
+            <View style={{ width: 60, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: it.focused ? c.primarySoft : 'transparent' }}>
+              <Icon name={it.icon} size={22} color={it.focused ? 'onPrimarySoft' : 'textSecondary'} stroke={it.focused ? 2.2 : 1.8} />
+            </View>
+            <Text variant="caption" weight={it.focused ? 700 : 500} color={it.focused ? 'primary' : 'textSecondary'} numberOfLines={1} allowFontScaling={false} style={{ fontSize: size, lineHeight: Math.round(size * 1.3), width: col - 4, textAlign: 'center' }}>{it.label}</Text>
           </Tap>
         ))}
       </View>

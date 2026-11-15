@@ -22,7 +22,7 @@ export default function Visit() {
   return (
     <Page title={t('tab.visit')} sub={t('visit.lead')} right={<SavedMark />}>
       <Tap onPress={() => router.push('/guide/emergency')} minTarget={false} accessibilityRole="link" accessibilityLabel={`${emergency.title}. ${emergency.summary}`}
-        style={{ flexDirection: 'row', alignItems: 'center', gap: 14, backgroundColor: c.ink, borderRadius: radius.md, padding: 16, minHeight: 76 }}>
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 14, backgroundColor: c.ink, borderRadius: radius.lg, padding: 18, minHeight: 84 }}>
         {roomy ? (
           <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.danger, alignItems: 'center', justifyContent: 'center' }}>
             <Icon name="siren" size={22} color="onDanger" stroke={2} />

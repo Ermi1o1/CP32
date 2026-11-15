@@ -33,6 +33,7 @@ export default function Search() {
   const { t } = useT();
   const router = useRouter();
   const [q, setQ] = useState('');
+  const [focused, setFocused] = useState(false);
   const hits = useMemo(() => search(q), [q]);
   const size = Math.round(17 * prefs.textScale);
 
@@ -40,10 +41,12 @@ export default function Search() {
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <SubHeader />
       <Page title={t('a11y.search')} right={<SavedMark />}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1.5, borderColor: c.text, paddingHorizontal: 14, minHeight: 54 }}>
+        {/* A soft pill; while typing, a green ring shows where the keyboard is aimed. */}
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: c.surface, borderRadius: radius.pill, borderWidth: 2, borderColor: focused ? c.primary : c.surface, paddingHorizontal: 18, minHeight: 56 }}>
           <Icon name="search" size={20} color="text" stroke={2} />
           <TextInput
             value={q} onChangeText={setQ} autoFocus autoCorrect={false} autoCapitalize="none" returnKeyType="search"
+            onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
             placeholder={t('search.placeholder')} placeholderTextColor={c.textTertiary}
             accessibilityLabel={t('search.placeholder')}
             // The bordered frame around the field is the focus indicator; the browser's own inner outline would double it.

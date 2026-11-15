@@ -4,6 +4,14 @@
 
 **Who:** the founder or any team member with an Android phone (Android 7.0 or newer). **Time:** about 30 minutes. **Write results** in the table at the bottom and tell the next Claude Code session, which records them in `docs/roadmap/phase-status.md`.
 
+## Version 0.6.0 — what to look at first
+0.6.0 answers the review of 0.5.0. Please check each point and send screenshots of all five tabs:
+1. **Bottom navigation** — the selected tab now shows a soft green pill behind its icon only. Every label must be whole on every tab.
+2. **No lines, no boxes** — is anything still ruled or boxed that should not be?
+3. **Green instead of black** — buttons, selected days and chips, the emergency panel.
+4. **Home** — photograph, title, search field, four round actions, highlights. Does it now read as a finished product?
+5. Dark mode (Profile → Appearance → Dark) — a quick look at Home and Programme.
+
 ## Version 0.5.0 — additions to check
 Programme → Filter: the sheet should slide up from the bottom, close with the X, with a tap on the dimmed area, and with the phone's back gesture. Programme → More → Exhibitors: open one. On a session page, check whether a line "… where you are today" appears (it appears only if your phone is not on Addis Ababa time).
 

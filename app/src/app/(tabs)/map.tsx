@@ -35,16 +35,16 @@ export default function MapTab() {
   return (
     <Page title={t('tab.map')} right={<SavedMark />}>
       <View accessible accessibilityRole="image" accessibilityLabel={t('map.planLabel', { p: place.name })}
-        style={{ borderRadius: radius.md, overflow: 'hidden', borderWidth: 1, borderColor: c.divider }}>
-        <SvgXml xml={venuePlanSvg(c as unknown as Record<string, string>, sel)} width="100%" height={undefined} style={{ aspectRatio: 350 / 300 }} />
+        style={{ borderRadius: radius.lg, overflow: 'hidden' }}>
+        <SvgXml xml={venuePlanSvg(c as unknown as Record<string, string>, sel)} width="100%" height={undefined} style={{ aspectRatio: 350 / 290 }} />
       </View>
       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
         <Icon name="info" size={14} color="textTertiary" stroke={2} />
         <Text variant="footnote" color="textTertiary">{t('map.schematic')}</Text>
       </View>
 
-      <View style={{ backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, padding: 16, gap: 4 }}>
-        <Text variant="label" upper color="textSecondary">{t(`map.kind.${place.kind}`)}</Text>
+      <View style={{ backgroundColor: c.surface, borderRadius: radius.lg, padding: 18, gap: 4 }}>
+        <Text variant="footnote" weight={600} color="primary">{t(`map.kind.${place.kind}`)}</Text>
         <Text variant="title2" accessibilityRole="header">{place.name}</Text>
         <Text variant="subhead" color="textSecondary">{place.note}</Text>
         {n > 0 ? (
@@ -60,7 +60,7 @@ export default function MapTab() {
         {listed.map((p) => (
           <Row key={p.id} icon={p.stepFree && only === 'stepfree' ? 'accessibility' : ICON[p.kind]} title={p.name} subtitle={p.note}
             onPress={() => setSel(p.id)}
-            right={sel === p.id ? <Icon name="circle-check" size={20} color="text" stroke={2.2} /> : <View style={{ width: 20 }} />} />
+            right={sel === p.id ? <Icon name="circle-check" size={22} color="primary" stroke={2.2} /> : <View style={{ width: 22 }} />} />
         ))}
       </Group>
     </Page>

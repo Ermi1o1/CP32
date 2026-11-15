@@ -69,7 +69,6 @@ export default function Programme() {
         value={quick} onChange={setQuick}
         options={[{ value: 'all', label: t('programme.all'), count: counts.all }, { value: 'public', label: t('programme.public'), count: counts.public }, { value: 'saved', label: t('programme.saved'), count: counts.saved }]}
       />
-      <View style={{ height: 1.5, backgroundColor: c.text, marginTop: -6 }} />
       <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
         <Text variant="footnote" color="textSecondary" style={{ flex: 1 }}>{t('programme.count', { n: shown.length })}{active ? ` · ${t('programme.filtersOn', { n: active })}` : ''}</Text>
         <Chip label={active ? `${t('programme.filter')} · ${active}` : t('programme.filter')} selected={active > 0} onPress={() => setSheet(true)} />

@@ -4,6 +4,7 @@
 
 | Folder | What | Date |
 |---|---|---|
-| `v1.1-daylight/` | **Current — version 0.3.0.** Every screen, at 412 px (the founder's phone width): Welcome, Home, Programme, session page, Map, Visit, Updates, two guide pages, Settings, About, Sources; the conference-day preview; dark theme; 200% text at 320 px; 360 px; second brand; empty and missing states; draft Amharic | 2026-11-14 |
+| `v1.2-soft/` | **Current — version 0.6.0 (D77).** Soft, borderless, deep green instead of black, standard bottom navigation, rebuilt Home. Every screen at 412 px, plus dark, 200% text at 320 px, 360 px, the conference-day preview, search, agenda, speakers, exhibitors, the filter sheet | 2026-11-15 |
+| `v1.1-daylight-rejected/` | Versions 0.3.0–0.5.0, rejected by the founder on a phone (boxy, lines everywhere, black fills, tab bar clipped its label). Kept for comparison. Was: **version 0.3.0.** Every screen, at 412 px (the founder's phone width): Welcome, Home, Programme, session page, Map, Visit, Updates, two guide pages, Settings, About, Sources; the conference-day preview; dark theme; 200% text at 320 px; 360 px; second brand; empty and missing states; draft Amharic | 2026-11-14 |
 | `v1.0-daylight-rejected/` | Version 0.2.0, rejected by the founder on a phone (inconsistent screens, generic typeface, tab bar overflow, Home pinned to a day). Kept for comparison | 2026-11-14 |
 | `step1-first-build/` | Version 0.1.0, the first build, judged dated. Kept for comparison | 2026-11-14 |

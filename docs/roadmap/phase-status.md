@@ -169,6 +169,22 @@ Screenshots: `docs/design/app-screens/v1.1-daylight/` (browser renders at 412 px
 | Release APK | Builds: 25.2 MB, Android 7.0+, permissions unchanged. Test-signed | Cloud session |
 | On a phone | **Not done for 0.3.0, 0.4.0 or 0.5.0.** Three versions are now stacked on an unverified base — the single largest risk in the project today | — |
 
+**Founder's phone review of 0.5.0 (2026-11-15, five screenshots): rejected on look and feel.** The tab-bar overflow of 0.2.0 was gone, but: the selected tab's tile clipped its own label; the design read as boxy, with lines everywhere; black fills were wanted as dark green; Home did not feel professional; overall "not a professional app to be published globally". The features added in 0.4.0 and 0.5.0 were not criticised.
+
+**Version 0.6.0 — second visual correction (D77; design rules v1.2).** No rules, hairlines or borders anywhere; soft rounded surfaces and pill buttons; deep green in place of black; the bottom navigation rebuilt to the standard pattern (pill behind the selected icon only); Home rebuilt (photograph with a curved edge, title, search field, four round quick actions, highlights, essentials). The amber "line" signature of D73 is dropped. All features of 0.5.0 are unchanged.
+
+| Check (version 0.6.0) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict, lint | Pass | Cloud session |
+| Unit tests | 117 of 117 | Cloud session |
+| Design-token contrast | 80 of 80 pairs pass WCAG 2.2 AA | Cloud session |
+| Automated accessibility (axe-core) | 0 violations over 108 runs, after fixing one the restyle introduced | Browser render only |
+| Tree test T1–T12 | 12 of 12 reachable | Browser render only |
+| Release APK | Builds: 25.2 MB, Android 7.0+, permissions unchanged. Test-signed | Cloud session |
+| On a phone | **Not done for 0.6.0.** Three earlier rounds showed that browser renders predict neither layout faults nor the founder's judgement | — |
+
+Screenshots: `docs/design/app-screens/v1.2-soft/`.
+
 **Three conditions before any demo to officials, none met today:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
 
 **Not built:** shared-element transition, real offline city map, push notifications, reminders, calendar export, the Amharic edition.

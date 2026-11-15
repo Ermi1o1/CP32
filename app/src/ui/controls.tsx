@@ -7,17 +7,18 @@ import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import type { ColorRole } from '@/theme/brand';
 
 /**
- * Button (v1.0, D73). Rectangular with a 14 px radius and 52 px tall.
- * `primary` is the amber action, used at most once per screen. `dark` is the
- * strong neutral. `outline` and `tinted` are secondary. `plain` is a text button.
+ * Button (v1.2, D77). A pill, 54 px tall, no border.
+ * `primary` = amber, the save action, at most once per screen.
+ * `dark` = deep green, the main way forward. `outline`/`tinted` = soft green,
+ * secondary. `plain` = text only. `danger` = red.
  */
 export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, accessibilityHint }: { label: string; onPress?: () => void; kind?: 'primary' | 'dark' | 'outline' | 'tinted' | 'plain' | 'danger'; icon?: IconName; wide?: boolean; flex?: number; accessibilityHint?: string }) {
   const { c, radius } = useTheme();
   const { prefs } = usePrefs();
-  const map: Record<string, { bg: string; fg: ColorRole; border?: string }> = {
+  const map: Record<string, { bg: string; fg: ColorRole }> = {
     primary: { bg: c.accent, fg: 'onAccent' },
     dark: { bg: c.ink, fg: 'onInk' },
-    outline: { bg: c.surface, fg: 'text', border: c.border },
+    outline: { bg: c.primarySoft, fg: 'onPrimarySoft' },
     tinted: { bg: c.primarySoft, fg: 'onPrimarySoft' },
     plain: { bg: 'transparent', fg: 'primary' },
     danger: { bg: c.danger, fg: 'onDanger' },
@@ -25,7 +26,7 @@ export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, acce
   const s = map[kind]!;
   return (
     <Tap onPress={onPress} accessibilityLabel={label} accessibilityHint={accessibilityHint}
-      style={{ backgroundColor: s.bg, borderRadius: radius.md, borderWidth: s.border ? 1.5 : 0, borderColor: s.border, minHeight: 52, paddingHorizontal: 18, paddingVertical: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, alignSelf: wide || flex ? 'stretch' : 'flex-start', flex }}>
+      style={{ backgroundColor: s.bg, borderRadius: radius.pill, minHeight: 54, paddingHorizontal: 22, paddingVertical: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, alignSelf: wide || flex ? 'stretch' : 'flex-start', flex }}>
       {icon ? <Icon name={icon} size={Math.round(20 * Math.min(prefs.textScale, 1.5))} color={s.fg} stroke={2.2} /> : null}
       <Text variant="callout" weight={700} color={s.fg} style={{ flexShrink: 1 }}>{label}</Text>
     </Tap>
@@ -33,17 +34,18 @@ export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, acce
 }
 
 /**
- * Filter chip. Selected = solid ink with reversed text and the accessibility
- * state; never colour alone. The visible pill is 38 px tall inside a 48 px target.
+ * Chip: a small pill for filters and suggestions. Unselected = soft fill;
+ * selected = deep green with reversed text, plus the accessibility state.
+ * The visible pill is 40 px tall inside a 48 px target.
  */
 export function Chip({ label, selected, onPress, count }: { label: string; selected?: boolean; onPress?: () => void; count?: number }) {
   const { c, radius } = useTheme();
   return (
     <Tap onPress={onPress} accessibilityState={{ selected: !!selected }} aria-pressed={!!selected} accessibilityLabel={count !== undefined ? `${label}, ${count}` : label}
       style={{ justifyContent: 'center' }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 14, minHeight: 38, borderRadius: radius.pill, borderWidth: 1.5, borderColor: selected ? c.ink : c.divider, backgroundColor: selected ? c.ink : c.surface }}>
-        <Text variant="subhead" weight={700} color={selected ? 'onInk' : 'text'}>{label}</Text>
-        {count !== undefined ? <Text variant="footnote" weight={700} color={selected ? 'onInk' : 'textSecondary'} tabular>{String(count)}</Text> : null}
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 16, minHeight: 40, borderRadius: radius.pill, backgroundColor: selected ? c.ink : c.surface }}>
+        <Text variant="subhead" weight={600} color={selected ? 'onInk' : 'text'}>{label}</Text>
+        {count !== undefined ? <Text variant="footnote" weight={600} color={selected ? 'onInk' : 'textSecondary'} tabular>{String(count)}</Text> : null}
       </View>
     </Tap>
   );
@@ -66,44 +68,39 @@ const TONES = {
   danger: { fg: 'danger', bg: 'dangerBg', icon: 'siren' },
 } as const;
 
-/**
- * Notice (v1.1). A bordered panel with a coloured bar on its leading edge,
- * an icon, a title and text. `danger` is announced assertively to screen readers.
- */
+/** Notice: a soft tinted panel with an icon, a title and text. No border. `danger` is announced assertively. */
 export function Banner({ tone, title, body }: { tone: keyof typeof TONES; title: string; body?: string }) {
   const { c, radius } = useTheme();
   const t = TONES[tone];
   return (
     <View accessibilityRole="alert" accessibilityLiveRegion={tone === 'danger' ? 'assertive' : 'polite'}
-      style={{ flexDirection: 'row', backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, overflow: 'hidden' }}>
-      <View style={{ width: 5, backgroundColor: c[t.fg] }} />
-      <View style={{ flex: 1, flexDirection: 'row', gap: 12, padding: 14 }}>
-        <Icon name={t.icon} size={22} color={t.fg} stroke={2} />
-        <View style={{ flex: 1, gap: 2 }}>
-          <Text variant="headline">{title}</Text>
-          {body ? <Text variant="footnote" color="textSecondary">{body}</Text> : null}
-        </View>
+      style={{ flexDirection: 'row', gap: 12, padding: 16, backgroundColor: c[t.bg], borderRadius: radius.md }}>
+      <Icon name={t.icon} size={22} color={t.fg} stroke={2} />
+      <View style={{ flex: 1, gap: 2 }}>
+        <Text variant="headline" color={t.fg}>{title}</Text>
+        {body ? <Text variant="footnote" color="text">{body}</Text> : null}
       </View>
     </View>
   );
 }
 
 /**
- * Segmented control for 2–5 mutually exclusive options (appearance, text size,
- * the programme's day). Equal columns inside one bordered frame; selected = solid ink.
+ * Segmented control for 2–5 mutually exclusive options (appearance, text
+ * size, the programme's day). Equal soft pills with small gaps — no frame
+ * around them. Selected = deep green.
  */
 export function Segmented<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string; sub?: string }[]; value: T; onChange: (v: T) => void }) {
   const { c, radius } = useTheme();
   return (
-    <View accessibilityRole="radiogroup" style={{ flexDirection: 'row', backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, padding: 4, gap: 4 }}>
+    <View accessibilityRole="radiogroup" style={{ flexDirection: 'row', gap: 6 }}>
       {options.map((o) => {
         const on = o.value === value;
         return (
           <Tap key={o.value} onPress={() => onChange(o.value)} accessibilityRole="radio" accessibilityState={{ checked: on }} aria-checked={on} accessibilityLabel={o.sub ? `${o.sub} ${o.label}` : o.label}
-            style={{ flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', paddingVertical: 6, paddingHorizontal: 2, borderRadius: radius.sm, backgroundColor: on ? c.ink : 'transparent' }}>
+            style={{ flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', paddingVertical: o.sub ? 8 : 6, paddingHorizontal: 2, borderRadius: o.sub ? radius.md : radius.pill, backgroundColor: on ? c.ink : c.surface }}>
             {/* The small caption above a segment stops growing early; the value below it carries the size. */}
             {o.sub ? <Text variant="label" upper color={on ? 'onInk' : 'textSecondary'} center numberOfLines={1} maxFontSizeMultiplier={1.1} style={{ fontSize: 11, lineHeight: 15 }}>{o.sub}</Text> : null}
-            <Text variant={o.sub ? 'title3' : 'subhead'} weight={o.sub ? 700 : on ? 700 : 500} color={on ? 'onInk' : 'text'} center>{o.label}</Text>
+            <Text variant={o.sub ? 'title3' : 'subhead'} weight={o.sub ? 700 : 600} color={on ? 'onInk' : 'text'} center>{o.label}</Text>
           </Tap>
         );
       })}
@@ -112,45 +109,36 @@ export function Segmented<T extends string>({ options, value, onChange }: { opti
 }
 
 /**
- * Filter tabs: plain text with a count; the selected one is underlined in ink.
- * Deliberately different from Segmented, so "which day" and "which sessions"
- * never look like the same control.
+ * Filter tabs: a wrapping row of chips with counts, one selected. Smaller and
+ * flatter than Segmented, so "which day" and "which sessions" stay visibly
+ * different controls.
  */
 export function FilterTabs<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string; count?: number }[]; value: T; onChange: (v: T) => void }) {
-  const { c } = useTheme();
   return (
-    <View accessibilityRole="tablist" style={{ flexDirection: 'row', flexWrap: 'wrap', columnGap: 22 }}>
-      {options.map((o) => {
-        const on = o.value === value;
-        return (
-          <Tap key={o.value} onPress={() => onChange(o.value)} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={o.count !== undefined ? `${o.label}, ${o.count}` : o.label}
-            style={{ minHeight: 48, justifyContent: 'center' }}>
-            <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: 5, paddingVertical: 6, borderBottomWidth: 2.5, borderBottomColor: on ? c.text : 'transparent' }}>
-              <Text variant="subhead" weight={on ? 700 : 500} color={on ? 'text' : 'textSecondary'}>{o.label}</Text>
-              {o.count !== undefined ? <Text variant="footnote" weight={600} color="textSecondary" tabular>{String(o.count)}</Text> : null}
-            </View>
-          </Tap>
-        );
-      })}
+    // A group of toggle buttons (each chip announces "selected"), not a tab list.
+    <View style={{ flexDirection: 'row', flexWrap: 'wrap', columnGap: 8 }}>
+      {options.map((o) => <Chip key={o.value} label={o.label} count={o.count} selected={o.value === value} onPress={() => onChange(o.value)} />)}
     </View>
   );
 }
 
-/** Grey block shown while content is being read from the phone's store. Never an endless spinner. */
+/** Soft block shown while content is being read from the phone's store. Never an endless spinner. */
 export function Skeleton({ height = 16, width = '100%', style }: { height?: number; width?: number | `${number}%`; style?: StyleProp<ViewStyle> }) {
   const { c, radius } = useTheme();
-  return <View accessibilityElementsHidden importantForAccessibility="no" style={[{ height, width, borderRadius: radius.sm, backgroundColor: c.surfaceAlt }, style]} />;
+  return <View accessibilityElementsHidden importantForAccessibility="no" style={[{ height, width, borderRadius: radius.sm, backgroundColor: c.surface }, style]} />;
 }
 
 /** Empty and "needs a connection" states. Each names the situation and what still works; neither says "something went wrong". */
 export function StateBlock({ icon, title, body, action }: { icon: IconName; title: string; body: string; action?: React.ReactNode }) {
   const { c, radius } = useTheme();
   return (
-    <View style={{ alignItems: 'flex-start', gap: 8, padding: 20, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, backgroundColor: c.surface }}>
-      <Icon name={icon} size={28} color="text" stroke={1.6} />
-      <Text variant="title3">{title}</Text>
-      <Text variant="subhead" color="textSecondary">{body}</Text>
-      {action ? <View style={{ marginTop: 6 }}>{action}</View> : null}
+    <View style={{ alignItems: 'center', gap: 8, paddingVertical: 28, paddingHorizontal: 24, borderRadius: radius.lg, backgroundColor: c.surface }}>
+      <View style={{ width: 60, height: 60, borderRadius: 30, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>
+        <Icon name={icon} size={28} color="onPrimarySoft" stroke={1.8} />
+      </View>
+      <Text variant="title3" center>{title}</Text>
+      <Text variant="subhead" color="textSecondary" center>{body}</Text>
+      {action ? <View style={{ marginTop: 8 }}>{action}</View> : null}
     </View>
   );
 }

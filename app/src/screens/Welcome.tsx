@@ -14,14 +14,15 @@ function Point({ icon, title, body }: { icon: IconName; title: StringKey; body: 
   const { t } = useT();
   return (
     <View>
-      <View style={{ flexDirection: 'row', gap: 14, paddingVertical: 14 }}>
-        <Icon name={icon} size={22} color="text" stroke={1.8} />
+      <View style={{ flexDirection: 'row', gap: 14, paddingVertical: 10 }}>
+        <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
+          <Icon name={icon} size={21} color="onPrimarySoft" stroke={1.9} />
+        </View>
         <View style={{ flex: 1, gap: 2 }}>
           <Text variant="headline">{t(title)}</Text>
           <Text variant="footnote" color="textSecondary">{t(body)}</Text>
         </View>
       </View>
-      <View style={{ height: 1, backgroundColor: c.divider }} />
     </View>
   );
 }
@@ -39,7 +40,7 @@ export default function Welcome() {
   const insets = useSafeAreaInsets();
   return (
     <ScrollView style={{ flex: 1, backgroundColor: c.bg }} contentContainerStyle={{ flexGrow: 1, paddingBottom: insets.bottom + 20 }}>
-      <Photo name="highland" height={190 + insets.top} />
+      <Photo name="highland" height={200 + insets.top} hero />
       <HorizonLine left={t('home.kicker')} right={<SavedMark />} />
       <View style={{ flexGrow: 1, alignItems: 'center' }}>
         <View style={{ width: '100%', maxWidth: layout.maxContentWidth, flexGrow: 1, paddingHorizontal: GUTTER, paddingTop: 18 }}>
@@ -49,7 +50,7 @@ export default function Welcome() {
           </View>
           <Text variant="display" accessibilityRole="header" style={{ marginTop: 10 }}>{t('welcome.title')}</Text>
           <Text variant="body" color="textSecondary" style={{ marginTop: 6 }}>{t('welcome.lead')}</Text>
-          <View style={{ height: 1.5, backgroundColor: c.text, marginTop: 16 }} />
+          <View style={{ height: 10 }} />
           <Point icon="shield" title="welcome.p1Title" body="welcome.p1" />
           <Point icon="info" title="welcome.p2Title" body="welcome.p2" />
           <Point icon="wifi-off" title="welcome.p3Title" body="welcome.p3" />

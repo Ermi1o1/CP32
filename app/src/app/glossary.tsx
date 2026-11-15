@@ -14,14 +14,12 @@ export default function Glossary() {
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <SubHeader title={t('tab.updates')} />
       <Page title={t('glossary.title')} sub={t('glossary.lead')}>
-        <View style={{ height: 1.5, backgroundColor: c.text }} />
         {GLOSSARY.map((g) => (
           <View key={g.term}>
-            <View accessible style={{ paddingVertical: 14, gap: 3 }}>
-              <Text variant="title3">{g.term}</Text>
+            <View accessible style={{ paddingVertical: 10, gap: 3 }}>
+              <Text variant="headline" color="primary">{g.term}</Text>
               <Text variant="subhead" color="textSecondary">{g.def}</Text>
             </View>
-            <View style={{ height: 1, backgroundColor: c.divider }} />
           </View>
         ))}
       </Page>

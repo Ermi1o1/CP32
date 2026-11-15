@@ -71,9 +71,9 @@ export default function SessionPage() {
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 + insets.bottom }} {...({ tabIndex: 0 } as object)}>
         <View>
-          <Photo name={THEME_PHOTO[session.theme]} height={heroH} />
+          <Photo name={THEME_PHOTO[session.theme]} height={heroH} hero />
           <View style={{ position: 'absolute', left: 0, right: 0, top: 0 }}>
-            <SubHeader onPhoto right={<View style={{ width: 42, height: 42, borderRadius: 21, backgroundColor: c.surface, alignItems: 'center', justifyContent: 'center' }}><SaveToggle id={session.id} title={session.title.en} size={22} /></View>} />
+            <SubHeader onPhoto right={<View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.bg, alignItems: 'center', justifyContent: 'center' }}><SaveToggle id={session.id} title={session.title.en} size={22} /></View>} />
           </View>
         </View>
         <View style={{ alignItems: 'center' }}>
@@ -89,18 +89,16 @@ export default function SessionPage() {
                 <Text variant="display" accessibilityRole="header">{session.title.en}</Text>
               </Enter>
 
-              <Enter {...enter(100)} style={{ paddingTop: 16 }}>
-                <View style={{ height: 1.5, backgroundColor: c.text }} />
-                <View style={{ flexDirection: 'row', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, paddingTop: 14 }} accessible accessibilityLabel={`${session.start} to ${session.end}`}>
+              <Enter {...enter(100)} style={{ marginTop: 16, backgroundColor: c.surface, borderRadius: 28, paddingHorizontal: 18, paddingTop: 16, paddingBottom: 6 }}>
+                <View style={{ flexDirection: 'row', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }} accessible accessibilityLabel={`${session.start} to ${session.end}`}>
                   <Text variant="clock">{session.start}</Text>
                   <Text variant="title2" weight={600} color="textSecondary" tabular>– {session.end}</Text>
                 </View>
-                <Text variant="footnote" color="textSecondary" style={{ paddingTop: 2, paddingBottom: local ? 2 : 12 }}>{t('session.yourTime')} · {t('session.minutes', { m: durationMin(session) })}</Text>
-                {local ? <Text variant="footnote" weight={600} color="text" style={{ paddingBottom: 12 }}>{t(local.dayShift === 0 ? 'session.local' : local.dayShift > 0 ? 'session.localNext' : 'session.localPrev', { t: local.time })}</Text> : null}
-                <Group>
-                  <View style={{ height: 0 }} />
+                <Text variant="footnote" color="textSecondary" style={{ paddingTop: 2 }}>{t('session.yourTime')} · {t('session.minutes', { m: durationMin(session) })}</Text>
+                {local ? <Text variant="footnote" weight={600} color="primary" style={{ paddingTop: 2 }}>{t(local.dayShift === 0 ? 'session.local' : local.dayShift > 0 ? 'session.localNext' : 'session.localPrev', { t: local.time })}</Text> : null}
+                <View style={{ paddingTop: 6 }}>
                   <Row icon="map-pin" title={session.room} value={t('session.onMap')} onPress={() => router.push('/map')} />
-                </Group>
+                </View>
               </Enter>
 
               <Enter {...enter(160)} style={{ paddingTop: 18 }}>
@@ -124,9 +122,9 @@ export default function SessionPage() {
                   <SectionTitle>{t('session.speaking')}</SectionTitle>
                   <Group>
                     {speakers.map((p) => (
-                      <Tap key={p.id} onPress={() => router.push(`/speaker/${p.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${p.name}, ${p.role}, ${p.org}`} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 12 }}>
-                        <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.surfaceAlt, alignItems: 'center', justifyContent: 'center' }}>
-                          <Text variant="subhead" weight={700}>{p.name.split(' ').map((w) => w[0]).join('').slice(0, 2)}</Text>
+                      <Tap key={p.id} onPress={() => router.push(`/speaker/${p.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${p.name}, ${p.role}, ${p.org}`} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 9 }}>
+                        <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
+                          <Text variant="subhead" weight={700} color="onPrimarySoft">{p.name.split(' ').map((w) => w[0]).join('').slice(0, 2)}</Text>
                         </View>
                         <View style={{ flex: 1, gap: 1 }}>
                           <Text variant="headline">{p.name}</Text>
