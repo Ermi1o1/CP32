@@ -7,11 +7,11 @@ import type { ColorRole } from '@/theme/brand';
 export interface TextProps extends RNTextProps {
   variant?: TypeStyle;
   color?: ColorRole;
-  weight?: 400 | 600 | 700 | 800;
+  weight?: 400 | 500 | 600 | 700 | 800;
   center?: boolean;
   upper?: boolean;
-  /** Force the display serif on or off; display styles use it by default. */
-  serif?: boolean;
+  /** Force the display face on or off; title styles use it by default. */
+  display?: boolean;
   /** Fixed-width digits, for clock times that must line up. */
   tabular?: boolean;
 }
@@ -29,15 +29,15 @@ function flatten(children: React.ReactNode): string {
  * script actually present in the string, applies the taller Amharic line
  * height, the in-app text size, and tags the language for screen readers.
  */
-export function Text({ variant = 'body', color = 'text', weight, center, upper, serif, tabular, style, children, ...rest }: TextProps) {
+export function Text({ variant = 'body', color = 'text', weight, center, upper, display, tabular, style, children, ...rest }: TextProps) {
   const { c } = useTheme();
   const { prefs } = usePrefs();
   const ethiopic = hasEthiopic(flatten(children));
-  // Display and clock styles are already large (26–40 px). They grow to 135% at most, so one long
-  // word ("Programme") still fits a 320 px screen; everything else follows the full 200%.
-  const big = variant === 'display' || variant === 'displaySmall' || variant === 'clock';
+  // The largest styles grow to 135% at most, so one long word ("Programme") still fits a
+  // 320 px screen; everything else follows the full 200%.
+  const big = variant === 'display' || variant === 'largeTitle' || variant === 'title1' || variant === 'clock';
   const scale = big ? Math.min(prefs.textScale, 1.35) : prefs.textScale;
-  const base = textStyle(variant, { ethiopic, lang: prefs.lang, scale, weight, serif });
+  const base = textStyle(variant, { ethiopic, lang: prefs.lang, scale, weight, display });
   const extra: TextStyle = {
     color: c[color],
     textAlign: center ? 'center' : undefined,

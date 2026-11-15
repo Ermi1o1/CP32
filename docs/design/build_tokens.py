@@ -30,17 +30,15 @@ PAIRS = [("text","bg",4.5,"body text"),("text","surface",4.5,"body text on card"
  ("primary","primarySoft",3.0,"icon on selected state (non-text)"),
  ("onAccent","accent",4.5,"primary-action (amber) button text"),("onHero","heroFrom",4.5,"hero text (top)"),("onHero","heroTo",4.5,"hero text (bottom)"),("heroKicker","heroTo",4.5,"hero kicker"),("heroKicker","heroFrom",4.5,"hero kicker (top)"),
  ("onInk","ink",4.5,"text on the ink block (selected tab, primary dark button)"),("line","bg",3.0,"the signature line on the page background (non-text)"),("line","surface",3.0,"the signature line on a card (non-text)"),("textTertiary","surface",4.5,"tertiary text on card"),("textTertiary","bg",4.5,"tertiary text on bg"),("star","surface",3.0,"saved star (non-text)"),("textSecondary","primarySoft",4.5,"secondary text on soft tint")]
-TYPE = {"fontFamily":{"body":"'Atkinson Hyperlegible Next', 'Noto Sans Ethiopic', system-ui, sans-serif","ethiopic":"'Noto Sans Ethiopic', sans-serif",
-  "note":"v0.2 (D53): Atkinson Hyperlegible Next (OFL, variable 200–800, Latin ≈34 KB woff2) for Latin; Noto Sans Ethiopic (bundled subset) renders all Ge'ez text via unicode-range fallback (D11, D49). Native iOS may swap Latin to the system font after review."},
- "scale":{ # iOS-Dynamic-Type-aligned; size px at 100%, line-height ratio EN, ratio AM, weight
-  "largeTitle":[34,1.2,1.4,800],"title1":[28,1.2,1.4,800],"title2":[24,1.2,1.4,800],"title3":[20,1.25,1.45,800],"headline":[17,1.3,1.6,600],"body":[17,1.35,1.65,400],
-  "callout":[16,1.35,1.6,400],"subhead":[15,1.35,1.6,400],"footnote":[13,1.35,1.55,400],"caption":[12,1.35,1.55,600],
-  # v1.0 additions (D73): serif display styles and the large tabular clock.
-  "display":[38,1.1,1.4,600],"displaySmall":[26,1.15,1.4,600],"clock":[40,1.0,1.2,800],"label":[11,1.3,1.5,800]},
+TYPE = {"fontFamily":{"display":"Bricolage Grotesque","body":"Instrument Sans","ethiopic":"Noto Sans Ethiopic","note":"v1.1 (D75): Bricolage Grotesque 600/700/800 for titles and clock times; Instrument Sans 400/500/600/700 for everything else; Noto Sans Ethiopic for all Ge'ez text. All SIL OFL, all bundled as static weights. Replaces Atkinson Hyperlegible Next and Fraunces."},
+ "scale":{ # v1.1 (D75). size px at 100%, line-height ratio EN, ratio AM, weight. Display styles use Bricolage Grotesque; the rest Instrument Sans.
+  "display":[36,1.08,1.4,700],"displaySmall":[24,1.15,1.4,700],"clock":[30,1.05,1.2,700],
+  "largeTitle":[32,1.1,1.4,700],"title1":[28,1.12,1.4,700],"title2":[22,1.18,1.4,700],"title3":[19,1.2,1.45,700],
+  "headline":[17,1.3,1.6,600],"body":[17,1.45,1.65,400],"callout":[16,1.35,1.6,500],"subhead":[15,1.35,1.6,400],"footnote":[13.5,1.35,1.55,400],"caption":[12,1.35,1.55,600],"label":[11.5,1.3,1.5,700]},
  "weights":{"regular":400,"medium":500,"semibold":600,"bold":700,"heavy":800},"minBodySize":16,"maxTextScale":2.0,"tracking":{"largeTitle":-0.022,"title":-0.015,"body":-0.005,"eyebrow":0.04},
  "amharicNote":"Ge'ez glyphs are dense: use the AM line-height ratio and never go below 14px for AM running text (to validate on A1/A2 devices)."}
 SPACE=[0,2,4,8,12,16,20,24,32,40,48,64]
-tokens={"meta":{"name":"COP32 guide — Daylight design tokens","status":"v1.0 (2026-11-14, D73, Design Pass v2). Supersedes v0.2 Highland Mist for the native app; the web prototype keeps its own frozen tokens.css. Original palette; not an official COP32/UNFCCC identity.","units":"px (dp/pt equivalent)"},
+tokens={"meta":{"name":"COP32 guide — Daylight design tokens","status":"v1.1 (2026-11-14, D73 + D75, Design Pass v2). Supersedes v0.2 Highland Mist for the native app; the web prototype keeps its own frozen tokens.css. Original palette; not an official COP32/UNFCCC identity.","units":"px (dp/pt equivalent)"},
  "color":COLOR,"typography":TYPE,"space":SPACE,
  "radius":{"sm":10,"md":14,"lg":20,"sheet":24,"device":42,"pill":999},"elevation":{"0":"none","1":"0 1px 2px rgba(10,40,40,.06)","2":"0 10px 24px -14px rgba(12,70,75,.55)","sheet":"0 -8px 30px rgba(0,0,0,.18)"},"material":{"blur":20,"saturate":1.8},
  "motion":{"fast":140,"base":240,"slow":420,"stagger":40,"staggerMax":280,"easing":"cubic-bezier(.2,.9,.25,1)","spring":"cubic-bezier(.3,1.5,.5,1)","pressScale":0.97,"reducedMotion":"disable non-essential motion; durations 0"},

@@ -28,3 +28,6 @@ Expo + React Native with TypeScript. Android APK first; iOS later from the same 
 
 ## Revisit when
 A real-device check finds an Amharic rendering or screen-reader defect that bundling cannot fix, or measured app size or start time misses the D27 budgets by a wide margin.
+
+## Lesson from the first device reviews (2026-11-14)
+Version 0.1.0 and 0.2.0 were installed by the founder. 0.2.0's tab bar overflowed the screen on Android although the browser render of the same code was correct: a row whose width came from its contents behaved differently in the native layout engine. Consequences adopted: fixed chrome (tab bar, headers) takes its width from the screen explicitly; a browser render is treated as a layout sketch only; every checkpoint needs phone screenshots before it is called done.

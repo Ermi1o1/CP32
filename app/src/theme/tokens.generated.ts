@@ -134,29 +134,47 @@ export const tokens = {
   "style": "solid"
  },
  "type": {
-  "largeTitle": {
-   "size": 34,
-   "lhEn": 1.2,
+  "display": {
+   "size": 36,
+   "lhEn": 1.08,
    "lhAm": 1.4,
-   "weight": 800
+   "weight": 700
+  },
+  "displaySmall": {
+   "size": 24,
+   "lhEn": 1.15,
+   "lhAm": 1.4,
+   "weight": 700
+  },
+  "clock": {
+   "size": 30,
+   "lhEn": 1.05,
+   "lhAm": 1.2,
+   "weight": 700
+  },
+  "largeTitle": {
+   "size": 32,
+   "lhEn": 1.1,
+   "lhAm": 1.4,
+   "weight": 700
   },
   "title1": {
    "size": 28,
-   "lhEn": 1.2,
+   "lhEn": 1.12,
    "lhAm": 1.4,
-   "weight": 800
+   "weight": 700
   },
   "title2": {
-   "size": 24,
-   "lhEn": 1.2,
+   "size": 22,
+   "lhEn": 1.18,
    "lhAm": 1.4,
-   "weight": 800
+   "weight": 700
   },
   "title3": {
-   "size": 20,
-   "lhEn": 1.25,
+   "size": 19,
+   "lhEn": 1.2,
    "lhAm": 1.45,
-   "weight": 800
+   "weight": 700
   },
   "headline": {
    "size": 17,
@@ -166,7 +184,7 @@ export const tokens = {
   },
   "body": {
    "size": 17,
-   "lhEn": 1.35,
+   "lhEn": 1.45,
    "lhAm": 1.65,
    "weight": 400
   },
@@ -174,7 +192,7 @@ export const tokens = {
    "size": 16,
    "lhEn": 1.35,
    "lhAm": 1.6,
-   "weight": 400
+   "weight": 500
   },
   "subhead": {
    "size": 15,
@@ -183,7 +201,7 @@ export const tokens = {
    "weight": 400
   },
   "footnote": {
-   "size": 13,
+   "size": 13.5,
    "lhEn": 1.35,
    "lhAm": 1.55,
    "weight": 400
@@ -194,29 +212,11 @@ export const tokens = {
    "lhAm": 1.55,
    "weight": 600
   },
-  "display": {
-   "size": 38,
-   "lhEn": 1.1,
-   "lhAm": 1.4,
-   "weight": 600
-  },
-  "displaySmall": {
-   "size": 26,
-   "lhEn": 1.15,
-   "lhAm": 1.4,
-   "weight": 600
-  },
-  "clock": {
-   "size": 40,
-   "lhEn": 1.0,
-   "lhAm": 1.2,
-   "weight": 800
-  },
   "label": {
-   "size": 11,
+   "size": 11.5,
    "lhEn": 1.3,
    "lhAm": 1.5,
-   "weight": 800
+   "weight": 700
   }
  }
 } as const;

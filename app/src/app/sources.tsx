@@ -15,8 +15,8 @@ export default function Sources() {
   const { t } = useT();
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
-      <SubHeader title={t('sources.title')} />
-      <Page>
+      <SubHeader />
+      <Page title={t('sources.title')}>
         <Text variant="body" color="textSecondary">{t('sources.lead')}</Text>
         <SectionTitle>{t('sources.reported')}</SectionTitle>
         <Group>

@@ -11,8 +11,8 @@ export default function Search() {
   const { t } = useT();
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
-      <SubHeader title={t('a11y.search')} />
-      <Page>
+      <SubHeader />
+      <Page title={t('a11y.search')}>
         <StateBlock icon="search" title={t('a11y.search')} body={t('common.comingInBuild')} />
       </Page>
     </View>

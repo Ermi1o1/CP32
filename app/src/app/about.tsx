@@ -15,8 +15,8 @@ export default function About() {
   const { t } = useT();
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
-      <SubHeader title={t('about.title')} />
-      <Page>
+      <SubHeader />
+      <Page title={t('about.title')}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14 }}>
           <Mark size={64} />
           <View style={{ flex: 1 }}>

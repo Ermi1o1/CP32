@@ -3,7 +3,9 @@ import { View, ScrollView } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@/ui/Text';
 import { Icon, Mark, type IconName } from '@/ui/Icon';
-import { Button, Segmented } from '@/ui/controls';
+import { Button } from '@/ui/controls';
+import { Photo, HorizonLine, SavedMark } from '@/ui/event';
+import { GUTTER } from '@/ui/chrome';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT, type StringKey } from '@/i18n';
 
@@ -11,57 +13,49 @@ function Point({ icon, title, body }: { icon: IconName; title: StringKey; body: 
   const { c } = useTheme();
   const { t } = useT();
   return (
-    <View style={{ flexDirection: 'row', gap: 14 }}>
-      <View style={{ width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center', backgroundColor: c.primarySoft }}>
-        <Icon name={icon} size={22} color="onPrimarySoft" />
+    <View>
+      <View style={{ flexDirection: 'row', gap: 14, paddingVertical: 14 }}>
+        <Icon name={icon} size={22} color="text" stroke={1.8} />
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text variant="headline">{t(title)}</Text>
+          <Text variant="footnote" color="textSecondary">{t(body)}</Text>
+        </View>
       </View>
-      <View style={{ flex: 1, gap: 2 }}>
-        <Text variant="headline">{t(title)}</Text>
-        <Text variant="subhead" color="textSecondary">{t(body)}</Text>
-      </View>
+      <View style={{ height: 1, backgroundColor: c.divider }} />
     </View>
   );
 }
 
 /**
- * First-run statement (D66, D65a). Shown once, before anything else, and
- * cannot be skipped past without the "Continue" tap. It says three things:
- * the app is independent, the content is illustrative, nothing leaves the phone.
+ * First-run statement (D66, D65a), in the same language as the rest of the
+ * app: photograph, the line, title, three ruled points, one button. Shown
+ * once; it says the app is independent, the content is illustrative, and
+ * nothing leaves the phone.
  */
 export default function Welcome() {
   const { c, brand, layout } = useTheme();
-  const { prefs, setPrefs } = usePrefs();
+  const { setPrefs } = usePrefs();
   const { t } = useT();
   const insets = useSafeAreaInsets();
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: c.bg }} contentContainerStyle={{ flexGrow: 1, paddingTop: insets.top + 28, paddingBottom: insets.bottom + 20, paddingHorizontal: 22, alignItems: 'center' }}>
-      <View style={{ width: '100%', maxWidth: layout.maxContentWidth, flexGrow: 1, gap: 22 }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
-          <Mark size={52} />
-          <View style={{ flex: 1 }}>
-            <Text variant="title2">{brand.name}</Text>
-            <Text variant="footnote" color="textSecondary">{t(brand.descriptorKey)}</Text>
+    <ScrollView style={{ flex: 1, backgroundColor: c.bg }} contentContainerStyle={{ flexGrow: 1, paddingBottom: insets.bottom + 20 }}>
+      <Photo name="highland" height={190 + insets.top} />
+      <HorizonLine left={t('home.kicker')} right={<SavedMark />} />
+      <View style={{ flexGrow: 1, alignItems: 'center' }}>
+        <View style={{ width: '100%', maxWidth: layout.maxContentWidth, flexGrow: 1, paddingHorizontal: GUTTER, paddingTop: 18 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
+            <Mark size={30} />
+            <Text variant="title3">{brand.name}</Text>
           </View>
-        </View>
-
-        <View style={{ gap: 6 }}>
-          <Text variant="largeTitle" accessibilityRole="header">{t('welcome.title')}</Text>
-          <Text variant="body" color="textSecondary">{t('welcome.lead')}</Text>
-        </View>
-
-        <View style={{ gap: 18 }}>
+          <Text variant="display" accessibilityRole="header" style={{ marginTop: 10 }}>{t('welcome.title')}</Text>
+          <Text variant="body" color="textSecondary" style={{ marginTop: 6 }}>{t('welcome.lead')}</Text>
+          <View style={{ height: 1.5, backgroundColor: c.text, marginTop: 16 }} />
           <Point icon="shield" title="welcome.p1Title" body="welcome.p1" />
           <Point icon="info" title="welcome.p2Title" body="welcome.p2" />
           <Point icon="wifi-off" title="welcome.p3Title" body="welcome.p3" />
+          <View style={{ flexGrow: 1, minHeight: 20 }} />
+          <Button kind="dark" wide label={t('common.continue')} onPress={() => setPrefs({ welcomed: true })} />
         </View>
-
-        <View style={{ gap: 8 }}>
-          <Text variant="footnote" color="textSecondary" weight={700} upper>{t('welcome.language')}</Text>
-          <Segmented value={prefs.lang} onChange={(lang) => setPrefs({ lang })} options={[{ value: 'en', label: 'English' }, { value: 'am', label: 'አማርኛ' }]} />
-        </View>
-
-        <View style={{ flexGrow: 1 }} />
-        <Button kind="primary" wide label={t('common.continue')} onPress={() => setPrefs({ welcomed: true })} />
       </View>
     </ScrollView>
   );

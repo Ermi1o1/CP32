@@ -4,7 +4,14 @@
 
 **Who:** the founder or any team member with an Android phone (Android 7.0 or newer). **Time:** about 30 minutes. **Write results** in the table at the bottom and tell the next Claude Code session, which records them in `docs/roadmap/phase-status.md`.
 
-## Version 0.2.0 — design review first (Design Pass v2)
+## Version 0.3.0 — what to look at first
+0.3.0 corrects the four faults found on the phone in 0.2.0. Please check each one specifically and send screenshots:
+1. **Tab bar** — open all five tabs in turn. All five labels must be fully visible on every tab, and the bar must never run off the edge.
+2. **Typeface** — titles and body text are new. Is it right?
+3. **Consistency** — Visit, Map, Updates and Settings should now look like the same app as Programme: same title, same lists, same margins.
+4. **Home** — it should read as a general start page, not as "day 2". (Profile → Demonstration → "Conference-day preview" brings the day view back for demos.)
+
+## Version 0.2.0 — earlier review questions (still useful)
 Before the sections below, please send **screenshots from your phone** of: Home (top, and scrolled down), Programme (Day 2, and one other day), one session page (top and scrolled), and Home in dark mode. Then answer four questions in a sentence each:
 1. Does it open, and is it smooth when you scroll and when you open a session?
 2. Tap a bookmark: do you see the small "pop", and feel a tick? (The tick needs Android 11 or newer.)

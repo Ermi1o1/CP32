@@ -14,8 +14,8 @@ export default function Gallery() {
   const [chip, setChip] = useState(0);
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
-      <SubHeader title={t('gallery.title')} />
-      <Page>
+      <SubHeader />
+      <Page title={t('gallery.title')}>
         <SectionTitle>{t('gallery.type')}</SectionTitle>
         <Card>
           <Text variant="largeTitle">{t('gallery.sample')}</Text>

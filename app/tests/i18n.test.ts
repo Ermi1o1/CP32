@@ -33,7 +33,9 @@ describe('script-aware typography (D11, D49)', () => {
   });
   it('never gives Ge\'ez text a Latin-only font', () => {
     for (const w of [400, 600, 700, 800]) expect(fontFor(w, true)).toMatch(/^NotoEthiopic-/);
-    expect(fontFor(800, false)).toBe('Atkinson-800');
+    expect(fontFor(800, false, true)).toBe('Bricolage-800');
+    expect(fontFor(800, false)).toBe('Instrument-700');
+    expect(fontFor(400, false)).toBe('Instrument-400');
   });
   it('Amharic lines are taller, and never tracked', () => {
     const e = textStyle('body', { ethiopic: false, lang: 'en', scale: 1 });
@@ -43,5 +45,7 @@ describe('script-aware typography (D11, D49)', () => {
   });
   it('text scale reaches 200%', () => {
     expect(textStyle('body', { ethiopic: false, lang: 'en', scale: 2 }).fontSize).toBe(34);
+    expect(textStyle('display', { ethiopic: false, lang: 'en', scale: 1 }).fontFamily).toBe('Bricolage-700');
+    expect(textStyle('body', { ethiopic: false, lang: 'en', scale: 1 }).fontFamily).toBe('Instrument-400');
   });
 });

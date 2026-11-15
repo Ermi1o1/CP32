@@ -24,7 +24,7 @@
 | 19 Project team | Done — D40–D42 approved 2026-10-03 | roadmap/team-requirements.md |
 | 20 Final product blueprint | Done — D43 approved 2026-10-03 | product/final-blueprint.md |
 | 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52). Its S1 outcome ("no framework decision") is superseded by D64 | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
-| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14 and installed by the founder; judged visually dated; Design Pass v2 under way, waiting for the founder to choose a direction** (D64–D72) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
+| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14 and installed by the founder; judged visually dated; version 0.2.0 rejected on the founder's phone; version 0.3.0 built in correction and awaiting phone review** (D64–D76) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
 
 ## Track D v2 — visual redesign (2026-10-03)
 **Done.** Direction "Highland Mist" chosen after four founder review rounds (D53; `docs/design/redesign-directions/`). Design system v0.2 + `tokens.json` updated; plan in `docs/design/redesign-plan.md`; every prototype screen rebuilt (5 batches); screenshots refreshed in `docs/design/prototype-screens/` (20). Checks: tokens 64/64 AA, axe-core 0 violations (16 screens × light/dark), 200% reflow without horizontal scroll, EN/AM and light/dark parity, tree-test T1–T12 all resolve. Private phone-viewable copy: https://claude.ai/artifact/X4MMCwgpeHVfpBCpLDh3wh (entry page `prototype/artifact-entry.html`). The GitHub Pages redeploy runs once this branch is merged to `main`.
@@ -125,7 +125,29 @@ Branch `phase-22-design-v2` (cut from `phase-22-native-build`, which is pushed a
 
 **Self-assessment against the design rubric (not validation):** focal point clear on all three screens (the clock time); three hierarchy levels; spacing and type scale followed; no identical-card grid; imagery is real photographs but only about 1024 px wide, so possibly soft on a large phone; three of nine photos are not Ethiopia and are credited as such. **Not built yet:** the shared-element transition from a session row to its page, the bottom-sheet filter, and the redesign of Map, Visit, Updates, Settings and Welcome (they carry the new colours, type and buttons on the old list structure).
 
-**Work stops here for the founder's on-device review of Home and Programme**, as the prompt requires.
+**Founder's phone review of 0.2.0 (2026-11-14, five screenshots): rejected.** Four findings, all confirmed: (1) widespread inconsistency — Visit, Map, Updates and Settings still had the old boxed lists and a different title face; "saved" status in three different places; amber meaning "open" on one screen and "save" on another; two identical-looking chip rows doing different jobs; (2) the typeface read as generic; (3) the tab bar ran off the screen on some tabs and squeezed labels on others — it sized itself to its labels on Android, which the browser render did not show; (4) Home was pinned to an invented "day 2". **Lesson recorded: the browser render did not reproduce the tab-bar fault; layout that depends on content width must be given explicit widths, and only a phone shows the truth.**
+
+**Version 0.3.0 — the correction (D75, D76; design rules v1.1).**
+- **Type:** Bricolage Grotesque for titles and times, Instrument Sans for text (D75).
+- **Tab bar:** five equal columns, width taken from the screen.
+- **One system on every screen:** one title, one section heading, one list style with plain line icons, one page margin, one place for "Saved offline", one meaning per button colour. Nine written rules in `docs/design/design-system.md`.
+- **Home is general** (D76): what the guide is, four entry tiles, highlights, essentials. The day-specific view is a demonstration switch in Settings, off by default.
+- **Every screen redesigned:** Home, Programme, session page, Map (schematic plan with a selected place and a places list), Visit (emergency first, then guides), seven guide pages, Updates (editorial explainers, and an Alerts tab that says plainly alerts are not live), Settings, Welcome, About, Sources.
+- **No invented facts added:** guides give general advice and list what official sources will supply; no phone numbers, dates, prices or news.
+
+| Check (version 0.3.0) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict, lint | Pass | Cloud session |
+| Unit tests | 102 of 102 | Cloud session |
+| Design-token contrast | 70 of 70 pairs pass WCAG 2.2 AA | Cloud session |
+| Automated accessibility (axe-core) | 0 violations over 19 routes × 2 languages × 2 themes (76 runs) | Browser render only |
+| Widths 320, 360 and 412 px; 200% text | No sideways scrolling; tab labels fit at all three widths | Browser render only |
+| Release APK | Builds: 25.2 MB (budget 30 MB), Android 7.0+, permissions unchanged from 0.2.0. Test-signed | Cloud session |
+| On a phone | **Not done. 0.3.0 has not been run on any device.** The tab bar in particular is fixed by construction but unverified | — |
+
+Screenshots: `docs/design/app-screens/v1.1-daylight/` (browser renders at 412 px, the founder's phone width). **Not built:** shared-element transition, bottom-sheet filter, search, the real offline city map.
+
+**Work stops here for the founder's phone review of 0.3.0.**
 
 **Carry-over from D74:** the demo script, one-pager, teardown "how we win" list and blueprint should no longer present Amharic as a lead selling point; none of those documents has been edited yet.
 

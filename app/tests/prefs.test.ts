@@ -9,8 +9,8 @@ describe('stored preferences are sanitised', () => {
     expect(sanitizePrefs({ lang: 'xx', mode: 7, textScale: 9, brand: 'evil', welcomed: 'yes' })).toEqual(DEFAULT_PREFS);
   });
   it('valid values survive', () => {
-    expect(sanitizePrefs({ lang: 'am', mode: 'dark', textScale: 2, brand: 'example', reduceMotion: true, welcomed: true }))
-      .toEqual({ lang: 'am', mode: 'dark', textScale: 2, brand: 'example', reduceMotion: true, welcomed: true });
+    expect(sanitizePrefs({ lang: 'am', mode: 'dark', textScale: 2, brand: 'example', reduceMotion: true, welcomed: true, livePreview: true }))
+      .toEqual({ lang: 'am', mode: 'dark', textScale: 2, brand: 'example', reduceMotion: true, welcomed: true, livePreview: true });
   });
   it('the first-run statement is shown until acknowledged', () => {
     expect(DEFAULT_PREFS.welcomed).toBe(false);

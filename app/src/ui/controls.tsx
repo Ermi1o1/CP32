@@ -27,7 +27,7 @@ export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, acce
     <Tap onPress={onPress} accessibilityLabel={label} accessibilityHint={accessibilityHint}
       style={{ backgroundColor: s.bg, borderRadius: radius.md, borderWidth: s.border ? 1.5 : 0, borderColor: s.border, minHeight: 52, paddingHorizontal: 18, paddingVertical: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, alignSelf: wide || flex ? 'stretch' : 'flex-start', flex }}>
       {icon ? <Icon name={icon} size={Math.round(20 * Math.min(prefs.textScale, 1.5))} color={s.fg} stroke={2.2} /> : null}
-      <Text variant="callout" weight={800} color={s.fg} style={{ flexShrink: 1 }}>{label}</Text>
+      <Text variant="callout" weight={700} color={s.fg} style={{ flexShrink: 1 }}>{label}</Text>
     </Tap>
   );
 }
@@ -66,33 +66,69 @@ const TONES = {
   danger: { fg: 'danger', bg: 'dangerBg', icon: 'siren' },
 } as const;
 
-/** Banner / notice. Always icon + title + text. `danger` is announced assertively to screen readers. */
+/**
+ * Notice (v1.1). A bordered panel with a coloured bar on its leading edge,
+ * an icon, a title and text. `danger` is announced assertively to screen readers.
+ */
 export function Banner({ tone, title, body }: { tone: keyof typeof TONES; title: string; body?: string }) {
   const { c, radius } = useTheme();
   const t = TONES[tone];
   return (
     <View accessibilityRole="alert" accessibilityLiveRegion={tone === 'danger' ? 'assertive' : 'polite'}
-      style={{ flexDirection: 'row', gap: 12, padding: 14, borderRadius: radius.md, backgroundColor: c[t.bg] }}>
-      <Icon name={t.icon} size={22} color={t.fg} />
-      <View style={{ flex: 1, gap: 2 }}>
-        <Text variant="headline" color={t.fg}>{title}</Text>
-        {body ? <Text variant="subhead" color="text">{body}</Text> : null}
+      style={{ flexDirection: 'row', backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, overflow: 'hidden' }}>
+      <View style={{ width: 5, backgroundColor: c[t.fg] }} />
+      <View style={{ flex: 1, flexDirection: 'row', gap: 12, padding: 14 }}>
+        <Icon name={t.icon} size={22} color={t.fg} stroke={2} />
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text variant="headline">{title}</Text>
+          {body ? <Text variant="footnote" color="textSecondary">{body}</Text> : null}
+        </View>
       </View>
     </View>
   );
 }
 
-/** Segmented control for 2–3 mutually exclusive options (appearance, language). */
-export function Segmented<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string }[]; value: T; onChange: (v: T) => void }) {
+/**
+ * Segmented control for 2–5 mutually exclusive options (appearance, text size,
+ * the programme's day). Equal columns inside one bordered frame; selected = solid ink.
+ */
+export function Segmented<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string; sub?: string }[]; value: T; onChange: (v: T) => void }) {
   const { c, radius } = useTheme();
   return (
-    <View accessibilityRole="radiogroup" style={{ flexDirection: 'row', backgroundColor: c.fill, borderRadius: radius.sm + 2, padding: 3, gap: 3 }}>
+    <View accessibilityRole="radiogroup" style={{ flexDirection: 'row', backgroundColor: c.surface, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, padding: 4, gap: 4 }}>
       {options.map((o) => {
         const on = o.value === value;
         return (
-          <Tap key={o.value} onPress={() => onChange(o.value)} accessibilityRole="radio" accessibilityState={{ checked: on }} aria-checked={on} accessibilityLabel={o.label}
-            style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 8, paddingHorizontal: 6, borderRadius: radius.sm, backgroundColor: on ? c.surface : 'transparent', borderWidth: on ? 1 : 0, borderColor: c.divider }}>
-            <Text variant="subhead" weight={on ? 700 : 400} center>{o.label}</Text>
+          <Tap key={o.value} onPress={() => onChange(o.value)} accessibilityRole="radio" accessibilityState={{ checked: on }} aria-checked={on} accessibilityLabel={o.sub ? `${o.sub} ${o.label}` : o.label}
+            style={{ flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', paddingVertical: 6, paddingHorizontal: 2, borderRadius: radius.sm, backgroundColor: on ? c.ink : 'transparent' }}>
+            {/* The small caption above a segment stops growing early; the value below it carries the size. */}
+            {o.sub ? <Text variant="label" upper color={on ? 'onInk' : 'textSecondary'} center numberOfLines={1} maxFontSizeMultiplier={1.1} style={{ fontSize: 11, lineHeight: 15 }}>{o.sub}</Text> : null}
+            <Text variant={o.sub ? 'title3' : 'subhead'} weight={o.sub ? 700 : on ? 700 : 500} color={on ? 'onInk' : 'text'} center>{o.label}</Text>
+          </Tap>
+        );
+      })}
+    </View>
+  );
+}
+
+/**
+ * Filter tabs: plain text with a count; the selected one is underlined in ink.
+ * Deliberately different from Segmented, so "which day" and "which sessions"
+ * never look like the same control.
+ */
+export function FilterTabs<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string; count?: number }[]; value: T; onChange: (v: T) => void }) {
+  const { c } = useTheme();
+  return (
+    <View accessibilityRole="tablist" style={{ flexDirection: 'row', flexWrap: 'wrap', columnGap: 22 }}>
+      {options.map((o) => {
+        const on = o.value === value;
+        return (
+          <Tap key={o.value} onPress={() => onChange(o.value)} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={o.count !== undefined ? `${o.label}, ${o.count}` : o.label}
+            style={{ minHeight: 48, justifyContent: 'center' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'baseline', gap: 5, paddingVertical: 6, borderBottomWidth: 2.5, borderBottomColor: on ? c.text : 'transparent' }}>
+              <Text variant="subhead" weight={on ? 700 : 500} color={on ? 'text' : 'textSecondary'}>{o.label}</Text>
+              {o.count !== undefined ? <Text variant="footnote" weight={600} color="textSecondary" tabular>{String(o.count)}</Text> : null}
+            </View>
           </Tap>
         );
       })}
@@ -110,13 +146,11 @@ export function Skeleton({ height = 16, width = '100%', style }: { height?: numb
 export function StateBlock({ icon, title, body, action }: { icon: IconName; title: string; body: string; action?: React.ReactNode }) {
   const { c, radius } = useTheme();
   return (
-    <View style={{ alignItems: 'center', gap: 10, padding: 24, borderRadius: radius.md, backgroundColor: c.surface }}>
-      <View style={{ width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', backgroundColor: c.primarySoft }}>
-        <Icon name={icon} size={26} color="onPrimarySoft" />
-      </View>
-      <Text variant="headline" center>{title}</Text>
-      <Text variant="subhead" color="textSecondary" center>{body}</Text>
-      {action}
+    <View style={{ alignItems: 'flex-start', gap: 8, padding: 20, borderRadius: radius.md, borderWidth: 1, borderColor: c.divider, backgroundColor: c.surface }}>
+      <Icon name={icon} size={28} color="text" stroke={1.6} />
+      <Text variant="title3">{title}</Text>
+      <Text variant="subhead" color="textSecondary">{body}</Text>
+      {action ? <View style={{ marginTop: 6 }}>{action}</View> : null}
     </View>
   );
 }

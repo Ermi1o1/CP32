@@ -18,6 +18,12 @@ export interface Prefs {
   reduceMotion: boolean;
   /** Set once the first-run independence statement has been read (D66). */
   welcomed: boolean;
+  /**
+   * Demonstration only (D76): pretend it is mid-conference (the event's demo
+   * clock), so Home shows "next" and the Programme shows a "now" line.
+   * Off by default: the app opens as a general, pre-event guide.
+   */
+  livePreview: boolean;
 }
 
 export const DEFAULT_PREFS: Prefs = {
@@ -27,6 +33,7 @@ export const DEFAULT_PREFS: Prefs = {
   brand: 'cop32',
   reduceMotion: false,
   welcomed: false,
+  livePreview: false,
 };
 
 const KEY = 'prefs.v1';
@@ -43,6 +50,7 @@ export function sanitizePrefs(raw: unknown): Prefs {
     brand: r.brand === 'example' ? 'example' : 'cop32',
     reduceMotion: r.reduceMotion === true,
     welcomed: r.welcomed === true,
+    livePreview: r.livePreview === true,
   };
 }
 
