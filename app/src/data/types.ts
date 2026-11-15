@@ -66,4 +66,5 @@ export interface ContentRepository {
   listSessions(filter?: { day?: number; access?: Access }): Promise<Session[]>;
   getSession(id: string): Promise<Session | undefined>;
   getSpeakers(ids: readonly string[]): Promise<Speaker[]>;
+  listSpeakers(): Promise<Speaker[]>;
 }

@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { GUTTER, ScreenTitle } from '@/ui/chrome';
 import { Button, FilterTabs, Segmented, Skeleton, StateBlock } from '@/ui/controls';
 import { NowLine, SavedMark, SessionRow } from '@/ui/event';
+import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { useContent } from '@/data/useContent';
@@ -70,6 +71,15 @@ export default function Programme() {
         ListHeaderComponent={header}
         extraData={`${day}-${quick}`}
         contentContainerStyle={{ paddingHorizontal: GUTTER, paddingTop: 2, paddingBottom: 28 }}
+        ListFooterComponent={event && all ? (
+          <View>
+            <SectionTitle>{t('programme.more')}</SectionTitle>
+            <Group>
+              <Row icon="bookmark" title={t('programme.agenda')} subtitle={t('programme.agendaCount', { n: saved.size })} onPress={() => router.push('/agenda')} />
+              <Row icon="users" title={t('programme.speakers')} subtitle={t('programme.speakersSub')} onPress={() => router.push('/speakers')} />
+            </Group>
+          </View>
+        ) : undefined}
         renderItem={({ item }) =>
           item.kind === 'now'
             ? <NowLine time={now?.time ?? ''} />

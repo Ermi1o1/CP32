@@ -26,6 +26,10 @@ export class BundledRepository implements ContentRepository {
   async getSpeakers(ids: readonly string[]): Promise<Speaker[]> {
     return ids.map((id) => this.speakers.find((p) => p.id === id)).filter((p): p is Speaker => p !== undefined);
   }
+
+  async listSpeakers(): Promise<Speaker[]> {
+    return [...this.speakers].sort((a, b) => a.name.localeCompare(b.name));
+  }
 }
 
 export const repository: ContentRepository = new BundledRepository();

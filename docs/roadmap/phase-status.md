@@ -147,7 +147,20 @@ Branch `phase-22-design-v2` (cut from `phase-22-native-build`, which is pushed a
 
 Screenshots: `docs/design/app-screens/v1.1-daylight/` (browser renders at 412 px, the founder's phone width). **Not built:** shared-element transition, bottom-sheet filter, search, the real offline city map.
 
-**Work stops here for the founder's phone review of 0.3.0.**
+**Version 0.4.0 (2026-11-15) — built on the founder's instruction to continue, without phone feedback on 0.3.0.** Added: **search** across sessions, people, places, guides and the glossary, working offline, with Ge'ez-aware matching; **My agenda** (everything saved, across days); **speakers** list and speaker pages; a **glossary** of twelve terms; Updates tabs for Alerts, Press and Live that say plainly they are empty until official sources exist; a **step-free** filter on the Map; **Delete my data** in Settings. Documents: `docs/demo/demo-script.md` and `docs/demo/one-pager.md` (first drafts).
+
+| Check (version 0.4.0) | Result | Where it ran |
+|---|---|---|
+| TypeScript strict, lint | Pass | Cloud session |
+| Unit tests | 111 of 111 (adds search, Ge'ez folding, glossary) | Cloud session |
+| Automated accessibility (axe-core) | 0 violations over 24 routes × 2 languages × 2 themes (96 runs) | Browser render only |
+| **Tree test T1–T12** | **12 of 12 destinations reachable, each in at most two taps** — a scripted walk; it shows the paths exist, not that people find them | Browser render only |
+| Release APK | Builds: 25.2 MB, Android 7.0+, permissions unchanged. Test-signed | Cloud session |
+| On a phone | **Not done for 0.3.0 or 0.4.0** | — |
+
+**Three conditions before any demo to officials, none met today:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
+
+**Not built:** bottom-sheet filter, shared-element transition, real offline city map, exhibitors directory, push notifications, reminders.
 
 **Carry-over from D74:** the demo script, one-pager, teardown "how we win" list and blueprint should no longer present Amharic as a lead selling point; none of those documents has been edited yet.
 

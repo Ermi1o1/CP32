@@ -63,6 +63,15 @@ export async function loadPrefs(): Promise<Prefs> {
   }
 }
 
+/** Forgets every stored preference (Settings → Delete my data). */
+export async function clearPrefs(): Promise<void> {
+  try {
+    await AsyncStorage.removeItem(KEY);
+  } catch {
+    // Nothing to do: the in-memory defaults already apply.
+  }
+}
+
 export async function savePrefs(p: Prefs): Promise<void> {
   try {
     await AsyncStorage.setItem(KEY, JSON.stringify(p));

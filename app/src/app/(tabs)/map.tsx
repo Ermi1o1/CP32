@@ -5,7 +5,7 @@ import { SvgXml } from 'react-native-svg';
 import { Page } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { Icon } from '@/ui/Icon';
-import { Button } from '@/ui/controls';
+import { Button, FilterTabs } from '@/ui/controls';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { SavedMark, venuePlanSvg } from '@/ui/event';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -26,6 +26,8 @@ export default function MapTab() {
   const router = useRouter();
   const sessions = useContent((r) => r.listSessions());
   const [sel, setSel] = useState<string>('hallA');
+  const [only, setOnly] = useState<'all' | 'stepfree'>('all');
+  const listed = PLACES.filter((p) => only === 'all' || p.stepFree);
   const place = PLACES.find((p) => p.id === sel) ?? PLACES[0]!;
   const count = (rooms: string[]) => (sessions ?? []).filter((s) => rooms.includes(s.room)).length;
   const n = count(place.rooms);
@@ -53,9 +55,10 @@ export default function MapTab() {
       </View>
 
       <SectionTitle>{t('map.places')}</SectionTitle>
+      <FilterTabs<'all' | 'stepfree'> value={only} onChange={setOnly} options={[{ value: 'all', label: t('programme.all'), count: PLACES.length }, { value: 'stepfree', label: t('map.stepFree'), count: PLACES.filter((p) => p.stepFree).length }]} />
       <Group>
-        {PLACES.map((p) => (
-          <Row key={p.id} icon={ICON[p.kind]} title={p.name} subtitle={p.note}
+        {listed.map((p) => (
+          <Row key={p.id} icon={p.stepFree && only === 'stepfree' ? 'accessibility' : ICON[p.kind]} title={p.name} subtitle={p.note}
             onPress={() => setSel(p.id)}
             right={sel === p.id ? <Icon name="circle-check" size={20} color="text" stroke={2.2} /> : <View style={{ width: 20 }} />} />
         ))}

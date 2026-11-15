@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Switch } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
-import { Segmented } from '@/ui/controls';
+import { Banner, Button, Segmented } from '@/ui/controls';
+import { useAgenda } from '@/state/agenda';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
-import { TEXT_SCALES, type TextScale } from '@/state/prefs';
+import { DEFAULT_PREFS, TEXT_SCALES, clearPrefs, type TextScale } from '@/state/prefs';
 import { BRANDS, type BrandId } from '@/theme/brand';
 
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
@@ -25,6 +26,9 @@ export default function Settings() {
   const { prefs, setPrefs } = usePrefs();
   const { t } = useT();
   const router = useRouter();
+  const { saved, clear } = useAgenda();
+  const [confirm, setConfirm] = useState(false);
+  const [done, setDone] = useState(false);
   const sw = (value: boolean, on: (v: boolean) => void, label: string) => (
     <Switch value={value} onValueChange={on} accessibilityLabel={label} trackColor={{ true: c.primary, false: c.border }} />
   );
@@ -51,9 +55,24 @@ export default function Settings() {
         <SectionTitle>{t('settings.aboutSection')}</SectionTitle>
         <Group>
           <Row icon="shield" title={t('settings.privacy')} subtitle={t('settings.privacySub')} />
+          <Row icon="bookmark" title={t('programme.agenda')} subtitle={t('programme.agendaCount', { n: saved.size })} onPress={() => router.push('/agenda')} />
           <Row icon="info" title={t('settings.about')} onPress={() => router.push('/about')} />
           <Row icon="list-checks" title={t('settings.sources')} subtitle={t('settings.sourcesSub')} onPress={() => router.push('/sources')} />
         </Group>
+
+        <SectionTitle>{t('settings.data')}</SectionTitle>
+        <View style={{ gap: 10, paddingTop: 12 }}>
+          <Text variant="subhead" color="textSecondary">{t('settings.dataSub')}</Text>
+          {confirm ? (
+            <View style={{ flexDirection: 'row', gap: 10 }}>
+              <Button kind="danger" flex={1} icon="trash-2" label={t('settings.deleteConfirm')} onPress={() => { clear(); void clearPrefs(); setPrefs({ ...DEFAULT_PREFS, welcomed: true }); setConfirm(false); setDone(true); }} />
+              <Button kind="outline" flex={1} label={t('common.notNow')} onPress={() => setConfirm(false)} />
+            </View>
+          ) : (
+            <Button kind="outline" wide icon="trash-2" label={t('settings.delete')} onPress={() => { setDone(false); setConfirm(true); }} />
+          )}
+          {done ? <Banner tone="success" title={t('settings.deleted')} body={t('settings.deletedSub')} /> : null}
+        </View>
 
         <SectionTitle>{t('settings.demo')}</SectionTitle>
         <Group>

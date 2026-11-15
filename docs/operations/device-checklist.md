@@ -4,6 +4,9 @@
 
 **Who:** the founder or any team member with an Android phone (Android 7.0 or newer). **Time:** about 30 minutes. **Write results** in the table at the bottom and tell the next Claude Code session, which records them in `docs/roadmap/phase-status.md`.
 
+## Version 0.4.0 — additions to check
+After the four 0.3.0 checks below: tap the search button and type "water" (results should appear as you type, also in airplane mode); save two sessions and open Programme → More → My agenda; open a speaker from a session page; Profile → Your data → Delete my data.
+
 ## Version 0.3.0 — what to look at first
 0.3.0 corrects the four faults found on the phone in 0.2.0. Please check each one specifically and send screenshots:
 1. **Tab bar** — open all five tabs in turn. All five labels must be fully visible on every tab, and the bar must never run off the edge.

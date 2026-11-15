@@ -115,17 +115,19 @@ export interface Place {
   note: string;
   /** Room names in the programme that belong to this place. */
   rooms: string[];
+  /** Reachable without steps, on this illustrative plan. */
+  stepFree?: boolean;
 }
 
 /** Places on the schematic venue plan. The plan is invented: the real venue has not been announced. */
 export const PLACES: Place[] = [
-  { id: 'hallA', name: 'Hall A', kind: 'hall', note: 'Main plenary hall · step-free', rooms: ['Hall A'] },
-  { id: 'hallB', name: 'Hall B', kind: 'hall', note: 'Panels and talks · step-free', rooms: ['Hall B'] },
+  { id: 'hallA', name: 'Hall A', kind: 'hall', note: 'Main plenary hall · step-free', rooms: ['Hall A'], stepFree: true },
+  { id: 'hallB', name: 'Hall B', kind: 'hall', note: 'Panels and talks · step-free', rooms: ['Hall B'], stepFree: true },
   { id: 'rooms', name: 'Rooms 1–3', kind: 'room', note: 'Workshops and training', rooms: ['Room 1', 'Room 2', 'Room 3'] },
   { id: 'court', name: 'Courtyard', kind: 'service', note: 'Open air · food and coffee', rooms: ['Courtyard'] },
-  { id: 'reg', name: 'Registration', kind: 'service', note: 'Badges and information', rooms: [] },
+  { id: 'reg', name: 'Registration', kind: 'service', note: 'Badges and information · step-free', rooms: [], stepFree: true },
   { id: 'gate1', name: 'Gate 1', kind: 'gate', note: 'North entrance · meeting point', rooms: ['Gate 1'] },
-  { id: 'gate2', name: 'Gate 2', kind: 'gate', note: 'South entrance · step-free', rooms: [] },
+  { id: 'gate2', name: 'Gate 2', kind: 'gate', note: 'South entrance · step-free', rooms: [], stepFree: true },
 ];
 
 /** Sessions shown as highlights on Home. */

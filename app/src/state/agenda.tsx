@@ -11,7 +11,7 @@ export function sanitizeAgenda(raw: unknown): string[] {
   return Array.isArray(raw) ? [...new Set(raw.filter((x): x is string => typeof x === 'string'))] : [];
 }
 
-interface Ctx { saved: ReadonlySet<string>; toggle: (id: string) => boolean; isSaved: (id: string) => boolean }
+interface Ctx { saved: ReadonlySet<string>; toggle: (id: string) => boolean; isSaved: (id: string) => boolean; clear: () => void }
 const AgendaCtx = createContext<Ctx | null>(null);
 
 export function AgendaProvider({ children }: { children: React.ReactNode }) {
@@ -38,7 +38,13 @@ export function AgendaProvider({ children }: { children: React.ReactNode }) {
     return willSave;
   }, [saved]);
 
-  const value = useMemo(() => ({ saved, toggle, isSaved: (id: string) => saved.has(id) }), [saved, toggle]);
+  /** Removes every saved session from this phone (Settings → Delete my data). */
+  const clear = useCallback(() => {
+    setIds([]);
+    AsyncStorage.removeItem(KEY).catch(() => {});
+  }, []);
+
+  const value = useMemo(() => ({ saved, toggle, isSaved: (id: string) => saved.has(id), clear }), [saved, toggle, clear]);
   return <AgendaCtx.Provider value={value}>{children}</AgendaCtx.Provider>;
 }
 

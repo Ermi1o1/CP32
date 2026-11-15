@@ -8,6 +8,8 @@ import { GUTTER, SubHeader } from '@/ui/chrome';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useNow } from '@/data/useNow';
 import { Text } from '@/ui/Text';
+import { Icon } from '@/ui/Icon';
+import { Tap } from '@/ui/Pressable';
 import { Button, Skeleton, StateBlock } from '@/ui/controls';
 import { HorizonLine, Photo, SavedMark, SaveToggle, Tag, accessKey } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
@@ -119,7 +121,7 @@ export default function SessionPage() {
                   <SectionTitle>{t('session.speaking')}</SectionTitle>
                   <Group>
                     {speakers.map((p) => (
-                      <View key={p.id} accessible accessibilityLabel={`${p.name}, ${p.role}, ${p.org}`} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 12 }}>
+                      <Tap key={p.id} onPress={() => router.push(`/speaker/${p.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${p.name}, ${p.role}, ${p.org}`} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 12 }}>
                         <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.surfaceAlt, alignItems: 'center', justifyContent: 'center' }}>
                           <Text variant="subhead" weight={700}>{p.name.split(' ').map((w) => w[0]).join('').slice(0, 2)}</Text>
                         </View>
@@ -127,7 +129,8 @@ export default function SessionPage() {
                           <Text variant="headline">{p.name}</Text>
                           <Text variant="footnote" color="textSecondary">{p.role} · {p.org}</Text>
                         </View>
-                      </View>
+                        <Icon name="chevron-right" size={18} color="textTertiary" stroke={2} />
+                      </Tap>
                     ))}
                   </Group>
                 </Enter>

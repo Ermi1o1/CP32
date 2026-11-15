@@ -148,6 +148,7 @@ export default function Home() {
                 <View style={{ paddingHorizontal: GUTTER }}>
                   <SectionTitle>{t('home.essentials')}</SectionTitle>
                   <Group>
+                    <Row icon="bookmark" title={t('programme.agenda')} subtitle={t('programme.agendaSub')} onPress={() => router.push('/agenda')} />
                     <Row icon="siren" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={() => router.push('/guide/emergency')} />
                     <Row icon="train-front" title={t('visit.around')} subtitle={t('visit.aroundSub')} onPress={() => router.push('/guide/around')} />
                     <Row icon="list-checks" title={t('settings.sources')} subtitle={t('settings.sourcesSub')} onPress={() => router.push('/sources')} />
