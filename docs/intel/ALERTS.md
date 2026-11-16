@@ -41,3 +41,4 @@ fault. See `proposals/2026-11-14-review.md` for what is still open.
 - 7 news items restating what `reality-check.md` already records: the host
   selection and Ethiopia–Nigeria contest, PM Abiy's preparation statements,
   UNGA and Global South commentary, and COP31-sidelines diplomacy coverage.
+- [ ] 2026-11-15 · **ENA English** · [C] Ethiopia Leads a Week of Green Diplomacy, Red Sea Access Push Gains International Momentum — https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTaHMxQllpVmlZd3lpUnAySFAxblk1Ny1mRjBMal9rdldrenJhQWUtdUh1aXhXNFZ0TVh2N3NvOTZkYmE4c0JicUtPaU5wcWNaSEE?oc=5

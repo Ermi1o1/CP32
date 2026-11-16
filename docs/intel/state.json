@@ -9,7 +9,7 @@
   "gnews_egp": 0,
   "gnews_ena_en": 0,
   "fana_en": 0,
-  "amn_en": 0,
+  "amn_en": 1,
   "gnews_ena_am": 0,
   "fana_am": 0,
   "gnews_addisstandard": 0,
@@ -34,41 +34,42 @@
  },
  "app_ids": {
   "appstore_cop32": [
+   "6789030250",
    "6811845833",
    "1269516792",
    "1632885226",
    "6754187049",
-   "6821604613",
-   "6738282514",
+   "6464719135",
    "1402774264",
+   "6821604613",
    "1531927334",
+   "6738282514",
+   "6761264127",
    "6822418708",
-   "6759739862",
-   "1665589216"
+   "6759739862"
   ],
   "appstore_ethiopia_climate": [
-   "1503459669",
+   "6764390669",
    "6748839567",
-   "1497800659",
    "6789030250",
-   "1632885226",
    "6811845833",
-   "1515175481",
-   "1195200573",
-   "1588675742",
-   "1563263735",
+   "1632885226",
    "6736705086",
-   "1663036320",
-   "590204052",
-   "847859021",
+   "1195200573",
+   "1563263735",
+   "1506109691",
    "6761763876",
-   "6797268036",
    "6529531521",
    "1597040733",
-   "6778734585",
-   "1202292818",
+   "1506890841",
+   "6797974220",
+   "1497638811",
+   "1559346306",
+   "6447110594",
    "6503872198",
-   "6797974220"
+   "6764895613",
+   "6759450438",
+   "6784473143"
   ]
  },
  "seen": {
@@ -493,7 +494,24 @@
   "c21d06cfd4ad2a68": "2026-11-15",
   "d5d1f3aa0bf20078": "2026-11-15",
   "1e59882a3826afe4": "2026-11-15",
-  "b8e28dfecb65b604": "2026-11-15"
+  "b8e28dfecb65b604": "2026-11-15",
+  "448052f5c3ff7584": "2026-11-16",
+  "a51f7c5f66be45b2": "2026-11-16",
+  "1d47ceccd33d9381": "2026-11-16",
+  "f98718cb138028af": "2026-11-16",
+  "c4ec21e048ebcc55": "2026-11-16",
+  "236bb82cb7e8abec": "2026-11-16",
+  "d916b4b85bcdd739": "2026-11-16",
+  "e6e09cdb1c13780d": "2026-11-16",
+  "c8da59d83c1ed1d2": "2026-11-16",
+  "7f3ce45419bdd63e": "2026-11-16",
+  "d3c305b5b59007e4": "2026-11-16",
+  "c293aadbe4d3da2d": "2026-11-16",
+  "1f1b9ed156b38704": "2026-11-16",
+  "b97802f266c1353b": "2026-11-16",
+  "ab16173d78dd33c5": "2026-11-16",
+  "402e2890d78858d2": "2026-11-16",
+  "7ab8d4295c572906": "2026-11-16"
  },
  "recent_titles": [
   [
@@ -2131,6 +2149,66 @@
   [
    "cop31 countries financial institutions mobilise billions to bridge global climate finance gap",
    "2026-11-15"
+  ],
+  [
+   "pm abiy convenes cop32 national steering committee to assess preparations and set strategic direction",
+   "2026-11-16"
+  ],
+  [
+   "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር የተገኙበት የኮፕ32 ብሔራዊ አስተባባሪ ኮሚቴ የሥራ ሂደት ግምገማ",
+   "2026-11-16"
+  ],
+  [
+   "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ ዶ ር መልዕክት ዛሬ ጠዋት የcop32 ብሔራዊ አስተባባሪ ኮሚቴን በመሰብሰብ አጠቃላይ የሥራ ሂደቱን ገምግመናል ዝግጅቶችን ከፈትሽን በኋላም ሥራዎች የሚመሩበት ስትራቴጂካዊ አቅጣጫ ሰ",
+   "2026-11-16"
+  ],
+  [
+   "ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ ዘላቂ ውጤት ለመለወጥ ትልቅ ዕድል ይፈጥራል ጠቅላይ ሚኒስትር ዐቢይ ዶ ር አዲስ አበባ ሕዳር 7 2019 ኤፍ ኤም ሲ ኢትዮጵያ የምታስተናግደው ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ",
+   "2026-11-16"
+  ],
+  [
+   "cop31 bulletin day 7 sharp divisions lower expectations for cop outcome",
+   "2026-11-16"
+  ],
+  [
+   "2026 09 29_cct_axis 1 synthesis roundtable_concept note_v0 1 docx",
+   "2026-11-16"
+  ],
+  [
+   "cop31 a climate summit must be a platform for hope",
+   "2026-11-16"
+  ],
+  [
+   "ethiopia prepares to lead cop32 as prime minister abiy ahmed urges urgent climate action",
+   "2026-11-16"
+  ],
+  [
+   "dr fatih birol executive director of the international energy agency iea cop31 electrification and global energy markets",
+   "2026-11-16"
+  ],
+  [
+   "face the facts follow the science choose the future and never give up un secretary general at his final press conference at cop31",
+   "2026-11-16"
+  ],
+  [
+   "delivering on paris subnational action and accountability in the global climate action agenda",
+   "2026-11-16"
+  ],
+  [
+   "ethiopia leads a week of green diplomacy red sea access push gains international momentum",
+   "2026-11-16"
+  ],
+  [
+   "cover decision cop 31 presidency note on draft text",
+   "2026-11-16"
+  ],
+  [
+   "ethiopia strengthens whole of government preparations to host cop32",
+   "2026-11-16"
+  ],
+  [
+   "pakistan proposes virtual green university youth fund at cop31",
+   "2026-11-16"
   ]
  ]
 }

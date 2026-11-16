@@ -1,0 +1,397 @@
+{
+  "run": "2026-11-16T11:49:55.802304+00:00",
+  "reviewed": false,
+  "counts": {
+    "kept": 15,
+    "duplicates": 147,
+    "irrelevant": 159,
+    "stale": 174,
+    "trimmed": 0
+  },
+  "problems": [
+    "amn_en — error:ReadTimeout (1 consecutive)"
+  ],
+  "items": [
+    {
+      "id": "b97802f266c1353b",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTaHMxQllpVmlZd3lpUnAySFAxblk1Ny1mRjBMal9rdldrenJhQWUtdUh1aXhXNFZ0TVh2N3NvOTZkYmE4c0JicUtPaU5wcWNaSEE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBTaHMxQllpVmlZd3lpUnAySFAxblk1Ny1mRjBMal9rdldrenJhQWUtdUh1aXhXNFZ0TVh2N3NvOTZkYmE4c0JicUtPaU5wcWNaSEE?oc=5",
+      "title": "Ethiopia Leads a Week of Green Diplomacy, Red Sea Access Push Gains International Momentum",
+      "outlet": "ENA English",
+      "source_key": "gnews_cop32_platform",
+      "kind": "article",
+      "published": "2026-11-15",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 1,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia Leads a Week of Green Diplomacy, Red Sea Access Push Gains International Momentum ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "e6e09cdb1c13780d",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa2kyWFNNQW9fRmxsVktfMEdQNXVRSGRVUHhGYV9XZks0SmdOc3FuNm9wVlZlSUpYSEVsRW5VcGE3RnRlUHYtNkJsNEZpS0ZPei01bkdlbnhFb3lNNGhGd2MtMjVDZVhMRHlTNHZfdV8tOUJBaXpjNmNkRnFaemhQYTBFVmI1WC16cmwxM2MzNlhfbVNVeHJrNVNEb0FBVmNaU2t3MnFBWWJzZG1oREJTTw?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQa2kyWFNNQW9fRmxsVktfMEdQNXVRSGRVUHhGYV9XZks0SmdOc3FuNm9wVlZlSUpYSEVsRW5VcGE3RnRlUHYtNkJsNEZpS0ZPei01bkdlbnhFb3lNNGhGd2MtMjVDZVhMRHlTNHZfdV8tOUJBaXpjNmNkRnFaemhQYTBFVmI1WC16cmwxM2MzNlhfbVNVeHJrNVNEb0FBVmNaU2t3MnFBWWJzZG1oREJTTw?oc=5",
+      "title": "Ethiopia Prepares to Lead COP32 as Prime Minister Abiy Ahmed Urges Urgent Climate Action",
+      "outlet": "Fidel Post",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-11",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Ethiopia Prepares to Lead COP32 as Prime Minister Abiy Ahmed Urges Urgent Climate Action Fidel Post",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "448052f5c3ff7584",
+      "url": "https://www.fanamc.com/english/pm-abiy-convenes-cop32-national-steering-committee-to-assess-preparations-and-set-strategic-direction/?utm_source=rss&utm_medium=rss&utm_campaign=pm-abiy-convenes-cop32-national-steering-committee-to-assess-preparations-and-set-strategic-direction",
+      "url_canonical": "https://fanamc.com/english/pm-abiy-convenes-cop32-national-steering-committee-to-assess-preparations-and-set-strategic-direction",
+      "title": "PM Abiy Convenes COP32 National Steering Committee to Assess Preparations and Set Strategic Direction",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "preparations",
+        "steering committee"
+      ],
+      "excerpt_auto": "Addis Ababa, November 16, 2026 (FMC) – Prime Minister Abiy Ahmed convened the COP32 National Steering Committee today to review the progress of preparations, assess ongoing activities and provide strategic direction for Ethiopia’s hosting of the 32nd United Nations Climate Change Conference (COP32).",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "a51f7c5f66be45b2",
+      "url": "https://www.youtube.com/watch?v=3wfCmUJeHbY",
+      "url_canonical": "https://youtube.com/watch?v=3wfCmUJeHbY",
+      "title": "ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) የተገኙበት የኮፕ32 ብሔራዊ አስተባባሪ ኮሚቴ የሥራ ሂደት ግምገማ",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "1d47ceccd33d9381",
+      "url": "https://t.me/fanatelevision/113245",
+      "url_canonical": "https://t.me/fanatelevision/113245",
+      "title": "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) መልዕክት፡- ዛሬ ጠዋት የCOP32 ብሔራዊ አስተባባሪ ኮሚቴን በመሰብሰብ አጠቃላይ የሥራ ሂደቱን ገምግመናል። ዝግጅቶችን ከፈትሽን በኋላም ሥራዎች የሚመሩበት ስትራቴጂካዊ አቅጣጫ ሰ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "የጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር) መልዕክት፡- ዛሬ ጠዋት የCOP32 ብሔራዊ አስተባባሪ ኮሚቴን በመሰብሰብ አጠቃላይ የሥራ ሂደቱን ገምግመናል። ዝግጅቶችን ከፈትሽን በኋላም ሥራዎች የሚመሩበት ስትራቴጂካዊ አቅጣጫ ሰጥቻለሁ። ጉባኤውን በስኬት ለማስተናገድ ሁሉም ግብረ-ኃይሎች ተናብበው እንዲሠሩ በማድረግ፣ የተቀናጀ ሁሉን አቀፍ የመንግሥት አካሄድ መከተል ወሳኝ መሆኑን በአጽንኦት አሳስቤያለሁ። COP32 ታላቅ ዓለም አቀፍ ጉባኤ ከመሆኑ ባለፈ፣ የኢትዮጵያን የአየር ንብ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "f98718cb138028af",
+      "url": "https://t.me/fanatelevision/113249",
+      "url_canonical": "https://t.me/fanatelevision/113249",
+      "title": "ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ ዘላቂ ውጤት ለመለወጥ ትልቅ ዕድል ይፈጥራል – ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) አዲስ አበባ፣ ሕዳር 7፣ 2019 (ኤፍ ኤም ሲ) ኢትዮጵያ የምታስተናግደው ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ ",
+      "outlet": "Fana (Telegram)",
+      "source_key": "tg_fana",
+      "kind": "telegram",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ ዘላቂ ውጤት ለመለወጥ ትልቅ ዕድል ይፈጥራል – ጠቅላይ ሚኒስትር ዐቢይ (ዶ/ር) አዲስ አበባ፣ ሕዳር 7፣ 2019 (ኤፍ ኤም ሲ) ኢትዮጵያ የምታስተናግደው ኮፕ32 ብሔራዊ ጥረቶቻችንን ወደ ዘላቂ ውጤት ለመለወጥ ትልቅ ዕድል ይፈጥራል አሉ ጠቅላይ ሚኒስትር ዐቢይ አሕመድ (ዶ/ር)፡፡ የኮፕ32 ብሔራዊ አስተባባሪ ኮሚቴ አጠቃላይ የሥራ ሂደት ግምገማ በዛሬው ዕለት ተካሂዷል፡፡ ጠቅላይ ሚኒስትሩ በማህበራዊ ትስስር ገጻቸው ባሰፈሩት መልዕክት፤ ብሔ",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "402e2890d78858d2",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE96SmVUYjNtSlo0czdMdnVjTi1OLVEtLVRYcUdKMDJiaW50QjR2SnA2czJCOHdCeml1cmx6YjBJeEZXeU9GUC1XOW9DcHV4a0RERWc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE96SmVUYjNtSlo0czdMdnVjTi1OLVEtLVRYcUdKMDJiaW50QjR2SnA2czJCOHdCeml1cmx6YjBJeEZXeU9GUC1XOW9DcHV4a0RERWc?oc=5",
+      "title": "Ethiopia Strengthens Whole-of-Government Preparations to Host COP32",
+      "outlet": "ENA English",
+      "source_key": "gnews_ena_en",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "preparations"
+      ],
+      "excerpt_auto": "Ethiopia Strengthens Whole-of-Government Preparations to Host COP32 ENA English",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "236bb82cb7e8abec",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdjdXbVc5aDdaZXU5UlB5U1VKRTZuc3BkLUtTYXVMVGxKcWZnLXkwdHRwbG5mNTQ5bTRSOXdsMXFwSTVRVFpMNjI5emhvckRDWkVlX2RfTmJucUQ3Wk1NWm5taHgycXV2VldsdU1WWklvTFVJOVRGU2FGRUJlLXRFckZvenhBbi1Nd2ZSaHhkeXBQWVZqSDNUc1pGU1BhYlN1ZUE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdjdXbVc5aDdaZXU5UlB5U1VKRTZuc3BkLUtTYXVMVGxKcWZnLXkwdHRwbG5mNTQ5bTRSOXdsMXFwSTVRVFpMNjI5emhvckRDWkVlX2RfTmJucUQ3Wk1NWm5taHgycXV2VldsdU1WWklvTFVJOVRGU2FGRUJlLXRFckZvenhBbi1Nd2ZSaHhkeXBQWVZqSDNUc1pGU1BhYlN1ZUE?oc=5",
+      "title": "2026-09-29_CCT_Axis 1 Synthesis Roundtable_Concept Note_v0.1.docx",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc_cop32",
+      "kind": "article",
+      "published": "2026-11-05",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "unfccc"
+      ],
+      "excerpt_auto": "2026-09-29_CCT_Axis 1 Synthesis Roundtable_Concept Note_v0.1.docx UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "d916b4b85bcdd739",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrbUItOGFhc0VoVlBBSmJ4c1pmY2tDNDRBY1hBRkJZZF9seGlmNDFpUXVrVlhObFF6RWY3UkV4Y2pEdkxHN1dDZkxTaF85VVhpMXFraW5zUjQycXJJOFNoWWQ2bk52Um1WTm9hai15Y1BQRzJQMDR1Ul9zMHM?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBrbUItOGFhc0VoVlBBSmJ4c1pmY2tDNDRBY1hBRkJZZF9seGlmNDFpUXVrVlhObFF6RWY3UkV4Y2pEdkxHN1dDZkxTaF85VVhpMXFraW5zUjQycXJJOFNoWWQ2bk52Um1WTm9hai15Y1BQRzJQMDR1Ul9zMHM?oc=5",
+      "title": "COP31: A climate summit must be a platform for hope",
+      "outlet": "King's College London",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-06",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31",
+        "platform"
+      ],
+      "excerpt_auto": "COP31: A climate summit must be a platform for hope King's College London",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c8da59d83c1ed1d2",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUkZEUS1FMWJJWlRxcmR4TFM0czdUNFk2Zno0VVQyRktzc3BvREl0Tzk3SlE3Z0VFaHhGajNRRGdMQW41SXVZOXM3TDZoU0JqMmVFZDlJWTlZbElHWmVQTFU0TDJ5enhIcHVZRm5QT1g1UHktUnBiSVpQVWJTVktlV2I3a2hrZ3M2SmpiYUFjelY3SHpFbWNwN2xSdGdyQ0xqcWUwVTd4SmdSUmhwV09sem1VNHpWd1d4RjFyT1NkaU0?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUkZEUS1FMWJJWlRxcmR4TFM0czdUNFk2Zno0VVQyRktzc3BvREl0Tzk3SlE3Z0VFaHhGajNRRGdMQW41SXVZOXM3TDZoU0JqMmVFZDlJWTlZbElHWmVQTFU0TDJ5enhIcHVZRm5QT1g1UHktUnBiSVpQVWJTVktlV2I3a2hrZ3M2SmpiYUFjelY3SHpFbWNwN2xSdGdyQ0xqcWUwVTd4SmdSUmhwV09sem1VNHpWd1d4RjFyT1NkaU0?oc=5",
+      "title": "Dr Fatih Birol, Executive Director of the International Energy Agency (IEA): COP31, electrification, and global energy markets",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-12",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31",
+        "unfccc"
+      ],
+      "excerpt_auto": "Dr Fatih Birol, Executive Director of the International Energy Agency (IEA): COP31, electrification, and global energy markets UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "d3c305b5b59007e4",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdmI3alhJblQ2TVNYdC1ibWJZNjFndFRGRkdqdlp3U1RJVEF1R1FEeU0zX2RpSE13UVk2QS12OE11QXBKbjBoNEhsZnhfcU1HV3BKelFxb3pOQXpHdERudVlSNk5ZX1I5SGl5NVBvOVJxd2tnM2Z0UlY5TjVSQW9mdHBXS2ZYdlBmSGVFazV3NTFGX0Jwdy1nU0JzejhvSUFiRFprcmZ3elVFbWx0SlhfVl9qLVk5QVl6cFExVDF3?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOdmI3alhJblQ2TVNYdC1ibWJZNjFndFRGRkdqdlp3U1RJVEF1R1FEeU0zX2RpSE13UVk2QS12OE11QXBKbjBoNEhsZnhfcU1HV3BKelFxb3pOQXpHdERudVlSNk5ZX1I5SGl5NVBvOVJxd2tnM2Z0UlY5TjVSQW9mdHBXS2ZYdlBmSGVFazV3NTFGX0Jwdy1nU0JzejhvSUFiRFprcmZ3elVFbWx0SlhfVl9qLVk5QVl6cFExVDF3?oc=5",
+      "title": "\"Face the facts. Follow the science. Choose the future. And never give up\" UN Secretary-General at his final press conference at COP31",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-13",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "\"Face the facts. Follow the science.",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c293aadbe4d3da2d",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdWROcGMyaU5hdmhrcGRDSlctdHhZcUhEUUNjZFRaSXdMWDZrRUlpQ1lQcTZIRmNNS1NNZDhoWjdyQ2lrTzhTdHh1ODIzaFBiM2RHYjRVcEhOaGR4X3ZkT3Y4UnNtQmNYNURRMGRnb0NQSjFBdWVidkdWSjVzSUdlNUNMWVdPNlZrWUlINjh0aTF3T0NQRS1sNVRjTmdVV2FZU3ZpUWJSTl9qUTlDeXJiem4yMGloN0NRd3c?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdWROcGMyaU5hdmhrcGRDSlctdHhZcUhEUUNjZFRaSXdMWDZrRUlpQ1lQcTZIRmNNS1NNZDhoWjdyQ2lrTzhTdHh1ODIzaFBiM2RHYjRVcEhOaGR4X3ZkT3Y4UnNtQmNYNURRMGRnb0NQSjFBdWVidkdWSjVzSUdlNUNMWVdPNlZrWUlINjh0aTF3T0NQRS1sNVRjTmdVV2FZU3ZpUWJSTl9qUTlDeXJiem4yMGloN0NRd3c?oc=5",
+      "title": "Delivering on Paris: Subnational Action and Accountability in the Global Climate Action Agenda",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-13",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "unfccc"
+      ],
+      "excerpt_auto": "Delivering on Paris: Subnational Action and Accountability in the Global Climate Action Agenda UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c4ec21e048ebcc55",
+      "url": "https://www.climatechangenews.com/2026/11/16/cop31-bulletin-day-7-sharp-divisions-lower-expectations-for-cop-outcome/",
+      "url_canonical": "https://climatechangenews.com/2026/11/16/cop31-bulletin-day-7-sharp-divisions-lower-expectations-for-cop-outcome",
+      "title": "COP31 Bulletin Day 7: Sharp divisions lower expectations for COP outcome",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Big emerging economies reject putting a voluntary electrification pledge and fossil fuel roadmap in the cover decision, while rich nations have little new finance to offer as a sweetener The post COP31 Bulletin Day 7: Sharp divisions lower expectations for COP outcome appeared first on Climate Home",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "ab16173d78dd33c5",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9kQldQaklsM0FGNDVEWDVSUDlqc3ItSU9ZakpKSGhPWkxVdzB1a0NENEh3VWltUG01WVZqMlgtWDRpUk9DcUZVY2dCbw?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9kQldQaklsM0FGNDVEWDVSUDlqc3ItSU9ZakpKSGhPWkxVdzB1a0NENEh3VWltUG01WVZqMlgtWDRpUk9DcUZVY2dCbw?oc=5",
+      "title": "Cover decision - COP 31 Presidency note on draft text",
+      "outlet": "UNFCCC",
+      "source_key": "gnews_unfccc",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop 31",
+        "presidency",
+        "unfccc"
+      ],
+      "excerpt_auto": "Cover decision - COP 31 Presidency note on draft text UNFCCC",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "7ab8d4295c572906",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeEo5dFM2SlZReUNUdDBQNGZlWTNscHY3Qk1oQnlRX1hwLUdQOW0ybEdmejY5ZzdMbE90WVBfbXZpOTNKamFuQ2pVM3pwcGFaVFBSV3Rvay1QaDdPWl82dXpJQXJZNW9QUVd3b1pIdjdzdXpFYkFrVFotSFF5WlhwdVhNbjVRd2RhZmVfOVF5eDctcmxDY3RzT2M1TFc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeEo5dFM2SlZReUNUdDBQNGZlWTNscHY3Qk1oQnlRX1hwLUdQOW0ybEdmejY5ZzdMbE90WVBfbXZpOTNKamFuQ2pVM3pwcGFaVFBSV3Rvay1QaDdPWl82dXpJQXJZNW9QUVd3b1pIdjdzdXpFYkFrVFotSFF5WlhwdVhNbjVRd2RhZmVfOVF5eDctcmxDY3RzT2M1TFc?oc=5",
+      "title": "Pakistan proposes virtual green university, youth fund at COP31",
+      "outlet": "Dawn",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-16",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Pakistan proposes virtual green university, youth fund at COP31 Dawn",
+      "also_seen": [],
+      "note": ""
+    }
+  ]
+}
