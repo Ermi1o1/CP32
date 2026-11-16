@@ -184,6 +184,7 @@ export const am: Record<StringKey, string> = {
   'home.all': 'ሙሉ ቀን',
   'home.nothingNext': 'ዛሬ ተጨማሪ ስብሰባ የለም',
   'home.nothingNextSub': 'ነገ በ09:00 ይጀምራል። ሁሉም ነገር በዚህ ስልክ ላይ ተቀምጧል።',
+  'session.share': 'ይህን ክፍለ ጊዜ አጋራ',
   'session.save': 'ወደ መርሐ ግብሬ አስቀምጥ',
   'session.unsave': 'ከመርሐ ግብሬ አስወግድ',
   'session.saved': 'ወደ መርሐ ግብሬ ተቀምጧል',

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
 import { FilterTabs } from '@/ui/controls';
-import { Group, Row } from '@/ui/lists';
+import { Group, Row, initialsOf } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { EXHIBITORS } from '@/data/exhibitors';
@@ -25,7 +25,7 @@ export default function Exhibitors() {
           options={[{ value: 'all', label: t('programme.all'), count: EXHIBITORS.length }, ...used.map((p) => ({ value: p.id, label: p.name, count: EXHIBITORS.filter((e) => e.placeId === p.id).length }))]} />
         <Group>
           {shown.map((e) => (
-            <Row key={e.id} icon="building-2" title={e.name} subtitle={`${e.kind} · ${PLACES.find((p) => p.id === e.placeId)?.name ?? ''} · ${t('exhibitors.stand', { s: e.stand })}`} onPress={() => router.push(`/exhibitor/${e.id}`)} />
+            <Row key={e.id} initials={initialsOf(e.name)} title={e.name} subtitle={`${e.kind} · ${PLACES.find((p) => p.id === e.placeId)?.name ?? ''} · ${t('exhibitors.stand', { s: e.stand })}`} onPress={() => router.push(`/exhibitor/${e.id}`)} />
           ))}
         </Group>
       </Page>

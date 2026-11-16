@@ -1,6 +1,6 @@
-# Demo script — COP32 guide app (draft 1)
+# Demo script — COP32 guide app (draft 2)
 
-**Written:** 2026-11-15, for app version 0.4.0. **Status: draft for the founder. Not rehearsed, and the app has not yet been verified on a phone at this version** — run the phone checklist (`docs/operations/device-checklist.md`) before using this in front of anyone.
+**Written:** 2026-11-15; revised 2026-11-16 for app version 0.9.0 (new Home, raised blocks, floating tab bar; D78, D79). **Status: draft for the founder. Not rehearsed, and the app has not yet been verified on a phone at this version** — run the phone checklist (`docs/operations/device-checklist.md`) before using this in front of anyone.
 **Length:** 8 minutes of showing, then questions. **Audience:** senior officials and their digital or communications leads.
 **Positioning (D70):** a host-country guide for COP32, built independently and offered for adoption. Not a competing bid. Not official.
 
@@ -24,9 +24,9 @@ Three things must be true before this demo is given to anyone outside the team. 
 
 | # | Screen | Do | Say | Time |
 |---|---|---|---|---|
-| 1 | **Home** | Open the app. Let it sit for two seconds. Scroll once. | "This is what a visitor sees. What the guide is, where to start, a few highlights. Under the photograph: *saved offline* — remember that." Point to the line "Independent guide · not an official COP32 app". "That line stays until you tell us otherwise." | 1:00 |
-| 2 | **Programme** | Tap Programme. Tap Day 2, then "Open to public". | "The programme as a timetable. A visitor's first question is 'what can I actually attend?' — one tap. Every session says who may enter, or says plainly that it is not yet confirmed. These sessions are examples; the real programme is one of our three asks." | 1:00 |
-| 3 | **Session** | Open a session. Tap **Save to my agenda**. | "Time, place, who is speaking. Saving needs no account — nothing leaves the phone. No sign-up, no tracking, no advertising." | 1:00 |
+| 1 | **Home** | Open the app. Let it sit for two seconds. Scroll once. | "This is what a visitor sees. What the guide is, a search field, a few highlights to swipe through, the first sessions. On the green card at the top: *saved offline* — remember that." Point to the line "Independent guide · not an official COP32 app". "That line stays until you tell us otherwise." | 1:00 |
+| 2 | **Programme** | Tap Programme. Tap Day 2, then "Open to public". | "The programme, one card per session. A visitor's first question is 'what can I actually attend?' — one tap. Every session says who may enter, or says plainly that it is not yet confirmed. These sessions are examples; the real programme is one of our three asks." | 1:00 |
+| 3 | **Session** | Open a session. Tap **Save to my agenda**. | "Time, place, who is speaking. Saving needs no account — nothing leaves the phone. No sign-up, no tracking, no advertising. 'Share this session' hands the details to the phone's own share sheet; the app itself sends nothing." | 1:00 |
 | 4 | **Map** | Tap Map. Select Hall B. Tap "Step-free". | "A venue plan — this one is a schematic, because the venue is not announced. With your floor plans, this becomes real wayfinding. Step-free routes are one tap." | 0:45 |
 | 5 | **Offline** — the centre of the demo | Swipe down, **airplane mode on**. Close the app fully. Reopen it. Open Programme, open a session not opened before, open Search and type "water". | "Now the phone has no connection. Everything still works: the whole programme, the map, the guides, search. In November, around a venue with tens of thousands of phones, the network will be the first thing to fail. This app does not need it." Pause. Let them try. | 1:30 |
 | 6 | **Your identity** | Profile → Demonstration → Brand identity → "Your Event". Go back to Home. Then switch back. | "Name, mark and colours come from one setting. If this becomes yours, it wears your identity the same day — nothing is rebuilt." | 0:45 |

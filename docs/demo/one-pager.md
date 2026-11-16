@@ -1,6 +1,6 @@
-# COP32 guide — one page (draft 1)
+# COP32 guide — one page (draft 2)
 
-**Draft for the founder, 2026-11-15.** Every statement here is true of the app at version 0.4.0. Figures marked ★ must be re-checked on a real phone before this page is given to anyone. Nothing here may be read as a claim of official status.
+**Draft for the founder, 2026-11-15; re-checked 2026-11-16.** Every statement here is true of the app at version 0.9.0. Figures marked ★ must be re-checked on a real phone before this page is given to anyone. Nothing here may be read as a claim of official status.
 
 ---
 

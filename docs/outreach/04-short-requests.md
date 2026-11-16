@@ -1,8 +1,11 @@
 # Short requests (DRAFT templates — adapt tone to each recipient; native-speaker review for Amharic)
 
+> **Revised 2026-11-16** against D68 (an official COP32 website and channels exist), D70 (a host-country guide offered for adoption) and D74 (English first). Still a draft: nothing has been sent, and every name, title and address must be checked on the day of sending.
+> In every template below, describe the project as "an independent visitor guide for COP32, working today as an Android application and offered to the host for adoption". Do not describe it as bilingual: it is in English, with an Amharic edition to follow.
+
 ## A. Stream and recording owners (UNFCCC / UN Web TV / host broadcaster)
 **Subject:** Request for guidance on linking to or embedding official COP32 streams
-Dear [Name], Zega Tech PLC is developing an independent public-information platform for COP32 (English/Amharic). We would like to point users to official live and recorded sessions. (1) May we link to the official streams? (2) May we embed them (click-to-load, no tracking), and under what terms? (3) Are captions/transcripts available and may we link to them? (4) What attribution do you require? We will follow your terms exactly and remove anything on request. Contact: [..]
+Dear [Name], Zega Tech PLC has built an independent visitor guide for COP32 (a working Android application). We would like to point users to official live and recorded sessions. (1) May we link to the official streams? (2) May we embed them (click-to-load, no tracking), and under what terms? (3) Are captions/transcripts available and may we link to them? (4) What attribution do you require? We will follow your terms exactly and remove anything on request. Contact: [..]
 
 ## B. Accommodation platform / host accommodation programme
 **Subject:** Is there an official accommodation platform for COP32 visitors?
@@ -10,7 +13,7 @@ Dear [Name], We are preparing guidance for visitors to Addis Ababa. If an offici
 
 ## C. Ethio Telecom (commercial / public-benefit partnerships)
 **Subject:** Connectivity cooperation for a COP32 public-information platform
-Dear [Name], We are designing a lightweight, offline-capable app and website for COP32 visitors and residents. We would like to discuss: (1) whether zero-rated or discounted data for official COP32 information is feasible; (2) expected network performance and capacity around the venue and in central Addis Ababa during the event; (3) options for Ethiopian hosting (telecloud/data centre) for the personal-data components; (4) any developer or partner programmes we should join. Contact: [..]
+Dear [Name], We have built a lightweight, fully offline app for COP32 visitors and residents. We would like to discuss: (1) whether zero-rated or discounted data for official COP32 information is feasible; (2) expected network performance and capacity around the venue and in central Addis Ababa during the event; (3) options for Ethiopian hosting (telecloud/data centre) for the personal-data components; (4) any developer or partner programmes we should join. Contact: [..]
 
 ## D. National meteorology agency
 **Subject:** Weather data for visitors during COP32
@@ -26,8 +29,8 @@ Dear [Name], We plan to show light-rail, bus and minibus routes using open data 
 
 ## G. Addis Chamber (Green Growth Centre) — introduction
 **Subject:** Introduction and potential collaboration
-Dear [Name], We are building an independent public-information platform for COP32 and would value an introduction to the Green Growth Centre team and to the appropriate government contacts. We can share a demonstration and see whether private-sector events could be listed. Contact: [..]
+Dear [Name], We have built an independent visitor guide for COP32, working today as an Android application, and would value an introduction to the Green Growth Centre team and to the appropriate government contacts. We can share a demonstration and see whether private-sector events could be listed. Contact: [..]
 
 ## H. Authorities who may authorise alerts (host operations / security / health / transport)
 **Subject:** Relaying authorised alerts for COP32 visitors — request for protocol
-Dear [Name], Zega Tech PLC is preparing a public-information platform for COP32 (English/Amharic). If it is recognised by the host, we propose to **relay** alerts authorised by competent bodies; we will not originate emergency instructions. We would like to understand: (1) which bodies authorise which alert types; (2) 24/7 contacts and how we verify messages (e.g., reference codes, secure channel); (3) approved templates and wording in English and Amharic; (4) test and drill procedures; (5) expected timelines for updates and "all clear" messages; (6) how geographic areas are described (zones, named areas). Our process includes dual approval, signed delivery and an audit log. Contact: [..]
+Dear [Name], Zega Tech PLC has built an independent visitor guide for COP32 (a working Android application). If it is recognised by the host, we propose to **relay** alerts authorised by competent bodies; we will not originate emergency instructions. We would like to understand: (1) which bodies authorise which alert types; (2) 24/7 contacts and how we verify messages (e.g., reference codes, secure channel); (3) approved templates and wording in English and Amharic; (4) test and drill procedures; (5) expected timelines for updates and "all clear" messages; (6) how geographic areas are described (zones, named areas). Our process includes dual approval, signed delivery and an audit log. Contact: [..]

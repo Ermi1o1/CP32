@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { Page, SubHeader } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { useTheme } from '@/theme/ThemeProvider';
+import { Group } from '@/ui/lists';
 import { useT } from '@/i18n';
 import { GLOSSARY } from '@/data/glossary';
 
@@ -14,14 +15,14 @@ export default function Glossary() {
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <SubHeader title={t('tab.updates')} />
       <Page title={t('glossary.title')} sub={t('glossary.lead')}>
-        {GLOSSARY.map((g) => (
-          <View key={g.term}>
-            <View accessible style={{ paddingVertical: 10, gap: 3 }}>
+        <Group>
+          {GLOSSARY.map((g) => (
+            <View key={g.term} accessible style={{ paddingVertical: 10, paddingHorizontal: 4, gap: 3 }}>
               <Text variant="headline" color="primary">{g.term}</Text>
               <Text variant="subhead" color="textSecondary">{g.def}</Text>
             </View>
-          </View>
-        ))}
+          ))}
+        </Group>
       </Page>
     </View>
   );

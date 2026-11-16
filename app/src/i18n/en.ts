@@ -176,6 +176,7 @@ export const en = {
   'home.all': 'Whole programme',
   'home.nothingNext': 'No more sessions today',
   'home.nothingNextSub': 'Tomorrow starts at 09:00. Everything is saved on this phone.',
+  'session.share': 'Share this session',
   'session.save': 'Save to my agenda',
   'session.unsave': 'Remove from my agenda',
   'session.saved': 'Saved to my agenda',

@@ -6,6 +6,11 @@ import { Tap } from './Pressable';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { lift } from './lift';
 
+/** Two letters for a person or organisation: the first letters of the first two words. */
+export function initialsOf(name: string): string {
+  return name.split(/\s+/).filter(Boolean).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+}
+
 /** `red` marks an emergency row; every other row uses the one green icon disc. */
 export type Tone = 'teal' | 'green' | 'red' | 'orange' | 'blue';
 
@@ -37,7 +42,7 @@ export function Group({ children }: { children: React.ReactNode }) {
  * line, optional value, and a chevron when it navigates. One style on every
  * screen. Text wraps; the row grows with large text.
  */
-export function Row({ icon, tone, title, subtitle, value, onPress, right }: { icon?: IconName; tone?: Tone; title: string; subtitle?: string; value?: string; onPress?: () => void; right?: React.ReactNode }) {
+export function Row({ icon, initials, tone, title, subtitle, value, onPress, right }: { icon?: IconName; initials?: string; tone?: Tone; title: string; subtitle?: string; value?: string; onPress?: () => void; right?: React.ReactNode }) {
   const { c } = useTheme();
   const { prefs } = usePrefs();
   const red = tone === 'red';
@@ -45,7 +50,12 @@ export function Row({ icon, tone, title, subtitle, value, onPress, right }: { ic
   const stackValue = !!value && prefs.textScale >= 1.3;
   const body = (
     <View style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 9, minHeight: 62 }}>
-      {icon ? (
+      {initials ? (
+        // A person or organisation gets its own initials, so a list of names is not a column of one repeated icon.
+        <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
+          <Text variant="subhead" weight={700} color="onPrimarySoft" maxFontSizeMultiplier={1.2}>{initials}</Text>
+        </View>
+      ) : icon ? (
         <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: red ? c.dangerBg : c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
           <Icon name={icon} size={21} color={red ? 'danger' : 'onPrimarySoft'} stroke={1.9} />
         </View>

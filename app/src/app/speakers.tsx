@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
 import { Skeleton } from '@/ui/controls';
-import { Group, Row } from '@/ui/lists';
+import { Group, Row, initialsOf } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { useContent } from '@/data/useContent';
@@ -20,7 +20,7 @@ export default function Speakers() {
       <Page title={t('programme.speakers')} sub={t('speakers.lead')}>
         {!people ? <View style={{ gap: 14 }}><Skeleton height={56} /><Skeleton height={56} /><Skeleton height={56} /></View> : (
           <Group>
-            {people.map((p) => <Row key={p.id} icon="user-round" title={p.name} subtitle={`${p.role} · ${p.org}`} onPress={() => router.push(`/speaker/${p.id}`)} />)}
+            {people.map((p) => <Row key={p.id} initials={initialsOf(p.name)} title={p.name} subtitle={`${p.role} · ${p.org}`} onPress={() => router.push(`/speaker/${p.id}`)} />)}
           </Group>
         )}
       </Page>

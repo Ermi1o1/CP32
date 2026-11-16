@@ -4,7 +4,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { Button, StateBlock } from '@/ui/controls';
-import { Group, Row, SectionTitle } from '@/ui/lists';
+import { Group, Row, SectionTitle, initialsOf } from '@/ui/lists';
 import { Photo, SessionRow } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -52,7 +52,7 @@ export default function ExhibitorPage() {
             <View>
               <SectionTitle>{t('exhibitors.people')}</SectionTitle>
               <Group>
-                {data.people.map((p) => <Row key={p.id} icon="user-round" title={p.name} subtitle={p.role} onPress={() => router.push(`/speaker/${p.id}`)} />)}
+                {data.people.map((p) => <Row key={p.id} initials={initialsOf(p.name)} title={p.name} subtitle={p.role} onPress={() => router.push(`/speaker/${p.id}`)} />)}
               </Group>
             </View>
           ) : null}

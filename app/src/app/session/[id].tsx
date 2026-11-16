@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, Share } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { tick } from '@/ui/haptic';
@@ -27,7 +27,7 @@ import { durationMin, phaseOf } from '@/data/time';
  */
 export default function SessionPage() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { c, layout } = useTheme();
+  const { c, layout, brand } = useTheme();
   const { prefs } = usePrefs();
   const { t } = useT();
   const router = useRouter();
@@ -108,6 +108,11 @@ export default function SessionPage() {
                   accessibilityHint={saved ? t('session.unsave') : undefined}
                   onPress={() => { tick(toggle(session.id) ? 'confirm' : 'undo'); }}
                 />
+                {/* Sharing hands plain text to the phone's own share sheet; nothing is sent by this app. */}
+                <View style={{ paddingTop: 10 }}>
+                  <Button kind="tinted" wide icon="share" label={t('session.share')}
+                    onPress={() => { void Share.share({ message: `${session.title.en}\n${t('programme.day', { d: session.day })} · ${session.start}–${session.end} · ${session.room}\n${t(brand.descriptorKey)}` }).catch(() => undefined); }} />
+                </View>
               </Enter>
 
               {session.body.en ? (

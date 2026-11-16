@@ -1,4 +1,7 @@
 # COP32 Public-Information Platform — One-page overview (DRAFT leave-behind)
+
+> **Superseded 2026-11-16.** Use `docs/demo/one-pager.md` as the leave-behind: it describes the working application and the current positioning (D70, D74). This older page describes a proposal, a bilingual platform and iOS and web editions that do not exist yet. Kept for the record only; do not hand it out.
+
 *Independent proposal by Zega Tech PLC [(registration in progress)]. Not an official COP32, UNFCCC or Government product. [Date/version]*
 
 **The need.** COP32 (Addis Ababa, November 2027 — dates and venue to be confirmed by the host) is expected to draw tens of thousands of participants and a large global audience. Accredited delegates have official, gated systems. The public, residents, journalists and visitors need one trusted, bilingual, easy source for what is happening, how to take part, how to get around Addis Ababa and what the conference decided.
