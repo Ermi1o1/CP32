@@ -1,4 +1,4 @@
-# Phase Status (updated 2026-11-15)
+# Phase Status (updated 2026-11-16)
 ## Documentation phases (project brief)
 | Phase | Status | Key files |
 |---|---|---|
@@ -184,6 +184,10 @@ Screenshots: `docs/design/app-screens/v1.1-daylight/` (browser renders at 412 px
 | On a phone | **Not done for 0.6.0.** Three earlier rounds showed that browser renders predict neither layout faults nor the founder's judgement | — |
 
 Screenshots: `docs/design/app-screens/v1.2-soft/`.
+
+**Version 0.6.1 (2026-11-16) — finish only, no new features; built on the founder's instruction to continue, with no phone feedback on 0.6.0 yet.** A review of every screen not yet inspected in the v1.2 style found one inconsistency, now fixed: the "coming from official sources" lists in the guides used bare icons and capital-letter labels instead of the standard row. The header logo is now a small-size version of the mark (the seedling alone, on deep green): at 28 px the word on the leaf was illegible. The app icon and splash are unchanged. Same checks as 0.6.0, all passing; APK 25.2 MB; **not run on a device**.
+
+**Considered and deliberately not done without a phone:** Android touch ripples, a darkened band behind the status bar over photographs, and colouring the system navigation bar. Each is a native-only behaviour that a browser render cannot show, and a wrong guess (a square ripple on a round button, white status icons on a white page) would be worse than leaving them as they are. They are the first things to do once a phone is in the loop.
 
 **Three conditions before any demo to officials, none met today:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
 

@@ -11,7 +11,7 @@
  *  - every palette override must pass the contrast test in brand.test.ts.
  */
 import { tokens } from './tokens.generated';
-import { COP32_MARK_SVG, EXAMPLE_MARK_SVG } from './marks';
+import { COP32_MARK_SVG, COP32_MARK_SMALL_SVG, EXAMPLE_MARK_SVG } from './marks';
 
 export type ColorRole = keyof typeof tokens.color.light;
 export type Palette = Record<ColorRole, string>;
@@ -23,6 +23,8 @@ export interface Brand {
   /** One line under the name on Home and in About. Carries the independence statement. */
   descriptorKey: 'brand.descriptor' | 'brand.descriptorExample';
   markSvg: string;
+  /** Optional simplified mark for sizes of 40 px and below. */
+  markSmallSvg?: string;
   light: Partial<Palette>;
   dark: Partial<Palette>;
   /** True only for brands the host has approved in writing. None exist. */
@@ -35,6 +37,7 @@ export const BRANDS = {
     name: 'COP32',
     descriptorKey: 'brand.descriptor',
     markSvg: COP32_MARK_SVG,
+    markSmallSvg: COP32_MARK_SMALL_SVG,
     light: {},
     dark: {},
     official: false,

@@ -15,5 +15,6 @@ export function Icon({ name, size = 24, color = 'text', stroke = 1.75, fill }: {
 
 export function Mark({ size = 30 }: { size?: number }) {
   const { brand } = useTheme();
-  return <SvgXml xml={brand.markSvg} width={size} height={size} style={{ borderRadius: size * 0.22, overflow: 'hidden' }} />;
+  const xml = size <= 40 && 'markSmallSvg' in brand && brand.markSmallSvg ? brand.markSmallSvg : brand.markSvg;
+  return <SvgXml xml={xml} width={size} height={size} style={{ borderRadius: size * 0.22, overflow: 'hidden' }} />;
 }

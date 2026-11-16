@@ -3,7 +3,7 @@
     "name": "COP32",
     "slug": "cop32-guide",
     "description": "Independent visitor guide for the COP32 climate conference in Addis Ababa. Not an official COP32, UNFCCC or government app. Demonstration build with illustrative content.",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "scheme": "cop32guide",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -31,7 +31,7 @@
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.VIBRATE"
       ],
-      "versionCode": 6
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/favicon.png",

@@ -3,9 +3,8 @@ import { View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
-import { Icon } from '@/ui/Icon';
 import { Button, Banner, StateBlock } from '@/ui/controls';
-import { Group, SectionTitle } from '@/ui/lists';
+import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { GUIDES } from '@/data/guides';
@@ -32,13 +31,7 @@ export default function GuidePage() {
           </View>
           <SectionTitle>{t('guide.covers')}</SectionTitle>
           <Group>
-            {g.covers.map((x) => (
-              <View key={x} style={{ flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 14 }}>
-                <Icon name="clock" size={20} color="textTertiary" stroke={1.8} />
-                <Text variant="subhead" style={{ flex: 1 }}>{x}</Text>
-                <Text variant="label" upper color="textSecondary">{t('guide.pending')}</Text>
-              </View>
-            ))}
+            {g.covers.map((x) => <Row key={x} icon="clock" title={x} value={t('guide.pending')} />)}
           </Group>
           <Text variant="footnote" color="textTertiary">{t('guide.note')}</Text>
         </Page>
