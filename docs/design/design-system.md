@@ -276,4 +276,16 @@ Lucide outlines. In rows and quick actions they sit on a soft green disc. 1.8–
 From 130%: a row's trailing value moves under its title; status labels stack. From 150%: session rows stack time over title; quick actions go two to a row. The largest styles stop at 135%; labels under quick-action discs stop at 150%; tab labels do not scale (they are sized from the column so "Programme" fits a 320 px screen). All other text follows the full 200%.
 
 ### Rules
-Never set type on a photograph. Every control over a photograph has a solid backing. Ended sessions step back through colour roles that still pass AA, never opacity. No invented news, alerts, phone numbers or dates. English first; no cultural motifs (D74).
+Words on a photograph sit on a solid plate, never on the image itself (D78). Every control over a photograph has a solid backing. Ended sessions step back through colour roles that still pass AA, never opacity. No invented news, alerts, phone numbers or dates. English first; no cultural motifs (D74).
+
+
+## v1.3 — Home (D78, version 0.7.0)
+
+Tokens are unchanged from v1.2. Only Home changed.
+
+- **No hero photograph on Home.** Home opens with the standard header, like every other tab.
+- **Status card.** One deep-green panel (28 px corners): a small capital label, the "Saved offline" pill, the title, and one honest status line that links to Sources and status. In the dark theme the panel is the deep soft green, not the bright one. With the conference-day preview on it shows day, time and an amber progress bar.
+- **Featured carousel.** One card per screen width, 236 px tall (330 px from 150% text), 28 px corners, snapping, with page dots (the current dot is a short deep-green bar). The title sits on a solid deep-green plate inset 10 px from the photograph's edge, white text, with a 40 px amber disc carrying an arrow. This plate is the only place white text is used over an image.
+- **Order of sections:** status, search, highlights, quick actions, next sessions, explainers, essentials, independence line. Each section title may carry one link on the right ("Whole programme", "See all").
+- **Explainer tiles:** 208 px wide soft tiles, 24 px corners, an icon on a white disc, kind, title.
+- **Source of the structure:** the order of information on the COP31 host app's Home, from the founder's captures. Nothing of its artwork, colours or tile designs is used (D67).

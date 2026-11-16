@@ -1,22 +1,21 @@
 import React from 'react';
-import { View, ScrollView, useWindowDimensions } from 'react-native';
+import { View, ScrollView, useWindowDimensions, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
 import { useRouter, type Href } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import { AppHeader, GUTTER } from '@/ui/chrome';
+import { GUTTER } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { Icon, type IconName } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
 import { Button, Skeleton } from '@/ui/controls';
 import { Group, Row, SectionTitle } from '@/ui/lists';
-import { HorizonLine, Photo, SavedMark, SaveToggle, Tag, accessKey } from '@/ui/event';
+import { Photo, SavedMark, SaveToggle, SessionRow, Tag, accessKey } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT, type StringKey } from '@/i18n';
 import { useContent } from '@/data/useContent';
 import { useNow } from '@/data/useNow';
-import { FEATURED } from '@/data/guides';
-import { durationMin, minutesUntil, nextUp } from '@/data/time';
+import { FEATURED, UPDATES } from '@/data/guides';
+import { dayProgress, durationMin, minutesUntil, nextUp } from '@/data/time';
 import type { Session } from '@/data/types';
 
 /** One quick action: a large green disc with an icon, and a label under it. */
@@ -35,66 +34,127 @@ function Quick({ icon, label, onPress, width }: { icon: IconName; label: StringK
   );
 }
 
-function Highlight({ s, onPress }: { s: Session; onPress: () => void }) {
-  const { radius } = useTheme();
+/** Words on a photograph always sit on this solid deep-green plate, never on the image itself. */
+const PLATE = 'rgba(7, 46, 41, 0.92)';
+const ON_PLATE = '#FFFFFF';
+
+/** One featured session: a large rounded photograph with its title on a solid plate and a round arrow. */
+function Feature({ s, width, onPress }: { s: Session; width: number; onPress: () => void }) {
+  const { c, radius } = useTheme();
+  const { prefs } = usePrefs();
   const { t } = useT();
+  // With enlarged text the card grows so the title keeps three full lines.
+  const big = prefs.textScale >= 1.5;
+  const h = big ? 330 : 236;
   return (
-    <Tap onPress={onPress} minTarget={false} accessibilityLabel={`${t('programme.day', { d: s.day })}, ${s.start}. ${s.title.en}`} style={{ width: 264, gap: 10 }}>
-      <Photo name={THEME_PHOTO[s.theme]} height={168} radius={radius.lg} />
-      <View style={{ gap: 3, paddingHorizontal: 2 }}>
-        <Text variant="footnote" weight={600} color="primary">{`${t('programme.day', { d: s.day })} · ${s.start} · ${s.format}`}</Text>
-        <Text variant="headline" numberOfLines={2}>{s.title.en}</Text>
+    <Tap onPress={onPress} minTarget={false} accessibilityRole="link" accessibilityLabel={`${t('programme.day', { d: s.day })}, ${s.start}. ${s.title.en}`}
+      style={{ width, height: h, borderRadius: radius.lg, overflow: 'hidden', backgroundColor: c.surfaceAlt }}>
+      <Photo name={THEME_PHOTO[s.theme]} height={h} />
+      <View style={{ position: 'absolute', left: 10, right: 10, bottom: 10, borderRadius: 20, backgroundColor: PLATE, paddingVertical: 12, paddingLeft: 16, paddingRight: 12, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text variant="label" numberOfLines={1} style={{ color: ON_PLATE, letterSpacing: 0 }}>{`${t('programme.day', { d: s.day })} · ${s.start} · ${s.format}`}</Text>
+          <Text variant="headline" weight={700} numberOfLines={big ? 4 : 2} style={{ color: ON_PLATE }}>{s.title.en}</Text>
+        </View>
+        <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: c.accent, alignItems: 'center', justifyContent: 'center' }}>
+          <Icon name="arrow-right" size={20} color="onAccent" stroke={2.2} />
+        </View>
+      </View>
+    </Tap>
+  );
+}
+
+/** Page dots under the featured carousel. Decoration only: the cards themselves are the controls. */
+function Dots({ count, index }: { count: number; index: number }) {
+  const { c } = useTheme();
+  return (
+    <View accessible={false} importantForAccessibility="no-hide-descendants" aria-hidden style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, paddingTop: 12 }}>
+      {Array.from({ length: count }, (_, i) => (
+        <View key={i} style={{ width: i === index ? 20 : 6, height: 6, borderRadius: 3, backgroundColor: i === index ? c.primary : c.surfaceAlt }} />
+      ))}
+    </View>
+  );
+}
+
+/** One explainer in the horizontal row: a soft tile with an icon, its kind and its title. */
+function Explainer({ icon, kind, title, onPress }: { icon: IconName; kind: string; title: string; onPress: () => void }) {
+  const { c } = useTheme();
+  return (
+    <Tap onPress={onPress} minTarget={false} accessibilityRole="link" accessibilityLabel={`${kind}. ${title}`}
+      style={{ width: 208, minHeight: 148, borderRadius: 24, backgroundColor: c.surface, padding: 16, gap: 10 }}>
+      <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: c.bg, alignItems: 'center', justifyContent: 'center' }}>
+        <Icon name={icon} size={20} color="primary" stroke={1.9} />
+      </View>
+      <View style={{ gap: 2 }}>
+        <Text variant="label" color="textSecondary" style={{ letterSpacing: 0 }}>{kind}</Text>
+        <Text variant="headline" numberOfLines={3}>{title}</Text>
       </View>
     </Tap>
   );
 }
 
 /**
- * Home (v1.2, D76, D77). A general landing page built the way people expect a
- * finished app to open: a photograph, a clear title, a search field, four
- * quick actions, a row of highlights, and the essentials. No boxes, no rules.
+ * Home (v1.3, D76, D78). Opens on information, not on a photograph: one
+ * compact deep-green status card, search, a featured carousel, four quick
+ * actions, the next sessions, explainers and the essentials. The structure
+ * follows what the best host-country apps do; the look is our own (D67).
  * It is not tied to a day; the demonstration switch "Conference-day preview"
- * adds the next-session panel.
+ * turns the status card into a live day and adds the next-session panel.
  */
 export default function Home() {
-  const { c, layout, brand, radius } = useTheme();
+  const { c, layout, brand, radius, dark } = useTheme();
+  // In the dark theme the status card is a deep green surface, not a bright one.
+  const onCard = dark ? 'onPrimarySoft' : 'onInk';
   const { prefs } = usePrefs();
   const { t } = useT();
   const router = useRouter();
-  const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
+  const [page, setPage] = React.useState(0);
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
   const now = useNow(data?.event);
 
-  const heroH = Math.round(260 + insets.top);
   const enter = (delay: number) => (prefs.reduceMotion ? {} : { entering: FadeInDown.duration(240).delay(delay) });
   const Enter = prefs.reduceMotion ? View : Animated.View;
   const next = data && now ? nextUp(data.sessions.filter((s) => s.day === now.day), now) : undefined;
   const featured = data ? FEATURED.map((id) => data.sessions.find((s) => s.id === id)).filter((s): s is Session => !!s) : [];
+  // Before the event the list is simply the opening sessions; on a live day it is what comes after now.
+  const upcoming = data
+    ? (now ? data.sessions.filter((s) => s.day === now.day && s.start > now.time) : data.sessions.filter((s) => s.day === 1)).filter((s) => s.id !== next?.id).slice(0, 3)
+    : [];
   const inner = Math.min(width, layout.maxContentWidth) - GUTTER * 2;
   const quickCols = prefs.textScale >= 1.5 ? 2 : 4;
+  const step = inner + 12;
   const go = (href: Href) => () => router.push(href);
+  const onCarousel = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const i = Math.round(e.nativeEvent.contentOffset.x / step);
+    if (i !== page) setPage(Math.max(0, Math.min(featured.length - 1, i)));
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }} {...({ tabIndex: 0 } as object)}>
-        <View>
-          <Photo name="highland" height={heroH} hero />
-          <View style={{ position: 'absolute', left: 0, right: 0, top: 0 }}>
-            <AppHeader onPhoto />
-          </View>
-        </View>
-
         <View style={{ alignItems: 'center' }}>
           <View style={{ width: '100%', maxWidth: layout.maxContentWidth }}>
-            <HorizonLine left={now && data ? `${t('home.dayOf', { d: now.day, n: data.event.dayCount })} · ${now.time}` : t('home.kicker')} right={<SavedMark />} />
-
-            <View style={{ paddingHorizontal: GUTTER, paddingTop: 10, gap: 8 }}>
-              <Text variant="display" accessibilityRole="header">{t('home.title')}</Text>
-              <Text variant="body" color="textSecondary">{t('home.lead')}</Text>
+            <View style={{ marginHorizontal: GUTTER, marginTop: 8, backgroundColor: dark ? c.primarySoft : c.ink, borderRadius: radius.lg, padding: 20, gap: 8 }}>
+              <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
+                <Text variant="label" upper color={onCard} style={{ flexShrink: 1 }}>{now && data ? `${t('home.dayOf', { d: now.day, n: data.event.dayCount })} · ${now.time}` : t('home.kicker')}</Text>
+                <SavedMark compact />
+              </View>
+              <Text variant="displaySmall" color={onCard} accessibilityRole="header">{t('home.title')}</Text>
+              {now ? (
+                <View accessible={false} importantForAccessibility="no-hide-descendants" aria-hidden style={{ height: 6, borderRadius: 3, marginTop: 4, overflow: 'hidden', flexDirection: 'row' }}>
+                  <View style={{ flex: dayProgress(now.time), backgroundColor: c.accent, borderRadius: 3 }} />
+                  <View style={{ flex: 1 - dayProgress(now.time), marginLeft: 4, borderRadius: 3, backgroundColor: c[onCard], opacity: 0.28 }} />
+                </View>
+              ) : null}
+              <Tap onPress={go('/sources')} minTarget={false} accessibilityRole="link" accessibilityLabel={`${t('home.statusNote')} ${t('settings.sources')}`}
+                style={{ flexDirection: 'row', alignItems: 'center', gap: 8, minHeight: 44, marginBottom: -8 }}>
+                <Icon name="info" size={17} color={onCard} stroke={2} />
+                <Text variant="footnote" color={onCard} style={{ flex: 1 }}>{t('home.statusNote')}</Text>
+                <Icon name="chevron-right" size={18} color={onCard} stroke={2} />
+              </Tap>
             </View>
 
-            <Enter {...enter(40)} style={{ paddingHorizontal: GUTTER, paddingTop: 18 }}>
+            <Enter {...enter(40)} style={{ paddingHorizontal: GUTTER, paddingTop: 14 }}>
               <Tap onPress={go('/search')} minTarget={false} accessibilityRole="search" accessibilityLabel={t('search.placeholder')}
                 style={{ flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: c.surface, borderRadius: radius.pill, minHeight: 56, paddingHorizontal: 20 }}>
                 <Icon name="search" size={21} color="textSecondary" stroke={2} />
@@ -122,22 +182,39 @@ export default function Home() {
               </Enter>
             ) : null}
 
-            <Enter {...enter(100)} style={{ flexDirection: 'row', flexWrap: 'wrap', rowGap: 18, paddingHorizontal: GUTTER, paddingTop: 24 }}>
+            {!data ? (
+              <View style={{ padding: GUTTER, gap: 12 }}><Skeleton height={24} width="40%" /><Skeleton height={236} /></View>
+            ) : (
+              <>
+                <Enter {...enter(80)} style={{ paddingHorizontal: GUTTER, paddingTop: 6 }}>
+                  <SectionTitle action={t('home.all')} onAction={go('/programme')}>{t('home.highlights')}</SectionTitle>
+                </Enter>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} snapToInterval={step} decelerationRate="fast" onScroll={onCarousel} scrollEventThrottle={32}
+                  contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12 }} {...({ tabIndex: 0 } as object)}>
+                  {featured.map((s) => <Feature key={s.id} s={s} width={inner} onPress={go(`/session/${s.id}`)} />)}
+                </ScrollView>
+                <Dots count={featured.length} index={page} />
+
+            <Enter {...enter(120)} style={{ flexDirection: 'row', flexWrap: 'wrap', rowGap: 18, paddingHorizontal: GUTTER, paddingTop: 24 }}>
               <Quick width={inner / quickCols} icon="calendar" label="tab.programme" onPress={go('/programme')} />
               <Quick width={inner / quickCols} icon="map" label="tab.map" onPress={go('/map')} />
               <Quick width={inner / quickCols} icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
-              <Quick width={inner / quickCols} icon="luggage" label="home.plan" onPress={go('/visit')} />
+              <Quick width={inner / quickCols} icon="users" label="programme.speakers" onPress={go('/speakers')} />
             </Enter>
 
-            {!data ? (
-              <View style={{ padding: GUTTER, gap: 12 }}><Skeleton height={24} width="40%" /><Skeleton height={168} /></View>
-            ) : (
-              <>
-                <Enter {...enter(160)} style={{ paddingHorizontal: GUTTER, paddingTop: 10 }}>
-                  <SectionTitle action={t('home.all')} onAction={go('/programme')}>{t('home.highlights')}</SectionTitle>
-                </Enter>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 16, paddingTop: 12 }}>
-                  {featured.map((s) => <Highlight key={s.id} s={s} onPress={go(`/session/${s.id}`)} />)}
+
+                <View style={{ paddingHorizontal: GUTTER, paddingTop: 12 }}>
+                  <SectionTitle action={t('home.seeAll')} onAction={go('/programme')}>{t('home.upcoming')}</SectionTitle>
+                  <View style={{ paddingTop: 4 }}>
+                    {upcoming.map((s, i) => <SessionRow key={s.id} session={s} now={now} index={i} showDay={!now} onPress={go(`/session/${s.id}`)} />)}
+                  </View>
+                </View>
+
+                <View style={{ paddingHorizontal: GUTTER, paddingTop: 6 }}>
+                  <SectionTitle action={t('home.seeAll')} onAction={go('/updates')}>{t('home.explainers')}</SectionTitle>
+                </View>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12 }} {...({ tabIndex: 0 } as object)}>
+                  {UPDATES.filter((u) => u.kind === 'Explainer').map((u) => <Explainer key={u.id} icon={u.icon as IconName} kind={u.kind} title={u.title} onPress={go('/updates')} />)}
                 </ScrollView>
 
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 10 }}>
@@ -145,8 +222,8 @@ export default function Home() {
                   <View style={{ paddingTop: 6 }}>
                     <Group>
                       <Row icon="ticket" title={t('home.canAttend')} subtitle={t('home.canAttendSub')} onPress={go('/guide/attend')} />
+                      <Row icon="luggage" title={t('home.plan')} subtitle={t('home.planSub')} onPress={go('/visit')} />
                       <Row icon="siren" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={go('/guide/emergency')} />
-                      <Row icon="list-checks" title={t('settings.sources')} subtitle={t('settings.sourcesSub')} onPress={go('/sources')} />
                     </Group>
                   </View>
                   {/* The permanent independence line (D66, D65a): always on Home. */}
