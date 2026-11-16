@@ -1,5 +1,5 @@
 # ADR-006 — Mobile framework: decision deferred
-Status: **No decision (open)** · Date: 2026-10-03 · Decision log: — · Evidence basis: sandbox/desk, **not** real devices or providers
+Status: **Superseded by ADR-007 (2026-11-14, D64)** — was: No decision (open) · Date: 2026-10-03 · Decision log: — · Evidence basis: sandbox/desk, **not** real devices or providers
 
 ## Context
 Flutter or React Native (S1)?
@@ -23,3 +23,6 @@ Only web builds could run: both rendered the Amharic test set correctly with a b
 
 ## Revisit when
 Real-device or real-provider results for the spike arrive, or the assumptions above change.
+
+## Superseded 2026-11-14
+The founder decided the framework without waiting for the real-device test (D64). See ADR-007. The statements above that Phase 22 is blocked on that test no longer apply; the test itself is still owed and is listed in ADR-007.

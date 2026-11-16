@@ -1,5 +1,7 @@
 # Letter 1 — COP32 Presidency Secretariat Office (DRAFT)
 
+> **Revised 2026-11-16** against D68 (an official COP32 website and channels exist), D70 (a host-country guide offered for adoption) and D74 (English first). Still a draft: nothing has been sent, and every name, title and address must be checked on the day of sending.
+
 [Letterhead: Zega Tech PLC — or founder's name until registration completes]
 [Date]
 Ref: [reference]
@@ -9,33 +11,33 @@ COP32 Presidency Secretariat Office
 Federal Democratic Republic of Ethiopia
 [Address — VERIFY]
 
-**Subject: Proposal for an independent public-information platform for COP32 and request for a meeting and structured event data**
+**Subject: A working host-country visitor guide for COP32, offered for your consideration — request for a meeting**
 
 Dear Dr [Name],
 
-I write on behalf of Zega Tech PLC [(registration in progress)], an Ethiopian technology company, to introduce a proposal that may help Ethiopia welcome and inform the many visitors, journalists, residents and remote followers of COP32.
+I write on behalf of Zega Tech PLC [(registration in progress)], an Ethiopian technology company, to show you something we have built: a working visitor guide for COP32, for the visitors, journalists, residents and remote followers who are not served by the delegate systems. We have seen the official COP32 website and channels, and we write so that our work supports yours and does not duplicate it.
 
-**1. What we propose**
-A bilingual (English and Amharic) public-information platform — Android, iOS and web — that gives visitors and the public one trusted place for: the programme and side events open to the public, maps and directions, practical guidance for visiting Addis Ababa (arrival, transport, accommodation, safety, culture), news and plain-language explainers on COP32, and an archive of outcomes after the conference. Booking and official processes (for example the e-visa) would be handled by linking to the official portals and designated providers; the platform would not process payments or applications.
+**1. What we have built**
+A working Android application (a demonstration build, with example content) that gives visitors and the public one place for: the programme and side events open to the public, maps and directions, practical guidance for visiting Addis Ababa (arrival, transport, accommodation, safety, culture), news and plain-language explainers on COP32, and, after the conference, its outcomes. It works fully without a connection, needs no account and collects no personal data. It is in English; the structure for Amharic is in place and a proper Amharic edition would be produced with native-speaking editors. Booking and official processes (for example the e-visa) would be handled by linking to the official portals and designated providers; the platform would not process payments or applications.
 
 **2. How it fits with official platforms**
-We understand that UNFCCC provides its own platform for accredited participants and that the host may provide its own services. Our platform does not replicate delegate negotiation tools. It aims to serve those who are not served by gated systems: the public, Ethiopian residents, journalists and visitors. Until and unless the Secretariat decides otherwise, the platform is independent and unofficial, and it will say so clearly. We would welcome your guidance on whether and how it could be recognised, linked from official channels, or adopted as a host-country information layer.
+We understand that UNFCCC provides its own platform for accredited participants and that the host may provide its own services. Our platform does not replicate delegate negotiation tools. It aims to serve those who are not served by gated systems: the public, Ethiopian residents, journalists and visitors. Until and unless the Secretariat decides otherwise in writing, the guide is independent and unofficial, and it says so on its first screen. It uses no government, UN or COP32 emblem. We offer it to the host for adoption. If a team or a supplier is already preparing a host-country application, we are not a competing bid: we would be glad to share what we have built as a working reference, and to contribute where that is useful.
 
 **3. Principles**
 - Public-interest purpose; the intended owner of the platform is the Government of Ethiopia [DECISION: confirm wording]. 
 - Privacy by design: no account needed, minimal permissions, personal data stored in Ethiopia, aligned with Proclamation No. 1321/2024.
 - Accuracy: official information is labelled by source and linked; nothing is published as official without authorisation.
-- Accessibility and local language from day one.
+- Accessibility from day one; local-language editions prepared with native-speaking editors.
 - Open, portable technology so that the platform can be handed over and operated by the owner.
 
 **4. What we ask**
-(a) A meeting (30–45 minutes) with the Secretariat or the office you designate, to present a short demonstration (sample data) and to hear your requirements.
-(b) Guidance on the proper office and process for a proposal of this kind, and on any plans for an official host-country application, so that we avoid duplication.
+(a) A meeting (30–45 minutes) with the Secretariat or the office you designate, to show the application on a phone (example content) and to hear your requirements.
+(b) Guidance on which office is responsible for COP32 digital services, and on any plans for an official host-country application, so that we avoid duplication.
 (c) Access to structured, public-facing event information when it is ready to be shared (see Annex A: programme, side events, speakers, venues, accessibility information, official links, and alerts channel). We will use it only as you authorise, with source labels, and we are able to work from simple spreadsheets.
 (d) Permission to link to — and, where you allow, embed — official streams and documents.
 
 **5. What we offer**
-- A working demonstration and a pilot in mid-2027 using public information, so that the platform is tested before the conference. [DECISION: "at no cost to the Government" / "terms to be discussed".]
+- The working application as it stands today, and a pilot in mid-2027 using public information, so that it is tested before the conference. [DECISION: "at no cost to the Government" / "terms to be discussed".]
 - A technical and privacy approach designed for government ownership, including documentation and handover.
 - A named contact and a commitment to respond to corrections and takedown requests promptly.
 

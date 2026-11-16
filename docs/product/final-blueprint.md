@@ -1,5 +1,7 @@
 # COP32 Public Platform — Final Product Blueprint (v1.0 draft, 2026-10-03)
 
+**Read this first (2026-11-16):** this blueprint is the October 2026 baseline and has **not** been re-baselined. Since then: an official COP32 digital workstream was found (D68); the positioning became "host-country guide offered for adoption" (D70, amending D1); the mobile framework was decided as Expo + React Native (D64) and a working Android app exists (version 0.9.0); the visual direction is "Daylight" in its raised-block form (D73, D75, D77–D79); the app is English-first (D74). Section 1 below still says "bilingual" and "equal priority Android and iOS"; today there is an English Android app only. Where this file disagrees with `docs/decisions/log.md` or `docs/roadmap/phase-status.md`, those win. A re-baseline is owed at gate G1.
+
 **Status:** APPROVED v1.0 (2026-10-03). Consolidation of Phases 0–19. Decisions D1–D42 are approved (see `docs/decisions/log.md`); this blueprint adds only **D43** (adopt this blueprint as the baseline). Every statement points to the file that holds the detail; if this file and a source file disagree, the source file and the decision log win.
 **Evidence labels:** **A** confirmed · **B** officially announced · **C** reported, unconfirmed · **D** analysis · **E** assumption · **F** needs verification.
 **Scope rule kept throughout:** team capacity is not assumed or discussed (founder instruction); functions are listed, not people.
@@ -61,7 +63,7 @@ Sources: `research/benchmark-findings.md`, `research/gap-analysis.md` (desk rese
 ## 7. Product differentiation
 1. **Public/host layer** the official delegate platform will not serve (complementary, not competing; D1).
 2. **Addis city companion** with link-outs (D14) — accommodation, transport, safety, visa, local culture.
-3. **Amharic-first quality** — correct rendering, search and (later) audio; no benchmark documents it.
+3. **Amharic-first quality** — correct rendering, search and (later) audio; no benchmark documents it. **[Overtaken on 2026-11-14 by D74: the native app is English-first and the Amharic edition is deferred to native-speaking editors. Not a current differentiator.]**
 4. **Remote follower experience** across time zones with plain-language explainers and daily digest.
 5. **Trust and transparency by design** — minimal permissions, optional accounts, delete-my-data, published privacy/accessibility statements, verified-source labels.
 6. **Safety-alert relay** with dual approval and CAP-aligned fields (D30) — only if the host agrees authorisers; otherwise disabled.

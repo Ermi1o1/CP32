@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "COP32",
+    "slug": "cop32-guide",
+    "description": "Independent visitor guide for the COP32 climate conference in Addis Ababa. Not an official COP32, UNFCCC or government app. Demonstration build with illustrative content.",
+    "version": "1.0.0",
+    "scheme": "cop32guide",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D474C"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zegatech.cop32guide"
+    },
+    "android": {
+      "package": "com.zegatech.cop32guide",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B4247",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [],
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE",
+        "android.permission.INTERNET"
+      ],
+      "versionCode": 11
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#0D474C",
+          "imageWidth": 160
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "useLegacyPackaging": true,
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "buildArchs": [
+              "arm64-v8a",
+              "armeabi-v7a"
+            ]
+          }
+        }
+      ],
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

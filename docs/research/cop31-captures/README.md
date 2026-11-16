@@ -19,7 +19,7 @@ out and this material cannot be reproduced.
 - **Not done, and not to be done:** no decompiling, no APK extraction, no asset
   or code extraction, no network interception, no scraping. Nothing about the
   app's internals, backend, data model or APIs is observable from this material
-  and none of it may be inferred as fact. See D66.
+  and none of it may be inferred as fact. See D67.
 
 ## Usage restrictions
 
@@ -33,7 +33,7 @@ out and this material cannot be reproduced.
   to the public CDN by `netlify.toml` (D60/D61). `docs/` is not published, which
   is why they live here.
 - Our own app must not copy their marks, illustrations, mascot or layouts. The
-  teardown informs what we build; it is not a template to trace (D64, D66).
+  teardown informs what we build; it is not a template to trace (D65, D67).
 
 ## Contents
 
