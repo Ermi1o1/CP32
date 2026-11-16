@@ -26,7 +26,8 @@
 #
 # WHY the ignore command:
 # Netlify skips the build when this command exits 0. It exits 0 only when
-# nothing outside docs/, deliverables/ and spikes/ changed since the LAST
+# nothing outside docs/, deliverables/, spikes/ and app/ (the native app, which
+# Netlify does not publish) changed since the LAST
 # DEPLOYED commit ($CACHED_COMMIT_REF), so the daily intel commits and doc-only
 # pushes never use build minutes. It compares against the last deploy, not
 # HEAD^, so a push that holds a prototype change plus a later docs-only commit
@@ -36,4 +37,4 @@
 [build]
   publish = "prototype"
   command = "python3 prototype/release.py --check && rm -f prototype/README.md prototype/build.py prototype/release.py"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!docs' ':!deliverables' ':!spikes'"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!docs' ':!deliverables' ':!spikes' ':!app'"

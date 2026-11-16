@@ -10,7 +10,7 @@ import * as Haptics from 'expo-haptics';
  * it. "Confirm" exists from Android 11; on older phones nothing happens.
  * Never throws; does nothing on the web.
  */
-export function tick(kind: 'confirm' | 'undo'): void {
+export function tick(kind: 'confirm' | 'undo' | 'select'): void {
   if (Platform.OS === 'web') return;
   const run =
     Platform.OS === 'android'

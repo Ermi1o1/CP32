@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
+import { Tap } from '@/ui/Pressable';
 import { FilterTabs, StateBlock } from '@/ui/controls';
 import { Group, Row } from '@/ui/lists';
 import { Photo, SavedMark } from '@/ui/event';
@@ -41,7 +42,7 @@ export default function Updates() {
             <Row icon="circle-help" title={t('glossary.title')} subtitle={t('glossary.count', { n: GLOSSARY.length })} onPress={() => router.push('/glossary')} />
           </Group>
           {UPDATES.map((u) => (
-            <View key={u.id} accessible style={{ flexDirection: 'row', gap: 14, padding: 12, marginTop: 12, backgroundColor: c.surface, borderRadius: 24, ...lift(dark) }}>
+            <Tap key={u.id} onPress={() => router.push(`/explainer/${u.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${u.kind}. ${u.title}. ${u.summary}`} style={{ flexDirection: 'row', gap: 14, padding: 12, marginTop: 12, backgroundColor: c.surface, borderRadius: 24, ...lift(dark) }}>
               <View style={{ width: 84, borderRadius: 16, overflow: 'hidden', alignSelf: 'flex-start' }}>
                 <Photo name={UPDATE_PHOTO[u.id] ?? 'highland'} height={84} />
               </View>
@@ -50,7 +51,7 @@ export default function Updates() {
                 <Text variant="headline">{u.title}</Text>
                 <Text variant="footnote" color="textSecondary">{u.summary}</Text>
               </View>
-            </View>
+            </Tap>
           ))}
         </View>
       )}

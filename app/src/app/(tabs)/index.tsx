@@ -15,6 +15,7 @@ import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT, type StringKey } from '@/i18n';
 import { useContent } from '@/data/useContent';
 import { useNow } from '@/data/useNow';
+import { useAgenda } from '@/state/agenda';
 import { FEATURED, UPDATES } from '@/data/guides';
 import { dayProgress, durationMin, minutesUntil, nextUp } from '@/data/time';
 import type { Session } from '@/data/types';
@@ -116,6 +117,7 @@ export default function Home() {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const [page, setPage] = React.useState(0);
+  const { saved } = useAgenda();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
   const now = useNow(data?.event);
 
@@ -211,6 +213,15 @@ export default function Home() {
                 </ScrollView>
 
 
+                {saved.size > 0 ? (
+                  // Appears once something is saved: the visitor's own agenda, one tap away.
+                  <View style={{ paddingHorizontal: GUTTER, paddingTop: 4 }}>
+                    <Group>
+                      <Row icon="bookmark" title={t('home.yourAgenda')} subtitle={t('home.savedCount', { n: saved.size })} onPress={go('/agenda')} />
+                    </Group>
+                  </View>
+                ) : null}
+
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 12 }}>
                   <SectionTitle action={t('home.seeAll')} onAction={go('/programme')}>{t('home.upcoming')}</SectionTitle>
                   <View style={{ paddingTop: 4 }}>
@@ -222,7 +233,7 @@ export default function Home() {
                   <SectionTitle action={t('home.seeAll')} onAction={go('/updates')}>{t('home.explainers')}</SectionTitle>
                 </View>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12, paddingBottom: 16 }} {...({ tabIndex: 0 } as object)}>
-                  {UPDATES.filter((u) => u.kind === 'Explainer').map((u) => <Explainer key={u.id} id={u.id} kind={u.kind} title={u.title} onPress={go('/updates')} />)}
+                  {UPDATES.map((u) => <Explainer key={u.id} id={u.id} kind={u.kind} title={u.title} onPress={go(`/explainer/${u.id}`)} />)}
                 </ScrollView>
 
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 10 }}>

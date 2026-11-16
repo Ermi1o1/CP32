@@ -2,6 +2,7 @@ import React from 'react';
 import { View, ScrollView } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Text } from '@/ui/Text';
+import { Group } from '@/ui/lists';
 import { Icon, Mark, type IconName } from '@/ui/Icon';
 import { Button } from '@/ui/controls';
 import { Photo, HorizonLine, SavedMark } from '@/ui/event';
@@ -51,9 +52,11 @@ export default function Welcome() {
           <Text variant="display" accessibilityRole="header" style={{ marginTop: 10 }}>{t('welcome.title')}</Text>
           <Text variant="body" color="textSecondary" style={{ marginTop: 6 }}>{t('welcome.lead')}</Text>
           <View style={{ height: 10 }} />
-          <Point icon="shield" title="welcome.p1Title" body="welcome.p1" />
-          <Point icon="info" title="welcome.p2Title" body="welcome.p2" />
-          <Point icon="wifi-off" title="welcome.p3Title" body="welcome.p3" />
+          <Group>
+            <Point icon="shield" title="welcome.p1Title" body="welcome.p1" />
+            <Point icon="info" title="welcome.p2Title" body="welcome.p2" />
+            <Point icon="wifi-off" title="welcome.p3Title" body="welcome.p3" />
+          </Group>
           <View style={{ flexGrow: 1, minHeight: 20 }} />
           <Button kind="dark" wide label={t('common.continue')} onPress={() => setPrefs({ welcomed: true })} />
         </View>

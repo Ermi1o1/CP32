@@ -32,7 +32,7 @@ function buildIndex(): Doc[] {
   for (const p of SPEAKERS) docs.push({ kind: 'person', id: p.id, title: p.name, sub: `${p.role} · ${p.org}`, href: `/speaker/${p.id}`, strong: fold(p.name), weak: fold(`${p.org} ${p.role}`) });
   for (const p of PLACES) docs.push({ kind: 'place', id: p.id, title: p.name, sub: p.note, href: '/map', strong: fold(`${p.name} ${p.rooms.join(' ')}`), weak: fold(p.note) });
   for (const g of GUIDES) docs.push({ kind: 'guide', id: g.id, title: g.title, sub: g.summary, href: `/guide/${g.id}`, strong: fold(g.title), weak: fold(`${g.summary} ${g.body.join(' ')} ${g.covers.join(' ')}`) });
-  for (const u of UPDATES) docs.push({ kind: 'guide', id: u.id, title: u.title, sub: u.summary, href: '/updates', strong: fold(u.title), weak: fold(u.summary) });
+  for (const u of UPDATES) docs.push({ kind: 'guide', id: u.id, title: u.title, sub: u.summary, href: `/explainer/${u.id}`, strong: fold(u.title), weak: fold(u.summary) });
   for (const e of EXHIBITORS) docs.push({ kind: 'exhibitor', id: e.id, title: e.name, sub: `${e.kind} · stand ${e.stand}`, href: `/exhibitor/${e.id}`, strong: fold(e.name), weak: fold(`${e.about} ${e.kind} ${e.theme} ${e.stand}`) });
   for (const t of GLOSSARY) docs.push({ kind: 'term', id: t.term, title: t.term, sub: t.def, href: '/glossary', strong: fold(t.term), weak: fold(t.def) });
   return docs;

@@ -12,7 +12,7 @@ import { Text } from '@/ui/Text';
 import { Icon } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
 import { Button, Skeleton, StateBlock } from '@/ui/controls';
-import { HorizonLine, Photo, SavedMark, SaveToggle, Tag, accessKey } from '@/ui/event';
+import { HorizonLine, Photo, SavedMark, SaveToggle, SessionRow, Tag, accessKey } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
@@ -36,7 +36,8 @@ export default function SessionPage() {
   const data = useContent(async (r) => {
     const [event, session] = await Promise.all([r.getEvent(), r.getSession(String(id))]);
     const speakers = session ? await r.getSpeakers(session.speakerIds) : [];
-    return { event, session, speakers };
+    const related = session ? (await r.listSessions()).filter((x) => x.theme === session.theme && x.id !== session.id).slice(0, 2) : [];
+    return { event, session, speakers, related };
   }, [id]);
 
   const now = useNow(data?.event);
@@ -142,6 +143,15 @@ export default function SessionPage() {
                 </Enter>
               ) : null}
             </View>
+
+            {data.related.length ? (
+              <View style={{ paddingHorizontal: 20 }}>
+                <SectionTitle>{t('session.related')}</SectionTitle>
+                <View style={{ paddingTop: 6 }}>
+                  {data.related.map((x, i) => <SessionRow key={x.id} session={x} now={now} index={i} showDay onPress={() => router.push(`/session/${x.id}`)} />)}
+                </View>
+              </View>
+            ) : null}
 
             <Text variant="footnote" color="textTertiary" style={{ paddingHorizontal: 20, paddingTop: 20 }}>{t('session.illustrative')}</Text>
           </View>

@@ -29,6 +29,7 @@ await shot('07-updates',{prefs:P({}),route:'/updates',w:W,h:1000});
 await shot('08-guide',{prefs:P({}),route:'/guide/around',w:W,h:1000});
 await shot('09-guide-emergency',{prefs:P({}),route:'/guide/emergency',w:W,h:1000});
 await shot('10-settings',{prefs:P({}),route:'/settings',w:W,h:1500});
+await shot('46-explainer',{prefs:P({}),route:'/explainer/u3',w:W,h:1500});
 await shot('11-home-live',{prefs:P({livePreview:true}),w:W,h:2200});
 await shot('12-programme-live',{prefs:P({livePreview:true}),route:'/programme',w:W,h:1000});
 await shot('13-home-dark',{prefs:P({mode:'dark'}),w:W,h:2000});

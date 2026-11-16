@@ -10,6 +10,7 @@ import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import type { ColorRole } from '@/theme/brand';
 import { lift } from './lift';
+import { tick } from './haptic';
 
 /** Page margin used by every screen. */
 export const GUTTER = 20;
@@ -166,7 +167,7 @@ export function TabBar({ items }: { items: TabItem[] }) {
         <Animated.View style={[{ position: 'absolute', left: 0, top: -16, width: DISC, height: DISC, borderRadius: DISC / 2, backgroundColor: c.ink, ...lift(dark, 2) }, disc]} />
         <View accessibilityRole="tablist" style={{ flexDirection: 'row', height: BAR_H }}>
           {items.map((it) => (
-            <Tap key={it.key} onPress={it.onPress} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
+            <Tap key={it.key} onPress={() => { if (!it.focused) tick('select'); it.onPress(); }} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
               style={{ width: col, height: BAR_H, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 9 }}>
               <TabIcon icon={it.icon} focused={it.focused} still={still} />
               <Text variant="caption" weight={it.focused ? 700 : 500} color={it.focused ? 'primary' : 'textSecondary'} numberOfLines={1} allowFontScaling={false} style={{ fontSize: size, lineHeight: Math.round(size * 1.3), width: col - 2, textAlign: 'center' }}>{it.label}</Text>

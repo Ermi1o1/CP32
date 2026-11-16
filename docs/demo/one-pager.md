@@ -1,6 +1,6 @@
-# COP32 guide — one page (draft 2)
+# COP32 guide — one page (draft 3)
 
-**Draft for the founder, 2026-11-15; re-checked 2026-11-16.** Every statement here is true of the app at version 0.9.0. Figures marked ★ must be re-checked on a real phone before this page is given to anyone. Nothing here may be read as a claim of official status.
+**Draft for the founder, 2026-11-15; re-checked 2026-11-16.** Every statement here is true of the app at version 1.0.0. Figures marked ★ must be re-checked on a real phone before this page is given to anyone. Nothing here may be read as a claim of official status.
 
 ---
 
@@ -17,7 +17,7 @@ Recent conferences have each had a host-country app beside the UN's delegate pla
 | | |
 |---|---|
 | **Works without a connection** | The whole programme, the map, the guides and search are stored on the phone at install. Around a crowded venue the network fails first; this does not depend on it. |
-| **Private by design** | No account. Saved sessions never leave the phone. No advertising and no tracking software. It asks for no access to location, contacts, camera, microphone or storage. ★ |
+| **Private by design** | No account. Saved sessions never leave the phone. No advertising and no tracking software. It asks for no access to location, contacts, camera, microphone or storage, and this build does not hold the permission to use the network at all. ★ |
 | **Small** | About 25 MB to install ★ — a fraction of a typical event app — so it suits modest phones and expensive mobile data. |
 | **Honest** | Where a fact is not confirmed it says "to be confirmed". No AI assistant that may be wrong; no invented news, numbers or dates. A "Sources and status" page lists what is reported, what is illustrative and what is unknown. |
 | **Accessible** | Light and dark themes, text up to 200%, large touch targets, colour contrast checked against WCAG 2.2 AA on every build. |

@@ -24,7 +24,7 @@
 | 19 Project team | Done — D40–D42 approved 2026-10-03 | roadmap/team-requirements.md |
 | 20 Final product blueprint | Done — D43 approved 2026-10-03 | product/final-blueprint.md |
 | 21 Stage 2 execution: IA heuristic validation, spikes, design system, clickable prototype, ADRs, dossier | **Done 2026-10-03 on heuristic/sandbox basis — real validation still pending** (D44–D52). Its S1 outcome ("no framework decision") is superseded by D64 | roadmap/stage2-execution-prompt.md; ux/ia-validation-results/; architecture/spike-results/, architecture/adr/; design/; prototype/; deliverables/COP32-Platform-Proposal-v1.docx |
-| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14 and installed by the founder; judged visually dated; version 0.2.0 rejected on the founder's phone; versions 0.3.0–0.6.1 each corrected after phone reviews; build work closed at version 0.9.0 on 2026-11-16 as far as a cloud session can take it; versions 0.8.0 and 0.9.0 await the founder's phone review; the device column of the quality gates is still empty** (D64–D79) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
+| 22 Native build (Expo + React Native, Android APK first) | **In progress — build step 1 of 8 (app shell) done 2026-11-14 and installed by the founder; judged visually dated; version 0.2.0 rejected on the founder's phone; versions 0.3.0–0.6.1 each corrected after phone reviews; final demonstration build is version 1.0.0 (2026-11-16); version 0.9.0 was reviewed and confirmed by the founder on a phone; 1.0.0 itself not yet seen on a phone** (D64–D80) | roadmap/phase22-execution-prompt.md, phase22-execution-plan.md; research/cop31-app-teardown.md; architecture/adr/ADR-007 |
 
 ## Track D v2 — visual redesign (2026-10-03)
 **Done.** Direction "Highland Mist" chosen after four founder review rounds (D53; `docs/design/redesign-directions/`). Design system v0.2 + `tokens.json` updated; plan in `docs/design/redesign-plan.md`; every prototype screen rebuilt (5 batches); screenshots refreshed in `docs/design/prototype-screens/` (20). Checks: tokens 64/64 AA, axe-core 0 violations (16 screens × light/dark), 200% reflow without horizontal scroll, EN/AM and light/dark parity, tree-test T1–T12 all resolve. Private phone-viewable copy: https://claude.ai/artifact/X4MMCwgpeHVfpBCpLDh3wh (entry page `prototype/artifact-entry.html`). The GitHub Pages redeploy runs once this branch is merged to `main`.
@@ -206,28 +206,36 @@ Screenshots: `docs/design/app-screens/v1.2-soft/`.
 | No outside requests | None in any render | Not checked with a network monitor on a phone |
 | Offline | Works with the network cut in the browser render | **Airplane-mode cold start not done** |
 | Cold start, animation smoothness, shadows, haptics | Cannot be measured here | **Not done** |
-| Founder's review on one phone | — | Versions 0.2.0, 0.5.0, 0.6.1 and 0.7.0 reviewed from screenshots; **0.8.0 and 0.9.0 not yet seen** |
+| Founder's review on one phone | — | Versions 0.2.0, 0.5.0, 0.6.1 and 0.7.0 reviewed from screenshots; **0.9.0 reviewed from screenshots and a recording and confirmed (2026-11-16)**; 1.0.0 not yet seen |
 
 ### What Phase 22 did not build, and why
 | Item | Why not |
 |---|---|
 | Real offline city map | Needs a native map component and a map file for Addis; it cannot be rendered or checked in a browser at all, and it is the item most likely to break the size budget. To be done as its own measured step with a phone in the loop. The schematic venue plan stands in. |
-| Session reminders and push alerts | Need the notification permission and a native module that can only be verified on a phone; alerts also need an authorised source (one of the three asks). |
-| Calendar export | Needs a native calendar or file-sharing module; same reason. "Share this session" covers part of the need. |
+| Session reminders and calendar export | Sessions have no confirmed dates (D66), so there is nothing true to schedule or export. "Share this session" and My agenda cover the need until dates exist. |
+| Push alerts | Need an authorised source (one of the three asks), the notification permission and network access. |
 | Shared-element transition (card to session page) | Experimental in the current framework; a wrong guess shows as a visible glitch on a phone. |
 | Android touch ripples, status-bar and navigation-bar tuning | Native-only; first things to do once phone screenshots or a recording of 0.9.0 arrive. |
-| Post-event Home, "Ask" view, link-out interstitial, map quick-access row | Not started. Search already does retrieval across all content; the others wait for real content. |
+| Post-event Home, "Ask" view, link-out interstitial | Not started (the map quick-access row was built in 1.0.0). Search already does retrieval across all content; the others wait for real content. |
 | iOS and web editions; the Amharic edition | Out of this phase (D64 Android first; D74). |
+
+**Version 1.0.0 (2026-11-16) — the final demonstration build (D80).** The founder reviewed 0.9.0 on a phone (five screenshots and an 83-second screen recording) and confirmed it. **What the recording shows on a real phone:** the tab disc slides and stretches between tabs and is a true circle; every tab label is whole; the white blocks draw their shadows; the featured carousel snaps and its dots follow; Home, Programme, a session page, Map, Visit and Updates all open and scroll; saving a session shows on Home and Programme. That is the first real-device evidence for the v1.4 look. It was one phone, in the light theme, in English.
+
+Then, on the founder's instruction ("do your recommendations for unanswered, forget the three conditions and polish everything and add your suggestions and finish everything in one pass"): the package name stays; the **network permission is removed** (the app cannot open a connection); `app/` is added to the Netlify skip rule; the three pre-demo conditions are set aside as gates and kept as risks. Added: an explainer page for each of the five pieces (tappable from Home and Updates, found by search); "Find quickly" on the Map (food and coffee, badges and help, meeting point, step-free entrance); a "Your agenda" row on Home once something is saved; "More on this theme" on session pages; a light tick when changing tab; the Welcome points in one block; the Registration row no longer shows a coffee cup. Checks: typecheck and lint clean, 117 tests pass (the content guard caught years and money figures in the first draft of the explainers; they were reworded, the guard was not loosened), 46 renders with no errors, no outside requests, no overflow, axe-core 112 runs with 0 violations, tree test 12/12. **Version 1.0.0 itself has not been seen on a phone**, and removing the network permission is the one change in it that cannot be checked in a browser. Screenshots: `docs/design/app-screens/v1.5-final/`.
+
+**What "final" means here:** final for the demonstration. Example content with invented names; Amharic unreviewed; signed with a test key (a store release needs the founder's own signing key — see the runbook); no security audit; no store listing; Android only.
+
+**Not built, with the reason:** reminders and calendar export cannot be built honestly while sessions have no confirmed dates (D66) — there is nothing true to put in a calendar. Real offline city map, push alerts and the card-to-page transition remain as listed in the table below.
 
 **Considered and deliberately not done without a phone:** Android touch ripples, a darkened band behind the status bar over photographs, and colouring the system navigation bar. Each is a native-only behaviour that a browser render cannot show, and a wrong guess (a square ripple on a round button, white status icons on a white page) would be worse than leaving them as they are. They are the first things to do once a phone is in the loop.
 
-**Three conditions before any demo to officials, none met today:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
+**Three conditions earlier placed before any demo to officials — set aside as gates by the founder on 2026-11-16 (D80), kept here as risks; none is met:** the phone checklist passed on the demo phone; the owner of COP32 digital delivery identified and the procurement portal checked; contributor IP assignments signed.
 
 **Not built:** see the table "What Phase 22 did not build, and why" above.
 
 **Carry-over from D74:** the demo script, one-pager, teardown "how we win" list and blueprint should no longer present Amharic as a lead selling point; none of those documents has been edited yet.
 
-**Still open from build step 1:** the phone checklist (`docs/operations/device-checklist.md`) has not been reported back; package name; whether the demo build drops network access; the Netlify exclusion before any merge.
+**Closed by D80 (2026-11-16):** package name kept; the build drops network access; the Netlify exclusion is in `netlify.toml` on the branch. Still open: the written phone checklist (`docs/operations/device-checklist.md`) has not been run in full.
 
 ## Where the project stands in practice
 - Phase 21 is complete on a heuristic/sandbox basis (see table). Real card sort/tree test, real-device spikes (S1, S6), provider outreach (S5), native-speaker Amharic review and user testing remain open.
@@ -238,9 +246,9 @@ Screenshots: `docs/design/app-screens/v1.2-soft/`.
 ## Decisions awaiting approval
 D44–D52 recorded in the log with qualified status (heuristic/sandbox basis; provisional). Founder to confirm or amend.
 ## Next session should read first
-**State on 2026-11-16:** Phase 22's build is closed at version 0.9.0 on branch `phase-22-design-v2` (not merged; `main` untouched). The next step is not more building: it is the founder's phone review of 0.9.0 and the three conditions before any demo.
+**State on 2026-11-16:** the final demonstration build is version 1.0.0 on branch `phase-22-design-v2` (not merged; `main` untouched). The founder confirmed 0.9.0 on a phone and set aside the three pre-demo conditions (D80). Next: install 1.0.0 once to confirm it starts with the network permission removed; then the demo.
 
-Read, in order: `docs/decisions/log.md` (D64–D79), this file (the sections "Version 0.9.0", "Phase 22 quality gates — final results" and "What Phase 22 did not build"), `docs/design/design-system.md` (v1.0), `docs/operations/device-checklist.md`, `docs/demo/demo-script.md`, `docs/operations/apk-build-runbook.md`, `docs/research/reality-check.md` (re-check #3). Older reading list, kept for reference:
+Read, in order: `docs/decisions/log.md` (D64–D80), this file (the sections "Version 1.0.0", "Version 0.9.0", "Phase 22 quality gates — final results" and "What Phase 22 did not build"), `docs/design/design-system.md` (v1.0), `docs/operations/device-checklist.md`, `docs/demo/demo-script.md`, `docs/operations/apk-build-runbook.md`, `docs/research/reality-check.md` (re-check #3). Older reading list, kept for reference:
 
 **Design Pass v2 is the live work:** read `docs/roadmap/phase22-design-v2-prompt.md`, `docs/design/design-audit-v2.md` and `docs/design/v2-directions/README.md` after the decisions log and this file.
 

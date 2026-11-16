@@ -5,7 +5,7 @@ const {chromium}=require('playwright');const http=require('http');const fs=requi
 const root=process.argv[2];const axe=fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8');
 const srv=http.createServer((q,r)=>{let p=path.join(root,decodeURIComponent(q.url.split('?')[0]));if(!fs.existsSync(p)||fs.statSync(p).isDirectory())p=path.join(root,'index.html');r.writeHead(200,{'content-type':p.endsWith('.js')?'application/javascript':p.endsWith('.html')?'text/html':'application/octet-stream'});fs.createReadStream(p).pipe(r);}).listen(8098);
 (async()=>{const b=await chromium.launch();let total=0,runs=0;const seen={};
-const routes=['/','/programme','/session/s07','/session/s06','/map','/visit','/updates','/guide/around','/guide/emergency','/guide/nope','/settings','/about','/sources','/gallery','/search','/agenda','/speakers','/speaker/p01','/speaker/nope','/glossary','/exhibitors','/exhibitor/e11','/exhibitor/nope','WELCOME','LIVE/','LIVE/programme','LIVE/session/s06'];
+const routes=['/','/programme','/session/s07','/session/s06','/map','/visit','/updates','/guide/around','/explainer/u1','/guide/emergency','/guide/nope','/settings','/about','/sources','/gallery','/search','/agenda','/speakers','/speaker/p01','/speaker/nope','/glossary','/exhibitors','/exhibitor/e11','/exhibitor/nope','WELCOME','LIVE/','LIVE/programme','LIVE/session/s06'];
 for(const route of routes)for(const lang of ['en','am'])for(const mode of ['light','dark']){
  const ctx=await b.newContext({viewport:{width:390,height:844},colorScheme:mode});const pg=await ctx.newPage();
  const live=route.startsWith('LIVE');const path=live?route.slice(4):route;

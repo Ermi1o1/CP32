@@ -5,7 +5,7 @@ For the COP32 guide app in `app/`. Written 2026-11-14 after the first successful
 ## What exists today
 | Item | State on 2026-11-14 |
 |---|---|
-| Release APK | Builds. Version 0.9.0 (Phase 22 close; 2026-11-16): **25.2 MB**. Version 0.8.0 (raised blocks and floating tab bar, D79; 2026-11-16): **25.2 MB**. Version 0.7.0 (Home rebuilt, D78; 2026-11-16): **25.2 MB**. Version 0.6.1 (finish pass; 2026-11-16): **25.2 MB**. Version 0.6.0 (second visual correction, D77): 25.2 MB. Version 0.5.0: 25.2 MB. Version 0.4.0: 25.2 MB. Version 0.3.0: 25.2 MB. Version 0.2.0: 25.0 MB containing both common phone chip types (64-bit and 32-bit ARM). The first build, 0.1.0, was 21.7 MB. |
+| Release APK | Builds. Version 1.0.0 (final demonstration build, D80; network permission removed; 2026-11-16): **25.2 MB**. Version 0.9.0 (Phase 22 close; 2026-11-16): **25.2 MB**. Version 0.8.0 (raised blocks and floating tab bar, D79; 2026-11-16): **25.2 MB**. Version 0.7.0 (Home rebuilt, D78; 2026-11-16): **25.2 MB**. Version 0.6.1 (finish pass; 2026-11-16): **25.2 MB**. Version 0.6.0 (second visual correction, D77): 25.2 MB. Version 0.5.0: 25.2 MB. Version 0.4.0: 25.2 MB. Version 0.3.0: 25.2 MB. Version 0.2.0: 25.0 MB containing both common phone chip types (64-bit and 32-bit ARM). The first build, 0.1.0, was 21.7 MB. |
 | Minimum Android | 7.0 (API 24), target API 36 |
 | Permissions requested | Network access, and from 0.2.0 network-state (added by the image library; it reads whether a connection exists, nothing more). The vibrate permission is removed, so haptics use only the permission-free system call. Storage, overlay and vibration permissions that the framework adds by default are removed in `app/app.json`. |
 | Package name | `com.zegatech.cop32guide` — **a working choice, not yet confirmed by the founder.** It becomes hard to change once people have installed the app. |
@@ -50,9 +50,13 @@ ls -la app-release.apk                                   # size
 $B/aapt2 dump badging app-release.apk | grep -E "package|SdkVersion|uses-permission|application-label"
 $B/apksigner verify --print-certs app-release.apk        # who signed it
 ```
-Expect: label `COP32`, `minSdkVersion:'24'`, `uses-permission` lines for `INTERNET` and `ACCESS_NETWORK_STATE` (plus an internal one ending `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which is not a user permission).
+Expect: label `COP32`, `minSdkVersion:'24'`, from version 1.0.0 a single `uses-permission` line for `ACCESS_NETWORK_STATE` and **no `INTERNET` line** (D80; up to 0.9.0 both were present) (plus an internal one ending `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which is not a user permission).
 
 ## Open questions for the founder
 1. **Package name** `com.zegatech.cop32guide` — confirm or replace before anyone installs it.
-2. **Should the demonstration build drop network access altogether?** Nothing in it uses the network. Removing the permission would make "this app cannot send anything anywhere" checkable by anyone in the phone's settings — a strong point in front of officials. It must come back when content updates and alerts are built.
+2. **Network access — decided 2026-11-16 (D80): removed.** `android.permission.INTERNET` is in `blockedPermissions` in `app/app.json`. To restore it for content sync or alerts, delete that one line and rebuild. `ACCESS_NETWORK_STATE` is kept because the image library asks the system whether a network exists; it grants no ability to connect.
 3. **Who creates and holds the signing key.**
+
+
+## Signing for a store release (not done)
+Every APK so far is signed with a throwaway test key, which is right for sideloading and wrong for a store. A store release needs a signing key that the founder creates and keeps — never in this repository and never in a cloud session. Losing that key means the app can never be updated under the same listing. Steps, when the time comes: create an upload keystore on the founder's own machine; store it and its passwords in a password manager with a second copy offline; configure it through Gradle properties or Expo's build service; enrol in Play App Signing. Until then, nothing here is a store build.
