@@ -30,3 +30,7 @@ export const THEME_PHOTO: Record<Theme, PhotoName> = {
   culture: 'heath',
   plenary: 'hall',
 };
+
+/** Theme image for each practical guide and each explainer (v1.4). Illustrative only, like every bundled photograph. */
+export const GUIDE_PHOTO: Record<string, PhotoName> = { attend: 'hall', before: 'highland', around: 'dusk', stay: 'lake', explore: 'heath', money: 'teff' };
+export const UPDATE_PHOTO: Record<string, PhotoName> = { u1: 'hall', u2: 'nursery', u3: 'terraces', u4: 'wind', u5: 'lake' };

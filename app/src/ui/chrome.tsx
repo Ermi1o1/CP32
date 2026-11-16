@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Animated, { useAnimatedStyle, useSharedValue, withSequence, withSpring, withTiming } from 'react-native-reanimated';
 import { View, ScrollView, Platform, useWindowDimensions } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
@@ -8,18 +9,19 @@ import { Tap } from './Pressable';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import type { ColorRole } from '@/theme/brand';
+import { lift } from './lift';
 
 /** Page margin used by every screen. */
 export const GUTTER = 20;
 
-function RoundButton({ icon, label, onPress, tone = 'plain', onPhoto }: { icon: IconName; label: string; onPress: () => void; tone?: 'plain' | 'danger'; onPhoto?: boolean }) {
-  const { c } = useTheme();
-  // Over a photograph every control gets a solid backing, so it never depends on the image for contrast.
-  const bg = tone === 'danger' ? c.danger : onPhoto ? c.bg : c.surface;
+function RoundButton({ icon, label, onPress, tone = 'plain' }: { icon: IconName; label: string; onPress: () => void; tone?: 'plain' | 'danger'; onPhoto?: boolean }) {
+  const { c, dark } = useTheme();
+  // A raised white disc (v1.4): it stands off the tinted page and off a photograph alike.
+  const bg = tone === 'danger' ? c.danger : c.surface;
   const fg: ColorRole = tone === 'danger' ? 'onDanger' : 'text';
   return (
     <Tap onPress={onPress} accessibilityLabel={label} style={{ alignItems: 'center', justifyContent: 'center' }}>
-      <View style={{ width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center', backgroundColor: bg }}>
+      <View style={{ width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center', backgroundColor: bg, ...lift(dark, 1) }}>
         <Icon name={icon} size={21} color={fg} stroke={2} />
       </View>
     </Tap>
@@ -42,7 +44,7 @@ export function AppHeader({ onPhoto }: { onPhoto?: boolean }) {
   return (
     <View style={{ paddingTop: insets.top + 8, paddingBottom: 8, paddingLeft: GUTTER - 6, paddingRight: GUTTER - 14, backgroundColor: onPhoto ? 'transparent' : c.bg, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
       <View accessible accessibilityRole="header" accessibilityLabel={brand.name}
-        style={{ flexDirection: 'row', alignItems: 'center', gap: 9, flexShrink: 1, paddingLeft: 6, paddingRight: 14, height: 44, borderRadius: 22, backgroundColor: onPhoto ? c.bg : 'transparent' }}>
+        style={{ flexDirection: 'row', alignItems: 'center', gap: 9, flexShrink: 1, paddingLeft: 6, paddingRight: 14, height: 44, borderRadius: 22, backgroundColor: onPhoto ? c.surface : 'transparent' }}>
         <View style={{ flexShrink: 0 }}><Mark size={28} /></View>
         <Text variant="title3" numberOfLines={1} maxFontSizeMultiplier={1.3} style={{ flexShrink: 1, fontSize: Math.round(18 * k), lineHeight: Math.round(24 * k) }}>{brand.name}</Text>
       </View>
@@ -109,34 +111,68 @@ export function Page({ title, sub, right, children }: { title?: string; sub?: st
 
 export interface TabItem { key: string; label: string; icon: IconName; focused: boolean; onPress: () => void }
 
+const DISC = 54;
+const BAR_H = 66;
+
+/** One tab's icon. When its tab is selected it rises onto the green disc with a small spring. */
+function TabIcon({ icon, focused, still }: { icon: IconName; focused: boolean; still: boolean }) {
+  const y = useSharedValue(focused ? -15 : 0);
+  useEffect(() => {
+    const to = focused ? -15 : 0;
+    y.set(still ? to : withSpring(to, { damping: 13, stiffness: 210, mass: 0.7 }));
+  }, [focused, still, y]);
+  const style = useAnimatedStyle(() => ({ transform: [{ translateY: y.get() }, { scale: 1 + (y.get() / -15) * 0.08 }] }));
+  return (
+    <Animated.View style={[{ position: 'absolute', top: 14, height: 24, alignItems: 'center', justifyContent: 'center' }, style]}>
+      <Icon name={icon} size={23} color={focused ? 'onInk' : 'textSecondary'} stroke={focused ? 2.2 : 1.8} />
+    </Animated.View>
+  );
+}
+
 /**
- * Bottom navigation (v1.2, D77). The standard pattern people know from every
- * major app: a full-width bar fixed to the bottom, five equal columns, an
- * icon above a label. The selected tab is shown by a soft green pill BEHIND
- * THE ICON ONLY and by its label turning green and bold. The label is never
- * inside a tile, so its width can never clip it — the fault in both earlier
- * versions. No border: the bar is lifted from the page by a soft shadow.
+ * Bottom navigation (v1.4, D79): a floating white bar with a raised disc.
+ * The bar is a rounded white block lifted off the tinted page by a shadow and
+ * inset from the screen edges. ONE deep-green disc marks the selected tab: it
+ * stands proud of the bar's top edge, slides to the tab you tap with a
+ * spring, and stretches sideways for a moment as it travels. The selected
+ * icon rises onto the disc; its label turns green and bold. Labels sit below
+ * the icons, never inside a shape, and take their size from the column, so
+ * they cannot clip (the fault of versions 0.2.0 to 0.5.0). All movement is
+ * removed when "Reduce motion" is on.
  */
 export function TabBar({ items }: { items: TabItem[] }) {
   const { c, dark } = useTheme();
+  const { prefs } = usePrefs();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const col = Math.min(width, 640) / Math.max(items.length, 1);
+  const barW = Math.min(width, 640) - 24;
+  const col = barW / Math.max(items.length, 1);
   // Sized from the column so the longest label ("Programme") always fits; never from the system font scale.
-  const size = Math.min(12.5, col / 6.4);
+  const size = Math.min(12, col / 6.4);
+  const active = Math.max(0, items.findIndex((it) => it.focused));
+  const target = col * active + (col - DISC) / 2;
+  const still = prefs.reduceMotion;
+  const x = useSharedValue(target);
+  const stretch = useSharedValue(1);
+  useEffect(() => {
+    if (still) { x.set(target); return; }
+    x.set(withSpring(target, { damping: 15, stiffness: 180, mass: 0.8 }));
+    stretch.set(withSequence(withTiming(1.28, { duration: 110 }), withSpring(1, { damping: 9, stiffness: 220 })));
+  }, [target, still, x, stretch]);
+  const disc = useAnimatedStyle(() => ({ transform: [{ translateX: x.get() }, { scaleX: stretch.get() }, { scaleY: 1 - (stretch.get() - 1) * 0.45 }] }));
   return (
-    <View style={{ width, backgroundColor: c.bg, alignItems: 'center', paddingTop: 8, paddingBottom: Math.max(insets.bottom, 8),
-      shadowColor: '#0B4F47', shadowOpacity: dark ? 0.4 : 0.1, shadowRadius: 14, shadowOffset: { width: 0, height: -4 }, elevation: 12 }}>
-      <View accessibilityRole="tablist" style={{ flexDirection: 'row', width: col * items.length }}>
-        {items.map((it) => (
-          <Tap key={it.key} onPress={it.onPress} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
-            style={{ width: col, minHeight: 58, alignItems: 'center', justifyContent: 'center', gap: 4 }}>
-            <View style={{ width: 60, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: it.focused ? c.primarySoft : 'transparent' }}>
-              <Icon name={it.icon} size={22} color={it.focused ? 'onPrimarySoft' : 'textSecondary'} stroke={it.focused ? 2.2 : 1.8} />
-            </View>
-            <Text variant="caption" weight={it.focused ? 700 : 500} color={it.focused ? 'primary' : 'textSecondary'} numberOfLines={1} allowFontScaling={false} style={{ fontSize: size, lineHeight: Math.round(size * 1.3), width: col - 4, textAlign: 'center' }}>{it.label}</Text>
-          </Tap>
-        ))}
+    <View style={{ width, backgroundColor: c.bg, alignItems: 'center', paddingTop: 20, paddingBottom: Math.max(insets.bottom, 10) }}>
+      <View style={{ width: barW, height: BAR_H, borderRadius: BAR_H / 2, backgroundColor: c.surface, ...lift(dark, 3) }}>
+        <Animated.View style={[{ position: 'absolute', left: 0, top: -16, width: DISC, height: DISC, borderRadius: DISC / 2, backgroundColor: c.ink, ...lift(dark, 2) }, disc]} />
+        <View accessibilityRole="tablist" style={{ flexDirection: 'row', height: BAR_H }}>
+          {items.map((it) => (
+            <Tap key={it.key} onPress={it.onPress} minTarget={false} accessibilityRole="tab" accessibilityState={{ selected: it.focused }} accessibilityLabel={it.label}
+              style={{ width: col, height: BAR_H, alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 9 }}>
+              <TabIcon icon={it.icon} focused={it.focused} still={still} />
+              <Text variant="caption" weight={it.focused ? 700 : 500} color={it.focused ? 'primary' : 'textSecondary'} numberOfLines={1} allowFontScaling={false} style={{ fontSize: size, lineHeight: Math.round(size * 1.3), width: col - 2, textAlign: 'center' }}>{it.label}</Text>
+            </Tap>
+          ))}
+        </View>
       </View>
     </View>
   );

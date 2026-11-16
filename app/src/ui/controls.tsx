@@ -5,6 +5,7 @@ import { Icon, type IconName } from './Icon';
 import { Tap } from './Pressable';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import type { ColorRole } from '@/theme/brand';
+import { lift } from './lift';
 
 /**
  * Button (v1.2, D77). A pill, 54 px tall, no border.
@@ -39,11 +40,11 @@ export function Button({ label, onPress, kind = 'tinted', icon, wide, flex, acce
  * The visible pill is 40 px tall inside a 48 px target.
  */
 export function Chip({ label, selected, onPress, count }: { label: string; selected?: boolean; onPress?: () => void; count?: number }) {
-  const { c, radius } = useTheme();
+  const { c, radius, dark } = useTheme();
   return (
     <Tap onPress={onPress} accessibilityState={{ selected: !!selected }} aria-pressed={!!selected} accessibilityLabel={count !== undefined ? `${label}, ${count}` : label}
       style={{ justifyContent: 'center' }}>
-      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 16, minHeight: 40, borderRadius: radius.pill, backgroundColor: selected ? c.ink : c.surface }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 16, minHeight: 40, borderRadius: radius.pill, backgroundColor: selected ? c.ink : c.surface, ...lift(dark, 1) }}>
         <Text variant="subhead" weight={600} color={selected ? 'onInk' : 'text'}>{label}</Text>
         {count !== undefined ? <Text variant="footnote" weight={600} color={selected ? 'onInk' : 'textSecondary'} tabular>{String(count)}</Text> : null}
       </View>
@@ -90,14 +91,14 @@ export function Banner({ tone, title, body }: { tone: keyof typeof TONES; title:
  * around them. Selected = deep green.
  */
 export function Segmented<T extends string>({ options, value, onChange }: { options: readonly { value: T; label: string; sub?: string }[]; value: T; onChange: (v: T) => void }) {
-  const { c, radius } = useTheme();
+  const { c, radius, dark } = useTheme();
   return (
     <View accessibilityRole="radiogroup" style={{ flexDirection: 'row', gap: 6 }}>
       {options.map((o) => {
         const on = o.value === value;
         return (
           <Tap key={o.value} onPress={() => onChange(o.value)} accessibilityRole="radio" accessibilityState={{ checked: on }} aria-checked={on} accessibilityLabel={o.sub ? `${o.sub} ${o.label}` : o.label}
-            style={{ flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', paddingVertical: o.sub ? 8 : 6, paddingHorizontal: 2, borderRadius: o.sub ? radius.md : radius.pill, backgroundColor: on ? c.ink : c.surface }}>
+            style={{ flex: 1, minWidth: 0, alignItems: 'center', justifyContent: 'center', paddingVertical: o.sub ? 8 : 6, paddingHorizontal: 2, borderRadius: o.sub ? radius.md : radius.pill, backgroundColor: on ? c.ink : c.surface, ...lift(dark, on ? 2 : 1) }}>
             {/* The small caption above a segment stops growing early; the value below it carries the size. */}
             {o.sub ? <Text variant="label" upper color={on ? 'onInk' : 'textSecondary'} center numberOfLines={1} maxFontSizeMultiplier={1.1} style={{ fontSize: 11, lineHeight: 15 }}>{o.sub}</Text> : null}
             <Text variant={o.sub ? 'title3' : 'subhead'} weight={o.sub ? 700 : 600} color={on ? 'onInk' : 'text'} center>{o.label}</Text>
@@ -125,14 +126,14 @@ export function FilterTabs<T extends string>({ options, value, onChange }: { opt
 /** Soft block shown while content is being read from the phone's store. Never an endless spinner. */
 export function Skeleton({ height = 16, width = '100%', style }: { height?: number; width?: number | `${number}%`; style?: StyleProp<ViewStyle> }) {
   const { c, radius } = useTheme();
-  return <View accessibilityElementsHidden importantForAccessibility="no" style={[{ height, width, borderRadius: radius.sm, backgroundColor: c.surface }, style]} />;
+  return <View accessibilityElementsHidden importantForAccessibility="no" style={[{ height, width, borderRadius: radius.sm, backgroundColor: c.surfaceAlt }, style]} />;
 }
 
 /** Empty and "needs a connection" states. Each names the situation and what still works; neither says "something went wrong". */
 export function StateBlock({ icon, title, body, action }: { icon: IconName; title: string; body: string; action?: React.ReactNode }) {
-  const { c, radius } = useTheme();
+  const { c, radius, dark } = useTheme();
   return (
-    <View style={{ alignItems: 'center', gap: 8, paddingVertical: 28, paddingHorizontal: 24, borderRadius: radius.lg, backgroundColor: c.surface }}>
+    <View style={{ alignItems: 'center', gap: 8, paddingVertical: 28, paddingHorizontal: 24, borderRadius: radius.lg, backgroundColor: c.surface, ...lift(dark) }}>
       <View style={{ width: 60, height: 60, borderRadius: 30, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center', marginBottom: 4 }}>
         <Icon name={icon} size={28} color="onPrimarySoft" stroke={1.8} />
       </View>

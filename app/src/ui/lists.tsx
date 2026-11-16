@@ -4,6 +4,7 @@ import { Text } from './Text';
 import { Icon, type IconName } from './Icon';
 import { Tap } from './Pressable';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
+import { lift } from './lift';
 
 /** `red` marks an emergency row; every other row uses the one green icon disc. */
 export type Tone = 'teal' | 'green' | 'red' | 'orange' | 'blue';
@@ -25,9 +26,10 @@ export function SectionTitle({ children, action, onAction }: { children: string;
   );
 }
 
-/** A run of rows. No dividers and no box: rows are separated by their own spacing. */
+/** A run of rows in one raised white block (v1.4, D79). No dividers: rows are separated by their own spacing. */
 export function Group({ children }: { children: React.ReactNode }) {
-  return <View style={{ gap: 2 }}>{children}</View>;
+  const { c, radius, dark } = useTheme();
+  return <View style={{ gap: 2, backgroundColor: c.surface, borderRadius: radius.lg, paddingHorizontal: 14, paddingVertical: 6, ...lift(dark) }}>{children}</View>;
 }
 
 /**
@@ -66,10 +68,10 @@ export function Row({ icon, tone, title, subtitle, value, onPress, right }: { ic
   );
 }
 
-/** A soft filled panel for grouped controls or featured content. Rounded, no border, no shadow. */
+/** A raised white panel for grouped controls or featured content. Rounded, no border, soft shadow. */
 export function Card({ children, onPress, label }: { children: React.ReactNode; onPress?: () => void; label?: string }) {
-  const { c, radius } = useTheme();
-  const style = { backgroundColor: c.surface, borderRadius: radius.lg, padding: 18, gap: 8 } as const;
+  const { c, radius, dark } = useTheme();
+  const style = { backgroundColor: c.surface, borderRadius: radius.lg, padding: 18, gap: 8, ...lift(dark) } as const;
   if (!onPress) return <View style={style}>{children}</View>;
   return (
     <Tap onPress={onPress} minTarget={false} accessibilityLabel={label} style={style}>

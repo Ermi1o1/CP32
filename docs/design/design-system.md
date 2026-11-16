@@ -289,3 +289,19 @@ Tokens are unchanged from v1.2. Only Home changed.
 - **Order of sections:** status, search, highlights, quick actions, next sessions, explainers, essentials, independence line. Each section title may carry one link on the right ("Whole programme", "See all").
 - **Explainer tiles:** 208 px wide soft tiles, 24 px corners, an icon on a white disc, kind, title.
 - **Source of the structure:** the order of information on the COP31 host app's Home, from the founder's captures. Nothing of its artwork, colours or tile designs is used (D67).
+
+
+## v1.4 "Daylight, raised" (D79, version 0.8.0)
+
+Supersedes the surface, list and navigation rules of v1.2 and v1.3. Type, the green and amber palette, pills and the motion timings are unchanged.
+
+- **Page and blocks.** The page is a pale green-grey (`#EDF3F0`; dark `#09110F`). Content sits in white blocks (`#FFFFFF`; dark `#16231F`) with 20–28 px corners. A well or tag inside a block uses the page colour or one step darker (`#DDE8E3`).
+- **Shadow, three levels** (one helper, `app/src/ui/lift.ts`): 1 for small controls (chips, round buttons, search), 2 for cards and row groups, 3 for the floating tab bar, the status card and featured photographs. Green-tinted in light, black in dark. Not drawn on Android before version 9.
+- **No rules or hairlines** still holds (D77). Blocks are separated by space and shadow.
+- **Row group.** Rows that belong together share one white block.
+- **Session card.** Top line: clock, time range, live or ended tag, bookmark. Then format and access in green, the title, and a last line with the room on a soft chip and a 38 px round arrow (deep green; grey when ended).
+- **Quick-action tile.** 122 × 104 px, 24 px corners, deep green, white icon top-left, label bottom-left, the same icon at 92 px and 13% opacity bleeding off the bottom-right corner. In a horizontally scrolling row.
+- **Image card.** A photograph across the top of a white block with rounded top corners; on Visit a white icon disc overlaps the photograph's lower edge.
+- **Tab bar.** A white bar 66 px tall with fully rounded ends, inset 12 px from the screen edges, shadow level 3. One 54 px deep-green disc stands 16 px above the bar's top edge over the selected tab. On a tab change the disc slides with a spring and stretches about 28% sideways for a moment; the selected icon rises 15 px onto the disc and turns white; the label below turns green and bold. Labels are sized from the column width. With "Reduce motion" on, the disc and icon jump without animation.
+- **Dark theme.** Large green fills (status card, emergency card, quick tiles) use the deep soft green, not the bright mint.
+- **Relation to the COP31 app (D67 as narrowed by D79).** The kinds of component follow it; the colours, typefaces, mark, photographs and proportions are ours.

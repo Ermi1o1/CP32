@@ -2,9 +2,9 @@
 export const tokens = {
  "color": {
   "light": {
-   "bg": "#FFFFFF",
-   "surface": "#F1F5F3",
-   "surfaceAlt": "#E4ECE8",
+   "bg": "#EDF3F0",
+   "surface": "#FFFFFF",
+   "surfaceAlt": "#DDE8E3",
    "border": "#6B7873",
    "divider": "#E4ECE8",
    "text": "#10231E",
@@ -41,9 +41,9 @@ export const tokens = {
    "separator": "rgba(11,79,71,.10)"
   },
   "dark": {
-   "bg": "#0B1412",
-   "surface": "#15211D",
-   "surfaceAlt": "#1E2D28",
+   "bg": "#09110F",
+   "surface": "#16231F",
+   "surfaceAlt": "#21322C",
    "border": "#7F8C85",
    "divider": "#1E2D28",
    "text": "#F1EEE6",

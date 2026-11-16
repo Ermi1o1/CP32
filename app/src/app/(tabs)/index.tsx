@@ -6,10 +6,11 @@ import { GUTTER } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
 import { Icon, type IconName } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
+import { lift } from '@/ui/lift';
 import { Button, Skeleton } from '@/ui/controls';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { Photo, SavedMark, SaveToggle, SessionRow, Tag, accessKey } from '@/ui/event';
-import { THEME_PHOTO } from '@/ui/photos';
+import { THEME_PHOTO, UPDATE_PHOTO } from '@/ui/photos';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT, type StringKey } from '@/i18n';
 import { useContent } from '@/data/useContent';
@@ -18,18 +19,24 @@ import { FEATURED, UPDATES } from '@/data/guides';
 import { dayProgress, durationMin, minutesUntil, nextUp } from '@/data/time';
 import type { Session } from '@/data/types';
 
-/** One quick action: a large green disc with an icon, and a label under it. */
-function Quick({ icon, label, onPress, width }: { icon: IconName; label: StringKey; onPress: () => void; width: number }) {
-  const { c } = useTheme();
+/**
+ * One quick action (v1.4): a deep-green tile with a white icon top-left, the
+ * label bottom-left, and a large faint copy of the icon bleeding off the corner.
+ */
+function Quick({ icon, label, onPress }: { icon: IconName; label: StringKey; onPress: () => void }) {
+  const { c, dark } = useTheme();
   const { prefs } = usePrefs();
   const { t } = useT();
+  const k = Math.min(prefs.textScale, 1.5);
+  const fg = dark ? 'onPrimarySoft' : 'onInk';
   return (
-    <Tap onPress={onPress} minTarget={false} accessibilityLabel={t(label)} style={{ width, alignItems: 'center', gap: 8 }}>
-      <View style={{ width: 64, height: 64, borderRadius: 32, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
-        <Icon name={icon} size={26} color="onPrimarySoft" stroke={1.9} />
+    <Tap onPress={onPress} minTarget={false} accessibilityLabel={t(label)}
+      style={{ width: Math.round(122 * k), height: Math.round(104 * k), borderRadius: 24, backgroundColor: dark ? c.primarySoft : c.ink, padding: 14, justifyContent: 'space-between', overflow: 'hidden', ...lift(dark) }}>
+      <View accessible={false} importantForAccessibility="no-hide-descendants" aria-hidden style={{ position: 'absolute', right: -18, bottom: -20, opacity: 0.13 }}>
+        <Icon name={icon} size={92} color={fg} stroke={1.6} />
       </View>
-      {/* The label under a disc stops growing at 150%, so one long word still fits its column. */}
-      <Text variant="footnote" weight={600} center numberOfLines={2} maxFontSizeMultiplier={1.3} style={{ fontSize: Math.round(13.5 * Math.min(prefs.textScale, 1.5)), lineHeight: Math.round(18 * Math.min(prefs.textScale, 1.5)) }}>{t(label)}</Text>
+      <Icon name={icon} size={26} color={fg} stroke={2} />
+      <Text variant="footnote" weight={700} color={fg} numberOfLines={2} maxFontSizeMultiplier={1.5}>{t(label)}</Text>
     </Tap>
   );
 }
@@ -40,7 +47,7 @@ const ON_PLATE = '#FFFFFF';
 
 /** One featured session: a large rounded photograph with its title on a solid plate and a round arrow. */
 function Feature({ s, width, onPress }: { s: Session; width: number; onPress: () => void }) {
-  const { c, radius } = useTheme();
+  const { c, radius, dark } = useTheme();
   const { prefs } = usePrefs();
   const { t } = useT();
   // With enlarged text the card grows so the title keeps three full lines.
@@ -48,8 +55,8 @@ function Feature({ s, width, onPress }: { s: Session; width: number; onPress: ()
   const h = big ? 330 : 236;
   return (
     <Tap onPress={onPress} minTarget={false} accessibilityRole="link" accessibilityLabel={`${t('programme.day', { d: s.day })}, ${s.start}. ${s.title.en}`}
-      style={{ width, height: h, borderRadius: radius.lg, overflow: 'hidden', backgroundColor: c.surfaceAlt }}>
-      <Photo name={THEME_PHOTO[s.theme]} height={h} />
+      style={{ width, height: h, borderRadius: radius.lg, backgroundColor: c.surfaceAlt, ...lift(dark, 3) }}>
+      <Photo name={THEME_PHOTO[s.theme]} height={h} radius={radius.lg} />
       <View style={{ position: 'absolute', left: 10, right: 10, bottom: 10, borderRadius: 20, backgroundColor: PLATE, paddingVertical: 12, paddingLeft: 16, paddingRight: 12, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
         <View style={{ flex: 1, gap: 2 }}>
           <Text variant="label" numberOfLines={1} style={{ color: ON_PLATE, letterSpacing: 0 }}>{`${t('programme.day', { d: s.day })} · ${s.start} · ${s.format}`}</Text>
@@ -67,7 +74,7 @@ function Feature({ s, width, onPress }: { s: Session; width: number; onPress: ()
 function Dots({ count, index }: { count: number; index: number }) {
   const { c } = useTheme();
   return (
-    <View accessible={false} importantForAccessibility="no-hide-descendants" aria-hidden style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, paddingTop: 12 }}>
+    <View accessible={false} importantForAccessibility="no-hide-descendants" aria-hidden style={{ flexDirection: 'row', justifyContent: 'center', gap: 6, paddingTop: 0 }}>
       {Array.from({ length: count }, (_, i) => (
         <View key={i} style={{ width: i === index ? 20 : 6, height: 6, borderRadius: 3, backgroundColor: i === index ? c.primary : c.surfaceAlt }} />
       ))}
@@ -75,17 +82,17 @@ function Dots({ count, index }: { count: number; index: number }) {
   );
 }
 
-/** One explainer in the horizontal row: a soft tile with an icon, its kind and its title. */
-function Explainer({ icon, kind, title, onPress }: { icon: IconName; kind: string; title: string; onPress: () => void }) {
-  const { c } = useTheme();
+/** One explainer in the horizontal row: a raised white card with a photograph, its kind and its title. */
+function Explainer({ id, kind, title, onPress }: { id: string; kind: string; title: string; onPress: () => void }) {
+  const { c, dark } = useTheme();
   return (
     <Tap onPress={onPress} minTarget={false} accessibilityRole="link" accessibilityLabel={`${kind}. ${title}`}
-      style={{ width: 208, minHeight: 148, borderRadius: 24, backgroundColor: c.surface, padding: 16, gap: 10 }}>
-      <View style={{ width: 40, height: 40, borderRadius: 20, backgroundColor: c.bg, alignItems: 'center', justifyContent: 'center' }}>
-        <Icon name={icon} size={20} color="primary" stroke={1.9} />
+      style={{ width: 216, borderRadius: 24, backgroundColor: c.surface, ...lift(dark) }}>
+      <View style={{ borderTopLeftRadius: 24, borderTopRightRadius: 24, overflow: 'hidden' }}>
+        <Photo name={UPDATE_PHOTO[id] ?? 'highland'} height={104} />
       </View>
-      <View style={{ gap: 2 }}>
-        <Text variant="label" color="textSecondary" style={{ letterSpacing: 0 }}>{kind}</Text>
+      <View style={{ gap: 2, padding: 14 }}>
+        <Text variant="label" color="primary" style={{ letterSpacing: 0 }}>{kind}</Text>
         <Text variant="headline" numberOfLines={3}>{title}</Text>
       </View>
     </Tap>
@@ -93,7 +100,7 @@ function Explainer({ icon, kind, title, onPress }: { icon: IconName; kind: strin
 }
 
 /**
- * Home (v1.3, D76, D78). Opens on information, not on a photograph: one
+ * Home (v1.4, D76, D78, D79). Opens on information, not on a photograph: one
  * compact deep-green status card, search, a featured carousel, four quick
  * actions, the next sessions, explainers and the essentials. The structure
  * follows what the best host-country apps do; the look is our own (D67).
@@ -121,7 +128,6 @@ export default function Home() {
     ? (now ? data.sessions.filter((s) => s.day === now.day && s.start > now.time) : data.sessions.filter((s) => s.day === 1)).filter((s) => s.id !== next?.id).slice(0, 3)
     : [];
   const inner = Math.min(width, layout.maxContentWidth) - GUTTER * 2;
-  const quickCols = prefs.textScale >= 1.5 ? 2 : 4;
   const step = inner + 12;
   const go = (href: Href) => () => router.push(href);
   const onCarousel = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -134,7 +140,7 @@ export default function Home() {
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }} {...({ tabIndex: 0 } as object)}>
         <View style={{ alignItems: 'center' }}>
           <View style={{ width: '100%', maxWidth: layout.maxContentWidth }}>
-            <View style={{ marginHorizontal: GUTTER, marginTop: 8, backgroundColor: dark ? c.primarySoft : c.ink, borderRadius: radius.lg, padding: 20, gap: 8 }}>
+            <View style={{ marginHorizontal: GUTTER, marginTop: 8, backgroundColor: dark ? c.primarySoft : c.ink, borderRadius: radius.lg, padding: 20, gap: 8, ...lift(dark, 3) }}>
               <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 8 }}>
                 <Text variant="label" upper color={onCard} style={{ flexShrink: 1 }}>{now && data ? `${t('home.dayOf', { d: now.day, n: data.event.dayCount })} · ${now.time}` : t('home.kicker')}</Text>
                 <SavedMark compact />
@@ -156,14 +162,14 @@ export default function Home() {
 
             <Enter {...enter(40)} style={{ paddingHorizontal: GUTTER, paddingTop: 14 }}>
               <Tap onPress={go('/search')} minTarget={false} accessibilityRole="search" accessibilityLabel={t('search.placeholder')}
-                style={{ flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: c.surface, borderRadius: radius.pill, minHeight: 56, paddingHorizontal: 20 }}>
+                style={{ flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: c.surface, borderRadius: radius.pill, minHeight: 56, paddingHorizontal: 20, ...lift(dark, 1) }}>
                 <Icon name="search" size={21} color="textSecondary" stroke={2} />
                 <Text variant="callout" color="textSecondary" style={{ flex: 1 }}>{t('search.placeholder')}</Text>
               </Tap>
             </Enter>
 
             {next && now ? (
-              <Enter {...enter(80)} style={{ marginHorizontal: GUTTER, marginTop: 18, backgroundColor: c.surface, borderRadius: radius.lg, padding: 18, gap: 8 }}>
+              <Enter {...enter(80)} style={{ marginHorizontal: GUTTER, marginTop: 18, backgroundColor: c.surface, borderRadius: radius.lg, padding: 18, gap: 8, ...lift(dark) }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                   <Tag kind="next" label={`${t('home.next')} · ${t('home.inMin', { m: minutesUntil(next.start, now.time) })}`} />
                   <Tag kind={next.access === 'public' ? 'public' : 'restricted'} label={t(accessKey(next.access))} />
@@ -190,17 +196,19 @@ export default function Home() {
                   <SectionTitle action={t('home.all')} onAction={go('/programme')}>{t('home.highlights')}</SectionTitle>
                 </Enter>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} snapToInterval={step} decelerationRate="fast" onScroll={onCarousel} scrollEventThrottle={32}
-                  contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12 }} {...({ tabIndex: 0 } as object)}>
+                  contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12, paddingBottom: 18 }} {...({ tabIndex: 0 } as object)}>
                   {featured.map((s) => <Feature key={s.id} s={s} width={inner} onPress={go(`/session/${s.id}`)} />)}
                 </ScrollView>
                 <Dots count={featured.length} index={page} />
 
-            <Enter {...enter(120)} style={{ flexDirection: 'row', flexWrap: 'wrap', rowGap: 18, paddingHorizontal: GUTTER, paddingTop: 24 }}>
-              <Quick width={inner / quickCols} icon="calendar" label="tab.programme" onPress={go('/programme')} />
-              <Quick width={inner / quickCols} icon="map" label="tab.map" onPress={go('/map')} />
-              <Quick width={inner / quickCols} icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
-              <Quick width={inner / quickCols} icon="users" label="programme.speakers" onPress={go('/speakers')} />
-            </Enter>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 22, paddingBottom: 14 }} {...({ tabIndex: 0 } as object)}>
+                  <Quick icon="calendar" label="tab.programme" onPress={go('/programme')} />
+                  <Quick icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
+                  <Quick icon="map" label="tab.map" onPress={go('/map')} />
+                  <Quick icon="users" label="programme.speakers" onPress={go('/speakers')} />
+                  <Quick icon="landmark" label="programme.exhibitors" onPress={go('/exhibitors')} />
+                  <Quick icon="book-open" label="glossary.title" onPress={go('/glossary')} />
+                </ScrollView>
 
 
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 12 }}>
@@ -213,8 +221,8 @@ export default function Home() {
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 6 }}>
                   <SectionTitle action={t('home.seeAll')} onAction={go('/updates')}>{t('home.explainers')}</SectionTitle>
                 </View>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12 }} {...({ tabIndex: 0 } as object)}>
-                  {UPDATES.filter((u) => u.kind === 'Explainer').map((u) => <Explainer key={u.id} icon={u.icon as IconName} kind={u.kind} title={u.title} onPress={go('/updates')} />)}
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: GUTTER, gap: 12, paddingTop: 12, paddingBottom: 16 }} {...({ tabIndex: 0 } as object)}>
+                  {UPDATES.filter((u) => u.kind === 'Explainer').map((u) => <Explainer key={u.id} id={u.id} kind={u.kind} title={u.title} onPress={go('/updates')} />)}
                 </ScrollView>
 
                 <View style={{ paddingHorizontal: GUTTER, paddingTop: 10 }}>

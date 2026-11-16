@@ -7,6 +7,7 @@ import { Text } from './Text';
 import { Icon } from './Icon';
 import { Tap } from './Pressable';
 import { PHOTOS, type PhotoName } from './photos';
+import { lift } from './lift';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { useAgenda } from '@/state/agenda';
@@ -94,8 +95,8 @@ export function Tag({ kind, label }: { kind: 'live' | 'next' | 'public' | 'restr
     live: { bg: c.dangerBg, fg: 'danger', icon: 'radio' },
     next: { bg: c.accent, fg: 'onAccent', icon: 'clock' },
     public: { bg: c.successBg, fg: 'success', icon: 'check' },
-    restricted: { bg: c.surface, fg: 'textSecondary', icon: 'ticket' },
-    ended: { bg: c.surface, fg: 'textSecondary', icon: 'circle-check' },
+    restricted: { bg: c.surfaceAlt, fg: 'textSecondary', icon: 'ticket' },
+    ended: { bg: c.surfaceAlt, fg: 'textSecondary', icon: 'circle-check' },
   } as const;
   const m = map[kind];
   return (
@@ -111,39 +112,48 @@ export function accessKey(a: Session['access']) {
 }
 
 /**
- * Timetable row: the time is the strongest element, then the title, then one
- * line of meta. Rows are separated by hairlines, not boxed — a programme, not
- * a stack of cards. `index` staggers the entrance (40 ms apart, capped).
+ * Session card (v1.4, D79): one raised white block per session. Top line: the
+ * time range and the live state, with the save bookmark. Then the format and
+ * access, the title, and a last line with the room on a soft chip and a round
+ * arrow. Deliberately tighter than the cards in comparable apps, so three to
+ * four fit on a screen. `index` staggers the entrance (40 ms apart, capped).
  */
 export function SessionRow({ session, now, onPress, index = 0, showDay }: { session: Session; now: { day: number; time: string } | null; onPress: () => void; index?: number; showDay?: boolean }) {
-  const { c, motion } = useTheme();
+  const { c, motion, radius, dark } = useTheme();
   const { prefs } = usePrefs();
   const { t } = useT();
   // Without a live clock (the default, pre-event view) every session is simply listed.
   const phase: Phase = now ? phaseOf(session, now) : 'upcoming';
   const ended = phase === 'ended';
+  const live = phase === 'live';
   const meta = [session.format, session.room, t(accessKey(session.access))].join(' · ');
-  // At large text sizes the time moves above the title instead of squeezing beside it.
-  const stacked = prefs.textScale >= 1.5;
+  const when = `${showDay ? `${t('programme.day', { d: session.day })} · ` : ''}${session.start}–${session.end}`;
   const row = (
-    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10 }}>
-     <View style={{ flex: 1, flexDirection: stacked ? 'column' : 'row', alignItems: stacked ? 'flex-start' : 'center', gap: stacked ? 6 : 14 }}>
-      <View style={{ width: stacked ? undefined : Math.round(70 * Math.min(prefs.textScale, 1.3)), alignItems: stacked ? 'flex-start' : 'stretch', gap: 4 }}>
-        {/* The time sits on a soft pill: it gives the list its rhythm without any dividing line. */}
-        <View style={{ backgroundColor: phase === 'live' ? c.dangerBg : c.surface, borderRadius: 14, paddingVertical: 8, paddingHorizontal: 8, alignItems: 'center' }}>
-          {showDay ? <Text variant="label" color="textSecondary" style={{ letterSpacing: 0 }}>{t('programme.day', { d: session.day })}</Text> : null}
-          <Text variant="headline" weight={700} tabular color={ended ? 'textTertiary' : phase === 'live' ? 'danger' : 'text'}>{session.start}</Text>
-          {phase === 'live' ? <Text variant="label" color="danger" style={{ letterSpacing: 0 }}>{t('phase.live')}</Text> : null}
+    <View style={{ backgroundColor: c.surface, borderRadius: radius.md + 4, paddingLeft: 16, paddingRight: 6, paddingTop: 6, paddingBottom: 14, marginBottom: 12, ...lift(dark) }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+        <View style={{ flex: 1, flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', columnGap: 8, rowGap: 2 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flexShrink: 1 }}>
+            <Icon name="clock" size={16} color={ended ? 'textTertiary' : live ? 'danger' : 'primary'} stroke={2.2} />
+            <Text variant="subhead" weight={700} tabular color={ended ? 'textTertiary' : 'text'} style={{ flexShrink: 1 }}>{when}</Text>
+          </View>
+          {live ? <Tag kind="live" label={t('phase.live')} /> : null}
+          {ended ? <Tag kind="ended" label={t('phase.ended')} /> : null}
         </View>
-      </View>
-      <Tap onPress={onPress} minTarget={false} accessibilityLabel={`${session.start}. ${session.title.en}. ${meta}${ended ? `. ${t('phase.ended')}` : ''}`} style={{ flex: 1, gap: 3, minHeight: 48, justifyContent: 'center' }}>
-        <Text variant="headline" weight={ended ? 400 : 600} color={ended ? 'textSecondary' : 'text'}>{session.title.en}</Text>
-        <Text variant="footnote" color={ended ? 'textTertiary' : 'textSecondary'}>{ended ? `${meta} · ${t('phase.ended')}` : meta}</Text>
-      </Tap>
-     </View>
-      <View style={{ marginRight: -12 }}>
         <SaveToggle id={session.id} title={session.title.en} />
       </View>
+      <Tap onPress={onPress} minTarget={false} accessibilityLabel={`${when}. ${session.title.en}. ${meta}${ended ? `. ${t('phase.ended')}` : ''}`} style={{ gap: 4, paddingRight: 10 }}>
+        <Text variant="footnote" weight={600} color={ended ? 'textTertiary' : 'primary'}>{`${session.format} · ${t(accessKey(session.access))}`}</Text>
+        <Text variant="headline" weight={ended ? 500 : 700} color={ended ? 'textSecondary' : 'text'}>{session.title.en}</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginTop: 6 }}>
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, flexShrink: 1, backgroundColor: c.bg, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7 }}>
+            <Icon name="map-pin" size={15} color="textSecondary" stroke={2} />
+            <Text variant="footnote" weight={600} color="textSecondary" style={{ flexShrink: 1 }}>{session.room}</Text>
+          </View>
+          <View style={{ width: 38, height: 38, borderRadius: 19, backgroundColor: ended ? c.surfaceAlt : c.ink, alignItems: 'center', justifyContent: 'center' }}>
+            <Icon name="arrow-right" size={19} color={ended ? 'textSecondary' : 'onInk'} stroke={2.2} />
+          </View>
+        </View>
+      </Tap>
     </View>
   );
   const delay = Math.min(index * motion.stagger, motion.staggerMax);

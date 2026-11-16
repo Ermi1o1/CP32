@@ -9,7 +9,7 @@
 1. **Bottom navigation** — the selected tab now shows a soft green pill behind its icon only. Every label must be whole on every tab.
 2. **No lines, no boxes** — is anything still ruled or boxed that should not be?
 3. **Green instead of black** — buttons, selected days and chips, the emergency panel.
-4. **Home (version 0.7.0)** — no photograph at the top any more: a green status card, search, a swipeable featured card with dots, four round actions, next sessions, explainers. Does it now read as a finished product, at the COP31 app's standard? Swipe the featured card: does it stop cleanly on each card and do the dots follow?
+4. **Version 0.8.0 — the new look.** (a) Tap each of the five tabs: does the green disc slide and settle cleanly, is it a true circle, does it stand above the bar, and is every label whole? (b) Do the white blocks show a soft shadow on your phone? (c) Home, Programme, Visit and Updates: does it now feel like a real, finished app at the COP31 standard? Name the first thing that does not.
 5. Dark mode (Profile → Appearance → Dark) — a quick look at Home and Programme.
 
 ## Version 0.5.0 — additions to check

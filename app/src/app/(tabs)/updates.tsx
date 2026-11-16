@@ -3,10 +3,11 @@ import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page } from '@/ui/chrome';
 import { Text } from '@/ui/Text';
-import { Icon } from '@/ui/Icon';
 import { FilterTabs, StateBlock } from '@/ui/controls';
 import { Group, Row } from '@/ui/lists';
-import { SavedMark } from '@/ui/event';
+import { Photo, SavedMark } from '@/ui/event';
+import { UPDATE_PHOTO } from '@/ui/photos';
+import { lift } from '@/ui/lift';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useT } from '@/i18n';
 import { UPDATES } from '@/data/guides';
@@ -20,7 +21,7 @@ type Tab = 'read' | 'alerts' | 'press' | 'live';
  * alerts, press releases, and live or recorded sessions. No invented news.
  */
 export default function Updates() {
-  const { c } = useTheme();
+  const { c, dark } = useTheme();
   const { t } = useT();
   const router = useRouter();
   const [tab, setTab] = useState<Tab>('read');
@@ -40,16 +41,14 @@ export default function Updates() {
             <Row icon="circle-help" title={t('glossary.title')} subtitle={t('glossary.count', { n: GLOSSARY.length })} onPress={() => router.push('/glossary')} />
           </Group>
           {UPDATES.map((u) => (
-            <View key={u.id}>
-              <View accessible style={{ flexDirection: 'row', gap: 14, paddingVertical: 12 }}>
-                <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: c.primarySoft, alignItems: 'center', justifyContent: 'center' }}>
-                  <Icon name={u.icon} size={21} color="onPrimarySoft" stroke={1.9} />
-                </View>
-                <View style={{ flex: 1, gap: 4 }}>
-                  <Text variant="footnote" weight={600} color="primary">{`${u.kind} · ${t('updates.editorial')}`}</Text>
-                  <Text variant="headline">{u.title}</Text>
-                  <Text variant="subhead" color="textSecondary">{u.summary}</Text>
-                </View>
+            <View key={u.id} accessible style={{ flexDirection: 'row', gap: 14, padding: 12, marginTop: 12, backgroundColor: c.surface, borderRadius: 24, ...lift(dark) }}>
+              <View style={{ width: 84, borderRadius: 16, overflow: 'hidden', alignSelf: 'flex-start' }}>
+                <Photo name={UPDATE_PHOTO[u.id] ?? 'highland'} height={84} />
+              </View>
+              <View style={{ flex: 1, gap: 3, paddingRight: 4 }}>
+                <Text variant="footnote" weight={600} color="primary">{`${u.kind} · ${t('updates.editorial')}`}</Text>
+                <Text variant="headline">{u.title}</Text>
+                <Text variant="footnote" color="textSecondary">{u.summary}</Text>
               </View>
             </View>
           ))}

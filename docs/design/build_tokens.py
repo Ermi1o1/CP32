@@ -6,15 +6,15 @@ def lum(h):
     c=[x/12.92 if x<=0.03928 else ((x+0.055)/1.055)**2.4 for x in c]; return .2126*c[0]+.7152*c[1]+.0722*c[2]
 def cr(a,b):
     la,lb=sorted((lum(a),lum(b)),reverse=True); return (la+.05)/(lb+.05)
-COLOR = {  # v1.2 "Daylight, soft" (D77). White page, soft green-grey surfaces, NO borders or rules. Deep green replaces black. One amber accent.
- # `bg` is the page (white); `surface` is a soft filled card on it; `surfaceAlt` a step darker. `ink` is the strong fill (deep green).
- "light": {"bg":"#FFFFFF","surface":"#F1F5F3","surfaceAlt":"#E4ECE8","border":"#6B7873","divider":"#E4ECE8",
+COLOR = {  # v1.4 "Daylight, raised" (D79). Pale green-grey page, WHITE raised blocks with soft shadows. Deep green fills. One amber accent.
+ # `bg` is the page (a pale mist); `surface` is a raised white block on it; `surfaceAlt` a step darker than the page (wells, tags). `ink` is the strong fill (deep green).
+ "light": {"bg":"#EDF3F0","surface":"#FFFFFF","surfaceAlt":"#DDE8E3","border":"#6B7873","divider":"#E4ECE8",
    "text":"#10231E","textSecondary":"#465650","textTertiary":"#586862","primary":"#0B4F47","onPrimary":"#FFFFFF","primarySoft":"#DCEDE7","onPrimarySoft":"#0A3F39",
    "accent":"#F29F3D","onAccent":"#1A1206","sunset":"#F29F3D","heroFrom":"#0E5A51","heroTo":"#0B4F47","onHero":"#FFFFFF","heroKicker":"#F7C07A","link":"#0B4F47",
    "info":"#0B5A8A","infoBg":"#E3EEF6","success":"#1F5E12","successBg":"#E3F2DA","warning":"#7A3A0E","warningBg":"#FFF0DF","danger":"#B3261E","dangerBg":"#FCE7E3","onDanger":"#FFFFFF","focus":"#0B4F47","star":"#B36A00",
    "line":"#C96A00","ink":"#0B4F47","onInk":"#FFFFFF",
    "bar":"rgba(255,255,255,.96)","fill":"rgba(11,79,71,.07)","separator":"rgba(11,79,71,.10)"},
- "dark": {"bg":"#0B1412","surface":"#15211D","surfaceAlt":"#1E2D28","border":"#7F8C85","divider":"#1E2D28",
+ "dark": {"bg":"#09110F","surface":"#16231F","surfaceAlt":"#21322C","border":"#7F8C85","divider":"#1E2D28",
    "text":"#F1EEE6","textSecondary":"#A8B3AC","textTertiary":"#96A29B","primary":"#8FD3C8","onPrimary":"#06211E","primarySoft":"#173A35","onPrimarySoft":"#C5ECE5",
    "accent":"#F29F3D","onAccent":"#1A1206","sunset":"#F29F3D","heroFrom":"#1E2D28","heroTo":"#173A35","onHero":"#FFFFFF","heroKicker":"#F29F3D","link":"#8FD3C8",
    "info":"#8CC8F0","infoBg":"#16303F","success":"#9FE0A8","successBg":"#17301C","warning":"#F8C99A","warningBg":"#2E1F10","danger":"#FF9D92","dangerBg":"#3A1A16","onDanger":"#2B0A06","focus":"#8FD3C8","star":"#F2B33D",
@@ -38,7 +38,7 @@ TYPE = {"fontFamily":{"display":"Bricolage Grotesque","body":"Instrument Sans","
  "weights":{"regular":400,"medium":500,"semibold":600,"bold":700,"heavy":800},"minBodySize":16,"maxTextScale":2.0,"tracking":{"largeTitle":-0.022,"title":-0.015,"body":-0.005,"eyebrow":0.04},
  "amharicNote":"Ge'ez glyphs are dense: use the AM line-height ratio and never go below 14px for AM running text (to validate on A1/A2 devices)."}
 SPACE=[0,2,4,8,12,16,20,24,32,40,48,64]
-tokens={"meta":{"name":"COP32 guide — Daylight design tokens","status":"v1.2 (2026-11-15, D73 + D75 + D77, Design Pass v2). Supersedes v0.2 Highland Mist for the native app; the web prototype keeps its own frozen tokens.css. Original palette; not an official COP32/UNFCCC identity.","units":"px (dp/pt equivalent)"},
+tokens={"meta":{"name":"COP32 guide — Daylight design tokens","status":"v1.4 (2026-11-16, D73 + D75 + D77 + D79, Design Pass v2). Supersedes v0.2 Highland Mist for the native app; the web prototype keeps its own frozen tokens.css. Original palette; not an official COP32/UNFCCC identity.","units":"px (dp/pt equivalent)"},
  "color":COLOR,"typography":TYPE,"space":SPACE,
  "radius":{"sm":12,"md":20,"lg":28,"sheet":28,"device":42,"pill":999},"elevation":{"0":"none","1":"0 1px 2px rgba(10,40,40,.06)","2":"0 10px 24px -14px rgba(12,70,75,.55)","sheet":"0 -8px 30px rgba(0,0,0,.18)"},"material":{"blur":20,"saturate":1.8},
  "motion":{"fast":140,"base":240,"slow":420,"stagger":40,"staggerMax":280,"easing":"cubic-bezier(.2,.9,.25,1)","spring":"cubic-bezier(.3,1.5,.5,1)","pressScale":0.97,"reducedMotion":"disable non-essential motion; durations 0"},
