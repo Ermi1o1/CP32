@@ -9,7 +9,7 @@
   "gnews_egp": 0,
   "gnews_ena_en": 0,
   "fana_en": 0,
-  "amn_en": 1,
+  "amn_en": 2,
   "gnews_ena_am": 0,
   "fana_am": 0,
   "gnews_addisstandard": 0,
@@ -30,46 +30,50 @@
   "yt_ena": 0,
   "yt_fana": 0,
   "tg_ena": 0,
-  "tg_fana": 0
+  "tg_fana": 0,
+  "cop32ethiopia_et": 0,
+  "cic26_home": 0,
+  "cop32_presidency_substack": 1,
+  "gnews_cop32_uneca": 0,
+  "gnews_cop32_mfa": 0
  },
  "app_ids": {
   "appstore_cop32": [
-   "6789030250",
-   "6811845833",
    "1269516792",
-   "1632885226",
    "6754187049",
-   "6464719135",
-   "1402774264",
+   "6816161178",
    "6821604613",
-   "1531927334",
-   "6738282514",
-   "6761264127",
    "6822418708",
-   "6759739862"
+   "6738282514",
+   "1531927334",
+   "6761264127",
+   "1665589216",
+   "6818036933"
   ],
   "appstore_ethiopia_climate": [
+   "1326734477",
    "6764390669",
    "6748839567",
    "6789030250",
+   "1525181998",
+   "1515175481",
+   "1466186227",
    "6811845833",
    "1632885226",
    "6736705086",
+   "1049022407",
    "1195200573",
    "1563263735",
-   "1506109691",
+   "1666650448",
+   "847859021",
    "6761763876",
-   "6529531521",
+   "1525710459",
+   "6797268036",
    "1597040733",
-   "1506890841",
+   "6778734585",
    "6797974220",
    "1497638811",
-   "1559346306",
-   "6447110594",
-   "6503872198",
-   "6764895613",
-   "6759450438",
-   "6784473143"
+   "6529531521"
   ]
  },
  "seen": {
@@ -511,7 +515,48 @@
   "b97802f266c1353b": "2026-11-16",
   "ab16173d78dd33c5": "2026-11-16",
   "402e2890d78858d2": "2026-11-16",
-  "7ab8d4295c572906": "2026-11-16"
+  "7ab8d4295c572906": "2026-11-16",
+  "0767edef8c899f92": "2026-11-17",
+  "aecba870d3feecef": "2026-11-17",
+  "8c5c3d4a2e950339": "2026-11-17",
+  "d3625a1a01274d3b": "2026-11-17",
+  "25edb63653570344": "2026-11-17",
+  "49844957d967997c": "2026-11-17",
+  "9b1dff0a49ccc140": "2026-11-17",
+  "71d8e7c7195aca91": "2026-11-17",
+  "4a51a8b237d6de58": "2026-11-17",
+  "bf199949ddfd261d": "2026-11-17",
+  "cd578a1e4a6f73a0": "2026-11-17",
+  "47fba9756e61fd33": "2026-11-17",
+  "e188b56ee980d0a9": "2026-11-17",
+  "ec4c2b346908966f": "2026-11-17",
+  "0f4ccb09a01f61ae": "2026-11-17",
+  "284e2d1f545d0029": "2026-11-17",
+  "5951d0b2ba28db70": "2026-11-17",
+  "606441eb6ce294ce": "2026-11-17",
+  "0bfa993be72beb56": "2026-11-17",
+  "c8b31acdbb3a35ed": "2026-11-17",
+  "bb277f3bd6fa10d4": "2026-11-17",
+  "b36c26da710dcf72": "2026-11-17",
+  "c7d970ed30029813": "2026-11-17",
+  "c676c3dd4e9fea43": "2026-11-17",
+  "e1d9621b1daec6a9": "2026-11-17",
+  "11fbd043fc3f2d13": "2026-11-17",
+  "9a8ba77f389dba69": "2026-11-17",
+  "07e107bed2d61a71": "2026-11-17",
+  "c0e98c09d5684f9c": "2026-11-17",
+  "8d15e08eef7945aa": "2026-11-17",
+  "a22b5a78a8eb346c": "2026-11-17",
+  "5f53489e8a45275e": "2026-11-17",
+  "3f1b80ec194f1bbd": "2026-11-17",
+  "cd72e31cd0e0ca77": "2026-11-17",
+  "019d156e7d0c1aea": "2026-11-17",
+  "74bbd7b6b7072b14": "2026-11-17",
+  "b4b0c1e484723eda": "2026-11-17",
+  "3a45441f31e8a8f3": "2026-11-17",
+  "eb5c3e49ca53042a": "2026-11-17",
+  "98a9fbbe11e96509": "2026-11-17",
+  "a4d21a12cd264460": "2026-11-17"
  },
  "recent_titles": [
   [
@@ -2209,6 +2254,166 @@
   [
    "pakistan proposes virtual green university youth fund at cop31",
    "2026-11-16"
+  ],
+  [
+   "week 1 what happened at cop31",
+   "2026-11-17"
+  ],
+  [
+   "les villes en première ligne face aux changements climatiques",
+   "2026-11-17"
+  ],
+  [
+   "የጠቅላይ ሚኒስትሩ የሰጡት የኮፕ32 አቅጣጫ የቀድሞ ታጣቂዎች በመቀሌ ዓለምአቀ የጤና ጉባዔ በአዲስ አበባ የብሪክስን ጉባኤ የቃኘው መድረክ dailynews",
+   "2026-11-17"
+  ],
+  [
+   "ለቀጣዩ የኮፕ 32 cop32 መድረክ ኢትዮጵያ እንገናኝ የአንታሊያው ቱርኪዬ የኮፕ31 ተሳታፊዎች ethiopiannewsagency",
+   "2026-11-17"
+  ],
+  [
+   "የኢትዮጵያ አዲስ አቅም ኮፕ 32",
+   "2026-11-17"
+  ],
+  [
+   "ethiopia takes 144 429 electric vehicles and 56 billion green legacy seedlings to global climate stage ahead of cop32",
+   "2026-11-17"
+  ],
+  [
+   "ኢትዮጵያ በኮፕ 31 መድረክ ላይ ያሳየችው አርዓያነት የኮፕ 32 የኢትዮጵያ ፕሬዝዳንሺያል ቡድን አባል አቶ ገብሩ ጀምበር ethiopiannewsagency",
+   "2026-11-17"
+  ],
+  [
+   "countries take up industry push to loosen un carbon market rules at cop31",
+   "2026-11-17"
+  ],
+  [
+   "cop31 s electricity goal must be about more than ai and luxuries for the rich",
+   "2026-11-17"
+  ],
+  [
+   "can ai data centres help power underserved african communities",
+   "2026-11-17"
+  ],
+  [
+   "building coastal resilience for local communities in honduras",
+   "2026-11-17"
+  ],
+  [
+   "cop31 bulletin day 8 arab group russia reject cover text over fossil fuels and electrification goal",
+   "2026-11-17"
+  ],
+  [
+   "cop31 can t deliver for islands without delivering for the ocean",
+   "2026-11-17"
+  ],
+  [
+   "minerals for the planet or for war and ai cop31 must make clear what we prioritise",
+   "2026-11-17"
+  ],
+  [
+   "revealed russia saudi arabia and australia are largest co2 exporters of all time",
+   "2026-11-17"
+  ],
+  [
+   "africa climate talks call for credible implementation on the road to cop32",
+   "2026-11-17"
+  ],
+  [
+   "new un climate change report highlights what it takes to scale up industrial climate action",
+   "2026-11-17"
+  ],
+  [
+   "cop31 new global priorities target role of ai in climate information integrity",
+   "2026-11-17"
+  ],
+  [
+   "un climate change executive secretary simon stiell press conference",
+   "2026-11-17"
+  ],
+  [
+   "remarks by mr claver gatete at the africa day at cop31",
+   "2026-11-17"
+  ],
+  [
+   "from pledges to delivery africa makes the case for a climate finance overhaul at cop31",
+   "2026-11-17"
+  ],
+  [
+   "osc secretary general cop32 in ethiopia to serve as platform for global south to coordinate their positions",
+   "2026-11-17"
+  ],
+  [
+   "high level dialogue on technology and innovation for integrated fire management and wildfire resilience",
+   "2026-11-17"
+  ],
+  [
+   "africa climate talks call for stronger negotiating capacity and implementation focused cop32 in addis ababa",
+   "2026-11-17"
+  ],
+  [
+   "presidency led decision",
+   "2026-11-17"
+  ],
+  [
+   "draft text cover decision 16 nov 2026 13 30",
+   "2026-11-17"
+  ],
+  [
+   "transcript of cop31 press conference with cop31 president of negotiations",
+   "2026-11-17"
+  ],
+  [
+   "un climate chief on artificial intelligence the task ahead is to blunt their dangerous edges sharpen their catalytic ones and put these technologies responsibly to work",
+   "2026-11-17"
+  ],
+  [
+   "ethiopia advances cop32 preparations as abiy ahmed convenes national steering committee",
+   "2026-11-17"
+  ],
+  [
+   "tulip platform for turkic states unveiled at cop31 daily sabah",
+   "2026-11-17"
+  ],
+  [
+   "cop31 discusses using ai for climate solutions nhk world japan news",
+   "2026-11-17"
+  ],
+  [
+   "caspian sea countries discuss joint action international support at cop31",
+   "2026-11-17"
+  ],
+  [
+   "oyo govt seeks global partnership for climate action at cop31",
+   "2026-11-17"
+  ],
+  [
+   "cop31 sunny idoko seeks 10m investment for sustainable creative hub in nigeria",
+   "2026-11-17"
+  ],
+  [
+   "cop32 africa pushes for more climate finance as ethiopia prepares to host its own conference",
+   "2026-11-17"
+  ],
+  [
+   "climate promises must translate into funding and action at cop32 agna",
+   "2026-11-17"
+  ],
+  [
+   "tuya smart showcases conow aix ai energy platform at cop31 blue zone event",
+   "2026-11-17"
+  ],
+  [
+   "at cop31 nepal pushes for billions to help disaster survivors so far 20 million is promised",
+   "2026-11-17"
+  ],
+  [
+   "cop31 india sweden launch leadit 3 0 to accelerate low carbon industrial transition",
+   "2026-11-17"
+  ],
+  [
+   "pakistan calls for grants over debt to fund climate recovery at cop31",
+   "2026-11-17"
   ]
  ]
 }

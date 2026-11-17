@@ -1,0 +1,488 @@
+{
+  "run": "2026-11-17T12:10:13.129598+00:00",
+  "reviewed": false,
+  "counts": {
+    "kept": 19,
+    "duplicates": 136,
+    "irrelevant": 184,
+    "stale": 197,
+    "trimmed": 21
+  },
+  "problems": [
+    "3 open Tier-1 alert(s) in ALERTS.md older than 7 days — run /intel-review",
+    "cop32_presidency_substack — blocked:403 (1 consecutive)",
+    "amn_en — error:ReadTimeout (2 consecutive)"
+  ],
+  "items": [
+    {
+      "id": "b36c26da710dcf72",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQemdid0NUa2RveTR5M3ZaLVFidDA5YnFUazVVb19UdVdlcWI5OU84V2JNZENFZGM3OGdiZEVwamdaclUzMzB0VTlsaUFyUGFnTTN3R0lLVnBrSkc4dFFKNDBwOV9SUWlDcFdkTVhnd0ExYUFNSTlxR2c2UTBxb09MSGlySWlsXzJjNENuTW0xd3V2MXlGQTJKQUlySndpQ1hjT0pNM0dVQkRfSHRad2kxcWpHS1JKZVFBVjd0RlliN01LdVVOSmRFeQ?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQemdid0NUa2RveTR5M3ZaLVFidDA5YnFUazVVb19UdVdlcWI5OU84V2JNZENFZGM3OGdiZEVwamdaclUzMzB0VTlsaUFyUGFnTTN3R0lLVnBrSkc4dFFKNDBwOV9SUWlDcFdkTVhnd0ExYUFNSTlxR2c2UTBxb09MSGlySWlsXzJjNENuTW0xd3V2MXlGQTJKQUlySndpQ1hjT0pNM0dVQkRfSHRad2kxcWpHS1JKZVFBVjd0RlliN01LdVVOSmRFeQ?oc=5",
+      "title": "OSC Secretary-General: COP32 in Ethiopia to serve as platform for Global South to coordinate their positions",
+      "outlet": "TV BRICS",
+      "source_key": "gnews_cop32_platform",
+      "kind": "article",
+      "published": "2026-11-13",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 1,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "platform"
+      ],
+      "excerpt_auto": "OSC Secretary-General: COP32 in Ethiopia to serve as platform for Global South to coordinate their positions TV BRICS",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "b4b0c1e484723eda",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVDNnaUdnX1laTnY2cC1OTVFvUmxVdkpnZXkzc2xpU2pVMkpmdVZINE5vdkdlQVgwY2ZJdHIzYnJEc2NVRDlqX3NGUVJWekxra2JZeFRIbFY1WGJzZGZEUHlsdnMtWnpuUEI0czZCbUc0bnlWMnZVdmJHV0tnWXdhV3BKbzFnMWNMd1dXWEZZZVBzT2M5eUNjSUhsZHRZNmkwZ2R0RVVqZ0U2R2FHd2Q0V1ByOHI3Zw?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNVDNnaUdnX1laTnY2cC1OTVFvUmxVdkpnZXkzc2xpU2pVMkpmdVZINE5vdkdlQVgwY2ZJdHIzYnJEc2NVRDlqX3NGUVJWekxra2JZeFRIbFY1WGJzZGZEUHlsdnMtWnpuUEI0czZCbUc0bnlWMnZVdmJHV0tnWXdhV3BKbzFnMWNMd1dXWEZZZVBzT2M5eUNjSUhsZHRZNmkwZ2R0RVVqZ0U2R2FHd2Q0V1ByOHI3Zw?oc=5",
+      "title": "Climate promises must translate into funding and action at COP32 – AGNA",
+      "outlet": "Ghana Business News",
+      "source_key": "gnews_cop32_platform",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 1,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Climate promises must translate into funding and action at COP32 – AGNA Ghana Business News",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "284e2d1f545d0029",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPSWN3T1JGVzI3R2s0NXVRbWNzWF9vMmptRmgtM29RVFVfaFF3U1hPLU9vNEo0eHNrcjl0UDFsSjVyVFJhaXFNSTBtb3Y1NzVaSERZSGU4MnRlTlJrMXRyQ0JpR19GbXVDM3JTOVlRWVd5TlA1UGNTQ0pKaGctTlZXY1Rjd2ZHS1Frc2loRGZPYmJ4SGs?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPSWN3T1JGVzI3R2s0NXVRbWNzWF9vMmptRmgtM29RVFVfaFF3U1hPLU9vNEo0eHNrcjl0UDFsSjVyVFJhaXFNSTBtb3Y1NzVaSERZSGU4MnRlTlJrMXRyQ0JpR19GbXVDM3JTOVlRWVd5TlA1UGNTQ0pKaGctTlZXY1Rjd2ZHS1Frc2loRGZPYmJ4SGs?oc=5",
+      "title": "Africa Climate Talks call for credible implementation on the road to COP32",
+      "outlet": "Economic Commission for Africa (ECA)",
+      "source_key": "gnews_cop32_uneca",
+      "kind": "article",
+      "published": "2026-11-06",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [],
+      "excerpt_auto": "Africa Climate Talks call for credible implementation on the road to COP32 Economic Commission for Africa (ECA)",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "c676c3dd4e9fea43",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcVl0SDJ6am92NjNDMnJXejZzOGNQWlZkODM1cUh4WFJaVTZzbEZkbFhjNVBMTzdPeGVDZ0ZsOVdCcFphamh3MGF5bFBLaHNYXzI2M19jeENnWExQeDVoT2hfaFBZM2NnY2Z0TEhPZWhTTWJWaXdCY2d0WkluQTlqRmF3SjFMU2pmX3cxTTc3OTFKX2xRVTRZTFZmZFM3d2tJX2t1MFBGNWhIUXgxY0w1R1pEM1QyWWlnSHc?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcVl0SDJ6am92NjNDMnJXejZzOGNQWlZkODM1cUh4WFJaVTZzbEZkbFhjNVBMTzdPeGVDZ0ZsOVdCcFphamh3MGF5bFBLaHNYXzI2M19jeENnWExQeDVoT2hfaFBZM2NnY2Z0TEhPZWhTTWJWaXdCY2d0WkluQTlqRmF3SjFMU2pmX3cxTTc3OTFKX2xRVTRZTFZmZFM3d2tJX2t1MFBGNWhIUXgxY0w1R1pEM1QyWWlnSHc?oc=5",
+      "title": "Africa Climate Talks call for stronger negotiating capacity and implementation-focused COP32 in Addis Ababa",
+      "outlet": "Economic Commission for Africa (ECA)",
+      "source_key": "gnews_cop32_uneca",
+      "kind": "article",
+      "published": "2026-11-15",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "addis ababa"
+      ],
+      "excerpt_auto": "Africa Climate Talks call for stronger negotiating capacity and implementation-focused COP32 in Addis Ababa Economic Commission for Africa (ECA)",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "8c5c3d4a2e950339",
+      "url": "https://www.youtube.com/watch?v=61PS5h7VkEw",
+      "url_canonical": "https://youtube.com/watch?v=61PS5h7VkEw",
+      "title": "የጠቅላይ ሚኒስትሩ የሰጡት የኮፕ32 አቅጣጫ/የቀድሞ ታጣቂዎች በመቀሌ/ዓለምአቀ የጤና ጉባዔ በአዲስ አበባ/የብሪክስን ጉባኤ የቃኘው መድረክ/dailynews",
+      "outlet": "ENA (YouTube)",
+      "source_key": "yt_ena",
+      "kind": "video",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-17",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "አዲስ አበባ"
+      ],
+      "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "d3625a1a01274d3b",
+      "url": "https://www.youtube.com/watch?v=Bi9UYKaZ2Wg",
+      "url_canonical": "https://youtube.com/watch?v=Bi9UYKaZ2Wg",
+      "title": "ለቀጣዩ የኮፕ 32 (COP32) መድረክ ኢትዮጵያ እንገናኝ- የአንታሊያው(ቱርኪዬ) የኮፕ31 ተሳታፊዎች @ethiopiannewsagency",
+      "outlet": "ENA (YouTube)",
+      "source_key": "yt_ena",
+      "kind": "video",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-17",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "25edb63653570344",
+      "url": "https://www.youtube.com/watch?v=SXhre2TEAxs",
+      "url_canonical": "https://youtube.com/watch?v=SXhre2TEAxs",
+      "title": "የኢትዮጵያ አዲስ አቅም ኮፕ 32",
+      "outlet": "Fana Television (YouTube)",
+      "source_key": "yt_fana",
+      "kind": "video",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-17",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "#ፋና #አዲስ_አበባ #Ethiopia #ኢትዮጵያ #FANA_TV #FANA_NEWS #ፋና_ዜና",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "8d15e08eef7945aa",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZUgyUjFsTDBvYkphRVkxRnJpUWhYd0dsaW5sSm52c1VfNjB1SUIwQV9XY21Ca19mc1RpTUNQeEFpZ0lmcmxvcVlyZ055YTdvS1M5OGQxQVJpTjNxZXRMNFdrMkUxdlVXdGNCZDdjSXAyLWZNZUo0X09KME5WYW1GLVpwM3Nwa3NYZ2haeXZ2cWxUME5MWUJ6aFpfUkVGVUNfRE1TTkRqZkh5dVlxeklTRFljenBHN0RYSVdXY1g3aVE1NUx1?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZUgyUjFsTDBvYkphRVkxRnJpUWhYd0dsaW5sSm52c1VfNjB1SUIwQV9XY21Ca19mc1RpTUNQeEFpZ0lmcmxvcVlyZ055YTdvS1M5OGQxQVJpTjNxZXRMNFdrMkUxdlVXdGNCZDdjSXAyLWZNZUo0X09KME5WYW1GLVpwM3Nwa3NYZ2haeXZ2cWxUME5MWUJ6aFpfUkVGVUNfRE1TTkRqZkh5dVlxeklTRFljenBHN0RYSVdXY1g3aVE1NUx1?oc=5",
+      "title": "Ethiopia advances COP32 preparations as Abiy Ahmed convenes national steering committee",
+      "outlet": "Tech Review Africa",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-16",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "preparations",
+        "steering committee"
+      ],
+      "excerpt_auto": "Ethiopia advances COP32 preparations as Abiy Ahmed convenes national steering committee Tech Review Africa",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "49844957d967997c",
+      "url": "https://www.fanamc.com/english/ethiopia-takes-144429-electric-vehicles-and-56-billion-green-legacy-seedlings-to-global-climate-stage-ahead-of-cop32/?utm_source=rss&utm_medium=rss&utm_campaign=ethiopia-takes-144429-electric-vehicles-and-56-billion-green-legacy-seedlings-to-global-climate-stage-ahead-of-cop32",
+      "url_canonical": "https://fanamc.com/english/ethiopia-takes-144429-electric-vehicles-and-56-billion-green-legacy-seedlings-to-global-climate-stage-ahead-of-cop32",
+      "title": "Ethiopia Takes 144,429 Electric Vehicles and 56 Billion Green Legacy Seedlings to Global Climate Stage Ahead of COP32",
+      "outlet": "Fana / FMC (EN)",
+      "source_key": "fana_en",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [
+        "addis ababa",
+        "antalya",
+        "cop31",
+        "green legacy",
+        "transport"
+      ],
+      "excerpt_auto": "Addis Ababa, November 17, 2026 (FMC) — Ethiopia has brought its progress in forest restoration and clean transport, alongside broader efforts to build a climate-resilient economy, to the global spotlight at the 31st United Nations Climate Change Conference (COP31) in Antalya, Türkiye, presenting mor",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "9b1dff0a49ccc140",
+      "url": "https://www.youtube.com/watch?v=0YMUEH1aRck",
+      "url_canonical": "https://youtube.com/watch?v=0YMUEH1aRck",
+      "title": "ኢትዮጵያ በኮፕ 31 መድረክ ላይ ያሳየችው አርዓያነት - የኮፕ 32 የኢትዮጵያ ፕሬዝዳንሺያል ቡድን አባል አቶ ገብሩ ጀምበር @EthiopianNewsAgency",
+      "outlet": "ENA (YouTube)",
+      "source_key": "yt_ena",
+      "kind": "video",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "am",
+      "trust": "state_media",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "state media; promote to B only for direct official statements",
+      "flags": [
+        "official_adjacent"
+      ],
+      "matched": [],
+      "excerpt_auto": "#ENA_News #ENA #Ethiopian_News #EthiopiaNews #DailyNews #Todays_News #Mereja #Ethiopia_Today #EthiopianNewsToday #የኢትዮጲያ_ዜና #ENA #Ena_News #Ethiopian_News #Ethiopian_News_Agency #Today's_News #ሰበር_ዜና #ዜና_ዛሬ #Update_news #Mereja #መረጃ #addis_mereja #አዲስ_መረጃ #ሰበር_ዜና #አማረኛ_ዜና #amaregna_zena #amharic_new",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "74bbd7b6b7072b14",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSUFRS0p2OEpRRUVMSmtCdWIwRThOeThTQnp5SjVXQ0k0Wk5FSkphVThlVkhxakVXd01PZlI2UUZ4bTJZNlY4cWFvN3dzVHpyd2JrX2FYZGY4eW5lUldjdVhUaFdudGJUSTF2M004XzlsNDZxOFVadEpfcVRNTVRKV3ZrWVN5VEk0aVc1Q2Jvb0VYVjA3UVY2X1p5LWF3UG5BSG1tcDhsWnJXaG9Tb280WVJjeGVrRlc2OVQ5eUxlU0pXRXhENjlHenE1Zw?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOSUFRS0p2OEpRRUVMSmtCdWIwRThOeThTQnp5SjVXQ0k0Wk5FSkphVThlVkhxakVXd01PZlI2UUZ4bTJZNlY4cWFvN3dzVHpyd2JrX2FYZGY4eW5lUldjdVhUaFdudGJUSTF2M004XzlsNDZxOFVadEpfcVRNTVRKV3ZrWVN5VEk0aVc1Q2Jvb0VYVjA3UVY2X1p5LWF3UG5BSG1tcDhsWnJXaG9Tb280WVJjeGVrRlc2OVQ5eUxlU0pXRXhENjlHenE1Zw?oc=5",
+      "title": "COP32: Africa pushes for more climate finance as Ethiopia prepares to host its own conference",
+      "outlet": "Table.Briefings",
+      "source_key": "gnews_cop32_ethiopia",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 2,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "climate finance"
+      ],
+      "excerpt_auto": "COP32: Africa pushes for more climate finance as Ethiopia prepares to host its own conference Table.Briefings",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "cd578a1e4a6f73a0",
+      "url": "https://www.climatechangenews.com/2026/11/17/building-coastal-resilience-for-local-communities-in-honduras/",
+      "url_canonical": "https://climatechangenews.com/2026/11/17/building-coastal-resilience-for-local-communities-in-honduras",
+      "title": "Building coastal resilience for local communities in Honduras",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Climate adaptation projects that focus on ocean and coastal management could provide useful case studies for negotiators at COP31 The post Building coastal resilience for local communities in Honduras appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "47fba9756e61fd33",
+      "url": "https://www.climatechangenews.com/2026/11/17/cop31-bulletin-day-8-arab-group-russia-reject-cover-text-over-fossil-fuels-and-electrification-goal/",
+      "url_canonical": "https://climatechangenews.com/2026/11/17/cop31-bulletin-day-8-arab-group-russia-reject-cover-text-over-fossil-fuels-and-electrification-goal",
+      "title": "COP31 Bulletin Day 8: Arab Group, Russia reject cover text over fossil fuels and electrification goal",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Negotiations will try to slim down the bulky draft cover decision, while the EU is due to back the electrification goal and oceans and science feature at events The post COP31 Bulletin Day 8: Arab Group, Russia reject cover text over fossil fuels and electrification goal appeared first on Climate Ho",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "e188b56ee980d0a9",
+      "url": "https://www.climatechangenews.com/2026/11/17/cop31-cant-deliver-for-islands-without-delivering-for-the-ocean/",
+      "url_canonical": "https://climatechangenews.com/2026/11/17/cop31-cant-deliver-for-islands-without-delivering-for-the-ocean",
+      "title": "COP31 can’t deliver for islands without delivering for the ocean",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Recognition of the ocean's importance must go beyond speeches and start shaping national climate commitments and the allocation of international finance The post COP31 can’t deliver for islands without delivering for the ocean appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "ec4c2b346908966f",
+      "url": "https://www.climatechangenews.com/2026/11/17/minerals-for-the-planet-or-for-war-and-ai-cop31-must-make-clear-what-we-prioritise/",
+      "url_canonical": "https://climatechangenews.com/2026/11/17/minerals-for-the-planet-or-for-war-and-ai-cop31-must-make-clear-what-we-prioritise",
+      "title": "Minerals for the planet or for war and AI? COP31 must make clear what we prioritise",
+      "outlet": "Climate Home News",
+      "source_key": "climatehome",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "As demand for minerals soars, intensifying pressure for new mining, meeting demand for the energy transition must come first The post Minerals for the planet or for war and AI? COP31 must make clear what we prioritise appeared first on Climate Home News .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "0f4ccb09a01f61ae",
+      "url": "https://www.carbonbrief.org/revealed-russia-saudi-arabia-and-australia-are-largest-co2-exporters-of-all-time",
+      "url_canonical": "https://carbonbrief.org/revealed-russia-saudi-arabia-and-australia-are-largest-co2-exporters-of-all-time",
+      "title": "Revealed: Russia, Saudi Arabia and Australia are largest CO2 exporters of all time",
+      "outlet": "Carbon Brief",
+      "source_key": "carbonbrief",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "independent",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "independent press report",
+      "flags": [],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "Russia, Saudi Arabia and COP31 co-president Australia are the largest exporters of carbon dioxide (CO2) emissions in history, reveals Carbon… The post Revealed: Russia, Saudi Arabia and Australia are largest CO2 exporters of all time appeared first on Carbon Brief .",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "3a45441f31e8a8f3",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNaGdRUExrUGlvS2w4eUtyUXBkYklmT0ZGVXZDZS1XSTFNSkhTRG04T3N4WTJTdU5CNTVrdDVScTk1VVNtSEZxNDJObk1FWkdLajlRQmtuTVZaY1NoNERoeF9hTUl1cWdVS3c3SldhcHNUZi1oZ216Sm9oTURJLVlWa3JVUEJlazRlUS10NFp3ZTB3NnFld2MyRXhacWFDajdvc19kTTRHSkNJSG4taEtfeC0tdkdNRDdYTExrUXlR?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNaGdRUExrUGlvS2w4eUtyUXBkYklmT0ZGVXZDZS1XSTFNSkhTRG04T3N4WTJTdU5CNTVrdDVScTk1VVNtSEZxNDJObk1FWkdLajlRQmtuTVZaY1NoNERoeF9hTUl1cWdVS3c3SldhcHNUZi1oZ216Sm9oTURJLVlWa3JVUEJlazRlUS10NFp3ZTB3NnFld2MyRXhacWFDajdvc19kTTRHSkNJSG4taEtfeC0tdkdNRDdYTExrUXlR?oc=5",
+      "title": "Tuya Smart Showcases Conow AIX AI Energy Platform at COP31 Blue Zone Event",
+      "outlet": "Kalkine Media",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31",
+        "platform"
+      ],
+      "excerpt_auto": "Tuya Smart Showcases Conow AIX AI Energy Platform at COP31 Blue Zone Event Kalkine Media",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "eb5c3e49ca53042a",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONk96MkFyeVZiWDlXamVtZUpKVHVxbmx6eUtLX3Y0NDJNalFMX3hTb2VKS3FJeXJ1M0F5UEpCbFBRRnVvdDl3NHNuUG9NbVFaVzNfZ3RlMDZKelkwSU1YYk9oVm1aQkhULWNHaUpjMFNtTG8wMWlDTWFrSFk3SHFFVmM3NG9INGc1d2QyZ1lNdXNRX2lWV2JNaWduYVhYOGpIQ0REbWNzT2xfSzdUbFBnUnRIQ0h2QmJLeU14amFFSVFPVlE?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONk96MkFyeVZiWDlXamVtZUpKVHVxbmx6eUtLX3Y0NDJNalFMX3hTb2VKS3FJeXJ1M0F5UEpCbFBRRnVvdDl3NHNuUG9NbVFaVzNfZ3RlMDZKelkwSU1YYk9oVm1aQkhULWNHaUpjMFNtTG8wMWlDTWFrSFk3SHFFVmM3NG9INGc1d2QyZ1lNdXNRX2lWV2JNaWduYVhYOGpIQ0REbWNzT2xfSzdUbFBnUnRIQ0h2QmJLeU14amFFSVFPVlE?oc=5",
+      "title": "At COP31, Nepal pushes for billions to help disaster survivors. So far, $20 million is promised",
+      "outlet": "iNFOnews.ca",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "At COP31, Nepal pushes for billions to help disaster survivors. So far, $20 million is promised iNFOnews.ca",
+      "also_seen": [],
+      "note": ""
+    },
+    {
+      "id": "98a9fbbe11e96509",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPVE1vVEpqaXE2b2ZRLWc2TXg3N080eUk5WU9WcGR6WFZaV0lxbEZaOHNyYnoybUp3QzVaT0NIb0h2LXppV3AtbUpZVG5MRzM0R1NreWVObEJfWk1nVkxGWXRQS1JuS2JvRDBqUFRIVGt6aElRMHBOMFFYYkZWc1VfUW1CZnozODZJQVBwUnRKS0NUYVQxVEVuS19qaTN4eXMyWVljeFZCelJwak83bHBsMEIzN0lfSi1lRjl1Ti1OaGR4Vnl2ZmE2LXU0M19tY3J3aFFEQnFRMEt3QdIB3wFBVV95cUxOR2cyUW1PTnNQYmVlMnJmUnZOM1NlQWJHX1JnRExOZ0ZZVmdicDNjdWZTQUFpZGlPUTlBTy16RDBhOGZJZjNjWkF5M09sd0p2V3hrSUsyV3hPeko3Q2F5OW9UbHdsX1lMMWFYZEZhU0NaMDFDYUVqaU9qTmRuYXgwMjc0SGx6VzhMRVVoQmJTTF9MRTN1TUlmOFRHMGJycVpwSk5ocThXVFA0eXlQZEM3bDFweGNSTVlHbTIwOXVpdGt1Q0dRalVBTlBaNF9OUXFKVnFCXzg5eXJxXzVlUkpB?oc=5",
+      "url_canonical": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPVE1vVEpqaXE2b2ZRLWc2TXg3N080eUk5WU9WcGR6WFZaV0lxbEZaOHNyYnoybUp3QzVaT0NIb0h2LXppV3AtbUpZVG5MRzM0R1NreWVObEJfWk1nVkxGWXRQS1JuS2JvRDBqUFRIVGt6aElRMHBOMFFYYkZWc1VfUW1CZnozODZJQVBwUnRKS0NUYVQxVEVuS19qaTN4eXMyWVljeFZCelJwak83bHBsMEIzN0lfSi1lRjl1Ti1OaGR4Vnl2ZmE2LXU0M19tY3J3aFFEQnFRMEt3QdIB3wFBVV95cUxOR2cyUW1PTnNQYmVlMnJmUnZOM1NlQWJHX1JnRExOZ0ZZVmdicDNjdWZTQUFpZGlPUTlBTy16RDBhOGZJZjNjWkF5M09sd0p2V3hrSUsyV3hPeko3Q2F5OW9UbHdsX1lMMWFYZEZhU0NaMDFDYUVqaU9qTmRuYXgwMjc0SGx6VzhMRVVoQmJTTF9MRTN1TUlmOFRHMGJycVpwSk5ocThXVFA0eXlQZEM3bDFweGNSTVlHbTIwOXVpdGt1Q0dRalVBTlBaNF9OUXFKVnFCXzg5eXJxXzVlUkpB?oc=5",
+      "title": "COP31: India, Sweden Launch LeadIT 3.0 To Accelerate Low-carbon Industrial Transition",
+      "outlet": "ETV Bharat",
+      "source_key": "gnews_cop31_app",
+      "kind": "article",
+      "published": "2026-11-17",
+      "retrieved": "2026-11-17",
+      "lang": "en",
+      "trust": "aggregator",
+      "tier": 3,
+      "grade": "C",
+      "grade_reason": "aggregator or unverified source",
+      "flags": [
+        "via_google_news",
+        "low_trust"
+      ],
+      "matched": [
+        "cop31"
+      ],
+      "excerpt_auto": "COP31: India, Sweden Launch LeadIT 3.0 To Accelerate Low-carbon Industrial Transition ETV Bharat",
+      "also_seen": [],
+      "note": ""
+    }
+  ]
+}
