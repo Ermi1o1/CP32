@@ -2,12 +2,14 @@
   "expo": {
     "name": "COP32",
     "slug": "cop32-guide",
-    "description": "Independent visitor guide for the COP32 climate conference in Addis Ababa. Not an official COP32, UNFCCC or government app. Demonstration build with illustrative content.",
+    "description": "Independent visitor guide for the COP32 climate conference in Addis Ababa. Not an official COP32, UNFCCC or government app.",
     "version": "1.0.0",
     "scheme": "cop32guide",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
+    "primaryColor": "#0D474C",
+    "backgroundColor": "#F6F3EC",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -29,10 +31,18 @@
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.VIBRATE",
-        "android.permission.INTERNET"
+        "android.permission.VIBRATE"
       ],
       "versionCode": 11
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#0D474C",
+      "translucent": false
+    },
+    "androidNavigationBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#F6F3EC"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -58,10 +68,7 @@
             "useLegacyPackaging": true,
             "enableMinifyInReleaseBuilds": true,
             "enableShrinkResourcesInReleaseBuilds": true,
-            "buildArchs": [
-              "arm64-v8a",
-              "armeabi-v7a"
-            ]
+            "buildArchs": ["arm64-v8a", "armeabi-v7a"]
           }
         }
       ],
