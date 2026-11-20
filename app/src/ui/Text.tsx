@@ -10,9 +10,7 @@ export interface TextProps extends RNTextProps {
   weight?: 400 | 500 | 600 | 700 | 800;
   center?: boolean;
   upper?: boolean;
-  /** Force the display face on or off; title styles use it by default. */
   display?: boolean;
-  /** Fixed-width digits, for clock times that must line up. */
   tabular?: boolean;
 }
 
@@ -24,32 +22,36 @@ function flatten(children: React.ReactNode): string {
   return out;
 }
 
-/**
- * The only text component screens may use. It picks the bundled font for the
- * script actually present in the string, applies the taller Amharic line
- * height, the in-app text size, and tags the language for screen readers.
- */
 export function Text({ variant = 'body', color = 'text', weight, center, upper, display, tabular, style, children, ...rest }: TextProps) {
   const { c } = useTheme();
   const { prefs } = usePrefs();
   const ethiopic = hasEthiopic(flatten(children));
-  // The largest styles grow to 135% at most, so one long word ("Programme") still fits a
-  // 320 px screen; everything else follows the full 200%.
-  const big = variant === 'display' || variant === 'largeTitle' || variant === 'title1' || variant === 'clock';
+  
+  // SAFETY FALLBACK: If an invalid variant is used, fallback to body to prevent crash
+  const safeVariant = (variant === 'title' || variant === 'caption') ? 'body' : variant;
+  
+  const big = safeVariant === 'display' || safeVariant === 'largeTitle' || safeVariant === 'title1' || safeVariant === 'clock';
   const scale = big ? Math.min(prefs.textScale, 1.35) : prefs.textScale;
-  const base = textStyle(variant, { ethiopic, lang: prefs.lang, scale, weight, display });
+  
+  // Try to get the style, fallback if the variant is missing from the system
+  let base: any = {};
+  try {
+    base = textStyle(safeVariant, { ethiopic, lang: prefs.lang, scale, weight, display });
+  } catch (e) {
+    base = textStyle('body', { ethiopic, lang: prefs.lang, scale, weight, display });
+  }
+
   const extra: TextStyle = {
     color: c[color],
     textAlign: center ? 'center' : undefined,
-    // Upper-casing and tracking are Latin conventions; Ge'ez has no case.
     textTransform: upper && !ethiopic ? 'uppercase' : undefined,
-    letterSpacing: upper && !ethiopic && variant !== 'label' ? 0.5 : base.letterSpacing,
-    fontVariant: tabular || variant === 'clock' ? ['tabular-nums'] : undefined,
+    letterSpacing: upper && !ethiopic && safeVariant !== 'label' ? 0.5 : base.letterSpacing,
+    fontVariant: tabular || safeVariant === 'clock' ? ['tabular-nums'] : undefined,
   };
+  
   return (
     <RNText
       {...rest}
-      // Honour the phone's own font-size setting as well, up to 200% combined is tested.
       maxFontSizeMultiplier={big ? 1.35 : 2}
       accessibilityLanguage={ethiopic ? 'am' : 'en'}
       style={[base, extra, style]}>

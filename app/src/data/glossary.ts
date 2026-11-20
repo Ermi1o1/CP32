@@ -1,7 +1,3 @@
-/**
- * Glossary: short, plain-language definitions of terms heard at a climate
- * conference. General knowledge, written for this guide; not official wording.
- */
 export interface Term { term: string; def: string }
 
 export const GLOSSARY: Term[] = [
@@ -9,7 +5,9 @@ export const GLOSSARY: Term[] = [
   { term: 'Blue zone', def: 'The part of a climate conference run by the UN, where negotiations take place. Entry needs accreditation.' },
   { term: 'Climate finance', def: 'Money for cutting emissions and coping with climate impacts, especially funding that flows from richer to poorer countries.' },
   { term: 'COP', def: 'Conference of the Parties: the yearly meeting of the countries that signed the UN climate convention.' },
+  { term: 'Global Stocktake', def: 'A comprehensive assessment of the world’s progress on climate action, conducted every five years under the Paris Agreement.' },
   { term: 'Green zone', def: 'The part of a climate conference organised by the host country, usually open to the public, businesses and civil society.' },
+  { term: 'Just Transition', def: 'Ensuring that the shift to a green economy is fair and inclusive, creating decent work and leaving no one behind.' },
   { term: 'Loss and damage', def: 'Harm from climate change that people cannot adapt to — lost homes, land, lives and culture — and the question of who helps pay for it.' },
   { term: 'Mitigation', def: 'Cutting the greenhouse gases that cause climate change, or removing them from the air.' },
   { term: 'NDC', def: 'Nationally Determined Contribution: a country’s own climate plan and targets under the Paris Agreement.' },

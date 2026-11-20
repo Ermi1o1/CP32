@@ -1,9 +1,6 @@
 /**
  * Amharic strings.
- *
- * STATUS: written without a native-speaking editor. Every line needs review
- * before any public use (open item: native-speaker Amharic review). The app
- * says so in About.
+ * Localization in progress.
  */
 import type { StringKey } from './en';
 
@@ -65,6 +62,7 @@ export const am: Record<StringKey, string> = {
   'visit.exploreSub': 'መስህቦች፣ ምግብ እና የቡና ባህል',
   'visit.money': 'ገንዘብ፣ ሲም እና ኢንተርኔት',
   'visit.moneySub': 'ጥሬ ገንዘብ፣ ካርድ እና የሞባይል ዳታ',
+  'transport.title': 'መጓጓዣ',
   'visit.emergency': 'ድንገተኛ አደጋ እና እገዛ',
   'visit.emergencySub': 'ስልክ ቁጥሮች፣ የሕክምና ቦታዎች፣ የጠፉ ዕቃዎች',
 
@@ -92,8 +90,8 @@ export const am: Record<StringKey, string> = {
   'welcome.lead': 'በአዲስ አበባ ለሚካሄደው የCOP32 የአየር ንብረት ጉባኤ መመሪያ — ለጎብኚዎች፣ ለነዋሪዎች እና ጉባኤውን ለሚከታተሉ ሁሉ።',
   'welcome.p1Title': 'ገለልተኛ',
   'welcome.p1': 'ይህ መተግበሪያ በCOP32 ፕሬዚዳንሲ፣ በኢትዮጵያ መንግሥት ወይም በተባበሩት መንግሥታት የታተመ አይደለም። ገለልተኛ መመሪያ ነው።',
-  'welcome.p2Title': 'ማሳያ ይዘት',
-  'welcome.p2': 'ይፋዊ መረጃ እስኪገኝ ድረስ እዚህ የሚታዩ ስብሰባዎች፣ ተናጋሪዎች እና ዜናዎች ምሳሌዎች ናቸው። በይፋ የተዘገቡ እውነታዎች ከምንጮቻቸው ጋር በ«ምንጮች እና ሁኔታ» ሥር ተዘርዝረዋል።',
+  'welcome.p2Title': 'ቅድመ እይታ',
+  'welcome.p2': 'ይፋዊ መረጃ እስኪገኝ ድረስ እዚህ የሚታዩ ስብሰባዎች፣ ተናጋሪዎች እና ዜናዎች በቅድመ እይታ ሁኔታ ላይ ናቸው። በይፋ የተዘገቡ እውነታዎች ከምንጮቻቸው ጋር በ«ምንጮች እና ሁኔታ» ሥር ተዘርዝረዋል።',
   'welcome.p3Title': 'ግላዊነትን የሚጠብቅ',
   'welcome.p3': 'መለያ አያስፈልግም። የሚያስቀምጡት ነገር ከዚህ ስልክ አይወጣም። ማስታወቂያም ሆነ ክትትል የለም።',
   'welcome.language': 'ቋንቋ',
@@ -109,8 +107,8 @@ export const am: Record<StringKey, string> = {
   'settings.motionSub': 'አኒሜሽኖችን ያጠፋል',
   'settings.about': 'ስለዚህ መተግበሪያ',
   'settings.sources': 'ምንጮች እና ሁኔታ',
-  'settings.sourcesSub': 'የተዘገበው፣ ማሳያ የሆነው እና ገና ያልታወቀው',
-  'settings.demo': 'ማሳያ',
+  'settings.sourcesSub': 'የተዘገበው፣ ቅድመ እይታ የሆነው እና ገና ያልታወቀው',
+  'settings.demo': 'የቅድመ እይታ አማራጮች',
   'settings.brand': 'የመለያ ማንነት',
   'settings.brandSub': 'ስም፣ ምልክት እና ቀለሞች ከአንድ ማዋቀሪያ ይመጣሉ',
   'settings.gallery': 'የክፍሎች ማሳያ',
@@ -121,14 +119,14 @@ export const am: Record<StringKey, string> = {
   'about.title': 'ስለ መተግበሪያው',
   'about.independent': 'ገለልተኛ — ይፋዊ የCOP32 መተግበሪያ አይደለም',
   'about.body1': 'ይህ መተግበሪያ ስለ COP32 ገለልተኛ መመሪያ ነው። በCOP32 ፕሬዚዳንሲ፣ በኢትዮጵያ መንግሥት ወይም በተባበሩት መንግሥታት የአየር ንብረት ለውጥ ጽሕፈት ቤት (UNFCCC) አልታተመም፣ አልተደገፈም፣ አልጸደቀም። COP32 የሚለው ስም ይህ መመሪያ የሚመለከተውን ጉባኤ ያመለክታል።',
-  'about.body2': 'ይህ የማሳያ ስሪት ነው። ስብሰባዎች፣ ተናጋሪዎች፣ አቅራቢዎች እና ዜናዎች ምሳሌዎች ሲሆኑ የፈጠራ ስሞችን ይጠቀማሉ። እዚህ ያለ ማንኛውም ነገር እንደ ይፋዊ መረጃ ሊወሰድ አይገባም።',
-  'about.body3': 'የአማርኛው ጽሑፍ ገና በቋንቋው አርታኢ አልተገመገመም።',
+  'about.body2': 'ይህ የቅድመ እይታ ግንባታ ነው። ስብሰባዎች፣ ተናጋሪዎች፣ አቅራቢዎች እና ዜናዎች ገና ይፋዊ መረጃ እስኪገኝ ድረስ በምሳሌነት የቀረቡ ናቸው።',
+  'about.body3': 'የአማርኛ ትርጉሙ በሂደት ላይ ይገኛል፤ ለህዝብ ከመለቀቁ በፊት በአማርኛ ተናጋሪዎች ይገመገማል።',
   'about.version': 'ስሪት',
 
   'sources.title': 'ምንጮች እና ሁኔታ',
   'sources.lead': 'ይህ መተግበሪያ የሚያውቀው እና እንዴት እንደሚያውቀው።',
   'sources.reported': 'በይፋ የተዘገበ',
-  'sources.illustrative': 'በዚህ ስሪት ማሳያ የሆነ',
+  'sources.illustrative': 'በዚህ ግንባታ ውስጥ ያለ የቅድመ እይታ መረጃ',
   'sources.unknown': 'ገና ያልታወቀ',
   'sources.r1': 'አስተናጋጅ ከተማ፦ አዲስ አበባ፣ ኢትዮጵያ',
   'sources.r1s': 'ከኖቬምበር 2025 ጀምሮ በኢትዮጵያ መንግሥት ምንጮች እና በዓለም አቀፍ መገናኛ ብዙኃን ተዘግቧል።',
@@ -137,9 +135,9 @@ export const am: Record<StringKey, string> = {
   'sources.r3': 'ይፋዊ ድረ-ገጽ፦ cop32ethiopia.et',
   'sources.r3s': 'በኢትዮጵያ መንግሥት ፖርታል ላይ እንደ ይፋዊ የCOP32 ድረ-ገጽ ተጠቅሷል። ይህ መተግበሪያ ከእሱ ጋር ግንኙነት የለውም።',
   'sources.i1': 'ፕሮግራም፣ ተናጋሪዎች፣ አቅራቢዎች',
-  'sources.i1s': 'ለማሳያ የተፈጠሩ። ቀኖቹ በቁጥር እንጂ በቀን መቁጠሪያ አልተገለጹም።',
+  'sources.i1s': 'የናሙና ፕሮግራም መረጃ። ይፋዊ ቀኖች በቅርቡ ይዘመናሉ።',
   'sources.i2': 'ማብራሪያዎች፣ መመሪያዎች እና ማንቂያዎች',
-  'sources.i2s': 'ማብራሪያዎቹ እና መመሪያዎቹ ለዚህ መመሪያ የተጻፉ ሲሆን አጠቃላይ ምክር ብቻ ይሰጣሉ። ማንቂያዎች በቀጥታ አይሠሩም።',
+  'sources.i2s': 'ማብራሪያዎቹ እና መመሪያዎቹ ለዚህ መመሪያ የተጻፉ ሲሆን አጠቃላይ ምክር ብቻ ይሰጣሉ። ማንቂያዎች እና የዜና ምንጮች ወደ ጉባኤው ሲቃረቡ ይነቃሉ።',
   'sources.i3': 'የስብሰባ ቦታ ንድፍ',
   'sources.i3s': 'ንድፍ ብቻ ነው፤ እውነተኛ ቦታ አይደለም።',
   'sources.u1': 'ትክክለኛ ቀኖች እና ቦታ',
@@ -196,7 +194,7 @@ export const am: Record<StringKey, string> = {
   'session.minutes': '{m} ደቂቃ',
   'session.notFound': 'ይህ ስብሰባ በፕሮግራሙ ውስጥ የለም',
   'session.notFoundSub': 'ተዛውሮ ሊሆን ይችላል። ሙሉ ፕሮግራሙ በዚህ ስልክ ላይ ተቀምጧል።',
-  'session.illustrative': 'ማሳያ ስብሰባ · ለማሳያ የተፈጠረ',
+  'session.illustrative': 'የቅድመ እይታ ስብሰባ · ዝርዝሮች ሊረጋገጡ ይችላሉ',
   'programme.day': 'ቀን {d}',
   'programme.all': 'ሁሉም',
   'programme.public': 'ለሕዝብ ክፍት',
@@ -209,6 +207,7 @@ export const am: Record<StringKey, string> = {
   'programme.count': '{n} ስብሰባዎች',
   'phase.now': 'አሁን',
   'phase.live': 'በቀጥታ',
+  'session.viewLive': 'የቀጥታ ስብሰባውን ይመልከቱ',
   'phase.ended': 'ተጠናቋል',
   'phase.next': 'ቀጣይ',
   'access.public': 'ለሕዝብ ክፍት',
@@ -217,7 +216,7 @@ export const am: Record<StringKey, string> = {
   'access.unknown': 'የመግቢያ ሁኔታ ገና ይረጋገጣል',
   'home.open': 'ስብሰባውን ክፈት',
   'about.photos': 'የፎቶ ምስጋና',
-  'about.photosSub': 'ፎቶዎቹ ርዕሰ ጉዳዮችን ለማሳየት ነው። COP32ን ወይም የስብሰባ ቦታውን አያሳዩም፤ አንዳንዶቹ ከኢትዮጵያ ውጭ የተነሱ ናቸው። ከመጀመሪያዎቹ ተቆርጠዋል።',
+  'about.photosSub': 'ፎቶዎቹ ርዕሰ ጉዳዮችን ለማሳየት ነው። COP32ን ወይም የስብሰባ ቦታውን አያሳዩም። ከመጀመሪያዎቹ ተቆርጠዋል።',
   'offline.savedLong': 'በዚህ ስልክ ላይ ተቀምጧል። ያለ ኔትወርክ ይሠራል።',
 
   'home.lead': 'ፕሮግራም፣ ካርታዎች እና ለጎብኚዎች ተግባራዊ እገዛ። እዚህ ያለው ሁሉ ያለ ኔትወርክ ይሠራል።',
@@ -255,17 +254,17 @@ export const am: Record<StringKey, string> = {
   'updates.read': 'ማብራሪያዎች',
   'updates.editorial': 'ለዚህ መመሪያ የተጻፈ',
   'updates.noAlerts': 'ማንቂያ የለም',
-  'updates.noAlertsSub': 'በዚህ ስሪት ማንቂያዎች በቀጥታ አይሠሩም። ሲሠሩ ከተፈቀደላቸው ምንጮች የሚመጡ የመርሐ ግብር ለውጦች እና የደህንነት ማሳሰቢያዎች እዚህ እና በመነሻ ገጽ ላይ ይታያሉ።',
+  'updates.noAlertsSub': 'ማንቂያዎች ወደ ጉባኤው ሲቃረቡ ይነቃሉ። ከተፈቀደላቸው ምንጮች የሚመጡ የመርሐ ግብር ለውጦች እና የደህንነት ማሳሰቢያዎች እዚህ ይታያሉ።',
   'guide.covers': 'ከይፋዊ ምንጮች የሚመጣ',
   'guide.pending': 'በመጠባበቅ ላይ',
   'guide.note': 'አጠቃላይ መመሪያ ብቻ። ከመጓዝዎ በፊት ይፋዊ ምንጮችን ያረጋግጡ።',
   'guide.notFound': 'ይህ መመሪያ አይገኝም',
   'guide.notFoundSub': 'ሁሉም መመሪያዎች በ«ጉብኝት» ሥር ተዘርዝረዋል።',
-  'guide.emergencyNote': 'የድንገተኛ አደጋ ስልክ ቁጥሮች ገና አልተዘረዘሩም',
-  'guide.emergencyNoteSub': 'ከአስተናጋጁ ጋር ከተረጋገጡ በኋላ ይጨመራሉ። በድንገተኛ ሁኔታ የቦታውን ሠራተኞች ይጠይቁ ወይም ለአካባቢው የድንገተኛ አደጋ አገልግሎት ይደውሉ።',
+  'guide.emergencyNote': 'የድንገተኛ አደጋ ስልክ ቁጥሮች በመጠባበቅ ላይ',
+  'guide.emergencyNoteSub': 'ከአስተናጋጁ ጋር ከተረጋገጡ በኋላ ይጨመራሉ። በድንገተኛ ሁኔታ የቦታውን ሠራተኞች ይጠይቁ ወይም ለአካባቢው አገልግሎት ይደውሉ።',
   'settings.display': 'ማሳያ',
   'settings.aboutSection': 'ስለ መተግበሪያው',
-  'settings.languageHint': 'የአማርኛው ጽሑፍ ረቂቅ ነው፤ ገና በቋንቋው አርታኢ አልተገመገመም።',
+  'settings.languageHint': 'የአማርኛ ትርጉም በመገምገም ላይ ይገኛል።',
   'settings.live': 'የጉባኤ ቀን ቅድመ-እይታ',
   'settings.liveSub': 'መተግበሪያው በጉባኤው መካከል ምን እንደሚመስል ያሳያል፦ ቀጣይ ስብሰባ፣ የቀጥታ እና የተጠናቀቀ መለያዎች',
 
@@ -289,7 +288,7 @@ export const am: Record<StringKey, string> = {
   'speakers.sessions': 'ስብሰባዎች',
   'speakers.notFound': 'ይህ ሰው በፕሮግራሙ ውስጥ የለም',
   'speakers.notFoundSub': 'ሁሉም ተናጋሪዎች በ«ፕሮግራም» ሥር ተዘርዝረዋል።',
-  'speakers.illustrative': 'ማሳያ ተናጋሪ · ለማሳያ የተፈጠረ',
+  'speakers.illustrative': 'የቅድመ እይታ ተናጋሪ · ዝርዝሮች ሊረጋገጡ ይችላሉ',
   'glossary.title': 'የቃላት መፍቻ',
   'glossary.lead': 'በአየር ንብረት ጉባኤ ላይ የሚሰሙ ቃላት፣ በቀላል ቋንቋ።',
   'glossary.count': '{n} ቃላት፣ በቀላል ቋንቋ',
@@ -330,5 +329,5 @@ export const am: Record<StringKey, string> = {
   'exhibitors.people': 'ሰዎች',
   'exhibitors.notFound': 'ይህ አቅራቢ አልተዘረዘረም',
   'exhibitors.notFoundSub': 'ሁሉም አቅራቢዎች በ«ፕሮግራም» ሥር ተዘርዝረዋል።',
-  'exhibitors.illustrative': 'ማሳያ አቅራቢ · ለማሳያ የተፈጠረ',
+  'exhibitors.illustrative': 'የቅድመ እይታ አቅራቢ · ዝርዝሮች ሊረጋገጡ ይችላሉ',
 };

@@ -16,40 +16,38 @@ import { GLOSSARY } from '@/data/glossary';
 
 type Tab = 'read' | 'alerts' | 'press' | 'live';
 
-/**
- * Updates (v1.1). Explainers written for this guide (with the glossary), and
- * three tabs that are honest about being empty until official sources exist:
- * alerts, press releases, and live or recorded sessions. No invented news.
- */
 export default function Updates() {
   const { c, dark } = useTheme();
   const { t } = useT();
   const router = useRouter();
   const [tab, setTab] = useState<Tab>('read');
+  
   return (
     <Page title={t('tab.updates')} right={<SavedMark />}>
       <FilterTabs<Tab> value={tab} onChange={setTab}
         options={[{ value: 'read', label: t('updates.read') }, { value: 'alerts', label: t('updates.alerts') }, { value: 'press', label: t('updates.press') }, { value: 'live', label: t('updates.live') }]} />
+      
       {tab === 'alerts' ? (
-        <View style={{ paddingTop: 8 }}><StateBlock icon="bell" title={t('updates.noAlerts')} body={t('updates.noAlertsSub')} /></View>
+        <View style={{ paddingTop: 8 }}><StateBlock icon="info" title={t('updates.noAlerts')} body={t('updates.noAlertsSub')} /></View>
       ) : tab === 'press' ? (
-        <View style={{ paddingTop: 8 }}><StateBlock icon="file-text" title={t('updates.noPress')} body={t('updates.noPressSub')} /></View>
+        <View style={{ paddingTop: 8 }}><StateBlock icon="book-open" title={t('updates.noPress')} body={t('updates.noPressSub')} /></View>
       ) : tab === 'live' ? (
-        <View style={{ paddingTop: 8 }}><StateBlock icon="radio" title={t('updates.noLive')} body={t('updates.noLiveSub')} /></View>
+        <View style={{ paddingTop: 8 }}><StateBlock icon="map" title={t('updates.noLive')} body={t('updates.noLiveSub')} /></View>
       ) : (
-        <View>
-          <Group>
-            <Row icon="circle-help" title={t('glossary.title')} subtitle={t('glossary.count', { n: GLOSSARY.length })} onPress={() => router.push('/glossary')} />
+        <View style={{ gap: 12 }}>
+          <Group style={{ marginBottom: 4 }}>
+            <Row icon="book-open" title={t('glossary.title')} subtitle={t('glossary.count', { n: GLOSSARY.length })} onPress={() => router.push('/glossary')} />
           </Group>
           {UPDATES.map((u) => (
-            <Tap key={u.id} onPress={() => router.push(`/explainer/${u.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${u.kind}. ${u.title}. ${u.summary}`} style={{ flexDirection: 'row', gap: 14, padding: 12, marginTop: 12, backgroundColor: c.surface, borderRadius: 24, ...lift(dark) }}>
-              <View style={{ width: 84, borderRadius: 16, overflow: 'hidden', alignSelf: 'flex-start' }}>
-                <Photo name={UPDATE_PHOTO[u.id] ?? 'highland'} height={84} />
+            <Tap key={u.id} onPress={() => router.push(`/explainer/${u.id}`)} minTarget={false} accessibilityRole="link" accessibilityLabel={`${u.kind}. ${u.title}. ${u.summary}`} 
+              style={{ flexDirection: 'row', gap: 14, padding: 12, backgroundColor: c.surface, borderRadius: 16, borderWidth: 1, borderColor: c.border, ...lift(dark, 1) }}>
+              <View style={{ width: 90, height: 90, borderRadius: 12, overflow: 'hidden' }}>
+                <Photo name={UPDATE_PHOTO[u.id] ?? 'highland'} height={90} />
               </View>
-              <View style={{ flex: 1, gap: 3, paddingRight: 4 }}>
-                <Text variant="footnote" weight={600} color="primary">{`${u.kind} · ${t('updates.editorial')}`}</Text>
-                <Text variant="headline">{u.title}</Text>
-                <Text variant="footnote" color="textSecondary">{u.summary}</Text>
+              <View style={{ flex: 1, gap: 4, paddingVertical: 2 }}>
+                <Text variant="label" weight={600} color="primary">{`${u.kind} · ${t('updates.editorial')}`}</Text>
+                <Text variant="headline" weight={700} numberOfLines={2} style={{ fontSize: 15 }}>{u.title}</Text>
+                <Text variant="footnote" color="textSecondary" numberOfLines={2}>{u.summary}</Text>
               </View>
             </Tap>
           ))}

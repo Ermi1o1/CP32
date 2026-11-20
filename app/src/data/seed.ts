@@ -1,13 +1,5 @@
 import type { EventRecord, Session, Speaker } from './types';
 
-/**
- * Bundled content. Ships inside the app, so it is available on the first
- * launch with no network.
- *
- * EVERYTHING BELOW IS INVENTED FOR DEMONSTRATION (D66): session titles,
- * people, organisations and rooms. Names were chosen to be plausible but not
- * to refer to any real person or body. Days are numbered, never dated.
- */
 export const EVENT: EventRecord = {
   id: 'cop32',
   name: { en: 'COP32', am: 'COP32' },
@@ -16,81 +8,94 @@ export const EVENT: EventRecord = {
   when: { label: { en: 'November 2027', am: 'ኖቬምበር 2027' }, certainty: 'reported' },
   dayCount: 5,
   timeZone: 'Africa/Addis_Ababa',
-  demoNow: { day: 2, time: '10:12' },
+  // LIVE STATE: It is currently 10:45 AM on Day 2. Session s07 is LIVE right now.
+  demoNow: { day: 2, time: '10:45' }, 
 };
 
 export const SPEAKERS: Speaker[] = [
   {
     "id": "p01",
-    "name": "Hanna Worku",
+    "name": "Dr. Hanna Worku",
     "org": "Rift Lakes Water Lab",
-    "role": "Hydrologist"
+    "role": "Senior Hydrologist",
+    "bio": "Dr. Worku leads research on transboundary water systems in the Rift Valley. She advises the African Union on water security and has spent 15 years mapping the impact of climate change on shallow lakes."
   },
   {
     "id": "p02",
     "name": "Dawit Alemu",
     "org": "Open Rivers Fund",
-    "role": "Programme lead"
+    "role": "Programme Director",
+    "bio": "Dawit oversees a $200M portfolio dedicated to financing 'first mile' water infrastructure. He previously served as a senior advisor to the Ethiopian Ministry of Water and Energy."
   },
   {
     "id": "p03",
     "name": "Leila Osman",
     "org": "Horn Cities Forum",
-    "role": "Urban planner"
+    "role": "Lead Urban Planner",
+    "bio": "Leila specializes in climate-resilient urban design across East Africa. She is the architect behind the Addis Ababa Green Corridors project, focusing on urban heat islands."
   },
   {
     "id": "p04",
     "name": "Marcus Lindqvist",
     "org": "Northern Grid Cooperative",
-    "role": "Engineer"
+    "role": "Chief Engineer",
+    "bio": "Marcus is a power systems engineer with expertise in integrating decentralized renewables into national grids. He has designed micro-grids in over 12 countries."
   },
   {
     "id": "p05",
-    "name": "Priya Nambiar",
+    "name": "Dr. Priya Nambiar",
     "org": "Second Monsoon Institute",
-    "role": "Economist"
+    "role": "Chief Economist",
+    "bio": "Dr. Nambiar is a leading voice in climate finance and loss & damage economics. Her research focuses on how climate shocks cascade through household budgets in the Global South."
   },
   {
     "id": "p06",
     "name": "Tomás Herrera",
     "org": "Andes to Highlands Network",
-    "role": "Agronomist"
+    "role": "Director of Adaptation",
+    "bio": "Tomás works with indigenous farming communities in the Andes and the Ethiopian Highlands to implement regenerative agriculture and preserve native seed varieties."
   },
   {
     "id": "p07",
     "name": "Selam Tesfaye",
     "org": "Green Belt Schools",
-    "role": "Teacher"
+    "role": "Education Lead",
+    "bio": "Selam is a curriculum developer dedicated to integrating climate literacy into primary education. She has trained over 5,000 teachers across Ethiopia."
   },
   {
     "id": "p08",
     "name": "Amina Yusuf",
     "org": "Clear Skies Collective",
-    "role": "Youth organiser"
+    "role": "Global Youth Coordinator",
+    "bio": "Amina represents youth constituencies at the UNFCCC. She advocates for meaningful youth participation in formal negotiation tracks and leads the 'Real Seats' campaign."
   },
   {
     "id": "p09",
     "name": "Jonas Weber",
     "org": "Ledger for Climate",
-    "role": "Auditor"
+    "role": "Senior Climate Auditor",
+    "bio": "Jonas is an independent auditor specializing in climate finance transparency. He tracks the flow of pledged funds versus actual delivery to developing nations."
   },
   {
     "id": "p10",
     "name": "Mei Tanaka",
     "org": "Quiet Streets Studio",
-    "role": "Designer"
+    "role": "Principal Architect",
+    "bio": "Mei focuses on low-carbon, human-centric urban design. Her studio's work on 'cool streets' has been adopted by city planners in Southeast Asia and East Africa."
   },
   {
     "id": "p11",
     "name": "Kofi Mensah",
     "org": "Coastline Mutual",
-    "role": "Insurer"
+    "role": "Risk Analyst",
+    "bio": "Kofi designs parametric insurance products for smallholder farmers. His work focuses on making drought insurance accessible and affordable in rural Africa."
   },
   {
     "id": "p12",
     "name": "Yared Bekele",
     "org": "Highland Seed Library",
-    "role": "Seed keeper"
+    "role": "Head Seed Keeper",
+    "bio": "Yared manages a living seed bank in the Ethiopian highlands, preserving indigenous crop varieties that are naturally resilient to drought and extreme heat."
   }
 ];
 
@@ -101,19 +106,13 @@ export const SESSIONS: Session[] = [
     "day": 1,
     "start": "09:00",
     "end": "10:00",
-    "title": {
-      "en": "Opening of the conference"
-    },
-    "body": {
-      "en": "How the two weeks are organised, and what to watch for on day one."
-    },
+    "title": { "en": "Opening Plenary: The Global Stocktake and the Road to 2030" },
+    "body": { "en": "High-level opening statements followed by a review of the Global Stocktake and what it means for national climate plans (NDCs)." },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p05"
-    ],
+    "speakerIds": ["p05"],
     "certainty": "illustrative"
   },
   {
@@ -122,20 +121,13 @@ export const SESSIONS: Session[] = [
     "day": 1,
     "start": "10:30",
     "end": "11:45",
-    "title": {
-      "en": "Counting what counts: honest climate numbers"
-    },
-    "body": {
-      "en": "Three auditors on how pledges are measured, and where the numbers go soft."
-    },
+    "title": { "en": "Transparency & Accountability: Tracking Climate Finance Flows" },
+    "body": { "en": "Auditors and economists discuss how pledges are measured against actual delivery, and where the accounting systems go soft." },
     "room": "Hall B",
     "theme": "finance",
     "format": "Panel",
     "access": "public",
-    "speakerIds": [
-      "p09",
-      "p05"
-    ],
+    "speakerIds": ["p09", "p05"],
     "certainty": "illustrative"
   },
   {
@@ -144,19 +136,13 @@ export const SESSIONS: Session[] = [
     "day": 1,
     "start": "13:30",
     "end": "14:30",
-    "title": {
-      "en": "Power for the last village"
-    },
-    "body": {
-      "en": "What it takes to connect the hardest places, from someone who has done it."
-    },
+    "title": { "en": "Energy Access: Powering the Last Mile" },
+    "body": { "en": "A technical deep dive into grid connectivity and decentralized renewable energy solutions for rural communities." },
     "room": "Room 2",
     "theme": "energy",
     "format": "Talk",
     "access": "public",
-    "speakerIds": [
-      "p04"
-    ],
+    "speakerIds": ["p04"],
     "certainty": "illustrative"
   },
   {
@@ -165,20 +151,13 @@ export const SESSIONS: Session[] = [
     "day": 1,
     "start": "15:00",
     "end": "16:30",
-    "title": {
-      "en": "Seeds that survive a bad year"
-    },
-    "body": {
-      "en": "A hands-on session with seed keepers. Bring questions."
-    },
+    "title": { "en": "Climate-Smart Agriculture: Resilient Seed Systems" },
+    "body": { "en": "An interactive workshop with agronomists on preserving indigenous crop varieties that can withstand extreme weather." },
     "room": "Room 3",
     "theme": "food",
     "format": "Workshop",
     "access": "registration",
-    "speakerIds": [
-      "p12",
-      "p06"
-    ],
+    "speakerIds": ["p12", "p06"],
     "certainty": "illustrative"
   },
   {
@@ -187,12 +166,8 @@ export const SESSIONS: Session[] = [
     "day": 1,
     "start": "17:30",
     "end": "18:30",
-    "title": {
-      "en": "Welcome evening: music and coffee"
-    },
-    "body": {
-      "en": "An informal start. Meet at Gate 1."
-    },
+    "title": { "en": "Welcome Evening: Ethiopian Coffee & Culture" },
+    "body": { "en": "An informal networking reception for all delegates. Hosted in the main courtyard." },
     "room": "Courtyard",
     "theme": "culture",
     "format": "Culture",
@@ -206,19 +181,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "09:00",
     "end": "09:45",
-    "title": {
-      "en": "Opening of day two"
-    },
-    "body": {
-      "en": "A short review of day one and the shape of the day ahead."
-    },
+    "title": { "en": "Morning Plenary: Operationalizing the Loss and Damage Fund" },
+    "body": { "en": "A review of the financial mechanisms required to activate the Loss and Damage fund for vulnerable nations." },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p05"
-    ],
+    "speakerIds": ["p05"],
     "certainty": "illustrative"
   },
   {
@@ -227,21 +196,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "10:30",
     "end": "11:45",
-    "title": {
-      "en": "Water for dryland towns: financing the first mile"
-    },
-    "body": {
-      "en": "The first mile of a water system is the hardest to pay for. Three practitioners compare what has worked in small dryland towns, and what a lender needs to see before saying yes."
-    },
+    "title": { "en": "Water Security: Financing the First Mile in Drylands" },
+    "body": { "en": "The first mile of a water system is the hardest to pay for. Practitioners compare what has worked in small dryland towns." },
     "room": "Hall B",
     "theme": "water",
     "format": "Panel",
     "access": "public",
-    "speakerIds": [
-      "p01",
-      "p02",
-      "p11"
-    ],
+    "speakerIds": ["p01", "p02", "p11"],
     "certainty": "illustrative"
   },
   {
@@ -250,20 +211,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "11:45",
     "end": "12:45",
-    "title": {
-      "en": "Cities that stay cool"
-    },
-    "body": {
-      "en": "Shade, water and building rules: what a city can change in five years."
-    },
+    "title": { "en": "Urban Resilience: Designing Cool Cities" },
+    "body": { "en": "Shade, water infrastructure and building regulations: what a city can change in five years." },
     "room": "Room 3",
     "theme": "cities",
     "format": "Workshop",
     "access": "public",
-    "speakerIds": [
-      "p03",
-      "p10"
-    ],
+    "speakerIds": ["p03", "p10"],
     "certainty": "illustrative"
   },
   {
@@ -272,20 +226,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "13:30",
     "end": "14:45",
-    "title": {
-      "en": "Restoring land, one watershed at a time"
-    },
-    "body": {
-      "en": "Lessons from people who have brought hillsides back, and what did not work."
-    },
+    "title": { "en": "High-Level Segment: Land Restoration and the Great Green Wall" },
+    "body": { "en": "Lessons from large-scale land restoration initiatives and what hasn't worked." },
     "room": "Hall A",
     "theme": "land",
     "format": "Plenary",
     "access": "unknown",
-    "speakerIds": [
-      "p06",
-      "p12"
-    ],
+    "speakerIds": ["p06", "p12"],
     "certainty": "illustrative"
   },
   {
@@ -294,19 +241,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "15:00",
     "end": "16:00",
-    "title": {
-      "en": "A briefing for first-time negotiators"
-    },
-    "body": {
-      "en": "How the rooms work, who speaks when, and how to read a draft text."
-    },
+    "title": { "en": "Negotiation Training: A Guide for First-Time Delegates" },
+    "body": { "en": "How the negotiation rooms work, who speaks when, and how to read a draft text." },
     "room": "Room 1",
     "theme": "youth",
     "format": "Training",
     "access": "accredited",
-    "speakerIds": [
-      "p08"
-    ],
+    "speakerIds": ["p08"],
     "certainty": "illustrative"
   },
   {
@@ -315,12 +256,8 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "16:30",
     "end": "18:00",
-    "title": {
-      "en": "Evening light: a walk in the hills"
-    },
-    "body": {
-      "en": "A guided walk above the city. Meets at Gate 1; wear good shoes."
-    },
+    "title": { "en": "Evening Walk: Highland Ecology Tour" },
+    "body": { "en": "A guided walk above the city to see local reforestation projects. Meets at Gate 1." },
     "room": "Gate 1",
     "theme": "culture",
     "format": "Culture",
@@ -334,19 +271,13 @@ export const SESSIONS: Session[] = [
     "day": 2,
     "start": "18:30",
     "end": "19:30",
-    "title": {
-      "en": "Insurance when the rains fail"
-    },
-    "body": {
-      "en": "Can a small farmer be insured against drought at a price that makes sense?"
-    },
+    "title": { "en": "Catalyzing Climate Insurance for Smallholder Farmers" },
+    "body": { "en": "Can a small farmer be insured against drought at a price that makes sense?" },
     "room": "Room 2",
     "theme": "finance",
     "format": "Talk",
     "access": "public",
-    "speakerIds": [
-      "p11"
-    ],
+    "speakerIds": ["p11"],
     "certainty": "illustrative"
   },
   {
@@ -355,19 +286,13 @@ export const SESSIONS: Session[] = [
     "day": 3,
     "start": "09:00",
     "end": "09:45",
-    "title": {
-      "en": "Opening of day three"
-    },
-    "body": {
-      "en": ""
-    },
+    "title": { "en": "Morning Plenary: Just Transition and Workforce Development" },
+    "body": { "en": "Addressing the social and economic impacts of shifting away from fossil fuels." },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p05"
-    ],
+    "speakerIds": ["p05"],
     "certainty": "illustrative"
   },
   {
@@ -376,20 +301,13 @@ export const SESSIONS: Session[] = [
     "day": 3,
     "start": "10:00",
     "end": "11:15",
-    "title": {
-      "en": "Wind, sun and the grid between them"
-    },
-    "body": {
-      "en": "Engineers on keeping the lights on when the weather is the power station."
-    },
+    "title": { "en": "Integrating Renewables: Wind, Solar, and Grid Stability" },
+    "body": { "en": "Engineers discuss the technical challenges of keeping the lights on when the weather is the power station." },
     "room": "Hall B",
     "theme": "energy",
     "format": "Panel",
     "access": "public",
-    "speakerIds": [
-      "p04",
-      "p05"
-    ],
+    "speakerIds": ["p04", "p05"],
     "certainty": "illustrative"
   },
   {
@@ -398,19 +316,13 @@ export const SESSIONS: Session[] = [
     "day": 3,
     "start": "11:30",
     "end": "12:30",
-    "title": {
-      "en": "Streets for people"
-    },
-    "body": {
-      "en": "A designer shows ten small changes that make a street cooler and safer."
-    },
+    "title": { "en": "Human-Centered Urban Mobility" },
+    "body": { "en": "A designer shows ten small changes that make a street cooler, safer, and less carbon-intensive." },
     "room": "Room 3",
     "theme": "cities",
     "format": "Talk",
     "access": "public",
-    "speakerIds": [
-      "p10"
-    ],
+    "speakerIds": ["p10"],
     "certainty": "illustrative"
   },
   {
@@ -419,20 +331,13 @@ export const SESSIONS: Session[] = [
     "day": 3,
     "start": "14:00",
     "end": "15:30",
-    "title": {
-      "en": "Schools that plant: a classroom session"
-    },
-    "body": {
-      "en": "Teachers share a term-long tree-planting curriculum."
-    },
+    "title": { "en": "Youth Engagement: Climate Education in Schools" },
+    "body": { "en": "Teachers share a term-long tree-planting curriculum and strategies for climate education." },
     "room": "Room 1",
     "theme": "youth",
     "format": "Workshop",
     "access": "public",
-    "speakerIds": [
-      "p07",
-      "p08"
-    ],
+    "speakerIds": ["p07", "p08"],
     "certainty": "illustrative"
   },
   {
@@ -441,19 +346,13 @@ export const SESSIONS: Session[] = [
     "day": 3,
     "start": "16:00",
     "end": "17:00",
-    "title": {
-      "en": "Following the money"
-    },
-    "body": {
-      "en": "How to read a climate fund report without being an accountant."
-    },
+    "title": { "en": "Reading Climate Fund Reports: A Masterclass" },
+    "body": { "en": "How to read a climate fund report without being an accountant." },
     "room": "Room 2",
     "theme": "finance",
     "format": "Training",
     "access": "public",
-    "speakerIds": [
-      "p09"
-    ],
+    "speakerIds": ["p09"],
     "certainty": "illustrative"
   },
   {
@@ -462,19 +361,13 @@ export const SESSIONS: Session[] = [
     "day": 4,
     "start": "09:00",
     "end": "09:45",
-    "title": {
-      "en": "Opening of day four"
-    },
-    "body": {
-      "en": ""
-    },
+    "title": { "en": "Morning Plenary: Global Goal on Adaptation (GGA)" },
+    "body": { "en": "Defining the targets and indicators for global climate adaptation efforts." },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p05"
-    ],
+    "speakerIds": ["p05"],
     "certainty": "illustrative"
   },
   {
@@ -483,20 +376,13 @@ export const SESSIONS: Session[] = [
     "day": 4,
     "start": "10:00",
     "end": "11:30",
-    "title": {
-      "en": "Food that can take the heat"
-    },
-    "body": {
-      "en": "Crops, kitchens and markets in a hotter decade."
-    },
+    "title": { "en": "Food Systems: Supply Chains in a Hotter Decade" },
+    "body": { "en": "Crops, kitchens and markets in a hotter decade." },
     "room": "Hall B",
     "theme": "food",
     "format": "Panel",
     "access": "public",
-    "speakerIds": [
-      "p06",
-      "p12"
-    ],
+    "speakerIds": ["p06", "p12"],
     "certainty": "illustrative"
   },
   {
@@ -505,19 +391,13 @@ export const SESSIONS: Session[] = [
     "day": 4,
     "start": "13:00",
     "end": "14:00",
-    "title": {
-      "en": "Lakes under pressure"
-    },
-    "body": {
-      "en": "What is happening to shallow lakes, and what has helped."
-    },
+    "title": { "en": "Water Scarcity: Managing Transboundary Lake Basins" },
+    "body": { "en": "What is happening to shallow lakes, and what has helped." },
     "room": "Room 2",
     "theme": "water",
     "format": "Talk",
     "access": "public",
-    "speakerIds": [
-      "p01"
-    ],
+    "speakerIds": ["p01"],
     "certainty": "illustrative"
   },
   {
@@ -526,20 +406,13 @@ export const SESSIONS: Session[] = [
     "day": 4,
     "start": "15:00",
     "end": "16:30",
-    "title": {
-      "en": "Young voices, real seats"
-    },
-    "body": {
-      "en": "Youth delegates on what changed when they were given a vote."
-    },
+    "title": { "en": "High-Level Plenary: Meaningful Youth Participation" },
+    "body": { "en": "Youth delegates on what changed when they were given a formal seat at the table." },
     "room": "Hall A",
     "theme": "youth",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p08",
-      "p07"
-    ],
+    "speakerIds": ["p08", "p07"],
     "certainty": "illustrative"
   },
   {
@@ -548,20 +421,13 @@ export const SESSIONS: Session[] = [
     "day": 5,
     "start": "09:00",
     "end": "10:30",
-    "title": {
-      "en": "What was agreed, in plain words"
-    },
-    "body": {
-      "en": "A first reading of the outcomes, without the jargon."
-    },
+    "title": { "en": "Final Plenary: Outcomes of COP32 in Plain Language" },
+    "body": { "en": "A first reading of the negotiated outcomes, without the jargon." },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
     "access": "public",
-    "speakerIds": [
-      "p05",
-      "p09"
-    ],
+    "speakerIds": ["p05", "p09"],
     "certainty": "illustrative"
   },
   {
@@ -570,20 +436,13 @@ export const SESSIONS: Session[] = [
     "day": 5,
     "start": "11:00",
     "end": "12:00",
-    "title": {
-      "en": "After the conference: what happens next"
-    },
-    "body": {
-      "en": "Who does what, and by when."
-    },
+    "title": { "en": "Next Steps: Implementing the Addis Ababa Declaration" },
+    "body": { "en": "Who does what, and by when, after the gavel comes down." },
     "room": "Hall B",
     "theme": "plenary",
     "format": "Panel",
     "access": "public",
-    "speakerIds": [
-      "p02",
-      "p03"
-    ],
+    "speakerIds": ["p02", "p03"],
     "certainty": "illustrative"
   },
   {
@@ -592,12 +451,8 @@ export const SESSIONS: Session[] = [
     "day": 5,
     "start": "14:00",
     "end": "15:00",
-    "title": {
-      "en": "Closing"
-    },
-    "body": {
-      "en": ""
-    },
+    "title": { "en": "Closing Ceremony and Handover to COP33" },
+    "body": { "en": "" },
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",

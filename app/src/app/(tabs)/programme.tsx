@@ -1,13 +1,14 @@
 import React, { useMemo, useState } from 'react';
-import { View, FlatList } from 'react-native';
+import { View, FlatList, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
 import { GUTTER, ScreenTitle } from '@/ui/chrome';
-import { Button, Chip, FilterTabs, Segmented, Skeleton, StateBlock } from '@/ui/controls';
+import { Button, Chip, Skeleton, StateBlock } from '@/ui/controls';
 import { Sheet } from '@/ui/Sheet';
 import { Text } from '@/ui/Text';
 import { NowLine, SavedMark, SessionRow } from '@/ui/event';
 import { Group, Row, SectionTitle } from '@/ui/lists';
 import { useTheme } from '@/theme/ThemeProvider';
+import { Tap } from '@/ui/Pressable';
 import { useT } from '@/i18n';
 import { useContent } from '@/data/useContent';
 import { useNow } from '@/data/useNow';
@@ -18,19 +19,15 @@ import type { Session, Theme } from '@/data/types';
 type Quick = 'all' | 'public' | 'saved';
 type Item = { kind: 'session'; s: Session; i: number } | { kind: 'now' };
 
-/**
- * Programme (v1.1): a timetable. Two visibly different controls: a segmented
- * strip for WHICH DAY, and text tabs for WHICH SESSIONS. Opens on day one
- * (or on today with the now-line, in the conference-day preview).
- */
 export default function Programme() {
-  const { c, layout } = useTheme();
+  const { c, layout, radius } = useTheme();
   const { t } = useT();
   const router = useRouter();
   const { saved } = useAgenda();
   const event = useContent((r) => r.getEvent());
   const all = useContent((r) => r.listSessions());
   const now = useNow(event);
+  
   const [dayPick, setDay] = useState<number | undefined>(undefined);
   const [quick, setQuick] = useState<Quick>('all');
   const [sheet, setSheet] = useState(false);
@@ -42,6 +39,7 @@ export default function Programme() {
   const day = dayPick ?? now?.day ?? 1;
   const ofDay = useMemo(() => (all ?? []).filter((s) => s.day === day), [all, day]);
   const counts = { all: ofDay.length, public: ofDay.filter((s) => s.access === 'public').length, saved: ofDay.filter((s) => saved.has(s.id)).length };
+  
   const shown = ofDay
     .filter((s) => (quick === 'public' ? s.access === 'public' : quick === 'saved' ? saved.has(s.id) : true))
     .filter((s) => (formats.length === 0 || formats.includes(s.format)) && (themes.length === 0 || themes.includes(s.theme)));
@@ -59,16 +57,40 @@ export default function Programme() {
   }, [shown, now, day]);
 
   const header = (
-    <View style={{ gap: 12, paddingBottom: 4 }}>
+    <View style={{ paddingBottom: 8 }}>
       <ScreenTitle title={t('tab.programme')} right={<SavedMark />} />
-      <Segmented<`${number}`>
-        value={`${day}`} onChange={(v) => setDay(Number(v))}
-        options={Array.from({ length: event?.dayCount ?? 5 }, (_, i) => ({ value: `${i + 1}` as `${number}`, label: `${i + 1}`, sub: t('programme.dayShort') }))}
-      />
-      <FilterTabs<Quick>
-        value={quick} onChange={setQuick}
-        options={[{ value: 'all', label: t('programme.all'), count: counts.all }, { value: 'public', label: t('programme.public'), count: counts.public }, { value: 'saved', label: t('programme.saved'), count: counts.saved }]}
-      />
+      
+      {/* Sleek horizontal Day selector */}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, paddingVertical: 12 }}>
+        {Array.from({ length: event?.dayCount ?? 5 }, (_, i) => {
+          const d = i + 1;
+          const on = day === d;
+          return (
+            <Tap key={d} onPress={() => setDay(d)} minTarget={false} accessibilityState={{ selected: on }}
+              style={{ width: 68, height: 68, borderRadius: 16, backgroundColor: on ? c.ink : c.surface, alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: on ? c.ink : c.border }}>
+              <Text variant="label" weight={600} color={on ? 'onInk' : 'textSecondary'}>{t('programme.dayShort')}</Text>
+              <Text variant="headline" weight={700} color={on ? 'onInk' : 'text'} style={{ marginTop: -2 }}>{d}</Text>
+            </Tap>
+          );
+        })}
+      </ScrollView>
+
+      {/* Sleek Filters */}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, paddingBottom: 16 }}>
+        {(['all', 'public', 'saved'] as Quick[]).map((q) => {
+          const on = quick === q;
+          const count = counts[q];
+          return (
+            <Tap key={q} onPress={() => setQuick(q)} minTarget={false} accessibilityState={{ selected: on }}
+              style={{ paddingHorizontal: 16, paddingVertical: 8, borderRadius: 100, backgroundColor: on ? c.primary : c.surface, borderWidth: 1, borderColor: on ? c.primary : c.border }}>
+              <Text variant="label" weight={600} color={on ? 'onPrimary' : 'text'}>
+                {t(q === 'all' ? 'programme.all' : q === 'public' ? 'programme.public' : 'programme.saved')} {count > 0 ? `(${count})` : ''}
+              </Text>
+            </Tap>
+          );
+        })}
+      </ScrollView>
+
       <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
         <Text variant="footnote" color="textSecondary" style={{ flex: 1 }}>{t('programme.count', { n: shown.length })}{active ? ` · ${t('programme.filtersOn', { n: active })}` : ''}</Text>
         <Chip label={active ? `${t('programme.filter')} · ${active}` : t('programme.filter')} selected={active > 0} onPress={() => setSheet(true)} />
@@ -101,7 +123,7 @@ export default function Programme() {
             <SectionTitle>{t('programme.more')}</SectionTitle>
             <Group>
               <Row icon="bookmark" title={t('programme.agenda')} subtitle={t('programme.agendaCount', { n: saved.size })} onPress={() => router.push('/agenda')} />
-              <Row icon="building-2" title={t('exhibitors.title')} subtitle={t('exhibitors.lead')} onPress={() => router.push('/exhibitors')} />
+              <Row icon="landmark" title={t('exhibitors.title')} subtitle={t('exhibitors.lead')} onPress={() => router.push('/exhibitors')} />
               <Row icon="users" title={t('programme.speakers')} subtitle={t('programme.speakersSub')} onPress={() => router.push('/speakers')} />
             </Group>
           </View>
