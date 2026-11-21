@@ -67,6 +67,7 @@ export const en = {
   'transport.search': 'Search line, stop or place...',
   'transport.reset': 'Reset',
   'transport.trips': '{n} trips a day',
+  'transport.dragHint': 'Drag up or down to resize the panel',
   'visit.emergency': 'Emergency and help',
   'visit.emergencySub': 'Numbers, medical points, lost and found',
 
@@ -248,6 +249,7 @@ export const en = {
   'map.schematic': 'Schematic only. The venue plan is to be confirmed.',
   'map.planLabel': 'Schematic venue plan. Selected: {p}',
   'map.places': 'Places',
+  'map.gettingAroundSub': 'Light rail, taxis, fares and the airport transfer',
   'map.sessionsHere': 'See {n} sessions here',
   'map.kind.hall': 'Hall',
   'map.kind.room': 'Rooms',

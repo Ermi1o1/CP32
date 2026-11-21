@@ -206,8 +206,7 @@ export default function Home() {
                     <Quick icon="calendar" label="tab.programme" onPress={go('/programme')} />
                     <Quick icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
                     <Quick icon="map" label="tab.map" onPress={go('/map')} />
-                    {/* Replaced train-front with map */}
-                    <Quick icon="map" label="transport.title" onPress={go('/transport')} />
+                    <Quick icon="train-front" label="transport.title" onPress={go('/transport')} />
                     <Quick icon="users" label="programme.speakers" onPress={go('/speakers')} />
                     <Quick icon="book-open" label="glossary.title" onPress={go('/glossary')} />
                   </ScrollView>
@@ -239,10 +238,9 @@ export default function Home() {
                   <SectionTitle>{t('home.essentials')}</SectionTitle>
                   <View style={{ paddingTop: 4 }}>
                     <Group>
-                      {/* Replaced ticket, luggage, siren with safe icons */}
-                      <Row icon="calendar" title={t('home.canAttend')} subtitle={t('home.canAttendSub')} onPress={go('/guide/attend')} />
-<Row icon="map" title={t('home.plan')} subtitle={t('home.planSub')} onPress={go('/visit')} />
-                      <Row icon="info" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={go('/guide/emergency')} />
+                      <Row icon="ticket" title={t('home.canAttend')} subtitle={t('home.canAttendSub')} onPress={go('/guide/attend')} />
+                      <Row icon="luggage" title={t('home.plan')} subtitle={t('home.planSub')} onPress={go('/visit')} />
+                      <Row icon="siren" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={go('/guide/emergency')} />
                     </Group>
                   </View>
                   <Text variant="footnote" color="textTertiary" center style={{ paddingTop: 24, paddingBottom: 12 }}>{t(brand.descriptorKey)}</Text>

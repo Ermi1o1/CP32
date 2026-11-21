@@ -27,7 +27,7 @@ const QUICK: readonly { place: string; icon: IconName; label: StringKey }[] = [
 ];
 
 export default function MapTab() {
-  const { c, radius, dark } = useTheme();
+  const { c, dark } = useTheme();
   const { t } = useT();
   const router = useRouter();
   const sessions = useContent((r) => r.listSessions());
@@ -75,6 +75,10 @@ export default function MapTab() {
           );
         })}
       </ScrollView>
+
+      <Group>
+        <Row icon="train-front" title={t('transport.title')} subtitle={t('map.gettingAroundSub')} onPress={() => router.push('/transport')} />
+      </Group>
 
       <SectionTitle>{t('map.places')}</SectionTitle>
       <FilterTabs<'all' | 'stepfree'> value={only} onChange={setOnly} options={[{ value: 'all', label: t('programme.all'), count: PLACES.length }, { value: 'stepfree', label: t('map.stepFree'), count: PLACES.filter((p) => p.stepFree).length }]} />

@@ -73,6 +73,7 @@ export const am: Record<StringKey, string> = {
   'transport.search': 'መስመር፣ ማቆሚያ ወይም ቦታ ፈልግ...',
   'transport.reset': 'እንደገና ጀምር',
   'transport.trips': 'በቀን {n} ጉዞዎች',
+  'transport.dragHint': 'ፓነሉን ለማስፋት ወይም ለማሳነስ ወደ ላይ ወይም ወደ ታች ይጎትቱ',
   // END DRAFT
   'visit.emergency': 'ድንገተኛ አደጋ እና እገዛ',
   'visit.emergencySub': 'ስልክ ቁጥሮች፣ የሕክምና ቦታዎች፣ የጠፉ ዕቃዎች',
@@ -255,6 +256,8 @@ export const am: Record<StringKey, string> = {
   'map.schematic': 'ንድፍ ብቻ። የስብሰባ ቦታው ንድፍ ገና ይረጋገጣል።',
   'map.planLabel': 'የስብሰባ ቦታ ንድፍ። የተመረጠው፦ {p}',
   'map.places': 'ቦታዎች',
+  // DRAFT — needs native-speaker review (D74).
+  'map.gettingAroundSub': 'ቀላል ባቡር፣ ታክሲ፣ ዋጋዎች እና የአየር ማረፊያ ዝውውር',
   'map.sessionsHere': 'እዚህ ያሉ {n} ስብሰባዎችን ይመልከቱ',
   'map.kind.hall': 'አዳራሽ',
   'map.kind.room': 'ክፍሎች',
