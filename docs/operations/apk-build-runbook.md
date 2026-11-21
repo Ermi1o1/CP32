@@ -5,7 +5,7 @@ For the COP32 guide app in `app/`. Written 2026-11-14 after the first successful
 ## What exists today
 | Item | State on 2026-11-14 |
 |---|---|
-| Release APK | Builds. Version 1.0.0 (final demonstration build, D80; network permission removed; 2026-11-16): **25.2 MB**. Version 0.9.0 (Phase 22 close; 2026-11-16): **25.2 MB**. Version 0.8.0 (raised blocks and floating tab bar, D79; 2026-11-16): **25.2 MB**. Version 0.7.0 (Home rebuilt, D78; 2026-11-16): **25.2 MB**. Version 0.6.1 (finish pass; 2026-11-16): **25.2 MB**. Version 0.6.0 (second visual correction, D77): 25.2 MB. Version 0.5.0: 25.2 MB. Version 0.4.0: 25.2 MB. Version 0.3.0: 25.2 MB. Version 0.2.0: 25.0 MB containing both common phone chip types (64-bit and 32-bit ARM). The first build, 0.1.0, was 21.7 MB. |
+| Release APK | Builds. Version 1.1.0 (Phase 23 revamp port, D81–D84; versionCode 12; 2026-11-21): **25.3 MB**, SHA-256 `085b4e67f7f88bc872f229f32ede0da2216e699903cd89c42b24f973f93089da`, built from commit `0353dd4`, debug-signed, no INTERNET permission, VEP address not configured, demo mode off. Version 1.0.0 (final demonstration build, D80; network permission removed; 2026-11-16): **25.2 MB**. Version 0.9.0 (Phase 22 close; 2026-11-16): **25.2 MB**. Version 0.8.0 (raised blocks and floating tab bar, D79; 2026-11-16): **25.2 MB**. Version 0.7.0 (Home rebuilt, D78; 2026-11-16): **25.2 MB**. Version 0.6.1 (finish pass; 2026-11-16): **25.2 MB**. Version 0.6.0 (second visual correction, D77): 25.2 MB. Version 0.5.0: 25.2 MB. Version 0.4.0: 25.2 MB. Version 0.3.0: 25.2 MB. Version 0.2.0: 25.0 MB containing both common phone chip types (64-bit and 32-bit ARM). The first build, 0.1.0, was 21.7 MB. |
 | Minimum Android | 7.0 (API 24), target API 36 |
 | Permissions requested | Network access, and from 0.2.0 network-state (added by the image library; it reads whether a connection exists, nothing more). The vibrate permission is removed, so haptics use only the permission-free system call. Storage, overlay and vibration permissions that the framework adds by default are removed in `app/app.json`. |
 | Package name | `com.zegatech.cop32guide` — **a working choice, not yet confirmed by the founder.** It becomes hard to change once people have installed the app. |
@@ -16,7 +16,9 @@ For the COP32 guide app in `app/`. Written 2026-11-14 after the first successful
 Size history: the first build was 48.5 MB because Android stores native code uncompressed inside the file by default. Compressing it (one setting, `useLegacyPackaging`) brought it to 21.7 MB. The trade-off is a slightly slower first launch after install; measure it on a phone.
 
 ## Build it locally
-Needs: Node 22, Java 17 or newer, and the Android SDK (platform 37, build-tools 37.0.0, NDK 27.1.12297006, CMake 3.22.1).
+Needs: Node 22, Java 17 or newer, and the Android SDK (platform 37, build-tools 37.0.0, NDK 27.1.12297006, CMake 3.22.1). With `sdkmanager` the platform package is now called `platforms;android-37.0` (`platforms;android-37` no longer resolves; checked 2026-11-21).
+
+Build-time options (Expo reads them when bundling; see `app/.env.example`): `EXPO_PUBLIC_VEP_URL` / `EXPO_PUBLIC_VEP_SESSION_URL` for "Join virtually" (D83), and `EXPO_PUBLIC_DEMO_MODE=1` to pin the clock to day 2, 10:45 for a pitch build (D76 amendment). Set them in the shell before `./gradlew assembleRelease`.
 
 ```bash
 cd app
@@ -28,7 +30,7 @@ ANDROID_HOME=/path/to/android-sdk NODE_ENV=production ./gradlew assembleRelease
 ```
 First build: about 10 minutes. Later builds: about 6.
 
-**If dependency downloads fail with "429 Too Many Requests" or "Could not find …"** — Maven Central rate-limits busy addresses. In the cloud session this was solved by a machine-local Gradle file (`~/.gradle/init.d/central-mirror.gradle`, not in the repository) that tries Google's official Maven Central mirror first: `https://maven-central.storage-download.googleapis.com/maven2/`. A home or office connection normally does not need it.
+**If dependency downloads fail with "429 Too Many Requests" or "Plugin … was not found"** (a different plugin each run) — Maven Central rate-limits busy addresses, and Gradle treats a 429 as fatal rather than trying the next repository, so *adding* a mirror after Maven Central does not help. The fix (2026-11-21) is a machine-local Gradle file (`~/.gradle/init.d/central-mirror.gradle`, not in the repository) that **rewrites** every Maven Central repository URL (`repo.maven.apache.org`, `repo1.maven.org`) to Google's official mirror `https://maven-central.storage-download.googleapis.com/maven2/`, in `beforeSettings` (plugin management, settings buildscript, dependency resolution management) and in `allprojects` (buildscript and project repositories). A home or office connection normally does not need it.
 
 ## Build it with Expo's cloud service instead (EAS)
 The project configuration is compatible. It needs an Expo account owned by the project, which does not exist yet, and `npx eas-cli build -p android --profile preview`. Nothing is set up for this; it is the fallback if local builds become a burden.
@@ -51,6 +53,9 @@ $B/aapt2 dump badging app-release.apk | grep -E "package|SdkVersion|uses-permiss
 $B/apksigner verify --print-certs app-release.apk        # who signed it
 ```
 Expect: label `COP32`, `minSdkVersion:'24'`, from version 1.0.0 a single `uses-permission` line for `ACCESS_NETWORK_STATE` and **no `INTERNET` line** (D80; up to 0.9.0 both were present) (plus an internal one ending `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which is not a user permission).
+
+## Known gap (2026-11-21)
+`expo prebuild` warns that `androidNavigationBar` in `app/app.json` is deprecated and has no effect, so the navigation-bar colour aligned to `tokens.json` in Phase 23 (D82) does not reach Android. The `expo-navigation-bar` plugin is the replacement; not yet added. `androidStatusBar` is still honoured.
 
 ## Open questions for the founder
 1. **Package name** `com.zegatech.cop32guide` — confirm or replace before anyone installs it.
