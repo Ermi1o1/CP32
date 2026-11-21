@@ -32,7 +32,7 @@ describe('search over bundled content', () => {
     expect(hits[0]?.title).toMatch(/^Water/);
   });
   it('finds people, places, guides and glossary terms', () => {
-    expect(search('Hanna')[0]).toMatchObject({ kind: 'person', title: 'Hanna Worku' });
+    expect(search('Hanna')[0]).toMatchObject({ kind: 'person', title: 'Dr. Hanna Worku' });
     expect(search('hall b').some((h) => h.kind === 'place' && h.title === 'Hall B')).toBe(true);
     expect(search('visa').some((h) => h.kind === 'guide' && h.href === '/guide/before')).toBe(true);
     expect(search('loss and damage')[0]).toMatchObject({ kind: 'term', title: 'Loss and damage' });

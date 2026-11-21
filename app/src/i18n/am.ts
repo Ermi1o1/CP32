@@ -63,6 +63,17 @@ export const am: Record<StringKey, string> = {
   'visit.money': 'ገንዘብ፣ ሲም እና ኢንተርኔት',
   'visit.moneySub': 'ጥሬ ገንዘብ፣ ካርድ እና የሞባይል ዳታ',
   'transport.title': 'መጓጓዣ',
+  // DRAFT — machine-drafted, needs native-speaker review before release (D74).
+  'transport.route': 'መስመር ፈልግ',
+  'transport.lines': 'መስመሮች',
+  'transport.stops': 'ማቆሚያዎች',
+  'transport.places': 'ቦታዎች',
+  'transport.from': 'ከ — ሆቴል ወይም ማቆሚያ',
+  'transport.to': 'ወደ — ሆቴል ወይም ማቆሚያ',
+  'transport.search': 'መስመር፣ ማቆሚያ ወይም ቦታ ፈልግ...',
+  'transport.reset': 'እንደገና ጀምር',
+  'transport.trips': 'በቀን {n} ጉዞዎች',
+  // END DRAFT
   'visit.emergency': 'ድንገተኛ አደጋ እና እገዛ',
   'visit.emergencySub': 'ስልክ ቁጥሮች፣ የሕክምና ቦታዎች፣ የጠፉ ዕቃዎች',
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { View, TextInput, KeyboardAvoidingView, Platform, ScrollView, Image, Animated, PanResponder, Dimensions, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SubHeader } from '@/ui/chrome';
@@ -42,8 +42,8 @@ export default function Transport() {
   const [activeTab, setActiveTab] = useState<Tab>('lines');
 
   // Draggable Bottom Sheet Logic
-  const panY = useRef(new Animated.Value(SCREEN_HEIGHT - MIN_SHEET_HEIGHT)).current;
-  const panResponder = useRef(
+  const [panY] = useState(() => new Animated.Value(SCREEN_HEIGHT - MIN_SHEET_HEIGHT));
+  const [panResponder] = useState(() =>
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
@@ -74,7 +74,7 @@ export default function Transport() {
         }
       },
     })
-  ).current;
+  );
 
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>
@@ -107,11 +107,11 @@ export default function Transport() {
             </Tap>
             <View style={{ backgroundColor: c.surface, borderRadius: 12, shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 8, elevation: 4 }}>
               <Tap minTarget={false} style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}>
-                <Text variant="headline" weight={300} style={{ fontSize: 24, marginTop: -4 }}>+</Text>
+                <Text variant="headline" weight={400} style={{ fontSize: 24, marginTop: -4 }}>+</Text>
               </Tap>
               <View style={{ height: 1, backgroundColor: c.border, marginHorizontal: 8 }} />
               <Tap minTarget={false} style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}>
-                <Text variant="headline" weight={300} style={{ fontSize: 24, marginTop: -4 }}>-</Text>
+                <Text variant="headline" weight={400} style={{ fontSize: 24, marginTop: -4 }}>-</Text>
               </Tap>
             </View>
             <Tap minTarget={false} style={{ backgroundColor: c.surface, width: 44, height: 44, borderRadius: 12, alignItems: 'center', justifyContent: 'center', shadowColor: '#000', shadowOpacity: 0.1, shadowRadius: 8, elevation: 4 }}>
@@ -131,7 +131,7 @@ export default function Transport() {
           {/* Search Bar */}
           <View style={{ paddingHorizontal: 20, marginBottom: 16 }}>
             <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: c.bg, borderRadius: 12, paddingHorizontal: 16, height: 50 }}>
-              <Icon name="search" size={20} color="textSecondary" style={{ marginRight: 10 }} />
+              <View style={{ marginRight: 10 }}><Icon name="search" size={20} color="textSecondary" /></View>
               <TextInput placeholder={t('transport.search')} placeholderTextColor={c.textSecondary} style={{ flex: 1, color: c.text, fontSize: 15 }} />
             </View>
           </View>
@@ -184,7 +184,7 @@ export default function Transport() {
             ].map((stop, i) => (
               <View key={i} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: c.border }}>
                 <View style={{ width: 48, height: 48, borderRadius: 24, backgroundColor: '#E53935', alignItems: 'center', justifyContent: 'center', marginRight: 16 }}>
-                  <Icon name="map" size={20} color="#FFF" />
+                  <Icon name="map" size={20} color="onPrimary" />
                 </View>
                 <View style={{ flex: 1 }}>
                   <Text variant="headline" weight={600} style={{ fontSize: 16 }}>{stop.id}</Text>
@@ -206,7 +206,7 @@ export default function Transport() {
             ].map((place, i) => (
               <View key={i} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: c.border }}>
                 <View style={{ width: 48, height: 48, borderRadius: 24, backgroundColor: '#7E57C2', alignItems: 'center', justifyContent: 'center', marginRight: 16 }}>
-                  <Icon name="landmark" size={20} color="#FFF" />
+                  <Icon name="landmark" size={20} color="onPrimary" />
                 </View>
                 <View style={{ flex: 1 }}>
                   <Text variant="headline" weight={600} numberOfLines={1} style={{ fontSize: 16 }}>{place.name}</Text>

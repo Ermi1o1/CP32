@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, type StyleProp, type ViewStyle } from 'react-native';
 import { Text } from './Text';
 import { Icon, type IconName } from './Icon';
 import { Tap } from './Pressable';
@@ -32,9 +32,9 @@ export function SectionTitle({ children, action, onAction }: { children: string;
 }
 
 /** A run of rows in one raised white block (v1.4, D79). No dividers: rows are separated by their own spacing. */
-export function Group({ children }: { children: React.ReactNode }) {
+export function Group({ children, style }: { children: React.ReactNode; style?: StyleProp<ViewStyle> }) {
   const { c, radius, dark } = useTheme();
-  return <View style={{ gap: 2, backgroundColor: c.surface, borderRadius: radius.lg, paddingHorizontal: 14, paddingVertical: 6, ...lift(dark) }}>{children}</View>;
+  return <View style={[{ gap: 2, backgroundColor: c.surface, borderRadius: radius.lg, paddingHorizontal: 14, paddingVertical: 6, ...lift(dark) }, style]}>{children}</View>;
 }
 
 /**

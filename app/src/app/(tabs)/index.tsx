@@ -98,7 +98,8 @@ export default function Home() {
   const { saved } = useAgenda();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
   
-  const now = data?.event?.demoNow || useNow(data?.event);
+  const liveNow = useNow(data?.event);
+  const now = data?.event?.demoNow || liveNow;
   const enter = (delay: number) => (prefs.reduceMotion ? {} : { entering: FadeInDown.duration(240).delay(delay) });
   const Enter = prefs.reduceMotion ? View : Animated.View;
 
