@@ -12,6 +12,7 @@ import { Text } from '@/ui/Text';
 import { Icon } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
 import { Button, Skeleton, StateBlock } from '@/ui/controls';
+import { JoinVirtually } from '@/ui/JoinVirtually';
 import { HorizonLine, Photo, SavedMark, SaveToggle, SessionRow, Tag, accessKey } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
@@ -86,6 +87,7 @@ export default function SessionPage() {
                 <View style={{ flexDirection: 'row', gap: 6, flexWrap: 'wrap' }}>
                   {phase === 'live' ? <Tag kind="live" label={t('phase.live')} /> : phase === 'ended' ? <Tag kind="ended" label={t('phase.ended')} /> : null}
                   <Tag kind={session.access === 'public' ? 'public' : 'restricted'} label={t(accessKey(session.access))} />
+                  {session.delivery === 'hybrid' || session.delivery === 'virtual' ? <Tag kind="online" label={t(session.delivery === 'hybrid' ? 'vep.hybrid' : 'vep.virtual')} /> : null}
                 </View>
                 <Text variant="display" accessibilityRole="header">{session.title.en}</Text>
               </Enter>
@@ -109,6 +111,11 @@ export default function SessionPage() {
                   accessibilityHint={saved ? t('session.unsave') : undefined}
                   onPress={() => { tick(toggle(session.id) ? 'confirm' : 'undo'); }}
                 />
+                {session.delivery === 'hybrid' || session.delivery === 'virtual' ? (
+                  <View style={{ paddingTop: 10 }}>
+                    <JoinVirtually sessionId={session.id} kind="dark" />
+                  </View>
+                ) : null}
                 {/* Sharing hands plain text to the phone's own share sheet; nothing is sent by this app. */}
                 <View style={{ paddingTop: 10 }}>
                   <Button kind="tinted" wide icon="share" label={t('session.share')}

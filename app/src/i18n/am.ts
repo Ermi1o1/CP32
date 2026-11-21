@@ -62,6 +62,22 @@ export const am: Record<StringKey, string> = {
   'visit.exploreSub': 'መስህቦች፣ ምግብ እና የቡና ባህል',
   'visit.money': 'ገንዘብ፣ ሲም እና ኢንተርኔት',
   'visit.moneySub': 'ጥሬ ገንዘብ፣ ካርድ እና የሞባይል ዳታ',
+  // DRAFT — needs native-speaker review (D74).
+  'vep.join': 'በበይነመረብ ይቀላቀሉ',
+  'vep.joinHint': 'ምናባዊ የዝግጅት መድረኩን በአሳሽ ይከፍታል',
+  'vep.opening': 'ምናባዊ መድረኩ እየተከፈተ ነው…',
+  'vep.unconfigured': 'በዚህ ስሪት ምናባዊ ተሳትፎ አልተዘጋጀም',
+  'vep.unconfiguredSub': 'የምናባዊ የዝግጅት መድረኩ አድራሻ ለዚህ ስሪት አልተዘጋጀም። ሲዘጋጅ ድብልቅ ወይም ምናባዊ የሆኑ ስብሰባዎች ይከፍቱታል።',
+  'vep.failed': 'ምናባዊ መድረኩ አልተከፈተም',
+  'vep.failedSub': 'በዚህ ስልክ ላይ ያለ ምንም አሳሽ ሊንኩን አልተቀበለም። አሳሽ መጫኑን ያረጋግጡና እንደገና ይሞክሩ።',
+  'vep.retry': 'እንደገና ይሞክሩ',
+  'vep.dismiss': 'እሺ',
+  'vep.title': 'በበይነመረብ ይሳተፉ',
+  'vep.intro': 'የምልአተ ጉባኤ እና የተመረጡ ስብሰባዎች ከየትኛውም ቦታ፣ ያለ ባጅ፣ በምናባዊ መድረኩ ላይ በቀጥታ ሊከታተሉ ይችላሉ።',
+  'vep.how': 'መድረኩ በአሳሽዎ ውስጥ ይከፈታል። ይህ መመሪያ የሚመለከቱትን ወይም የሚጽፉትን አያይም።',
+  'vep.hybrid': 'ድብልቅ · በመስመር ላይም',
+  'vep.virtual': 'በመስመር ላይ ብቻ',
+  // END DRAFT
   'transport.title': 'መጓጓዣ',
   // DRAFT — machine-drafted, needs native-speaker review before release (D74).
   'transport.route': 'መስመር ፈልግ',

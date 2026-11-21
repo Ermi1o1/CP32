@@ -111,6 +111,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p05"],
     "certainty": "illustrative"
@@ -186,6 +187,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p05"],
     "certainty": "illustrative"
@@ -201,6 +203,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall B",
     "theme": "water",
     "format": "Panel",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p01", "p02", "p11"],
     "certainty": "illustrative"
@@ -231,6 +234,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "land",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "unknown",
     "speakerIds": ["p06", "p12"],
     "certainty": "illustrative"
@@ -291,6 +295,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p05"],
     "certainty": "illustrative"
@@ -351,6 +356,7 @@ export const SESSIONS: Session[] = [
     "room": "Room 2",
     "theme": "finance",
     "format": "Training",
+    "delivery": "virtual",
     "access": "public",
     "speakerIds": ["p09"],
     "certainty": "illustrative"
@@ -366,6 +372,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p05"],
     "certainty": "illustrative"
@@ -411,6 +418,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "youth",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p08", "p07"],
     "certainty": "illustrative"
@@ -426,6 +434,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": ["p05", "p09"],
     "certainty": "illustrative"
@@ -456,6 +465,7 @@ export const SESSIONS: Session[] = [
     "room": "Hall A",
     "theme": "plenary",
     "format": "Plenary",
+    "delivery": "hybrid",
     "access": "public",
     "speakerIds": [],
     "certainty": "illustrative"

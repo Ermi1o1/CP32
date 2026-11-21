@@ -3,6 +3,7 @@ import { View, ScrollView, useWindowDimensions, type NativeScrollEvent, type Nat
 import { useRouter, type Href } from 'expo-router';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { GUTTER } from '@/ui/chrome';
+import { JoinVirtually } from '@/ui/JoinVirtually';
 import { Text } from '@/ui/Text';
 import { Icon, type IconName } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
@@ -151,21 +152,23 @@ export default function Home() {
             </Enter>
 
             {liveSession && now ? (
-              <Enter {...enter(60)} style={{ marginHorizontal: GUTTER, marginTop: 20, backgroundColor: c.surface, borderWidth: 1, borderColor: '#E53935', borderRadius: 20, padding: 18, gap: 10, ...lift(dark, 2) }}>
+              <Enter {...enter(60)} style={{ marginHorizontal: GUTTER, marginTop: 20, backgroundColor: c.surface, borderWidth: 1, borderColor: c.danger, borderRadius: 20, padding: 18, gap: 10, ...lift(dark, 2) }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                  <View style={{ backgroundColor: '#E53935', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 100, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                     <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#FFF' }} />
-                     <Text variant="label" weight={700} style={{ color: '#FFF', letterSpacing: 0.5 }}>LIVE NOW</Text>
+                  <View style={{ backgroundColor: c.danger, paddingHorizontal: 10, paddingVertical: 4, borderRadius: radius.pill, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                     <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: c.onDanger }} />
+                     <Text variant="label" weight={700} color="onDanger" upper>{t('phase.live')}</Text>
                   </View>
                   <Tag kind={liveSession.access === 'public' ? 'public' : 'restricted'} label={t(accessKey(liveSession.access))} />
                 </View>
                 <Tap onPress={go('/session/' + liveSession.id)} minTarget={false} accessibilityRole="link" style={{ gap: 4 }}>
-                  <Text variant="label" weight={600} style={{ color: '#E53935' }}>{liveSession.start} - {liveSession.end}</Text>
+                  <Text variant="label" weight={600} color="danger">{liveSession.start} – {liveSession.end}</Text>
                   <Text variant="headline" weight={700} style={{ color: c.text, fontSize: 20 }}>{liveSession.title.en}</Text>
                   <Text variant="footnote" color="textSecondary" style={{ marginTop: 2 }}>{[liveSession.room, liveSession.format].join(' · ')}</Text>
                 </Tap>
                 <View style={{ flexDirection: 'row', gap: 10, marginTop: 6, alignItems: 'center' }}>
-                  <Button kind="primary" flex={1} label={t('session.viewLive') || 'View Live Session'} onPress={go('/session/' + liveSession.id)} />
+                  {liveSession.delivery === 'hybrid' || liveSession.delivery === 'virtual'
+                    ? <JoinVirtually sessionId={liveSession.id} kind="primary" flex={1} />
+                    : <Button kind="primary" flex={1} label={t('session.viewLive')} onPress={go('/session/' + liveSession.id)} />}
                   <View style={{ borderRadius: 24, width: 48, height: 48, alignItems: 'center', justifyContent: 'center', backgroundColor: c.bg }}>
                     <SaveToggle id={liveSession.id} title={liveSession.title.en} />
                   </View>
@@ -206,6 +209,7 @@ export default function Home() {
                     <Quick icon="calendar" label="tab.programme" onPress={go('/programme')} />
                     <Quick icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
                     <Quick icon="map" label="tab.map" onPress={go('/map')} />
+                    <Quick icon="radio" label="vep.title" onPress={go('/virtual')} />
                     <Quick icon="train-front" label="transport.title" onPress={go('/transport')} />
                     <Quick icon="users" label="programme.speakers" onPress={go('/speakers')} />
                     <Quick icon="book-open" label="glossary.title" onPress={go('/glossary')} />

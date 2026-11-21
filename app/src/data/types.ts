@@ -11,6 +11,9 @@ export type Certainty = 'official' | 'reported' | 'illustrative' | 'unknown';
 
 export type EditionState = 'pre' | 'during' | 'post';
 
+/** How a session can be attended. Absent means in person only. Virtual and hybrid sessions offer "Join virtually" (VEP). */
+export type Delivery = 'in-person' | 'hybrid' | 'virtual';
+
 export interface EventRecord {
   id: string;
   name: Bilingual;
@@ -53,6 +56,7 @@ export interface Session {
   room: string;
   theme: Theme;
   format: string;
+  delivery?: Delivery;
   access: Access;
   speakerIds: string[];
   certainty: Certainty;
