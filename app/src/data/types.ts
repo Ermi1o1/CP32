@@ -1,16 +1,29 @@
+/**
+ * Content model, following docs/ux/information-architecture.md §4.
+ * Event is the root entity; every record carries its event id (D5).
+ * Bilingual fields hold both languages; `am` may be missing and then falls
+ * back to English (D74: English first, Amharic by a native-speaking editor later).
+ */
 export interface Bilingual { en: string; am?: string }
+
+/** How sure the app is about a fact (D66). Drives the Sources screen and "TBC" labels. */
 export type Certainty = 'official' | 'reported' | 'illustrative' | 'unknown';
+
 export type EditionState = 'pre' | 'during' | 'post';
+
+/** How a session can be attended. Absent means in person only. Virtual and hybrid sessions offer "Join virtually" (VEP). */
+export type Delivery = 'in-person' | 'hybrid' | 'virtual';
 
 export interface EventRecord {
   id: string;
   name: Bilingual;
   city: Bilingual;
   state: EditionState;
+  /** Month and year only. No day-level dates exist until the host confirms them. */
   when: { label: Bilingual; certainty: Certainty };
+  /** Programme days are numbered, never dated, in this build (D66). */
   dayCount: number;
   timeZone: 'Africa/Addis_Ababa';
-  demoNow: { day: number; time: string };
 }
 
 export type Access = 'public' | 'accredited' | 'registration' | 'unknown';
@@ -21,13 +34,16 @@ export interface Speaker {
   name: string;
   org: string;
   role: string;
-  bio: string; // NEW: Deep profile text
+  /** Short profile shown on the speaker page. Illustrative in this build (D66). */
+  bio: string;
 }
 
 export interface Session {
   id: string;
   eventId: string;
+  /** 1-based programme day. */
   day: number;
+  /** Local event time, 24h "HH:MM". */
   start: string;
   end: string;
   title: Bilingual;
@@ -35,11 +51,17 @@ export interface Session {
   room: string;
   theme: Theme;
   format: string;
+  delivery?: Delivery;
   access: Access;
   speakerIds: string[];
   certainty: Certainty;
 }
 
+/**
+ * The only door between screens and content. Today one implementation reads
+ * content bundled inside the app; a CMS-backed one can replace it later
+ * without a single screen changing.
+ */
 export interface ContentRepository {
   getEvent(): Promise<EventRecord>;
   listSessions(filter?: { day?: number; access?: Access }): Promise<Session[]>;

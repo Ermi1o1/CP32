@@ -8,12 +8,12 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "primaryColor": "#0D474C",
-    "backgroundColor": "#F6F3EC",
+    "primaryColor": "#0B4F47",
+    "backgroundColor": "#EDF3F0",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0D474C"
+      "backgroundColor": "#EDF3F0"
     },
     "ios": {
       "supportsTablet": true,
@@ -31,18 +31,19 @@
         "android.permission.SYSTEM_ALERT_WINDOW",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.VIBRATE"
+        "android.permission.VIBRATE",
+        "android.permission.INTERNET"
       ],
       "versionCode": 11
     },
     "androidStatusBar": {
       "barStyle": "light-content",
-      "backgroundColor": "#0D474C",
+      "backgroundColor": "#0B4F47",
       "translucent": false
     },
     "androidNavigationBar": {
       "barStyle": "dark-content",
-      "backgroundColor": "#F6F3EC"
+      "backgroundColor": "#EDF3F0"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -57,7 +58,7 @@
         "expo-splash-screen",
         {
           "image": "./assets/splash-icon.png",
-          "backgroundColor": "#0D474C",
+          "backgroundColor": "#EDF3F0",
           "imageWidth": 160
         }
       ],
@@ -68,11 +69,15 @@
             "useLegacyPackaging": true,
             "enableMinifyInReleaseBuilds": true,
             "enableShrinkResourcesInReleaseBuilds": true,
-            "buildArchs": ["arm64-v8a", "armeabi-v7a"]
+            "buildArchs": [
+              "arm64-v8a",
+              "armeabi-v7a"
+            ]
           }
         }
       ],
-      "expo-image"
+      "expo-image",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true

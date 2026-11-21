@@ -3,6 +3,8 @@ import { View, ScrollView, useWindowDimensions, type NativeScrollEvent, type Nat
 import { useRouter, type Href } from 'expo-router';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { GUTTER } from '@/ui/chrome';
+import { JoinVirtually } from '@/ui/JoinVirtually';
+import { ProvenanceMarker } from '@/ui/ProvenanceMarker';
 import { Text } from '@/ui/Text';
 import { Icon, type IconName } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
@@ -98,7 +100,7 @@ export default function Home() {
   const { saved } = useAgenda();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
   
-  const now = data?.event?.demoNow || useNow(data?.event);
+  const now = useNow();
   const enter = (delay: number) => (prefs.reduceMotion ? {} : { entering: FadeInDown.duration(240).delay(delay) });
   const Enter = prefs.reduceMotion ? View : Animated.View;
 
@@ -147,24 +149,27 @@ export default function Home() {
                 <Icon name="search" size={20} color="textSecondary" stroke={2} />
                 <Text variant="callout" color="textSecondary" style={{ flex: 1, fontSize: 15 }}>{t('search.placeholder')}</Text>
               </Tap>
+              <View style={{ paddingTop: 10 }}><ProvenanceMarker /></View>
             </Enter>
 
             {liveSession && now ? (
-              <Enter {...enter(60)} style={{ marginHorizontal: GUTTER, marginTop: 20, backgroundColor: c.surface, borderWidth: 1, borderColor: '#E53935', borderRadius: 20, padding: 18, gap: 10, ...lift(dark, 2) }}>
+              <Enter {...enter(60)} style={{ marginHorizontal: GUTTER, marginTop: 20, backgroundColor: c.surface, borderWidth: 1, borderColor: c.danger, borderRadius: 20, padding: 18, gap: 10, ...lift(dark, 2) }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                  <View style={{ backgroundColor: '#E53935', paddingHorizontal: 10, paddingVertical: 4, borderRadius: 100, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                     <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: '#FFF' }} />
-                     <Text variant="label" weight={700} style={{ color: '#FFF', letterSpacing: 0.5 }}>LIVE NOW</Text>
+                  <View style={{ backgroundColor: c.danger, paddingHorizontal: 10, paddingVertical: 4, borderRadius: radius.pill, flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                     <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: c.onDanger }} />
+                     <Text variant="label" weight={700} color="onDanger" upper>{t('phase.live')}</Text>
                   </View>
                   <Tag kind={liveSession.access === 'public' ? 'public' : 'restricted'} label={t(accessKey(liveSession.access))} />
                 </View>
                 <Tap onPress={go('/session/' + liveSession.id)} minTarget={false} accessibilityRole="link" style={{ gap: 4 }}>
-                  <Text variant="label" weight={600} style={{ color: '#E53935' }}>{liveSession.start} - {liveSession.end}</Text>
+                  <Text variant="label" weight={600} color="danger">{liveSession.start} – {liveSession.end}</Text>
                   <Text variant="headline" weight={700} style={{ color: c.text, fontSize: 20 }}>{liveSession.title.en}</Text>
                   <Text variant="footnote" color="textSecondary" style={{ marginTop: 2 }}>{[liveSession.room, liveSession.format].join(' · ')}</Text>
                 </Tap>
                 <View style={{ flexDirection: 'row', gap: 10, marginTop: 6, alignItems: 'center' }}>
-                  <Button kind="primary" flex={1} label={t('session.viewLive') || 'View Live Session'} onPress={go('/session/' + liveSession.id)} />
+                  {liveSession.delivery === 'hybrid' || liveSession.delivery === 'virtual'
+                    ? <JoinVirtually sessionId={liveSession.id} kind="primary" flex={1} />
+                    : <Button kind="primary" flex={1} label={t('session.viewLive')} onPress={go('/session/' + liveSession.id)} />}
                   <View style={{ borderRadius: 24, width: 48, height: 48, alignItems: 'center', justifyContent: 'center', backgroundColor: c.bg }}>
                     <SaveToggle id={liveSession.id} title={liveSession.title.en} />
                   </View>
@@ -205,8 +210,8 @@ export default function Home() {
                     <Quick icon="calendar" label="tab.programme" onPress={go('/programme')} />
                     <Quick icon="bookmark" label="programme.agenda" onPress={go('/agenda')} />
                     <Quick icon="map" label="tab.map" onPress={go('/map')} />
-                    {/* Replaced train-front with map */}
-                    <Quick icon="map" label="transport.title" onPress={go('/transport')} />
+                    <Quick icon="radio" label="vep.title" onPress={go('/virtual')} />
+                    <Quick icon="train-front" label="transport.title" onPress={go('/transport')} />
                     <Quick icon="users" label="programme.speakers" onPress={go('/speakers')} />
                     <Quick icon="book-open" label="glossary.title" onPress={go('/glossary')} />
                   </ScrollView>
@@ -238,10 +243,9 @@ export default function Home() {
                   <SectionTitle>{t('home.essentials')}</SectionTitle>
                   <View style={{ paddingTop: 4 }}>
                     <Group>
-                      {/* Replaced ticket, luggage, siren with safe icons */}
-                      <Row icon="calendar" title={t('home.canAttend')} subtitle={t('home.canAttendSub')} onPress={go('/guide/attend')} />
-<Row icon="map" title={t('home.plan')} subtitle={t('home.planSub')} onPress={go('/visit')} />
-                      <Row icon="info" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={go('/guide/emergency')} />
+                      <Row icon="ticket" title={t('home.canAttend')} subtitle={t('home.canAttendSub')} onPress={go('/guide/attend')} />
+                      <Row icon="luggage" title={t('home.plan')} subtitle={t('home.planSub')} onPress={go('/visit')} />
+                      <Row icon="siren" tone="red" title={t('visit.emergency')} subtitle={t('visit.emergencySub')} onPress={go('/guide/emergency')} />
                     </Group>
                   </View>
                   <Text variant="footnote" color="textTertiary" center style={{ paddingTop: 24, paddingBottom: 12 }}>{t(brand.descriptorKey)}</Text>

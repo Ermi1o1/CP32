@@ -89,7 +89,7 @@ export function SaveToggle({ id, title, size = 24 }: { id: string; title: string
 }
 
 /** Small capsule for live / access states. Icon plus words; colour is never the only signal. */
-export function Tag({ kind, label }: { kind: 'live' | 'next' | 'public' | 'restricted' | 'ended'; label: string }) {
+export function Tag({ kind, label }: { kind: 'live' | 'next' | 'public' | 'restricted' | 'ended' | 'online'; label: string }) {
   const { c } = useTheme();
   const map = {
     live: { bg: c.dangerBg, fg: 'danger', icon: 'radio' },
@@ -97,6 +97,7 @@ export function Tag({ kind, label }: { kind: 'live' | 'next' | 'public' | 'restr
     public: { bg: c.successBg, fg: 'success', icon: 'check' },
     restricted: { bg: c.surfaceAlt, fg: 'textSecondary', icon: 'ticket' },
     ended: { bg: c.surfaceAlt, fg: 'textSecondary', icon: 'circle-check' },
+    online: { bg: c.infoBg, fg: 'info', icon: 'radio' },
   } as const;
   const m = map[kind];
   return (

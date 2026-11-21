@@ -62,7 +62,37 @@ export const am: Record<StringKey, string> = {
   'visit.exploreSub': 'መስህቦች፣ ምግብ እና የቡና ባህል',
   'visit.money': 'ገንዘብ፣ ሲም እና ኢንተርኔት',
   'visit.moneySub': 'ጥሬ ገንዘብ፣ ካርድ እና የሞባይል ዳታ',
-  'transport.title': 'መጓጓዣ',
+  // DRAFT — needs native-speaker review (D74).
+  'transport.title': 'በአዲስ አበባ መንቀሳቀስ',
+  'transport.lead': 'ቀላል ባቡር፣ ታክሲ፣ የአየር ማረፊያ ዝውውር እና ገና ያልተረጋገጡ ነገሮች።',
+  'transport.lines': 'የቀላል ባቡር መስመሮች',
+  'transport.liveTitle': 'የቀጥታ ክትትል',
+  'transport.poweredBy': 'በ{p} የሚሰራ',
+  'transport.liveSoon': 'ክትትሉ ሲገናኝ የኮንፈረንስ ማመላለሻ እና የከተማ አውቶቡሶች የቀጥታ መድረሻ ሰዓት እዚህ ይታያል። እስካሁን ምንም አይከታተልም።',
+  'transport.liveOn': 'የቀጥታ መድረሻዎች ተገናኝተዋል።',
+  'prov.official': 'ይፋዊ',
+  'prov.preview': 'የቅድመ እይታ ይዘት',
+  'prov.synced': 'ይፋዊ — {t} ላይ የተመሳሰለ',
+  'prov.reported': 'በይፋ የተዘገበ',
+  'prov.illustrative': 'የቅድመ እይታ ይዘት',
+  'prov.unknown': 'ገና ያልተረጋገጠ',
+  // END DRAFT
+  // DRAFT — needs native-speaker review (D74).
+  'vep.join': 'በበይነመረብ ይቀላቀሉ',
+  'vep.joinHint': 'ምናባዊ የዝግጅት መድረኩን በአሳሽ ይከፍታል',
+  'vep.opening': 'ምናባዊ መድረኩ እየተከፈተ ነው…',
+  'vep.unconfigured': 'በዚህ ስሪት ምናባዊ ተሳትፎ አልተዘጋጀም',
+  'vep.unconfiguredSub': 'የምናባዊ የዝግጅት መድረኩ አድራሻ ለዚህ ስሪት አልተዘጋጀም። ሲዘጋጅ ድብልቅ ወይም ምናባዊ የሆኑ ስብሰባዎች ይከፍቱታል።',
+  'vep.failed': 'ምናባዊ መድረኩ አልተከፈተም',
+  'vep.failedSub': 'በዚህ ስልክ ላይ ያለ ምንም አሳሽ ሊንኩን አልተቀበለም። አሳሽ መጫኑን ያረጋግጡና እንደገና ይሞክሩ።',
+  'vep.retry': 'እንደገና ይሞክሩ',
+  'vep.dismiss': 'እሺ',
+  'vep.title': 'በበይነመረብ ይሳተፉ',
+  'vep.intro': 'የምልአተ ጉባኤ እና የተመረጡ ስብሰባዎች ከየትኛውም ቦታ፣ ያለ ባጅ፣ በምናባዊ መድረኩ ላይ በቀጥታ ሊከታተሉ ይችላሉ።',
+  'vep.how': 'መድረኩ በአሳሽዎ ውስጥ ይከፈታል። ይህ መመሪያ የሚመለከቱትን ወይም የሚጽፉትን አያይም።',
+  'vep.hybrid': 'ድብልቅ · በመስመር ላይም',
+  'vep.virtual': 'በመስመር ላይ ብቻ',
+  // END DRAFT
   'visit.emergency': 'ድንገተኛ አደጋ እና እገዛ',
   'visit.emergencySub': 'ስልክ ቁጥሮች፣ የሕክምና ቦታዎች፣ የጠፉ ዕቃዎች',
 
@@ -108,6 +138,10 @@ export const am: Record<StringKey, string> = {
   'settings.about': 'ስለዚህ መተግበሪያ',
   'settings.sources': 'ምንጮች እና ሁኔታ',
   'settings.sourcesSub': 'የተዘገበው፣ ቅድመ እይታ የሆነው እና ገና ያልታወቀው',
+  // DRAFT — needs native-speaker review (D74).
+  'settings.sync': 'ይፋዊ ማመሳሰል (ማሳያ)',
+  'settings.syncSub': 'የፕሮግራም ይዘት ከይፋዊ ምንጭ ሲመጣ እንዴት እንደሚታይ ያሳያል። መተግበሪያው እንደገና ሲጀምር ይመለሳል።',
+  // END DRAFT
   'settings.demo': 'የቅድመ እይታ አማራጮች',
   'settings.brand': 'የመለያ ማንነት',
   'settings.brandSub': 'ስም፣ ምልክት እና ቀለሞች ከአንድ ማዋቀሪያ ይመጣሉ',
@@ -244,6 +278,8 @@ export const am: Record<StringKey, string> = {
   'map.schematic': 'ንድፍ ብቻ። የስብሰባ ቦታው ንድፍ ገና ይረጋገጣል።',
   'map.planLabel': 'የስብሰባ ቦታ ንድፍ። የተመረጠው፦ {p}',
   'map.places': 'ቦታዎች',
+  // DRAFT — needs native-speaker review (D74).
+  'map.gettingAroundSub': 'ቀላል ባቡር፣ ታክሲ፣ ዋጋዎች እና የአየር ማረፊያ ዝውውር',
   'map.sessionsHere': 'እዚህ ያሉ {n} ስብሰባዎችን ይመልከቱ',
   'map.kind.hall': 'አዳራሽ',
   'map.kind.room': 'ክፍሎች',

@@ -27,7 +27,7 @@ export default function ExhibitorPage() {
     const ids = new Set(mine.map((p) => p.id));
     return { event, people: mine, sessions: sessions.filter((s) => s.speakerIds.some((x) => ids.has(x))) };
   }, [id]);
-  const now = useNow(data?.event);
+  const now = useNow();
   const place = PLACES.find((p) => p.id === e?.placeId);
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>

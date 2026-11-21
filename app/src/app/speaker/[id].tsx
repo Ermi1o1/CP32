@@ -22,7 +22,7 @@ export default function SpeakerPage() {
     return { event, person: people[0], sessions: sessions.filter((s) => s.speakerIds.includes(String(id))) };
   }, [id]);
   
-  const now = useNow(data?.event);
+  const now = useNow();
 
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>

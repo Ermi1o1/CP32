@@ -20,13 +20,13 @@ type Quick = 'all' | 'public' | 'saved';
 type Item = { kind: 'session'; s: Session; i: number } | { kind: 'now' };
 
 export default function Programme() {
-  const { c, layout, radius } = useTheme();
+  const { c, layout } = useTheme();
   const { t } = useT();
   const router = useRouter();
   const { saved } = useAgenda();
   const event = useContent((r) => r.getEvent());
   const all = useContent((r) => r.listSessions());
-  const now = useNow(event);
+  const now = useNow();
   
   const [dayPick, setDay] = useState<number | undefined>(undefined);
   const [quick, setQuick] = useState<Quick>('all');

@@ -23,9 +23,9 @@ export const GUIDES: Guide[] = [
     summary: 'Where to turn if something goes wrong',
     body: [
       'If you are in immediate danger, speak to the nearest security or medical staff, or ask any venue volunteer to call for help.',
-      'Emergency phone numbers, medical points and the lost-and-found desk will be listed here once they are finalized with the host. This page is saved on your phone and will work without signal.',
+      'Emergency phone numbers, medical points and the lost-and-found desk will be listed here once they are confirmed with the host. This page is saved on your phone and will work without signal.',
     ],
-    covers: ['Emergency phone numbers', 'Medical points and first aid', 'Lost and found', 'Embassy and consular contacts'],
+    covers: ['Emergency phone numbers, confirmed with the host', 'Medical points and first aid, on the map', 'Lost and found', 'Embassy and consular contacts'],
   },
   {
     id: 'attend', icon: 'ticket',
@@ -156,7 +156,7 @@ export const UPDATES: Update[] = [
   { 
     id: 'u5', 
     kind: 'Guide note', 
-    icon: 'compass', 
+    icon: 'map', 
     title: 'Making the most of your visit', 
     summary: `Practical tips for navigating the venue, managing your schedule, and finding side events.`, 
     body: [
@@ -192,4 +192,4 @@ export const PLACES: Place[] = [
 ];
 
 /** Sessions shown as highlights on Home. */
-export const FEATURED: string[] = ['s07', 's14', 's19', 's22'];
+export const FEATURED: string[] = ['s09', 's16', 's21', 's24'];
