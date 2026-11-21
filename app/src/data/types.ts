@@ -24,11 +24,6 @@ export interface EventRecord {
   /** Programme days are numbered, never dated, in this build (D66). */
   dayCount: number;
   timeZone: 'Africa/Addis_Ababa';
-  /**
-   * The demonstration clock. The conference is in the future, so "now" is a
-   * fixed, illustrative moment that lets Home and Programme show a live day.
-   */
-  demoNow: { day: number; time: string };
 }
 
 export type Access = 'public' | 'accredited' | 'registration' | 'unknown';

@@ -13,6 +13,7 @@ import { Icon } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
 import { Button, Skeleton, StateBlock } from '@/ui/controls';
 import { JoinVirtually } from '@/ui/JoinVirtually';
+import { ProvenanceMarker } from '@/ui/ProvenanceMarker';
 import { HorizonLine, Photo, SavedMark, SaveToggle, SessionRow, Tag, accessKey } from '@/ui/event';
 import { THEME_PHOTO } from '@/ui/photos';
 import { useTheme, usePrefs } from '@/theme/ThemeProvider';
@@ -41,7 +42,7 @@ export default function SessionPage() {
     return { event, session, speakers, related };
   }, [id]);
 
-  const now = useNow(data?.event);
+  const now = useNow();
   const heroH = 210 + insets.top;
   const Enter = prefs.reduceMotion ? View : Animated.View;
   const enter = (delay: number) => (prefs.reduceMotion ? {} : { entering: FadeInDown.duration(240).delay(delay) });
@@ -160,7 +161,7 @@ export default function SessionPage() {
               </View>
             ) : null}
 
-            <Text variant="footnote" color="textTertiary" style={{ paddingHorizontal: 20, paddingTop: 20 }}>{t('session.illustrative')}</Text>
+            <View style={{ paddingHorizontal: 20, paddingTop: 20 }}><ProvenanceMarker certainty={session.certainty} /></View>
           </View>
         </View>
       </ScrollView>

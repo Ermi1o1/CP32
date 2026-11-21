@@ -65,6 +65,8 @@ export const en = {
   'transport.liveSoon': 'Live arrivals for conference shuttles and city buses will appear here once tracking is connected. Nothing is tracked yet.',
   'transport.liveOn': 'Live arrivals are connected.',
   'prov.official': 'Official',
+  'prov.preview': 'Preview content',
+  'prov.synced': 'Official — synced {t}',
   'prov.reported': 'Publicly reported',
   'prov.illustrative': 'Preview content',
   'prov.unknown': 'Not yet confirmed',
@@ -285,6 +287,8 @@ export const en = {
   'settings.display': 'Display',
   'settings.aboutSection': 'About',
   'settings.languageHint': 'Amharic localization is actively being reviewed.',
+  'settings.sync': 'Official sync (demonstration)',
+  'settings.syncSub': 'Shows how programme content looks once it arrives from the official source. Resets when the app restarts.',
   'settings.live': 'Conference-day preview',
   'settings.liveSub': 'Shows the app as it would look mid-conference: next session, live and ended labels, a now-line',
 

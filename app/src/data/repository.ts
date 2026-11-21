@@ -33,3 +33,20 @@ export class BundledRepository implements ContentRepository {
 }
 
 export const repository: ContentRepository = new BundledRepository();
+
+/**
+ * The same content as it would look after a sync from the official source:
+ * every illustrative record is presented as official. Demonstration of the
+ * CMS pipeline (D66 certainty as provenance); screens do not change.
+ */
+export class SyncedView implements ContentRepository {
+  constructor(private readonly base: ContentRepository) {}
+  private mark = (s: Session): Session => (s.certainty === 'illustrative' ? { ...s, certainty: 'official' } : s);
+  getEvent() { return this.base.getEvent(); }
+  async listSessions(filter?: { day?: number; access?: Access }) { return (await this.base.listSessions(filter)).map(this.mark); }
+  async getSession(id: string) { const s = await this.base.getSession(id); return s && this.mark(s); }
+  getSpeakers(ids: readonly string[]) { return this.base.getSpeakers(ids); }
+  listSpeakers() { return this.base.listSpeakers(); }
+}
+
+export const syncedRepository: ContentRepository = new SyncedView(repository);

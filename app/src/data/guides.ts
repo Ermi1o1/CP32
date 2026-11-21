@@ -192,4 +192,4 @@ export const PLACES: Place[] = [
 ];
 
 /** Sessions shown as highlights on Home. */
-export const FEATURED: string[] = ['s07', 's14', 's19', 's22'];
+export const FEATURED: string[] = ['s09', 's16', 's21', 's24'];

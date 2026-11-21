@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { setOfficialSync, useOfficialSync } from '@/state/provenance';
 import { View, Switch } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Page, SubHeader } from '@/ui/chrome';
@@ -29,6 +30,7 @@ export default function Settings() {
   const { saved, clear } = useAgenda();
   const [confirm, setConfirm] = useState(false);
   const [done, setDone] = useState(false);
+  const sync = useOfficialSync();
   const sw = (value: boolean, on: (v: boolean) => void, label: string) => (
     <Switch value={value} onValueChange={on} accessibilityLabel={label} trackColor={{ true: c.primary, false: c.border }} />
   );
@@ -76,6 +78,7 @@ export default function Settings() {
 
         <SectionTitle>{t('settings.demo')}</SectionTitle>
         <Group>
+          <Row icon="rotate-cw" title={t('settings.sync')} subtitle={t('settings.syncSub')} right={sw(sync.on, (v) => setOfficialSync(v), t('settings.sync'))} />
           <Row icon="clock" title={t('settings.live')} subtitle={t('settings.liveSub')} right={sw(prefs.livePreview, (livePreview) => setPrefs({ livePreview }), t('settings.live'))} />
           <Field label={t('settings.brand')} hint={t('settings.brandSub')}>
             <Segmented<BrandId> value={prefs.brand} onChange={(brand) => setPrefs({ brand })}

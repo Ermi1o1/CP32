@@ -71,6 +71,8 @@ export const am: Record<StringKey, string> = {
   'transport.liveSoon': 'ክትትሉ ሲገናኝ የኮንፈረንስ ማመላለሻ እና የከተማ አውቶቡሶች የቀጥታ መድረሻ ሰዓት እዚህ ይታያል። እስካሁን ምንም አይከታተልም።',
   'transport.liveOn': 'የቀጥታ መድረሻዎች ተገናኝተዋል።',
   'prov.official': 'ይፋዊ',
+  'prov.preview': 'የቅድመ እይታ ይዘት',
+  'prov.synced': 'ይፋዊ — {t} ላይ የተመሳሰለ',
   'prov.reported': 'በይፋ የተዘገበ',
   'prov.illustrative': 'የቅድመ እይታ ይዘት',
   'prov.unknown': 'ገና ያልተረጋገጠ',
@@ -136,6 +138,10 @@ export const am: Record<StringKey, string> = {
   'settings.about': 'ስለዚህ መተግበሪያ',
   'settings.sources': 'ምንጮች እና ሁኔታ',
   'settings.sourcesSub': 'የተዘገበው፣ ቅድመ እይታ የሆነው እና ገና ያልታወቀው',
+  // DRAFT — needs native-speaker review (D74).
+  'settings.sync': 'ይፋዊ ማመሳሰል (ማሳያ)',
+  'settings.syncSub': 'የፕሮግራም ይዘት ከይፋዊ ምንጭ ሲመጣ እንዴት እንደሚታይ ያሳያል። መተግበሪያው እንደገና ሲጀምር ይመለሳል።',
+  // END DRAFT
   'settings.demo': 'የቅድመ እይታ አማራጮች',
   'settings.brand': 'የመለያ ማንነት',
   'settings.brandSub': 'ስም፣ ምልክት እና ቀለሞች ከአንድ ማዋቀሪያ ይመጣሉ',

@@ -4,6 +4,7 @@ import { useRouter, type Href } from 'expo-router';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { GUTTER } from '@/ui/chrome';
 import { JoinVirtually } from '@/ui/JoinVirtually';
+import { ProvenanceMarker } from '@/ui/ProvenanceMarker';
 import { Text } from '@/ui/Text';
 import { Icon, type IconName } from '@/ui/Icon';
 import { Tap } from '@/ui/Pressable';
@@ -99,8 +100,7 @@ export default function Home() {
   const { saved } = useAgenda();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
   
-  const liveNow = useNow(data?.event);
-  const now = data?.event?.demoNow || liveNow;
+  const now = useNow();
   const enter = (delay: number) => (prefs.reduceMotion ? {} : { entering: FadeInDown.duration(240).delay(delay) });
   const Enter = prefs.reduceMotion ? View : Animated.View;
 
@@ -149,6 +149,7 @@ export default function Home() {
                 <Icon name="search" size={20} color="textSecondary" stroke={2} />
                 <Text variant="callout" color="textSecondary" style={{ flex: 1, fontSize: 15 }}>{t('search.placeholder')}</Text>
               </Tap>
+              <View style={{ paddingTop: 10 }}><ProvenanceMarker /></View>
             </Enter>
 
             {liveSession && now ? (

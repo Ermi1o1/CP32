@@ -17,7 +17,7 @@ export default function Virtual() {
   const { t } = useT();
   const router = useRouter();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
-  const now = useNow(data?.event);
+  const now = useNow();
   const online = (data?.sessions ?? []).filter((s) => s.delivery === 'hybrid' || s.delivery === 'virtual');
   return (
     <View style={{ flex: 1, backgroundColor: c.bg }}>

@@ -18,7 +18,7 @@ export default function Agenda() {
   const router = useRouter();
   const { saved } = useAgenda();
   const data = useContent(async (r) => ({ event: await r.getEvent(), sessions: await r.listSessions() }));
-  const now = useNow(data?.event);
+  const now = useNow();
   const mine = (data?.sessions ?? []).filter((s) => saved.has(s.id));
   const days = [...new Set(mine.map((s) => s.day))];
   return (
