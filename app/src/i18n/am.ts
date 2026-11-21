@@ -63,6 +63,19 @@ export const am: Record<StringKey, string> = {
   'visit.money': 'ገንዘብ፣ ሲም እና ኢንተርኔት',
   'visit.moneySub': 'ጥሬ ገንዘብ፣ ካርድ እና የሞባይል ዳታ',
   // DRAFT — needs native-speaker review (D74).
+  'transport.title': 'በአዲስ አበባ መንቀሳቀስ',
+  'transport.lead': 'ቀላል ባቡር፣ ታክሲ፣ የአየር ማረፊያ ዝውውር እና ገና ያልተረጋገጡ ነገሮች።',
+  'transport.lines': 'የቀላል ባቡር መስመሮች',
+  'transport.liveTitle': 'የቀጥታ ክትትል',
+  'transport.poweredBy': 'በ{p} የሚሰራ',
+  'transport.liveSoon': 'ክትትሉ ሲገናኝ የኮንፈረንስ ማመላለሻ እና የከተማ አውቶቡሶች የቀጥታ መድረሻ ሰዓት እዚህ ይታያል። እስካሁን ምንም አይከታተልም።',
+  'transport.liveOn': 'የቀጥታ መድረሻዎች ተገናኝተዋል።',
+  'prov.official': 'ይፋዊ',
+  'prov.reported': 'በይፋ የተዘገበ',
+  'prov.illustrative': 'የቅድመ እይታ ይዘት',
+  'prov.unknown': 'ገና ያልተረጋገጠ',
+  // END DRAFT
+  // DRAFT — needs native-speaker review (D74).
   'vep.join': 'በበይነመረብ ይቀላቀሉ',
   'vep.joinHint': 'ምናባዊ የዝግጅት መድረኩን በአሳሽ ይከፍታል',
   'vep.opening': 'ምናባዊ መድረኩ እየተከፈተ ነው…',
@@ -77,19 +90,6 @@ export const am: Record<StringKey, string> = {
   'vep.how': 'መድረኩ በአሳሽዎ ውስጥ ይከፈታል። ይህ መመሪያ የሚመለከቱትን ወይም የሚጽፉትን አያይም።',
   'vep.hybrid': 'ድብልቅ · በመስመር ላይም',
   'vep.virtual': 'በመስመር ላይ ብቻ',
-  // END DRAFT
-  'transport.title': 'መጓጓዣ',
-  // DRAFT — machine-drafted, needs native-speaker review before release (D74).
-  'transport.route': 'መስመር ፈልግ',
-  'transport.lines': 'መስመሮች',
-  'transport.stops': 'ማቆሚያዎች',
-  'transport.places': 'ቦታዎች',
-  'transport.from': 'ከ — ሆቴል ወይም ማቆሚያ',
-  'transport.to': 'ወደ — ሆቴል ወይም ማቆሚያ',
-  'transport.search': 'መስመር፣ ማቆሚያ ወይም ቦታ ፈልግ...',
-  'transport.reset': 'እንደገና ጀምር',
-  'transport.trips': 'በቀን {n} ጉዞዎች',
-  'transport.dragHint': 'ፓነሉን ለማስፋት ወይም ለማሳነስ ወደ ላይ ወይም ወደ ታች ይጎትቱ',
   // END DRAFT
   'visit.emergency': 'ድንገተኛ አደጋ እና እገዛ',
   'visit.emergencySub': 'ስልክ ቁጥሮች፣ የሕክምና ቦታዎች፣ የጠፉ ዕቃዎች',
